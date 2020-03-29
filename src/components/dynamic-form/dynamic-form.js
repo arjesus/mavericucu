@@ -49,9 +49,10 @@ class DynamicForm extends React.Component {
         <style jsx>{`
           .form-container {
             background-color: #fff;
-            min-height: 54vh;
+            min-height: 65vh;
             height: 100px;
             width: 100%;
+            padding: 20px 0;
             .feel-container {
               display: flex;
               flex-direction: column;
