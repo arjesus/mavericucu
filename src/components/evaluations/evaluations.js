@@ -92,12 +92,6 @@ class Evaluations extends React.Component {
 
   render() {
     const { contentToRender } = this.state;
-    const progressDone = document.querySelectorAll(".progress-done");
-
-    progressDone.forEach(progress => {
-      progress.style.width = progress.getAttribute("data-done") + "%";
-    });
-
     return (
       <React.Fragment>
         <div className="reviews-container">
