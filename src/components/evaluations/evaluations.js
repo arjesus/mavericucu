@@ -127,7 +127,7 @@ class Evaluations extends React.Component {
             grid-template-columns: 1fr 1fr;
             background-color: #73a580;
             height: 100px;
-            min-height: 48vh;
+            min-height: 53vh;
             width: 100%;
             justify-items: center;
             -webkit-box-align: center;
