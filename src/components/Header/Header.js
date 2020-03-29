@@ -8,6 +8,7 @@ import config from "../../../content/meta/config";
 import Menu from "../Menu";
 
 import avatar from "../../images/jpg/avatar.jpg";
+import logo from '../../../static/images/lirio.png'
 
 class Header extends React.Component {
   state = {
@@ -38,11 +39,11 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5=="" ? avatar : config.gravatarImgMd5 } alt={config.siteTitle} />
+              <img src={config.gravatarImgMd5=="" ? logo : config.gravatarImgMd5 } alt={config.siteTitle} />
             </div>
             <div className="type">
-              <h1>{config.headerTitle}</h1>
-              <h2>{config.headerSubTitle}</h2>
+              <h1>Javi e Isma</h1>
+              <h2>La van a partir</h2>
             </div>
           </Link>
           <FontLoadedContext.Consumer>
@@ -159,10 +160,10 @@ class Header extends React.Component {
 
               :global(a.logoType),
               h1 {
-                color: ${theme.color.neutral.white};
+                color: ${theme.color.neutral.green};
               }
               h2 {
-                color: ${theme.color.neutral.gray.d};
+                color: ${theme.color.neutral.darkGreen};
               }
             }
           }
@@ -200,10 +201,10 @@ class Header extends React.Component {
               &.homepage:not(.fixed) {
                 :global(a.logoType),
                 h1 {
-                  color: ${theme.color.neutral.white};
+                  color: ${theme.color.neutral.green};
                 }
                 h2 {
-                  color: ${theme.color.neutral.gray.d};
+                  color: ${theme.color.neutral.darkGreen};
                 }
               }
             }

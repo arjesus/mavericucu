@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
         }
       }
     } = this.props;
-
+    
     const backgrounds = {
       desktop,
       tablet,
@@ -47,10 +47,10 @@ class IndexPage extends React.Component {
         </ThemeContext.Consumer>
 
         <hr ref={this.separator} />
-
+        {/* 
         <ThemeContext.Consumer>
           {theme => <Blog posts={posts} theme={theme} />}
-        </ThemeContext.Consumer>
+        </ThemeContext.Consumer> */}
 
         <Seo facebook={facebook} />
 

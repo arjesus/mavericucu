@@ -39,6 +39,8 @@ size:
 color:
   # color options
   neutral:
+    darkGreen: &color-green-dark '#54795E'
+    green: &color-green '#73a580'
     white: &color-white '#ffffff'
     gray:
       a: &color-gray-1 '#fafaf9'
@@ -104,7 +106,8 @@ background:
 text:
   family: *font-family-target
   color:
-    primary: *color-gray-10
+    primary: *color-green
+    primeryHover: *color-green-dark
     primaryInverse: *color-white
     brand: *color-brand-primary
     attention: *color-special-attention
@@ -134,9 +137,12 @@ icon:
 hero:
   h1:
     size: *font-size-xxl
-    color: *color-white
+    color: *color-green
     lineHeight: *font-line-height-xs
   background: 'linear-gradient(0deg, #E0306E, #6438B5)'
+  bar:
+    colorBackground: *color-green
+    color: *color-white
 blog:
   h1:
     size: *font-size-l
