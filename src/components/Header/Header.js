@@ -42,7 +42,7 @@ class Header extends React.Component {
               <img src={config.gravatarImgMd5=="" ? logo : config.gravatarImgMd5 } alt={config.siteTitle} />
             </div>
             <div className="type">
-              <h1>Javi e Isma</h1>
+              <h1>Javi, Agus e Isma</h1>
               <h2>La van a partir</h2>
             </div>
           </Link>
@@ -84,7 +84,7 @@ class Header extends React.Component {
               align-items: center;
               display: flex;
               flex-direction: "column";
-              color: ${theme.text.color.primary};
+              color: ${theme.color.principals.darkerPurpleText};
 
               .logo {
                 flex-shrink: 0;
@@ -160,10 +160,10 @@ class Header extends React.Component {
 
               :global(a.logoType),
               h1 {
-                color: ${theme.color.neutral.green};
+                color: ${theme.color.principals.darkerPurpleText};
               }
               h2 {
-                color: ${theme.color.neutral.darkGreen};
+                color: ${theme.color.principals.darkerPurpleText};
               }
             }
           }

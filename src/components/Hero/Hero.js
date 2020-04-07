@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import womanWorried from '../../../static/images/mujer.preocupada.jpg';
-import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
-import Evaluations from '../evaluations/evaluations.js';
-import DynamicForm from '../dynamic-form/dynamic-form';
+import womanWorried from "../../../static/images/mujer.preocupada.jpg";
+import psicoHelp from "../../../static/images/mujer-psicologa-ayudando.jpg";
+import Evaluations from "../evaluations/evaluations.js";
+import DynamicForm from "../dynamic-form/dynamic-form";
 
 const Hero = props => {
   const { theme } = props;
@@ -11,37 +11,43 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>
-          Psicólogos online. Estabilidad emocional <strong> cuando más la necesites </strong> cuando más la necesites
-        </h1>
+        <div>
+          <h1>Psicólogos online. Estabilidad emocional cuando más la necesites</h1>
+          <p>
+            Ayuda psicológica especial durante periodo de confinamiento con psicólogos
+            especializados en el impacto emocional del coronavirus COVID-19.
+          </p>
+        </div>
+        {window.innerWidth <= 600 && (
+          <div className="mobile-button">
+            <button aria-label="scroll">Reserva cita online </button>
+          </div>
+        )}
         <div>
           <img src={womanWorried} alt="Mujer preocupada" />
         </div>
       </section>
-      <section className="hero-bar">
-        <h2>
-          Ayuda psicológica especial durante periodo de confinamiento con psicólogos
-         especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
-        </h2>
-        <button aria-label="scroll">
-          Comenzar
-        </button>
-      </section>
+      {window.innerWidth > 600 && (
+        <section className="hero-bar">
+          <h2>
+            Ayuda psicológica especial durante periodo de confinamiento con psicólogos
+            especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
+          </h2>
+          <button aria-label="scroll">Reserva cita online </button>
+        </section>
+      )}
       <div className="padding-block">
         <section className="hero-sub-header">
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
           </div>
           <div className="hero-sub-text">
-            <h2>
-              Atención especializada y de calidad
-          </h2>
+            <h2>Atención especializada y de calidad</h2>
             <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.
-          </p>
-            <button>
-              Contactanos
-        </button>
+              Nuestros especialistas guías te contactaran para de forma segura y privada para
+              encontrar el psicólogo que más se adapte a tus necesidades.
+            </p>
+            <button>Contactanos</button>
           </div>
         </section>
         <section className="hero-block-images-header">
@@ -49,22 +55,25 @@ const Hero = props => {
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
             <h3>Contactanos </h3>
             <p>
-              Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que  blabla.
-          </p>
+              Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto
+              contigo en la hora y momento que blabla.
+            </p>
           </div>
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
             <h3>Habla con nuestro especialista guia </h3>
             <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.
-          </p>
+              Nuestros especialistas guías te contactaran para de forma segura y privada para
+              encontrar el psicólogo que más se adapte a tus necesidades.
+            </p>
           </div>
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
             <h3>Comienza tu terapia online </h3>
             <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.
-          </p>
+              Nuestros especialistas guías te contactaran para de forma segura y privada para
+              encontrar el psicólogo que más se adapte a tus necesidades.
+            </p>
           </div>
         </section>
       </div>
@@ -87,6 +96,50 @@ const Hero = props => {
             width: 80%;
           }
         }
+
+        h1 {
+          text-align: center;
+          font-size: ${theme.hero.h1.size};
+          margin: ${theme.space.stack.l};
+          color: ${theme.color.principals.darkerPurpleText};
+          line-height: ${theme.hero.h1.lineHeight};
+          text-remove-gap: both 0 "Open Sans";
+        }
+
+        p {
+          font-size: 1rem;
+          color: ${theme.color.principals.darkerPurpleText};
+          text-align: center;
+        }
+
+        @media (max-width: 600px) {
+          .hero {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 0.2fr 1fr;
+            height: 100%;
+            grid-gap: 30px;
+            img {
+              width: 100%;
+            }
+          }
+          h1 {
+            font-size: 1.9rem;
+            line-height: 1.3;
+          }
+          p {
+            font-size: 1rem;
+          }
+          .mobile-button button{
+            padding: 11px 69px;
+            background-color: ${theme.color.principals.darkerPurpleText};
+            border: none;
+            border-radius: 1em;
+            color: ${theme.color.principals.white};
+            font-size: 20px;
+            cursor: pointer;
+          }
+        }
+
         .padding-block {
           padding: 50px 10%;
           .hero-sub-header {
@@ -133,10 +186,10 @@ const Hero = props => {
             }
             button {
               padding: 7px 69px;
-              background-Color: ${theme.hero.bar.colorBackground};
-              border: groove 0.5em ${theme.hero.bar.color};  
+              background-color: ${theme.color.principals.darkerPurpleText};
+              border: none;
               border-radius: 1em;
-              color: ${theme.hero.bar.color};
+              color: ${theme.color.principals.white};
               font-size: 18px;
               cursor: pointer;
               width: 50%;
@@ -186,7 +239,7 @@ const Hero = props => {
           min-height: 20vh;
           height: 100px;
           justify-items: center;
-          background-color: ${theme.hero.bar.colorBackground};
+          background-color: ${theme.color.principals.darkerPurpleText};
           align-items: center;
           grid-auto-flow: column;
           padding: 0 15%;
@@ -195,38 +248,14 @@ const Hero = props => {
           }
           button {
             padding: 7px 69px;
-            background-Color: ${theme.hero.bar.color};
-            border: groove 0.5em ${theme.hero.bar.colorBackground};  
+            background-color: ${theme.color.principals.white};
             border-radius: 1em;
-            color: ${theme.hero.h1.color};
+            color: ${theme.color.principals.darkerPurpleText};
             font-size: 18px;
             cursor: pointer;
+            border: none;
           }
         }
-        h1 {
-          text-align: center;
-          font-size: ${theme.hero.h1.size};
-          margin: ${theme.space.stack.l};
-          color: ${theme.hero.h1.color};
-          line-height: ${theme.hero.h1.lineHeight};
-          text-remove-gap: both 0 "Open Sans";
-          :global(strong) {
-            position: relative;
-            &::after,
-            &::before {
-              content: "›";
-              color: ${theme.text.color.attention};
-              margin: 0 ${theme.space.xs} 0 0;
-              text-shadow: 0 0 ${theme.space.s} ${theme.color.neutral.gray.k};
-            }
-            &::after {
-              content: "‹";
-              margin: 0 0 0 ${theme.space.xs};
-            }
-          }
-        }
-
-
       `}</style>
     </React.Fragment>
   );

@@ -129,6 +129,7 @@ class Evaluations extends React.Component {
             height: 100px;
             min-height: 53vh;
             width: 100%;
+            grid-gap: 1rem;
             justify-items: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
@@ -151,6 +152,18 @@ class Evaluations extends React.Component {
             .progress-line {
               display: flex;
               align-items: center;
+            }
+          }
+
+          @media (max-width: 600px) {
+            .reviews-container {
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr 1fr;
+              height: 100%;
+              grid-gap: 30px;
+              .review-container-comments {
+                width: 300px;
+              }
             }
           }
 

@@ -37,6 +37,24 @@ size:
     small: 5px
 # COLOR
 color:
+  # OUR COLOR VARIBLES
+  principals:
+    darkPurple: &darkPurple '#8e7cc3ff'
+    lightPurple: &lightPurple '#d2bbe5ff'
+    darkerPurpleText: &darkerPurpleText '#4e3b80'
+    white: &white '#fff'
+
+
+
+
+
+
+
+
+
+
+
+
   # color options
   neutral:
     darkGreen: &color-green-dark '#54795E'
