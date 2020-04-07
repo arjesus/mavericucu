@@ -1,70 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import { ThemeContext } from "../../layouts";
 import Contact from "../Contact-inserted";
 
 const feelings = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
 const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
 
-class DynamicForm extends React.Component {
-  state = {
-    formStep: 1
-  };
+const DynamicForm = () => {
 
-  renderNextStep = () => {
-    const { formStep } = this.state;
-    console.log(formStep)
-    this.setState({
-      formStep: formStep + 1
-    });
-  }
+  const [formStep, setFormStep] = useState(1)
+  const [answers, setAnswer] = useState([])
 
-  render() {
-    const { formStep } = this.state;
-    console.log(formStep, '22222222222222222222222222222')
-    return (
-      <React.Fragment>
-        <div className="form-container">
-          {formStep === 1 && (
-            <div className="feel-container">
-              <h3>¿Como te sientes?</h3>
-              <div className="btn-container">
-                {feelings.map(feeling => {
-                  return (
-                    <a className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => this.renderNextStep()}>
-                      <span>{feeling}</span>
-                    </a>
-                  )
-                })}
-              </div>
+  return (
+    <React.Fragment>
+      <div className="form-container">
+        {formStep === 1 && (
+          <div className="feel-container">
+            <h3>¿Como te sientes?</h3>
+            <div className="btn-container">
+              {feelings.map(feeling => {
+                return (
+                  <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,feeling)}}>
+                    <span>{feeling}</span>
+                  </button>
+                )
+              })}
             </div>
-          )}
-          {formStep === 2 && (
-            <div className="feel-container">
-              <h3>¿Como de intensos son tus sentimientos?</h3>
-              <div className="btn-container">
-                {intensity.map(intens => {
-                  return (
-                    <a className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => this.renderNextStep()}>
-                      <span>{intens}</span>
-                    </a>
-                  )
-                })}
-              </div>
+          </div>
+        )}
+        {formStep === 2 && (
+          <div className="feel-container">
+            <h3>¿Como de intensos son tus sentimientos?</h3>
+            <div className="btn-container">
+              {intensity.map(intens => {
+                return (
+                  <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,intens)}}>
+                    <span>{intens}</span>
+                  </button>
+                )
+              })}
             </div>
-          )}
-          {formStep === 3 && (
-            <div className="feel-container">
-              <h3>
-                Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
+          </div>
+        )}
+        {formStep === 3 && (
+          <div className="feel-container">
+            <h3>
+              Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
             </h3>
-              <div className="form-integrated">
-                <ThemeContext.Consumer>{theme => <Contact theme={theme} />}</ThemeContext.Consumer>
-              </div>
+            <div className="form-integrated">
+              <ThemeContext.Consumer>{theme => <Contact theme={theme} answers={answers} />}</ThemeContext.Consumer>
             </div>
-          )}
-        </div>
-        {/* --- STYLES --- */}
-        <style jsx>{`
+          </div>
+        )}
+      </div>
+      {/* --- STYLES --- */}
+      <style jsx>{`
           .form-container {
             background-color: #fff;
             min-height: 65vh;
@@ -100,9 +89,9 @@ class DynamicForm extends React.Component {
             }
           }
         `}</style>
-      </React.Fragment>
-    );
-  }
+    </React.Fragment>
+  );
 }
+
 
 export default DynamicForm;

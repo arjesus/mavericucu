@@ -34,7 +34,8 @@ const Contact = props => {
   }
 
   function sendMessage(values) {
-    fetch("/", {
+    const getFormUrl = "https://getform.io/f/5402de69-81bf-4618-8e2d-422a3738881c";
+    fetch(getFormUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...values })
@@ -53,7 +54,7 @@ const Contact = props => {
     console.log("submit Error");
   }
 
-  return (
+  return (  
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
