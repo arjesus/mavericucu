@@ -50,29 +50,27 @@ const Hero = props => {
             <button>Contactanos</button>
           </div>
         </section>
+        <h2>Fácil, asequible y 100% adaptado a ti</h2>
         <section className="hero-block-images-header">
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <h3>Contactanos </h3>
             <p>
-              Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto
-              contigo en la hora y momento que blabla.
+              Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
+              contacto contigo en la hora y momento que solicites.
             </p>
           </div>
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <h3>Habla con nuestro especialista guia </h3>
             <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para
-              encontrar el psicólogo que más se adapte a tus necesidades.
+              Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
+              forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
             </p>
           </div>
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <h3>Comienza tu terapia online </h3>
             <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para
-              encontrar el psicólogo que más se adapte a tus necesidades.
+              Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
+              gratuita.
             </p>
           </div>
         </section>
@@ -118,6 +116,7 @@ const Hero = props => {
             grid-template-rows: 1fr 0.2fr 1fr;
             height: 100%;
             grid-gap: 30px;
+            padding: 25px;
             img {
               width: 100%;
             }
@@ -129,7 +128,7 @@ const Hero = props => {
           p {
             font-size: 1rem;
           }
-          .mobile-button button{
+          .mobile-button button {
             padding: 11px 69px;
             background-color: ${theme.color.principals.darkerPurpleText};
             border: none;
@@ -137,6 +136,11 @@ const Hero = props => {
             color: ${theme.color.principals.white};
             font-size: 20px;
             cursor: pointer;
+          }
+          .padding-block {
+            padding: 30px 25px !important;
+            display: grid;
+            grid-template-rows: 1.5fr 0.2fr 1fr;
           }
         }
 
@@ -163,13 +167,8 @@ const Hero = props => {
             img {
               width: 70%;
             }
-            h2 {
-              color: ${theme.hero.h1.color};
-              font-size: 35px;
-              font-weight: 700;
-            }
             p {
-              color: ${theme.hero.h1.color};
+              color: ${theme.color.principals.darkerPurpleText};
               font-size: 16px;
               line-height: 1.4rem;
             }
@@ -188,12 +187,17 @@ const Hero = props => {
               padding: 7px 69px;
               background-color: ${theme.color.principals.darkerPurpleText};
               border: none;
-              border-radius: 1em;
+              border-radius: 0.5 em;
               color: ${theme.color.principals.white};
               font-size: 18px;
               cursor: pointer;
               width: 50%;
             }
+          }
+          h2 {
+            color: ${theme.color.principals.darkerPurpleText};
+            font-size: 35px;
+            font-weight: 700;
           }
           .hero-block-images-header {
             display: grid;
@@ -219,7 +223,7 @@ const Hero = props => {
             }
             h3 {
               text-align: center;
-              color: ${theme.hero.h1.color};
+              color: ${theme.color.principals.darkerPurpleText};
               font-size: 16px;
               line-height: 1.4rem;
               margin-bottom: 10px;
@@ -227,9 +231,54 @@ const Hero = props => {
             }
             p {
               text-align: center;
-              color: ${theme.hero.h1.color};
+              color: ${theme.color.principals.darkerPurpleText};
               font-size: 16px;
               line-height: 1.4rem;
+            }
+          }
+          @media (max-width: 600px) {
+            h2 {
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 25px;
+              font-weight: 600;
+              text-align: center;
+            }
+            .hero-sub-header {
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr 1fr;
+              grid-row-gap: 40px;
+              width: 100%;
+              justify-items: center;
+              img {
+                width: 100%;
+              }
+              .hero-sub-text {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 0.2fr;
+                justify-items: center;
+                text-align: center;
+                width: 100%;
+                button {
+                  width: 100%;
+                }
+              }
+            }
+            .hero-block-images-header {
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr 1fr 1fr;
+              height: 100%;
+              .hero-sub-image {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 0.5fr 1.5fr;
+                grid-template-rows: 1fr;
+                img {
+                  width: 100%;
+                  margin: 0;
+                }
+              }
             }
           }
         }
@@ -264,7 +313,7 @@ const Hero = props => {
 Hero.propTypes = {
   scrollToContent: PropTypes.func.isRequired,
   backgrounds: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
 };
 
 export default Hero;

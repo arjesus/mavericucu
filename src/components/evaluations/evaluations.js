@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from '../../../static/images/lirio.png'
+import logo from "../../../static/images/lirio.png";
 
 const arrOfData = [
   {
@@ -8,7 +8,8 @@ const arrOfData = [
     percentage: "85%",
     style: "width: 85%",
     title: "Header de la review",
-    text: "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
+    text:
+      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
     author: "name autor"
   },
   {
@@ -16,7 +17,8 @@ const arrOfData = [
     percentage: "7%",
     style: "width: 85%",
     title: "Header de la review",
-    text: "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
+    text:
+      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
     author: "name autor"
   },
   {
@@ -24,7 +26,8 @@ const arrOfData = [
     percentage: "3%",
     style: "width: 3%",
     title: "Header de la review",
-    text: "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
+    text:
+      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
     author: "name autor"
   },
   {
@@ -32,7 +35,8 @@ const arrOfData = [
     percentage: "4%",
     style: "width: 4%",
     title: "Header de la review",
-    text: "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
+    text:
+      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
     author: "name autor"
   },
   {
@@ -40,7 +44,8 @@ const arrOfData = [
     percentage: "1%",
     style: "width: 1%",
     title: "Header de la review",
-    text: "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
+    text:
+      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
     author: "name autor"
   }
 ];
@@ -50,7 +55,8 @@ class Evaluations extends React.Component {
     counter: 0,
     contentToRender: {
       title: "Header de la review",
-      text: "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
+      text:
+        "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
       author: "name autor"
     }
   };
@@ -80,7 +86,7 @@ class Evaluations extends React.Component {
     counter += 1;
     this.setState({
       counter,
-      contentToRender: newReviewToRender,
+      contentToRender: newReviewToRender
     });
   }
 
@@ -106,18 +112,26 @@ class Evaluations extends React.Component {
                   </span>
                   <div className="progress-line">
                     <div className="progress">
-                      <div className="progress-done" style={this.getTextStyle(item.percentage)}></div>
+                      <div
+                        className="progress-done"
+                        style={this.getTextStyle(item.percentage)}
+                      ></div>
                     </div>
                     <span className="percent">{item.percentage}</span>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
           <div className="review-container-comments">
-            <div className="text"><img src={logo} /><h3>{contentToRender.title}</h3></div>
+            <div className="text">
+              <img src={logo} />
+              <h3>{contentToRender.title}</h3>
+            </div>
             <p>{contentToRender.text}</p>
-            <p><i>{contentToRender.author}</i></p>
+            <p>
+              <i>{contentToRender.author}</i>
+            </p>
           </div>
         </div>
         {/* --- STYLES --- */}
@@ -125,7 +139,7 @@ class Evaluations extends React.Component {
           .reviews-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            background-color: #73a580;
+            background-color: #4e3b80;
             height: 100px;
             min-height: 53vh;
             width: 100%;
@@ -140,12 +154,12 @@ class Evaluations extends React.Component {
             padding: 50px 10%;
 
             h3 {
-              color: #73a580;
+              color: #4e3b80;
               font-size: 24px;
             }
 
             p {
-              color: #73a580;
+              color: #4e3b80;
               font-size: 18px;
             }
 
@@ -170,7 +184,8 @@ class Evaluations extends React.Component {
           .reviews-container-bars {
             border-radius: 2px;
             background-color: #ffffff;
-            box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 rgb(255, 255, 255);
+            box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
+              0 6px 14px 0 rgb(255, 255, 255);
             padding: 25px;
 
             h3 {
@@ -193,8 +208,8 @@ class Evaluations extends React.Component {
           }
 
           .progress-done {
-            background: linear-gradient(to left, #c5c392, #73a580);
-            box-shadow: 0 3px 3px -5px #c5c392, #73a580;
+            background: linear-gradient(to left, #d2bbe5ff, #4e3b80);
+            box-shadow: 0 3px 3px -5px #d2bbe5ff, #4e3b80;
             border-radius: 5px;
             height: 10px;
             width: 0;
@@ -207,8 +222,10 @@ class Evaluations extends React.Component {
           .review-container-comments {
             border-radius: 2px;
             background-color: #ffffff;
-            -webkit-box-shadow: 0 3px 26px -1px rgba(0,0,0,.02), 0 1px 33px 0 rgba(0,0,0,.05), 0 6px 14px 0 rgb(255,255,255);
-            box-shadow: 0 3px 26px -1px rgba(0,0,0,.02), 0 1px 33px 0 rgba(0,0,0,.05), 0 6px 14px 0 rgb(255,255,255);
+            -webkit-box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02),
+              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 rgb(255, 255, 255);
+            box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
+              0 6px 14px 0 rgb(255, 255, 255);
             padding: 25px;
             width: 500px;
             height: 100%;
