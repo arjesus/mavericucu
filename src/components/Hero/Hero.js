@@ -186,10 +186,10 @@ const Hero = props => {
               justify-items: center;
             }
             button {
-              padding: 7px 69px;
+              padding: 7px 0;
               background-color: ${theme.color.principals.darkerPurpleText};
               border: none;
-              border-radius: 0.5 em;
+              border-radius: 0.5rem;
               color: ${theme.color.principals.white};
               font-size: 18px;
               cursor: pointer;
