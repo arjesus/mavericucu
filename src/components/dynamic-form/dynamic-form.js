@@ -6,8 +6,9 @@ const feelings = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
 const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
 
 const DynamicForm = () => {
-  const [formStep, setFormStep] = useState(1);
-  const [answers, setAnswer] = useState([]);
+
+  const [formStep, setFormStep] = useState(1)
+  const [answers, setAnswer] = useState([])
 
   return (
     <React.Fragment>
@@ -18,17 +19,10 @@ const DynamicForm = () => {
             <div className="btn-container">
               {feelings.map(feeling => {
                 return (
-                  <button
-                    className="feel-btn"
-                    href="#"
-                    key={indexedDB.toString()}
-                    onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer(answers, feeling);
-                    }}
-                  >
+                  <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,feeling)}}>
                     <span>{feeling}</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -39,17 +33,10 @@ const DynamicForm = () => {
             <div className="btn-container">
               {intensity.map(intens => {
                 return (
-                  <button
-                    className="feel-btn"
-                    href="#"
-                    key={indexedDB.toString()}
-                    onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer(answers, intens);
-                    }}
-                  >
+                  <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,intens)}}>
                     <span>{intens}</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -60,55 +47,56 @@ const DynamicForm = () => {
               Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
             </h3>
             <div className="form-integrated">
-              <ThemeContext.Consumer>
-                {theme => <Contact theme={theme} answers={answers} />}
-              </ThemeContext.Consumer>
+              <ThemeContext.Consumer>{theme => <Contact theme={theme} answers={answers} />}</ThemeContext.Consumer>
             </div>
           </div>
         )}
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
-        .form-container {
-          background-color: #fff;
-          min-height: 65vh;
-          height: 100px;
-          width: 100%;
-          padding: 20px 0;
-          .feel-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 100%;
-            @media (max-width: 600px) {
-
-            }
-            .btn-container {
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-              grid-gap: 10px;
-              .feel-btn {
-                padding: 15px 50px;
-                background-color: #4e3b80;
-                color: #fff;
-                font-size: 20px;
-                text-align: center;
+          .form-container {
+            background-color: #fff;
+            min-height: 65vh;
+            height: 100px;
+            width: 100%;
+            padding: 20px 30px;
+            .feel-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+              height: 100%;
+              .btn-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 10px;
+                .feel-btn {
+                  padding: 15px 50px;
+                  background-color: #73a580;
+                  color: #fff;
+                  font-size: 20px;
+                  text-align: center;
+                }
               }
             }
+            .form-integrated {
+              margin-top: 20px;
+              width: 70%;
+            }
+            h3 {
+              color: #73a580;
+              font-size: 24px;
+            }
           }
-          .form-integrated {
-            margin-top: 20px;
-            width: 70%;
+          @media (max-width: 600px) {
+            .btn-container {
+              grid-template-columns: 1fr !important;
+            }
           }
-          h3 {
-            color: #4e3b80;
-            font-size: 24px;
-          }
-        }
-      `}</style>
+        `}</style>
     </React.Fragment>
   );
-};
+}
+
 
 export default DynamicForm;
