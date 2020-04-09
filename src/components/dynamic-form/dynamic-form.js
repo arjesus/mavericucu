@@ -14,7 +14,7 @@ const DynamicForm = () => {
       <div className="form-container">
         {formStep === 1 && (
           <div className="feel-container">
-            <h3>¿Como te sientes?</h3>
+            <h3>¿Como sientes?</h3>
             <div className="btn-container">
               {feelings.map(feeling => {
                 return (
@@ -81,9 +81,7 @@ const DynamicForm = () => {
             justify-content: space-evenly;
             align-items: center;
             height: 100%;
-            @media (max-width: 600px) {
 
-            }
             .btn-container {
               display: grid;
               grid-template-columns: 1fr 1fr 1fr;
@@ -104,6 +102,18 @@ const DynamicForm = () => {
           h3 {
             color: #4e3b80;
             font-size: 24px;
+          }
+        }
+        @media (max-width: 600px) {
+          .form-container {
+            min-height: 40vh;
+          }
+          .feel-btn {
+            padding: 15px 14px;
+            font-size: 18px;
+          }
+          .feel-btn {
+            padding: 15px 15px !important;
           }
         }
       `}</style>
