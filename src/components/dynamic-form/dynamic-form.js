@@ -16,12 +16,12 @@ const DynamicForm = () => {
           <div className="feel-container">
             <h3>¿Como sientes?</h3>
             <div className="btn-container">
-              {feelings.map(feeling => {
+              {feelings.map((feeling, index) => {
                 return (
                   <button
                     className="feel-btn"
                     href="#"
-                    key={indexedDB.toString()}
+                    key={index.toString()}
                     onClick={() => {
                       return setFormStep(formStep + 1), setAnswer(answers, feeling);
                     }}
@@ -37,17 +37,17 @@ const DynamicForm = () => {
           <div className="feel-container">
             <h3>¿Como de intensos son tus sentimientos?</h3>
             <div className="btn-container">
-              {intensity.map(intens => {
+              {intensity.map((items, index) => {
                 return (
                   <button
                     className="feel-btn"
                     href="#"
-                    key={indexedDB.toString()}
+                    key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer(answers, intens);
+                      return setFormStep(formStep + 1), setAnswer(answers, items);
                     }}
                   >
-                    <span>{intens}</span>
+                    <span>{items}</span>
                   </button>
                 );
               })}
