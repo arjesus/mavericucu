@@ -18,7 +18,7 @@ const Hero = props => {
             especializados en el impacto emocional del coronavirus COVID-19.
           </p>
         </div>
-        {window.innerWidth <= 600 && (
+        {window && window.innerWidth <= 600 && (
           <button className="mobile-button" aria-label="scroll">
             Reserva tu cita online
           </button>
@@ -27,7 +27,7 @@ const Hero = props => {
           <img src={womanWorried} alt="Mujer preocupada" />
         </div>
       </section>
-      {window.innerWidth > 600 && (
+      {window && window.innerWidth > 600 && (
         <section className="hero-bar">
           <h2>
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
