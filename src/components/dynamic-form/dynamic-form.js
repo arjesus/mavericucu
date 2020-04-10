@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ThemeContext } from "../../layouts";
 import Contact from "../Contact-inserted";
+import DatePickerMaterialComponent from "./date-picker/datepicker.material";
 
 const feelings = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
 const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
@@ -54,7 +55,12 @@ const DynamicForm = () => {
             </div>
           </div>
         )}
-        {formStep === 3 && (
+        {formStep === 3 &&
+          <div className="feel-container">
+            <DatePickerMaterialComponent />
+          </div>
+        }
+        {formStep === 4 && (
           <div className="feel-container">
             <h3>
               Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
