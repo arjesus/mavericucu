@@ -1,6 +1,7 @@
 import React from "react";
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme, withStyles } from "@material-ui/core/styles";
+import createPalette from '@material-ui/core/styles/createPalette';
 import DateFnsUtils from "@date-io/date-fns";
 import userHandleDate from "../handleDateChange";
 
@@ -17,7 +18,10 @@ export default function DatePickerMaterialComponent() {
   const dateHandler = userHandleDate(new Date(), id);
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils} theme={theme}>
-      <DatePicker theme={theme} {...dateHandler} orientation="landscape" variant="static" />
+      <MuiThemeProvider theme={theme}>
+        <DatePicker theme={theme} {...dateHandler} orientation="landscape" variant="static" />
+      </MuiThemeProvider>
     </MuiPickersUtilsProvider>
   );
 }
+
