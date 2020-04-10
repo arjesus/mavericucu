@@ -6,7 +6,7 @@ export function getScreenWidth() {
 
 export function isWideScreen() {
   if (typeof window !== `undefined`) {
-    const windowWidth = window.innerWidth;
+    const Width = window.innerWidth;
     const mediaQueryL = 1024;
 
     return windowWidth >= mediaQueryL;

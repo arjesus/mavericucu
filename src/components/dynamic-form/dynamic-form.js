@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ThemeContext } from "../../layouts";
 import Contact from "../Contact-inserted";
+import DatePickerMaterialComponent from "./date-picker/datepicker.material";
 
 const feelings = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
 const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
@@ -15,11 +16,22 @@ const DynamicForm = () => {
       <div className="form-container">
         {formStep === 1 && (
           <div className="feel-container">
-            <h3>¿Como te sientes?</h3>
+            <h3>¿Como sientes?</h3>
             <div className="btn-container">
-              {feelings.map(feeling => {
+              {feelings.map((feeling, index) => {
                 return (
+<<<<<<< HEAD
                   <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,feeling)}}>
+=======
+                  <button
+                    className="feel-btn"
+                    href="#"
+                    key={index.toString()}
+                    onClick={() => {
+                      return setFormStep(formStep + 1), setAnswer(answers, feeling);
+                    }}
+                  >
+>>>>>>> 39d4b33bf652b18bdc2889147567b7a655b44ff8
                     <span>{feeling}</span>
                   </button>
                 )
@@ -31,17 +43,29 @@ const DynamicForm = () => {
           <div className="feel-container">
             <h3>¿Como de intensos son tus sentimientos?</h3>
             <div className="btn-container">
-              {intensity.map(intens => {
+              {intensity.map((items, index) => {
                 return (
-                  <button className="feel-btn" href="#" key={indexedDB.toString()} onClick={() => {return setFormStep(formStep + 1),setAnswer(answers,intens)}}>
-                    <span>{intens}</span>
+                  <button
+                    className="feel-btn"
+                    href="#"
+                    key={index.toString()}
+                    onClick={() => {
+                      return setFormStep(formStep + 1), setAnswer(answers, items);
+                    }}
+                  >
+                    <span>{items}</span>
                   </button>
                 )
               })}
             </div>
           </div>
         )}
-        {formStep === 3 && (
+        {formStep === 3 &&
+          <div className="feel-container">
+            <DatePickerMaterialComponent />
+          </div>
+        }
+        {formStep === 4 && (
           <div className="feel-container">
             <h3>
               Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
@@ -54,6 +78,7 @@ const DynamicForm = () => {
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
+<<<<<<< HEAD
           .form-container {
             background-color: #fff;
             min-height: 65vh;
@@ -77,6 +102,31 @@ const DynamicForm = () => {
                   font-size: 20px;
                   text-align: center;
                 }
+=======
+        .form-container {
+          background-color: #fff;
+          min-height: 65vh;
+          height: 100px;
+          width: 100%;
+          padding: 20px 0;
+          .feel-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+
+            .btn-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-gap: 10px;
+              .feel-btn {
+                padding: 15px 50px;
+                background-color: #4e3b80;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+>>>>>>> 39d4b33bf652b18bdc2889147567b7a655b44ff8
               }
             }
             .form-integrated {
@@ -93,7 +143,24 @@ const DynamicForm = () => {
               grid-template-columns: 1fr !important;
             }
           }
+<<<<<<< HEAD
         `}</style>
+=======
+        }
+        @media (max-width: 600px) {
+          .form-container {
+            min-height: 40vh;
+          }
+          .feel-btn {
+            padding: 15px 14px;
+            font-size: 18px;
+          }
+          .feel-btn {
+            padding: 15px 15px !important;
+          }
+        }
+      `}</style>
+>>>>>>> 39d4b33bf652b18bdc2889147567b7a655b44ff8
     </React.Fragment>
   );
 }

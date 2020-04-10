@@ -18,16 +18,16 @@ const Hero = props => {
             especializados en el impacto emocional del coronavirus COVID-19.
           </p>
         </div>
-        {window.innerWidth <= 600 && (
-          <div className="mobile-button">
-            <button aria-label="scroll">Reserva cita online </button>
-          </div>
+        {typeof window !== "undefined" && window.innerWidth <= 600 && (
+          <button className="mobile-button" aria-label="scroll">
+            Reserva tu cita online
+          </button>
         )}
         <div>
           <img src={womanWorried} alt="Mujer preocupada" />
         </div>
       </section>
-      {window.innerWidth > 600 && (
+      {typeof window !== "undefined" && window.innerWidth > 600 && (
         <section className="hero-bar">
           <h2>
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
@@ -113,12 +113,23 @@ const Hero = props => {
         @media (max-width: 600px) {
           .hero {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 0.2fr 1fr;
+            grid-template-rows: 0.7fr 0fr 1fr;
             height: 100%;
             grid-gap: 30px;
             padding: 25px;
+            margin-top: 80px;
             img {
               width: 100%;
+            }
+            .mobile-button {
+              margin: 0 auto;
+              padding: 11px 69px;
+              background-color: ${theme.color.principals.darkerPurpleText};
+              border: none;
+              border-radius: 0.5em;
+              color: ${theme.color.principals.white};
+              font-size: 20px;
+              cursor: pointer;
             }
           }
           h1 {
@@ -127,15 +138,6 @@ const Hero = props => {
           }
           p {
             font-size: 1rem;
-          }
-          .mobile-button button {
-            padding: 11px 69px;
-            background-color: ${theme.color.principals.darkerPurpleText};
-            border: none;
-            border-radius: 1em;
-            color: ${theme.color.principals.white};
-            font-size: 20px;
-            cursor: pointer;
           }
           .padding-block {
             padding: 30px 25px !important;
@@ -184,10 +186,10 @@ const Hero = props => {
               justify-items: center;
             }
             button {
-              padding: 7px 69px;
+              padding: 7px 0;
               background-color: ${theme.color.principals.darkerPurpleText};
               border: none;
-              border-radius: 0.5 em;
+              border-radius: 0.5rem;
               color: ${theme.color.principals.white};
               font-size: 18px;
               cursor: pointer;
@@ -262,6 +264,7 @@ const Hero = props => {
                 width: 100%;
                 button {
                   width: 100%;
+                  border-radius: 0.5rem;
                 }
               }
             }
@@ -274,9 +277,15 @@ const Hero = props => {
                 display: grid;
                 grid-template-columns: 0.5fr 1.5fr;
                 grid-template-rows: 1fr;
+                column-gap: 15px;
                 img {
                   width: 100%;
                   margin: 0;
+                }
+                p {
+                  text-align: justify;
+                  font-size: 14px;
+                  line-height: 1.2rem;
                 }
               }
             }
@@ -313,7 +322,7 @@ const Hero = props => {
 Hero.propTypes = {
   scrollToContent: PropTypes.func.isRequired,
   backgrounds: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
 };
 
 export default Hero;
