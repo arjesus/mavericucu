@@ -9,6 +9,8 @@ const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayu
 const DynamicForm = () => {
   const [formStep, setFormStep] = useState(1);
   const [answers, setAnswer] = useState([]);
+  console.log(answers);
+  console.log(formStep);
 
   return (
     <React.Fragment>
@@ -24,7 +26,7 @@ const DynamicForm = () => {
                     href="#"
                     key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer(answers, feeling);
+                      return setFormStep(formStep + 1), setAnswer([...answers, feeling]);
                     }}
                   >
                     <span>{feeling}</span>
@@ -39,13 +41,14 @@ const DynamicForm = () => {
             <h3>¿Como de intensos son tus sentimientos?</h3>
             <div className="btn-container">
               {intensity.map((items, index) => {
+                console.log(items, 'aaaaaaaaaaaaaaaaaaaaa')
                 return (
                   <button
                     className="feel-btn"
                     href="#"
                     key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer(answers, items);
+                      return setFormStep(formStep + 1), setAnswer([...answers, items]);
                     }}
                   >
                     <span>{items}</span>
@@ -55,11 +58,15 @@ const DynamicForm = () => {
             </div>
           </div>
         )}
-        {formStep === 3 &&
+        {formStep === 3 && (
           <div className="feel-container">
-            <DatePickerMaterialComponent />
+            <DatePickerMaterialComponent
+              setFormStep={setFormStep}
+              setAnswer={setAnswer}
+              answers={answers}
+            />
           </div>
-        }
+        )}
         {formStep === 4 && (
           <div className="feel-container">
             <h3>
@@ -117,8 +124,6 @@ const DynamicForm = () => {
           .feel-btn {
             padding: 15px 14px;
             font-size: 18px;
-          }
-          .feel-btn {
             padding: 15px 15px !important;
           }
         }

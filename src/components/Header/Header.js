@@ -201,10 +201,10 @@ class Header extends React.Component {
               &.homepage:not(.fixed) {
                 :global(a.logoType),
                 h1 {
-                  color: ${theme.color.neutral.green};
+                  color: ${theme.color.principals.darkerPurpleText};
                 }
                 h2 {
-                  color: ${theme.color.neutral.darkGreen};
+                  color: ${theme.color.principals.lightPurple};
                 }
               }
             }

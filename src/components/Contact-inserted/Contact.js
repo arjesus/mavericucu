@@ -94,7 +94,7 @@ const Contact = props => {
                     { required: true, message: "Cuentanos como te sientes", whitespace: true }
                   ]
                 })(
-                  <TextArea name="message" placeholder="" autosize={{ minRows: 4, maxRows: 10 }} />
+                  <TextArea name="message" placeholder="" autoSize={{ minRows: 4, maxRows: 10 }} />
                 )}
               </FormItem>
               <FormItem>
@@ -110,45 +110,45 @@ const Contact = props => {
                 background: transparent;
 
                 h3 {
-                  color: #73a580 !important;
+                  color: #4e3b80 !important;
                 }
               }
               .form :global(.ant-row.ant-form-item) {
-                color: #73a580 !important;
+                color: #4e3b80 !important;
                 margin: 0 0 1em;
               }
               .form :global(.ant-row.ant-form-item:last-child) {
-                color: #73a580 !important;
+                color: #4e3b80 !important;
                 margin-top: 1em;
               }
               .form :global(.ant-form-item-control) {
                 line-height: 1em;
-                color: #73a580 !important;
+                color: #4e3b80 !important;
               }
               .form :global(.ant-form-item-label) {
 
                 line-height: 1em;
-                color: #73a580;
+                color: #4e3b80;
                 margin-bottom: 0.5em;
               }
               .form :global(.ant-form-item) {
-                color: #73a580 !important;
+                color: #4e3b80 !important;
                 margin: 0;
               }
               .form :global(.ant-input) {
-                color: #73a580 !important;
+                color: #4e3b80 !important;
                 appearance: none;
                 height: auto;
                 font-size: 1.2em;
                 padding: 0.5em 0.6em;
               }
               .form :global(.ant-btn-primary) {
-                color: #73a580 !important;
+                color: #fff !important;
                 height: auto;
                 font-size: 1.2em;
                 padding: 0.5em 3em;
-                background: #73a580;
-                border: 1px solid #73a580;
+                background: #4e3b80;
+                border: 1px solid #4e3b80;
               }
               .form :global(.ant-form-explain) {
                 margin-top: 0.2em;
@@ -168,7 +168,7 @@ const Contact = props => {
 };
 
 Contact.propTypes = {
-  form: PropTypes.object
+  form: PropTypes.object,
 };
 
 const ContactForm = Form.create({})(Contact);
