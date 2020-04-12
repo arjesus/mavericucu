@@ -17,7 +17,7 @@ const DynamicForm = () => {
       <div className="form-container">
         <div className="form-steps-container">
           {formStep !== 1 && <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>⟵</p>}
-          <p className="form-steps-counter">{formStep}/4</p>
+          <p className="form-steps-counter">{formStep}/5</p>
           {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
         </div>
         {formStep === 1 && (
@@ -66,6 +66,28 @@ const DynamicForm = () => {
         )}
         {formStep === 3 && (
           <div className="feel-container">
+            <h3>¿Tienes experiencia con terapias anteriores?</h3>
+            <div className="btn-container">
+              {["Si","No"].map((items, index) => {
+                return (
+                  <button
+                    className="feel-btn"
+                    href="#"
+                    key={index.toString()}
+                    onClick={() => {
+                      return setFormStep(formStep + 1), setAnswer([...answers, items]);
+                    }}
+                  >
+                    <span>{items}</span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setAnswer([...answers, { items: "omitted" }]) }}>Omitir</p>
+          </div>
+        )}
+        {formStep === 4 && (
+          <div className="feel-container">
             <DatePickerMaterialComponent
               setFormStep={setFormStep}
               setAnswer={setAnswer}
@@ -73,7 +95,7 @@ const DynamicForm = () => {
             />
           </div>
         )}
-        {formStep === 4 && (
+        {formStep === 5 && (
           <div className="feel-container">
             <h3>
               Dejanos tus datos y nos pondremos en contacto contigo para asignarte un profesional
@@ -94,7 +116,7 @@ const DynamicForm = () => {
         color:grey;
         align-items:center;
         justify-content:center;
-        margin:15px 0;
+        margin-top:100px;
 
         .form-steps-counter{
           margin:0 8px;
