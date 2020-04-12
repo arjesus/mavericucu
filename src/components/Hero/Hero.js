@@ -4,6 +4,7 @@ import womanWorried from "../../../static/images/mujer.preocupada.jpg";
 import psicoHelp from "../../../static/images/mujer-psicologa-ayudando.jpg";
 import Evaluations from "../evaluations/evaluations.js";
 import DynamicForm from "../dynamic-form/dynamic-form";
+import Psychology from '../psychology/psychology';
 
 const Hero = props => {
   const { theme } = props;
@@ -76,6 +77,7 @@ const Hero = props => {
         </section>
       </div>
       <Evaluations />
+      <Psychology />
       <DynamicForm />
       {/* --- STYLES --- */}
       <style jsx>{`
