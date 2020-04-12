@@ -37,11 +37,17 @@ const Contact = props => {
     const getFormUrl = "https://getform.io/f/5402de69-81bf-4618-8e2d-422a3738881c";
     fetch(getFormUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...values })
+      data: new FormData(values),
+      dataType: "json",
+      contentType: "multipart/form-data",
+      processData: false,
+      contentType: false,
+      headers: {
+        "Accept": "application/json"
+      }
     })
-      .then(() => {
-        console.log("Form submission success");
+      .then((data) => {
+        console.log(data,"DATAAAAAAA");
         navigate("/success");
       })
       .catch(error => {

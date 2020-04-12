@@ -15,15 +15,19 @@ const DynamicForm = () => {
   return (
     <React.Fragment>
       <div className="form-container">
+        <div className="form-steps-container">
+          {formStep !== 1 && <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>⟵</p>}
+          <p className="form-steps-counter">{formStep}/4</p>
+          {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
+        </div>
         {formStep === 1 && (
           <div className="feel-container">
-            <h3>¿Como sientes?</h3>
+            <h3>¿Que sientes?</h3>
             <div className="btn-container">
               {feelings.map((feeling, index) => {
                 return (
                   <button
                     className="feel-btn"
-                    href="#"
                     key={index.toString()}
                     onClick={() => {
                       return setFormStep(formStep + 1), setAnswer([...answers, feeling]);
@@ -34,6 +38,8 @@ const DynamicForm = () => {
                 );
               })}
             </div>
+
+            <p className="omit" onClick={() => { return setFormStep(formStep + 2), setAnswer([...answers, [{ feeling: "omitted" }, { items: "omitted" }]]) }}>Omitir</p>
           </div>
         )}
         {formStep === 2 && (
@@ -41,7 +47,6 @@ const DynamicForm = () => {
             <h3>¿Como de intensos son tus sentimientos?</h3>
             <div className="btn-container">
               {intensity.map((items, index) => {
-                console.log(items, 'aaaaaaaaaaaaaaaaaaaaa')
                 return (
                   <button
                     className="feel-btn"
@@ -56,6 +61,7 @@ const DynamicForm = () => {
                 );
               })}
             </div>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setAnswer([...answers, { items: "omitted" }]) }}>Omitir</p>
           </div>
         )}
         {formStep === 3 && (
@@ -79,15 +85,37 @@ const DynamicForm = () => {
             </div>
           </div>
         )}
+
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
+      .form-steps-container{
+        display:flex;
+        color:grey;
+        align-items:center;
+        justify-content:center;
+        margin:15px 0;
+
+        .form-steps-counter{
+          margin:0 8px;
+        }
+        .form-steps-actions{
+          cursor:pointer;
+          
+        }
+      }
+      .omit{
+        color:grey;
+        text-decoration:underline;
+        cursor:pointer;
+      }
         .form-container {
           background-color: #fff;
           min-height: 65vh;
           height: 100px;
           width: 100%;
           padding: 20px 0;
+
           .feel-container {
             display: flex;
             flex-direction: column;
@@ -125,6 +153,12 @@ const DynamicForm = () => {
             padding: 15px 14px;
             font-size: 18px;
             padding: 15px 15px !important;
+            margin:3px 0;
+
+          }
+          .btn-container{
+            display:flex !important;
+            flex-direction:column !important;
           }
         }
       `}</style>
