@@ -38,15 +38,15 @@ const Hero = props => {
       )}
       <div className="padding-block">
         <section className="hero-sub-header">
-          <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-          </div>
           <div className="hero-sub-text">
             <h2>Atención especializada y de calidad</h2>
             <p>
               Nuestros especialistas guías te contactaran para de forma segura y privada para
               encontrar el psicólogo que más se adapte a tus necesidades.
             </p>
+          </div>
+          <div className="hero-sub-image">
+            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
             <button>Contactanos</button>
           </div>
         </section>
@@ -248,8 +248,7 @@ const Hero = props => {
             .hero-sub-header {
               display: grid;
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr 1fr;
-              grid-row-gap: 40px;
+              grid-template-rows: 0.6fr 0.6fr;
               width: 100%;
               justify-items: center;
               img {
@@ -262,6 +261,14 @@ const Hero = props => {
                 justify-items: center;
                 text-align: center;
                 width: 100%;
+              }
+              .hero-sub-image {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.6fr 0.2fr;
+                width: 100%;
+                justify-items: center;
+                grid-gap: 15px;
                 button {
                   width: 100%;
                   border-radius: 0.5rem;

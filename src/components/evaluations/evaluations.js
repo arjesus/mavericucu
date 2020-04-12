@@ -101,49 +101,53 @@ class Evaluations extends React.Component {
     return (
       <React.Fragment>
         <div className="reviews-container">
-          <div className="reviews-container-bars">
-            <h3>Reviews</h3>
-            {arrOfData.map((item, index) => {
-              return (
-                <div key={index.toString()}>
-                  <span>
-                    {item.number}
-                    <i className="fas fa-star"></i>
-                  </span>
-                  <div className="progress-line">
-                    <div className="progress">
-                      <div
-                        className="progress-done"
-                        style={this.getTextStyle(item.percentage)}
-                      ></div>
+          <h2>Tu bienestar emocional como nuestro punto de partida</h2>
+          <div className="boxes-container">
+            <div className="reviews-container-bars">
+              <h3>Reviews</h3>
+              {arrOfData.map((item, index) => {
+                return (
+                  <div key={index.toString()}>
+                    <span>
+                      {item.number}
+                      <i className="fas fa-star"></i>
+                    </span>
+                    <div className="progress-line">
+                      <div className="progress">
+                        <div
+                          className="progress-done"
+                          style={this.getTextStyle(item.percentage)}
+                        ></div>
+                      </div>
+                      <span className="percent">{item.percentage}</span>
                     </div>
-                    <span className="percent">{item.percentage}</span>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="review-container-comments">
-            <div className="text">
-              <img src={logo} />
-              <h3>{contentToRender.title}</h3>
+                );
+              })}
             </div>
-            <p>{contentToRender.text}</p>
-            <p>
-              <i>{contentToRender.author}</i>
-            </p>
+            <div className="review-container-comments">
+              <div className="text">
+                <img src={logo} />
+                <h3>{contentToRender.title}</h3>
+              </div>
+              <p>{contentToRender.text}</p>
+              <p>
+                <i>{contentToRender.author}</i>
+              </p>
+            </div>
           </div>
         </div>
         {/* --- STYLES --- */}
         <style jsx>{`
           .reviews-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            background-color: #4e3b80;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            background-color: #ffff;
             height: 100px;
             min-height: 53vh;
             width: 100%;
-            grid-gap: 1rem;
+            grid-gap: 3rem;
             justify-items: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
@@ -152,6 +156,18 @@ class Evaluations extends React.Component {
             -ms-flex-align: center;
             align-items: center;
             padding: 50px 10%;
+
+            .boxes-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 2rem;
+            }
+
+            h2 {
+              color: #4e3b80;
+              font-size: 28px;
+              text-align: center;
+            }
 
             h3 {
               color: #4e3b80;
@@ -172,9 +188,16 @@ class Evaluations extends React.Component {
           @media (max-width: 600px) {
             .reviews-container {
               grid-template-columns: 1fr;
-              grid-template-rows: 1fr 1fr;
+              grid-template-rows: 0.1fr 1fr;
               height: 100%;
               grid-gap: 30px;
+              padding: 10px 10%;
+              .boxes-container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 2rem;
+              }  
               .review-container-comments {
                 width: 300px;
               }
@@ -185,7 +208,7 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 rgb(255, 255, 255);
+              0 6px 14px 0 #4e3b80;
             padding: 25px;
 
             h3 {
@@ -223,9 +246,9 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             -webkit-box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02),
-              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 rgb(255, 255, 255);
+              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 #4e3b80;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 rgb(255, 255, 255);
+              0 6px 14px 0 #4e3b80;
             padding: 25px;
             width: 500px;
             height: 100%;
