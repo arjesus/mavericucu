@@ -13,7 +13,7 @@ const theme = createMuiTheme({
 });
 
 const DatePickerMaterialComponent = props => {
-  const { setFormStep, setAnswer, answers } = props;
+  const { setFormStep, setTime, answers } = props;
   const [value, setDateValue] = useState(new Date());
   const [date, setTimeValue] = useState(new Date());
   const [blockToRender, changeBlock] = useState(1);
@@ -27,8 +27,8 @@ const DatePickerMaterialComponent = props => {
   };
 
   const sendTime = () => {
-    setAnswer([...answers, value + date]);
-    setFormStep(4);
+    setTime( value + date);
+    setFormStep(5);
   };
 
   return (

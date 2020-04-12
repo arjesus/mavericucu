@@ -3,11 +3,16 @@ import { ThemeContext } from "../../layouts";
 import Contact from "../Contact-inserted";
 import DatePickerMaterialComponent from "./date-picker/datepicker.material";
 
-const feelings = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
-const intensity = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
+const feelingsArr = ["Ansiedad", "Tristeza", "Depresion", "Agobio", "Miedo"];
+const intensityArr = ["Ligero", "Esta incrementandose", "Es intenso", "Necesito ayuda urgente"];
 
 const DynamicForm = () => {
   const [formStep, setFormStep] = useState(1);
+  const [feeling, setFeeling] = useState("")
+  const [intensity, setIntensity] = useState("")
+  const [experience, setExperience] = useState("")
+  const [time, setTime] = useState("")
+
   const [answers, setAnswer] = useState([]);
   console.log(answers);
   console.log(formStep);
@@ -24,13 +29,13 @@ const DynamicForm = () => {
           <div className="feel-container">
             <h3>¿Que sientes?</h3>
             <div className="btn-container">
-              {feelings.map((feeling, index) => {
+              {feelingsArr.map((feeling, index) => {
                 return (
                   <button
                     className="feel-btn"
                     key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer([...answers, feeling]);
+                      return setFormStep(formStep + 1), setFeeling(feeling);
                     }}
                   >
                     <span>{feeling}</span>
@@ -39,21 +44,21 @@ const DynamicForm = () => {
               })}
             </div>
 
-            <p className="omit" onClick={() => { return setFormStep(formStep + 2), setAnswer([...answers, [{ feeling: "omitted" }, { items: "omitted" }]]) }}>Omitir</p>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 2), setFeeling("omitido") }}>Omitir</p>
           </div>
         )}
         {formStep === 2 && (
           <div className="feel-container">
             <h3>¿Como de intensos son tus sentimientos?</h3>
             <div className="btn-container">
-              {intensity.map((items, index) => {
+              {intensityArr.map((items, index) => {
                 return (
                   <button
                     className="feel-btn"
                     href="#"
                     key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer([...answers, items]);
+                      return setFormStep(formStep + 1), setIntensity(items);
                     }}
                   >
                     <span>{items}</span>
@@ -61,21 +66,21 @@ const DynamicForm = () => {
                 );
               })}
             </div>
-            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setAnswer([...answers, { items: "omitted" }]) }}>Omitir</p>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setIntensity("omitido") }}>Omitir</p>
           </div>
         )}
         {formStep === 3 && (
           <div className="feel-container">
             <h3>¿Tienes experiencia con terapias anteriores?</h3>
             <div className="btn-container">
-              {["Si","No"].map((items, index) => {
+              {["Si", "No"].map((items, index) => {
                 return (
                   <button
                     className="feel-btn"
                     href="#"
                     key={index.toString()}
                     onClick={() => {
-                      return setFormStep(formStep + 1), setAnswer([...answers, items]);
+                      return setFormStep(formStep + 1), setExperience(items);
                     }}
                   >
                     <span>{items}</span>
@@ -83,15 +88,15 @@ const DynamicForm = () => {
                 );
               })}
             </div>
-            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setAnswer([...answers, { items: "omitted" }]) }}>Omitir</p>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setExperience("omitted") }}>Omitir</p>
           </div>
         )}
         {formStep === 4 && (
           <div className="feel-container">
             <DatePickerMaterialComponent
               setFormStep={setFormStep}
-              setAnswer={setAnswer}
-              answers={answers}
+              setTime={setTime}
+              answers={[feeling, intensity, experience]}
             />
           </div>
         )}
@@ -102,7 +107,7 @@ const DynamicForm = () => {
             </h3>
             <div className="form-integrated">
               <ThemeContext.Consumer>
-                {theme => <Contact theme={theme} answers={answers} />}
+                {theme => <Contact theme={theme} answers={[time, feeling, intensity, experience]} />}
               </ThemeContext.Consumer>
             </div>
           </div>
