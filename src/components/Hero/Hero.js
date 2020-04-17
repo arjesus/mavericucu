@@ -1,10 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import womanWorried from "../../../static/images/mujer.preocupada.jpg";
-import psicoHelp from "../../../static/images/mujer-psicologa-ayudando.jpg";
-import Evaluations from "../evaluations/evaluations.js";
-import DynamicForm from "../dynamic-form/dynamic-form";
+import React from 'react';
+import PropTypes from 'prop-types';
+import womanWorried from '../../../static/images/mujer.preocupada.jpg';
+import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
+import Evaluations from '../evaluations/evaluations.js';
+import DynamicForm from '../dynamic-form/dynamic-form';
 import Psychology from '../psychology/psychology';
+import Checkout from '../Checkout/checkout';
 
 const Hero = props => {
   const { theme } = props;
@@ -19,7 +20,7 @@ const Hero = props => {
             especializados en el impacto emocional del coronavirus COVID-19.
           </p>
         </div>
-        {typeof window !== "undefined" && window.innerWidth <= 600 && (
+        {typeof window !== 'undefined' && window.innerWidth <= 600 && (
           <button className="mobile-button" aria-label="scroll">
             Reserva tu cita online
           </button>
@@ -28,7 +29,7 @@ const Hero = props => {
           <img src={womanWorried} alt="Mujer preocupada" />
         </div>
       </section>
-      {typeof window !== "undefined" && window.innerWidth > 600 && (
+      {typeof window !== 'undefined' && window.innerWidth > 600 && (
         <section className="hero-bar">
           <h2>
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
@@ -76,6 +77,7 @@ const Hero = props => {
           </div>
         </section>
       </div>
+      <Checkout />
       <Evaluations />
       <Psychology />
       <DynamicForm />
@@ -103,7 +105,7 @@ const Hero = props => {
           margin: ${theme.space.stack.l};
           color: ${theme.color.principals.darkerPurpleText};
           line-height: ${theme.hero.h1.lineHeight};
-          text-remove-gap: both 0 "Open Sans";
+          text-remove-gap: both 0 'Open Sans';
         }
 
         p {
@@ -178,7 +180,9 @@ const Hero = props => {
             }
             .hero-sub-image {
               display: flex;
-              justify-content: center;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
             }
             .hero-sub-text {
               display: grid;
@@ -196,6 +200,7 @@ const Hero = props => {
               font-size: 18px;
               cursor: pointer;
               width: 50%;
+              margin-top: 20px;
             }
           }
           h2 {

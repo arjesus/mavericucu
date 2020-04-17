@@ -57,6 +57,7 @@ const Psychology = props => {
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
               0 6px 14px 0 #4e3b80;
             padding: 15px;
+            border-radius: 0.5rem;
           }
 
           .header-card {
