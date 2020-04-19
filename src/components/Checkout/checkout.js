@@ -1,17 +1,6 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-
-const buttonStyles = {
-  fontSize: '13px',
-  textAlign: 'center',
-  color: '#fff',
-  outline: 'none',
-  padding: '12px 60px',
-  boxShadow: '2px 5px 10px rgba(0,0,0,.1)',
-  backgroundColor: 'rgb(255, 178, 56)',
-  borderRadius: '6px',
-  letterSpacing: '1.5px'
-};
+import theme from '../../theme/theme.yaml';
 
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
 
@@ -31,9 +20,23 @@ const redirectToCheckout = async event => {
 
 const Checkout = () => {
   return (
-    <button style={buttonStyles} onClick={redirectToCheckout}>
-      Reservar cita
-    </button>
+    <React.Fragment>
+      <button className="mobile-button" aria-label="scroll" onClick={redirectToCheckout}>
+        Reservar tu cita
+      </button>
+      {/* --- STYLES --- */}
+      <style jsx>{`
+        .mobile-button {
+          padding: 7px 69px;
+          background-color: ${theme.color.principals.white};
+          border-radius: 1em;
+          color: ${theme.color.principals.darkerPurpleText};
+          font-size: 18px;
+          cursor: pointer;
+          border: none;
+        }
+      `}</style>
+    </React.Fragment>
   );
 };
 

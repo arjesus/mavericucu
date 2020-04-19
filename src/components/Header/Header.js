@@ -1,14 +1,14 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import VisibilitySensor from "react-visibility-sensor";
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
-import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
-import config from "../../../content/meta/config";
-import Menu from "../Menu";
+import { ScreenWidthContext, FontLoadedContext } from '../../layouts';
+import config from '../../../content/meta/config';
+import Menu from '../Menu';
 
-import avatar from "../../images/jpg/avatar.jpg";
-import logo from '../../../static/images/lirio.png'
+import avatar from '../../images/jpg/avatar.jpg';
+import logo from '../../../static/images/logo.png';
 
 class Header extends React.Component {
   state = {
@@ -24,8 +24,8 @@ class Header extends React.Component {
   };
 
   getHeaderSize = () => {
-    const fixed = this.state.fixed ? "fixed" : "";
-    const homepage = this.props.path === "/" ? "homepage" : "";
+    const fixed = this.state.fixed ? 'fixed' : '';
+    const homepage = this.props.path === '/' ? 'homepage' : '';
 
     return `${fixed} ${homepage}`;
   };
@@ -39,11 +39,14 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5=="" ? logo : config.gravatarImgMd5 } alt={config.siteTitle} />
+              <img
+                src={config.gravatarImgMd5 == '' ? logo : config.gravatarImgMd5}
+                alt={config.siteTitle}
+              />
             </div>
             <div className="type">
-              <h1>Javi, Agus e Isma</h1>
-              <h2>La van a partir</h2>
+              <h1>Eva Minerva</h1>
+              <h2>Equilibrio y superacion</h2>
             </div>
           </Link>
           <FontLoadedContext.Consumer>
@@ -83,7 +86,7 @@ class Header extends React.Component {
             :global(a.logoType) {
               align-items: center;
               display: flex;
-              flex-direction: "column";
+              flex-direction: 'column';
               color: ${theme.color.principals.darkerPurpleText};
 
               .logo {
@@ -112,13 +115,13 @@ class Header extends React.Component {
           }
 
           .logo {
-            border-radius: 65% 75%;
-            border: 1px solid #eee;
-            display: inline-block;
-            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
             margin: ${theme.space.inline.default};
             overflow: hidden;
-            width: 44px;
+            width: 60px;
             transition: all 0.5s;
 
             .homepage & {
@@ -127,7 +130,7 @@ class Header extends React.Component {
             }
 
             img {
-              width: 100%;
+              width: 80px;
             }
           }
 
@@ -139,7 +142,7 @@ class Header extends React.Component {
             left: 0;
             right: 0;
             height: 1px;
-            top: ${path === "/" ? theme.header.height.homepage : theme.header.height.default};
+            top: ${path === '/' ? theme.header.height.homepage : theme.header.height.default};
           }
 
           @from-width tablet {
@@ -220,8 +223,8 @@ class Header extends React.Component {
               margin: ${theme.space.inline.default};
 
               .fixed & {
-                height: 36px;
-                width: 36px;
+                height: 50px;
+                width: 50px;
               }
 
               .header.homepage:not(.fixed) & {

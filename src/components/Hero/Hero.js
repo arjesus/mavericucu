@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import womanWorried from '../../../static/images/mujer.preocupada.jpg';
+import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
 import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
+import womaSitting from '../../../static/images/header-mujer.jpg';
 import Evaluations from '../evaluations/evaluations.js';
 import DynamicForm from '../dynamic-form/dynamic-form';
 import Psychology from '../psychology/psychology';
@@ -35,7 +36,7 @@ const Hero = props => {
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
             especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
           </h2>
-          <button aria-label="scroll">Reserva cita online </button>
+          <Checkout />
         </section>
       )}
       <div className="padding-block">
@@ -77,7 +78,6 @@ const Hero = props => {
           </div>
         </section>
       </div>
-      <Checkout />
       <Evaluations />
       <Psychology />
       <DynamicForm />
@@ -85,22 +85,21 @@ const Hero = props => {
       <style jsx>{`
         .hero {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          min-height: 80vh;
+          grid-template-columns: 0.7fr 1fr;
+          min-height: 77.7vh;
           height: 100px;
           justify-content: center;
           align-items: center;
-          padding: ${theme.space.inset.l};
-          padding-top: ${theme.header.height.homepage};
           grid-auto-flow: column;
-          grid-column-gap: 60px;
+          padding-left: 50px;
+
           img {
-            width: 80%;
+            width: 100%;
           }
         }
 
         h1 {
-          text-align: center;
+          text-align: left;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
           color: ${theme.color.principals.darkerPurpleText};
@@ -111,7 +110,7 @@ const Hero = props => {
         p {
           font-size: 1rem;
           color: ${theme.color.principals.darkerPurpleText};
-          text-align: center;
+          text-align: left;
         }
 
         @media (max-width: 600px) {

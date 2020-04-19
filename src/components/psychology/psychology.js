@@ -1,53 +1,58 @@
-import React from "react";
+import React from 'react';
 
-import logo from "../../../static/images/lirio.png";
+import logo from '../../../static/images/lirio.png';
+import terapeuta1 from '../../../static/images/psychology/1.png';
+import terapeuta2 from '../../../static/images/psychology/2.png';
+import terapeuta3 from '../../../static/images/psychology/3.png';
+import terapeuta4 from '../../../static/images/psychology/4.png';
+import terapeuta5 from '../../../static/images/psychology/5.png';
 
 const arrOfData = [
   {
     number: 5,
-    name: "luis",
+    name: 'luis',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    img: { logo }
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    img: terapeuta5
   },
   {
     number: 4,
-    name: "Pedro",
+    name: 'Pedro',
     text:
-      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
-    img: { logo }
+      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+    img: terapeuta4
   },
   {
     number: 3,
-    name: "Raquel",
+    name: 'Raquel',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    img: { logo }
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    img: terapeuta3
   },
   {
     number: 2,
-    name: "Melisa",
+    name: 'Melisa',
     text:
-      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
-    img: { logo }
+      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+    img: terapeuta2
   },
   {
     number: 1,
-    name: "Alome",
+    name: 'Sara',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    img: { logo }
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    img: terapeuta1
   }
 ];
 
 const Psychology = props => {
   const cardToRender = [];
   for (let i = 0; i <= 2; i += 1) {
-    console.log(i);
+    const randomPsuchology = Math.random
     cardToRender.push(
       <div className="card-container" key={i.toString()}>
         <div className="header-card">
-          <img src={logo} />
+          <img src={arrOfData[i].img} />
           <h3>{arrOfData[i].name}</h3>
         </div>
         <p>{arrOfData[i].text}</p>
@@ -65,6 +70,7 @@ const Psychology = props => {
             grid-template-columns: 0.3fr 1fr;
             img {
               width: 70px;
+              border-radius: 50%;
             }
             h3 {
               color: #4e3b80;
@@ -118,7 +124,7 @@ const Psychology = props => {
           color: #4e3b80;
           font-size: 18px;
         }
-        @media (max-width: 600px) { 
+        @media (max-width: 600px) {
           .psychology-container {
             display: grid;
             grid-template-columns: 1fr;
