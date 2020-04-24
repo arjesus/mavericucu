@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
 import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
-import womaSitting from '../../../static/images/header-mujer.jpg';
 import Evaluations from '../evaluations/evaluations.js';
 import DynamicForm from '../dynamic-form/dynamic-form';
 import Psychology from '../psychology/psychology';
