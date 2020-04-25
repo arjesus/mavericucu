@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
 import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
 import Evaluations from '../evaluations/evaluations.js';
-import DynamicForm from '../dynamic-form/dynamic-form';
 import Psychology from '../psychology/psychology';
-import Checkout from '../Checkout/checkout';
+import Plans from './components/plans.component';
 
 const Hero = props => {
   const { theme } = props;
@@ -21,9 +20,9 @@ const Hero = props => {
           </p>
         </div>
         {typeof window !== 'undefined' && window.innerWidth <= 600 && (
-          <button className="mobile-button" aria-label="scroll">
+          <a href="#link-to-form-section" className="mobile-button">
             Reserva tu cita online
-          </button>
+          </a>
         )}
         <div>
           <img src={womanWorried} alt="Mujer preocupada" />
@@ -35,7 +34,7 @@ const Hero = props => {
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
             especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
           </h2>
-          <Checkout />
+          <a href="#link-to-form-section">Contactanos</a>
         </section>
       )}
       <div className="padding-block">
@@ -49,7 +48,7 @@ const Hero = props => {
           </div>
           <div className="hero-sub-image">
             <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <button>Contactanos</button>
+            <a href="#link-to-form-section">Contactanos</a>
           </div>
         </section>
         <h2>Fácil, asequible y 100% adaptado a ti</h2>
@@ -79,7 +78,23 @@ const Hero = props => {
       </div>
       <Evaluations />
       <Psychology />
-      <DynamicForm />
+      <section id="link-to-form-section" className="plans-block">
+        <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
+        <div className="plans-sub">
+          <Plans />
+          <div className="plans-sub-text">
+            <h2>Primera cita gratis</h2>
+            <p>
+              Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
+              resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
+              <strong>tu experiencia</strong>
+            </p>
+            <a href="/contact" className="plans-botton">
+              Contacta con nosotros
+            </a>
+          </div>
+        </div>
+      </section>
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
@@ -124,13 +139,8 @@ const Hero = props => {
             }
             .mobile-button {
               margin: 0 auto;
-              padding: 11px 69px;
-              background-color: ${theme.color.principals.darkerPurpleText};
-              border: none;
-              border-radius: 0.5em;
-              color: ${theme.color.principals.white};
-              font-size: 20px;
-              cursor: pointer;
+              padding: 11px 0px;
+              width: 70%;
             }
           }
           h1 {
@@ -187,17 +197,6 @@ const Hero = props => {
               grid-row-gap: 40px;
               width: 80%;
               justify-items: center;
-            }
-            button {
-              padding: 7px 0;
-              background-color: ${theme.color.principals.darkerPurpleText};
-              border: none;
-              border-radius: 0.5rem;
-              color: ${theme.color.principals.white};
-              font-size: 18px;
-              cursor: pointer;
-              width: 50%;
-              margin-top: 20px;
             }
           }
           h2 {
@@ -275,9 +274,10 @@ const Hero = props => {
                 width: 100%;
                 justify-items: center;
                 grid-gap: 15px;
-                button {
+                a {
                   width: 100%;
                   border-radius: 0.5rem;
+                  text-align: center;
                 }
               }
             }
@@ -317,14 +317,64 @@ const Hero = props => {
           h2 {
             color: ${theme.hero.bar.color};
           }
-          button {
-            padding: 7px 69px;
+          a {
             background-color: ${theme.color.principals.white};
-            border-radius: 1em;
             color: ${theme.color.principals.darkerPurpleText};
-            font-size: 18px;
-            cursor: pointer;
-            border: none;
+            text-align: center;
+          }
+        }
+        a {
+          padding: 7px 0;
+          background-color: ${theme.color.principals.darkerPurpleText};
+          border: none;
+          border-radius: 0.5rem;
+          color: ${theme.color.principals.white};
+          font-size: 18px;
+          cursor: pointer;
+          width: 50%;
+          margin-top: 20px;
+          text-align: center;
+        }
+        @media (max-width: 600px) {
+          .plans-block {
+            h2 {
+              text-align: center;
+              margin-bottom: 25px;
+            }
+            .plans-sub {
+              display: grid;
+              grid-template-columns: 1fr !important;
+            }
+            .plans-botton {
+              width: 70% !important;
+            }
+          }
+        }
+        .plans-block {
+          display: flex;
+          width: 100%;
+          height: auto;
+          min-height: 60vh;
+          padding: 50px 10%;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            color: ${theme.color.principals.darkerPurpleText};
+          }
+          .plans-sub {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+          }
+          .plans-sub-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            h2 {
+              margin-bottom: 20px;
+            }
           }
         }
       `}</style>
