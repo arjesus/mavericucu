@@ -107,7 +107,7 @@ const DynamicForm = () => {
             </h3>
             <div className="form-integrated">
               <ThemeContext.Consumer>
-                {theme => <Contact theme={theme} answers={[time, feeling, intensity, experience]} />}
+                {theme => <Contact theme={theme} answers={{time, feeling, intensity, experience}} />}
               </ThemeContext.Consumer>
             </div>
           </div>

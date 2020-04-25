@@ -6,6 +6,7 @@ import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 import PropTypes from "prop-types";
 import React from "react";
+import { postFormAnswers } from "../../services/form"
 
 const FormItem = Form.Item;
 const { TextArea } = Input;
@@ -16,6 +17,7 @@ import { ThemeContext } from "../../layouts";
 
 const Contact = props => {
   const { getFieldDecorator } = props.form;
+  const { answers } = props
 
   function encode(data) {
     return Object.keys(data)
@@ -28,7 +30,7 @@ const Contact = props => {
     props.form.validateFields((err, values) => {
       if (!err) {
         console.log("Received values of form: ", values);
-        sendMessage(values);
+        postFormAnswers({answers:{...answers,name:values.name,email:values.email,userMessage:values.message}})
       }
     });
   }
@@ -98,7 +100,7 @@ const Contact = props => {
                 )}
               </FormItem>
               <FormItem>
-                <Button type="primary" htmlType="submit">
+                <Button type="primary" onClick={handleSubmit}>
                   Enviar
                 </Button>
               </FormItem>
