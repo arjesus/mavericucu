@@ -142,9 +142,9 @@ class Evaluations extends React.Component {
           .reviews-container {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 0fr 1fr;
             background-color: #ffff;
-            height: 100px;
+            height: auto;
             min-height: 53vh;
             width: 100%;
             grid-gap: 3rem;

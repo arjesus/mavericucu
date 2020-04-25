@@ -139,7 +139,7 @@ const DynamicForm = () => {
         .form-container {
           background-color: #fff;
           min-height: 65vh;
-          height: 100px;
+          height: auto;
           width: 100%;
           padding: 20px 0;
 
@@ -148,7 +148,7 @@ const DynamicForm = () => {
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            height: 100%;
+            height: auto;
 
             .btn-container {
               display: grid;

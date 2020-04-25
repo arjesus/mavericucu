@@ -29,7 +29,8 @@ const Footer = props => {
           padding: ${theme.space.inset.default};
           top: 0;
           width: 100%;
-          height: 15vh;
+          min-height: 15vh;
+          height: auto;
           justify-content: center;
 
           & :global(a.footer-link) {

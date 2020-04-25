@@ -86,12 +86,11 @@ const Hero = props => {
           display: grid;
           grid-template-columns: 0.7fr 1fr;
           min-height: 77.7vh;
-          height: 100px;
+          height: auto;
           justify-content: center;
           align-items: center;
           grid-auto-flow: column;
           padding-left: 50px;
-
           img {
             width: 100%;
           }
@@ -154,7 +153,7 @@ const Hero = props => {
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 50vh;
-            height: 100px;
+            height: auto;
             -webkit-box-align: center;
             -ms-flex-align: center;
             -webkit-align-items: center;
@@ -205,18 +204,20 @@ const Hero = props => {
             color: ${theme.color.principals.darkerPurpleText};
             font-size: 35px;
             font-weight: 700;
+            margin-top: 50px;
           }
           .hero-block-images-header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             width: 100%;
             min-height: 50vh;
-            height: 100px;
+            height: auto;
             -ms-flex-align: center;
             -ms-flex-align: center;
             grid-auto-flow: column;
             grid-column-gap: 60px;
             justify-items: center;
+            margin-top: 50px;
             img {
               width: 70%;
               margin-bottom: 30px;
@@ -307,7 +308,7 @@ const Hero = props => {
           display: grid;
           grid-template-columns: 1fr 1fr;
           min-height: 20vh;
-          height: 100px;
+          height: auto;
           justify-items: center;
           background-color: ${theme.color.principals.darkerPurpleText};
           align-items: center;

@@ -107,7 +107,8 @@ const Psychology = props => {
           width: 100%;
           grid-gap: 3rem;
           padding: 0 60px;
-          margin-top: 120px;
+          margin-top: 50px;
+          height: auto;
         }
         .psychology-card {
           display: grid;
