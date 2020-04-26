@@ -42,69 +42,71 @@ const Hero = props => {
         </section>
       )}
       <div className="padding-block">
-        <section className="hero-sub-header">
-          <div className="hero-sub-text">
-            <h2>Atención especializada y de calidad</h2>
-            <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para
-              encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
-            <a href="#link-to-form-section">Contactanos</a>
-          </div>
-        </section>
-        <h2>Fácil, asequible y 100% adaptado a ti</h2>
-        <section className="hero-block-images-header">
-          <div className="hero-sub-image">
-            <img src={paso1} alt="Mujer psicologa ayudando" />
-            <p>
-              Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
-              contacto contigo en la hora y momento que solicites.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={paso2} alt="Mujer psicologa ayudando" />
-            <p>
-              Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
-              forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={paso3} alt="Mujer psicologa ayudando" />
-            <p>
-              Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
-              gratuita.
-            </p>
-          </div>
-        </section>
-      </div>
-      <Evaluations />
-      <Psychology />
-      <section id="link-to-form-section" className="plans-block">
-        <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
-        <div className="plans-sub">
-          <Plans />
-          <div className="plans-sub-text">
-            <h2>Primera cita gratis</h2>
-            <p>
-              Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
-              resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
-              <strong>tu experiencia</strong>
-            </p>
-            <a href="/contact" className="plans-botton">
-              Contacta con nosotros
-            </a>
-          </div>
+        <div className="white-background">
+          <section className="hero-sub-header">
+            <div className="hero-sub-text">
+              <h2>Atención especializada y de calidad</h2>
+              <p>
+                Nuestros especialistas guías te contactaran para de forma segura y privada para
+                encontrar el psicólogo que más se adapte a tus necesidades.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
+              <a href="#link-to-form-section">Contactanos</a>
+            </div>
+          </section>
+          <h2 style={{ textAlign: 'center' }}>Fácil, asequible y 100% adaptado a ti</h2>
+          <section className="hero-block-images-header">
+            <div className="hero-sub-image">
+              <img src={paso1} alt="Mujer psicologa ayudando" />
+              <p>
+                Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
+                contacto contigo en la hora y momento que solicites.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso2} alt="Mujer psicologa ayudando" />
+              <p>
+                Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
+                forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso3} alt="Mujer psicologa ayudando" />
+              <p>
+                Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
+                gratuita.
+              </p>
+            </div>
+          </section>
+          <Evaluations />
+          <Psychology />
+          <section id="link-to-form-section" className="plans-block">
+            <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
+            <div className="plans-sub">
+              <Plans />
+              <div className="plans-sub-text">
+                <h2>Primera cita gratis</h2>
+                <p>
+                  Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
+                  resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
+                  <strong>tu experiencia</strong>
+                </p>
+                <a href="/contact" className="plans-botton">
+                  Contacta con nosotros
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
           display: grid;
           grid-template-columns: 0.7fr 1fr;
-          min-height: 77.7vh;
+          min-height: 80vh;
           height: auto;
           justify-content: center;
           align-items: center;
@@ -155,21 +157,26 @@ const Hero = props => {
             font-size: 1rem;
           }
           .padding-block {
-            padding: 30px 25px !important;
+            padding: 0 5px !important;
             display: grid;
             grid-template-rows: 1.5fr 0.2fr 1fr;
           }
         }
 
         .padding-block {
-          padding: 50px 10%;
-          background: url(${fondo}) no-repeat center center fixed; 
+          padding: 0 10%;
+          background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+            url(${fondo}) no-repeat center center;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
           background-size: cover;
+          .white-background {
+            background-color: white;
+            opacity: 0.9;
+          }
+
           .hero-sub-header {
-            bacnkground-color: white;
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 50vh;
