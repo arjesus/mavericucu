@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
-import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
+import capturaDePantalla from '../../../static/images/capturaPantalla.png';
+import fondo from '../../../static/images/fondo.jpg';
+import paso1 from '../../../static/images/paso1.jpg';
+import paso2 from '../../../static/images/paso2.jpg';
+import paso3 from '../../../static/images/paso3.jpg';
 import Evaluations from '../evaluations/evaluations.js';
 import Psychology from '../psychology/psychology';
 import Plans from './components/plans.component';
@@ -47,28 +51,28 @@ const Hero = props => {
             </p>
           </div>
           <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
+            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
             <a href="#link-to-form-section">Contactanos</a>
           </div>
         </section>
         <h2>Fácil, asequible y 100% adaptado a ti</h2>
         <section className="hero-block-images-header">
           <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
+            <img src={paso1} alt="Mujer psicologa ayudando" />
             <p>
               Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
               contacto contigo en la hora y momento que solicites.
             </p>
           </div>
           <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
+            <img src={paso2} alt="Mujer psicologa ayudando" />
             <p>
               Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
               forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
             </p>
           </div>
           <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
+            <img src={paso3} alt="Mujer psicologa ayudando" />
             <p>
               Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
               gratuita.
@@ -159,7 +163,13 @@ const Hero = props => {
 
         .padding-block {
           padding: 50px 10%;
+          background: url(${fondo}) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
           .hero-sub-header {
+            bacnkground-color: white;
             display: grid;
             grid-template-columns: 1fr 1fr;
             min-height: 50vh;
