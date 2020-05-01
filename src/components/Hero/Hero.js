@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
-import psicoHelp from '../../../static/images/mujer-psicologa-ayudando.jpg';
+import capturaDePantalla from '../../../static/images/capturaPantalla.png';
+import fondo from '../../../static/images/fondo.jpg';
+import paso1 from '../../../static/images/paso1.jpg';
+import paso2 from '../../../static/images/paso2.jpg';
+import paso3 from '../../../static/images/paso3.jpg';
 import Evaluations from '../evaluations/evaluations.js';
-import DynamicForm from '../dynamic-form/dynamic-form';
 import Psychology from '../psychology/psychology';
-import Checkout from '../Checkout/checkout';
+import Plans from './components/plans.component';
 
 const Hero = props => {
   const { theme } = props;
@@ -21,9 +24,9 @@ const Hero = props => {
           </p>
         </div>
         {typeof window !== 'undefined' && window.innerWidth <= 600 && (
-          <button className="mobile-button" aria-label="scroll">
+          <a href="#link-to-form-section" className="mobile-button">
             Reserva tu cita online
-          </button>
+          </a>
         )}
         <div>
           <img src={womanWorried} alt="Mujer preocupada" />
@@ -35,57 +38,75 @@ const Hero = props => {
             Ayuda psicológica especial durante periodo de confinamiento con psicólogos
             especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
           </h2>
-          <Checkout />
+          <a href="#link-to-form-section">Contactanos</a>
         </section>
       )}
       <div className="padding-block">
-        <section className="hero-sub-header">
-          <div className="hero-sub-text">
-            <h2>Atención especializada y de calidad</h2>
-            <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para
-              encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <button>Contactanos</button>
-          </div>
-        </section>
-        <h2>Fácil, asequible y 100% adaptado a ti</h2>
-        <section className="hero-block-images-header">
-          <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <p>
-              Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
-              contacto contigo en la hora y momento que solicites.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <p>
-              Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
-              forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={psicoHelp} alt="Mujer psicologa ayudando" />
-            <p>
-              Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
-              gratuita.
-            </p>
-          </div>
-        </section>
+        <div className="white-background">
+          <section className="hero-sub-header">
+            <div className="hero-sub-text">
+              <h2>Atención especializada y de calidad</h2>
+              <p>
+                Nuestros especialistas guías te contactaran para de forma segura y privada para
+                encontrar el psicólogo que más se adapte a tus necesidades.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
+              <a href="#link-to-form-section">Contactanos</a>
+            </div>
+          </section>
+          <h2 style={{ textAlign: 'center' }}>Fácil, asequible y 100% adaptado a ti</h2>
+          <section className="hero-block-images-header">
+            <div className="hero-sub-image">
+              <img src={paso1} alt="Mujer psicologa ayudando" />
+              <p>
+                Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
+                contacto contigo en la hora y momento que solicites.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso2} alt="Mujer psicologa ayudando" />
+              <p>
+                Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
+                forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso3} alt="Mujer psicologa ayudando" />
+              <p>
+                Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
+                gratuita.
+              </p>
+            </div>
+          </section>
+          <Evaluations />
+          <Psychology />
+          <section id="link-to-form-section" className="plans-block">
+            <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
+            <div className="plans-sub">
+              <Plans />
+              <div className="plans-sub-text">
+                <h2>Primera cita gratis</h2>
+                <p>
+                  Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
+                  resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
+                  <strong>tu experiencia</strong>
+                </p>
+                <a href="/contact" className="plans-botton">
+                  Contacta con nosotros
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <Evaluations />
-      <Psychology />
-      <DynamicForm />
       {/* --- STYLES --- */}
       <style jsx>{`
         .hero {
           display: grid;
           grid-template-columns: 0.7fr 1fr;
-          min-height: 77.7vh;
+          min-height: 80vh;
           height: auto;
           justify-content: center;
           align-items: center;
@@ -124,13 +145,8 @@ const Hero = props => {
             }
             .mobile-button {
               margin: 0 auto;
-              padding: 11px 69px;
-              background-color: ${theme.color.principals.darkerPurpleText};
-              border: none;
-              border-radius: 0.5em;
-              color: ${theme.color.principals.white};
-              font-size: 20px;
-              cursor: pointer;
+              padding: 11px 0px;
+              width: 70%;
             }
           }
           h1 {
@@ -141,14 +157,25 @@ const Hero = props => {
             font-size: 1rem;
           }
           .padding-block {
-            padding: 30px 25px !important;
+            padding: 0 5px !important;
             display: grid;
             grid-template-rows: 1.5fr 0.2fr 1fr;
           }
         }
 
         .padding-block {
-          padding: 50px 10%;
+          padding: 0 10%;
+          background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+            url(${fondo}) no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          .white-background {
+            background-color: white;
+            opacity: 0.9;
+          }
+
           .hero-sub-header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -187,17 +214,6 @@ const Hero = props => {
               grid-row-gap: 40px;
               width: 80%;
               justify-items: center;
-            }
-            button {
-              padding: 7px 0;
-              background-color: ${theme.color.principals.darkerPurpleText};
-              border: none;
-              border-radius: 0.5rem;
-              color: ${theme.color.principals.white};
-              font-size: 18px;
-              cursor: pointer;
-              width: 50%;
-              margin-top: 20px;
             }
           }
           h2 {
@@ -275,9 +291,10 @@ const Hero = props => {
                 width: 100%;
                 justify-items: center;
                 grid-gap: 15px;
-                button {
+                a {
                   width: 100%;
                   border-radius: 0.5rem;
+                  text-align: center;
                 }
               }
             }
@@ -317,14 +334,64 @@ const Hero = props => {
           h2 {
             color: ${theme.hero.bar.color};
           }
-          button {
-            padding: 7px 69px;
+          a {
             background-color: ${theme.color.principals.white};
-            border-radius: 1em;
             color: ${theme.color.principals.darkerPurpleText};
-            font-size: 18px;
-            cursor: pointer;
-            border: none;
+            text-align: center;
+          }
+        }
+        a {
+          padding: 7px 0;
+          background-color: ${theme.color.principals.darkerPurpleText};
+          border: none;
+          border-radius: 0.5rem;
+          color: ${theme.color.principals.white};
+          font-size: 18px;
+          cursor: pointer;
+          width: 50%;
+          margin-top: 20px;
+          text-align: center;
+        }
+        @media (max-width: 600px) {
+          .plans-block {
+            h2 {
+              text-align: center;
+              margin-bottom: 25px;
+            }
+            .plans-sub {
+              display: grid;
+              grid-template-columns: 1fr !important;
+            }
+            .plans-botton {
+              width: 70% !important;
+            }
+          }
+        }
+        .plans-block {
+          display: flex;
+          width: 100%;
+          height: auto;
+          min-height: 60vh;
+          padding: 50px 10%;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          h2 {
+            color: ${theme.color.principals.darkerPurpleText};
+          }
+          .plans-sub {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+          }
+          .plans-sub-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            h2 {
+              margin-bottom: 20px;
+            }
           }
         }
       `}</style>

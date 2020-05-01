@@ -41,8 +41,10 @@ color:
   principals:
     darkPurple: &darkPurple '#8e7cc3ff'
     lightPurple: &lightPurple '#d2bbe5ff'
+    lightPurpleBackground: &lightPurpleBackground '#d2bbe573'
     darkerPurpleText: &darkerPurpleText '#4e3b80'
     white: &white '#fff'
+    gray: &gray '	#696969'
 
 
 
