@@ -171,19 +171,19 @@ class Layout extends React.Component {
                         text-decoration: none;
                         color: #666;
                       }
-                      // .background-img {
-                      //   padding: 0 2.5%;
-                      //   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-                      //   url('${fondo}') no-repeat center center;
-                      // -webkit-background-size: cover;
-                      // -moz-background-size: cover;
-                      // -o-background-size: cover;
-                      // background-size: cover;
-                      // }
-                      // .background-img-white {
-                      //     background-color: white;
-                      //     opacity: 0.9;
-                      // }
+                      .background-img {
+                        padding: 0 2.5%;
+                        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                        url('${fondo}') no-repeat center center;
+                      -webkit-background-size: cover;
+                      -moz-background-size: cover;
+                      -o-background-size: cover;
+                      background-size: cover;
+                      }
+                      .background-img-white {
+                          background-color: white;
+                          opacity: 0.9;
+                      }
                       main {
                         width: auto;
                         display: block;
