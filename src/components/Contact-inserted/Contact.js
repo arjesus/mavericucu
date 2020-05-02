@@ -30,9 +30,12 @@ const Contact = props => {
     props.form.validateFields((err, values) => {
       if (!err) {
         console.log("Received values of form: ", values);
-        postFormAnswers({answers:{...answers,name:values.name,email:values.email,userMessage:values.message}})
+        answers.phone = values.phone
+        answers.email = values.email
+        postFormAnswers(answers)
+        props.setFormStep(9)
       }
-    });
+    })
   }
 
   function sendMessage(values) {
@@ -66,23 +69,18 @@ const Contact = props => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
+
+              <h3>Gracias {props.answers.name} por tu tiempo!</h3>
+
+
               <FormItem>
-                <h3>Tu nombre para dirigirnos a ti?</h3>
-                {getFieldDecorator("name", {
-                  rules: [
-                    {
-                      whitespace: true
-                    }
-                  ]
-                })(<Input name="name" />)}
-              </FormItem>
-              <FormItem>
-                <h3>Un email para contactarte</h3>
+                <h3>Dejanos un email para que podamos ponernos en contacto contigo</h3>
+                <label>Email: </label>
                 {getFieldDecorator("email", {
                   rules: [
                     {
                       required: true,
-                      message: "Un email para contactarte",
+                      message: "El formato del email no es válido",
                       whitespace: true,
                       type: "email"
                     }
@@ -90,14 +88,17 @@ const Contact = props => {
                 })(<Input name="email" />)}
               </FormItem>
               <FormItem>
-                <h3>Cuentanos como te sientes</h3>
-                {getFieldDecorator("message", {
+                <label>Teléfono: </label>
+                {getFieldDecorator("phone", {
                   rules: [
-                    { required: true, message: "Cuentanos como te sientes", whitespace: true }
+                    {
+                      required: true,
+                      message: "El campo no puede estar vacío",
+                      whitespace: true,
+                      type: ""
+                    }
                   ]
-                })(
-                  <TextArea name="message" placeholder="" autoSize={{ minRows: 4, maxRows: 10 }} />
-                )}
+                })(<Input name="phone" />)}
               </FormItem>
               <FormItem>
                 <Button type="primary" onClick={handleSubmit}>

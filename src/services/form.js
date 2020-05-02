@@ -7,10 +7,9 @@ const api = axios.create({
 
 export const postFormAnswers = async (answers) => {
   try {
-      const response = await api.post('/form', answers )
-      console.log(response.data)
-      return response.data
+    const response = await api.post('/form', { answers })
+    return response
   } catch (error) {
-      console.error(error)
+    console.error(error)
   }
 }

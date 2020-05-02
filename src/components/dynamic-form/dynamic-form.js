@@ -15,8 +15,9 @@ const DynamicForm = () => {
   const [name, setName] = useState("")
   const [age, setAge] = useState("")
   const [gender, setGender] = useState("")
+  const [body, setBody] = useState("")
 
-  
+
 
   const [answers, setAnswer] = useState([]);
   console.log(answers);
@@ -27,7 +28,7 @@ const DynamicForm = () => {
       <div className="form-container">
         <div className="form-steps-container">
           {formStep !== 1 && <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>⟵</p>}
-          <p className="form-steps-counter">{formStep}/8</p>
+          <p className="form-steps-counter">{formStep}/9</p>
           {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
         </div>
         {formStep === 1 && (
@@ -56,48 +57,26 @@ const DynamicForm = () => {
           <div className="feel-container">
             <h3>¿Con qué género te identificas?</h3>
             <div className="btn-container">
-            {["Hombre","Mujer","No binario"].map((gender, index) => {
-              return (
-                <button
-                  className="feel-btn"
-                  key={index.toString()}
-                  onClick={() => {
-                    return setFormStep(formStep + 1), setGender(gender);
-                  }}
-                >
-                  <span>{gender}</span>
-                </button>
-              );
-            })}
-          </div>
+              {["Hombre", "Mujer", "No binario"].map((gender, index) => {
+                return (
+                  <button
+                    className="feel-btn"
+                    key={index.toString()}
+                    onClick={() => {
+                      return setFormStep(formStep + 1), setGender(gender);
+                    }}
+                  >
+                    <span>{gender}</span>
+                  </button>
+                );
+              })}
+            </div>
             <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
           </div>
         )}
         {formStep === 4 && (
           <div className="feel-container">
-          <h3>¿Cuál es el motivo de tu consulta?</h3>
-          <div className="btn-container">
-            {feelingsArr.map((feeling, index) => {
-              return (
-                <button
-                  className="feel-btn"
-                  key={index.toString()}
-                  onClick={() => {
-                    return setFormStep(formStep + 1), setFeeling(feeling);
-                  }}
-                >
-                  <span>{feeling}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          <p className="omit" onClick={() => { return setFormStep(formStep + 2), setFeeling("omitido") }}>Omitir</p>
-        </div>
-        )}
-        {formStep === 5 && (
-          <div className="feel-container">
-            <h3>¿Que te sientes físicamente?</h3>
+            <h3>¿Cuál es el motivo de tu consulta?</h3>
             <div className="btn-container">
               {feelingsArr.map((feeling, index) => {
                 return (
@@ -114,10 +93,32 @@ const DynamicForm = () => {
               })}
             </div>
 
-            <p className="omit" onClick={() => { return setFormStep(formStep + 2), setFeeling("omitido") }}>Omitir</p>
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setFeeling("omitido") }}>Omitir</p>
           </div>
         )}
-        
+        {formStep === 5 && (
+          <div className="feel-container">
+            <h3>¿Cómo te sientes físicamente?</h3>
+            <div className="btn-container">
+              {["Muy bien", "Bien", "Regular", "Mal", "Muy mal"].map((feeling, index) => {
+                return (
+                  <button
+                    className="feel-btn"
+                    key={index.toString()}
+                    onClick={() => {
+                      return setFormStep(formStep + 1), setBody(feeling);
+                    }}
+                  >
+                    <span>{feeling}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            <p className="omit" onClick={() => { return setFormStep(formStep + 1), setBody("omitido") }}>Omitir</p>
+          </div>
+        )}
+
         {formStep === 6 && (
           <div className="feel-container">
             <h3>¿Tienes experiencia con terapias anteriores?</h3>
@@ -149,12 +150,16 @@ const DynamicForm = () => {
             />
           </div>
         )}
-           {formStep === 8 && (
+        {formStep === 8 && (
           <div className="feel-container">
-            <Contact></Contact>
+            <Contact answers={{name,age,gender,feeling,body,experience,time}} setFormStep={setFormStep}></Contact>
           </div>
         )}
-
+        {formStep === 9 && (
+         <div className="feel-container">
+          <h1>Thank you!</h1>
+        </div>
+        )}
 
       </div>
       {/* --- STYLES --- */}

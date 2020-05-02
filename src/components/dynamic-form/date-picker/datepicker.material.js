@@ -28,7 +28,7 @@ const DatePickerMaterialComponent = props => {
 
   const sendTime = () => {
     setTime( value + date);
-    setFormStep(5);
+    setFormStep(8);
   };
 
   return (
