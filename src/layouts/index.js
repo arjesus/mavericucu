@@ -1,18 +1,19 @@
-import "typeface-open-sans";
-import FontFaceObserver from "fontfaceobserver";
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import 'typeface-open-sans';
+import FontFaceObserver from 'fontfaceobserver';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
-import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
-import Footer from "../components/Footer/";
-import Header from "../components/Header";
+import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers';
+import Footer from '../components/Footer/';
+import Header from '../components/Header';
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
 export const FontLoadedContext = React.createContext(false);
 
-import themeObjectFromYaml from "../theme/theme.yaml";
+import themeObjectFromYaml from '../theme/theme.yaml';
+import fondo from '../images/svg-icons/webackground1.svg';
 
 class Layout extends React.Component {
   constructor() {
@@ -27,8 +28,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "Open Sans", 400);
-      this.loadFont("font600", "Open Sans", 600);
+      this.loadFont('font400', 'Open Sans', 400);
+      this.loadFont('font600', 'Open Sans', 600);
     }
   }
 
@@ -38,13 +39,13 @@ class Layout extends React.Component {
     this.setState({
       screenWidth: getScreenWidth()
     });
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", this.resizeThrottler, false);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.resizeThrottler, false);
     }
   }
 
   resizeThrottler = () => {
-    return timeoutThrottlerHandler(this.timeouts, "resize", 100, this.resizeHandler);
+    return timeoutThrottlerHandler(this.timeouts, 'resize', 100, this.resizeHandler);
   };
 
   resizeHandler = () => {
@@ -52,7 +53,7 @@ class Layout extends React.Component {
   };
 
   isHomePage = () => {
-    if (this.props.location.pathname === "/") {
+    if (this.props.location.pathname === '/') {
       return true;
     }
 
@@ -120,7 +121,9 @@ class Layout extends React.Component {
                       pages={pages}
                       theme={this.state.theme}
                     />
-                    <main>{children}</main>
+                    <main className="background-img">
+                      <div className="background-img-white">{children}</div>
+                    </main>
                     <Footer html={footnoteHTML} theme={this.state.theme} />
 
                     {/* --- STYLES --- */}
@@ -141,9 +144,11 @@ class Layout extends React.Component {
                         padding: 0;
                       }
                       body {
-                        font-family: ${this.state.font400loaded
-                          ? "'Open Sans', sans-serif;"
-                          : "Arial, sans-serif;"};
+                        font-family: ${
+                          this.state.font400loaded
+                            ? "'Open Sans', sans-serif;"
+                            : 'Arial, sans-serif;'
+                        };
                       }
                       h1,
                       h2,
@@ -166,6 +171,19 @@ class Layout extends React.Component {
                         text-decoration: none;
                         color: #666;
                       }
+                      // .background-img {
+                      //   padding: 0 2.5%;
+                      //   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                      //   url('${fondo}') no-repeat center center;
+                      // -webkit-background-size: cover;
+                      // -moz-background-size: cover;
+                      // -o-background-size: cover;
+                      // background-size: cover;
+                      // }
+                      // .background-img-white {
+                      //     background-color: white;
+                      //     opacity: 0.9;
+                      // }
                       main {
                         width: auto;
                         display: block;

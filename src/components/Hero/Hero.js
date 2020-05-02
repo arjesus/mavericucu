@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
-import capturaDePantalla from '../../../static/images/capturaPantalla.png';
-import fondo from '../../../static/images/fondo.jpg';
+import capturaDePantalla from '../../images/jpg/mujer-ordenador.jpg';
+
 import paso1 from '../../../static/images/paso1.jpg';
 import paso2 from '../../../static/images/paso2.jpg';
 import paso3 from '../../../static/images/paso3.jpg';
@@ -61,8 +61,8 @@ const Hero = props => {
             <div className="hero-sub-image">
               <img src={paso1} alt="Mujer psicologa ayudando" />
               <p>
-                Contactanos. Mediante nuestro formulario web o llamada telefónica, nos pondremos en
-                contacto contigo en la hora y momento que solicites.
+                <strong>Contactanos.</strong> Mediante nuestro formulario web o llamada telefónica,
+                nos pondremos en contacto contigo en la hora y momento que solicites.
               </p>
             </div>
             <div className="hero-sub-image">
@@ -164,17 +164,6 @@ const Hero = props => {
         }
 
         .padding-block {
-          padding: 0 10%;
-          background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-            url(${fondo}) no-repeat center center;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-          .white-background {
-            background-color: white;
-            opacity: 0.9;
-          }
 
           .hero-sub-header {
             display: grid;
