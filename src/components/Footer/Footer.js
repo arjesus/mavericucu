@@ -21,6 +21,11 @@ const Footer = props => {
       </footer>
       {/* --- STYLES --- */}
       <style jsx>{`
+        @media (max-width: 600px) {
+          .footer {
+            align-items: flex-start !important;
+          }
+        }
         .footer {
           align-items: center;
           display: flex;
