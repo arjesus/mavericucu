@@ -173,7 +173,7 @@ class Layout extends React.Component {
                       }
                       .background-img {
                         padding: 0 2.5%;
-                        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
                         url('${fondo}') no-repeat center center;
                       -webkit-background-size: cover;
                       -moz-background-size: cover;

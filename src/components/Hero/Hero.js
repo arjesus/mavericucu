@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import womanWorried from '../../../static/images/mujer-sofa-gato.jpg';
+import womanWorried from '../../images/jpg/mujer-en-sofa.jpg';
 import capturaDePantalla from '../../images/jpg/mujer-ordenador.jpg';
 
 import paso1 from '../../../static/images/paso1.jpg';
@@ -106,7 +106,7 @@ const Hero = props => {
         .hero {
           display: grid;
           grid-template-columns: 0.7fr 1fr;
-          min-height: 80vh;
+          min-height: 70vh;
           height: auto;
           justify-content: center;
           align-items: center;
@@ -367,6 +367,7 @@ const Hero = props => {
           align-items: center;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
+            margin-bottom: 30px;
           }
           .plans-sub {
             display: grid;

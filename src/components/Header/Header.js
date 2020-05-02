@@ -7,7 +7,6 @@ import { ScreenWidthContext, FontLoadedContext } from '../../layouts';
 import config from '../../../content/meta/config';
 import Menu from '../Menu';
 
-import avatar from '../../images/jpg/avatar.jpg';
 import logo from '../../../static/images/logo.png';
 
 class Header extends React.Component {
@@ -98,6 +97,7 @@ class Header extends React.Component {
               position: absolute;
               background-color: transparent;
               height: ${theme.header.height.homepage};
+              z-index: 1;
             }
           }
 
@@ -191,6 +191,8 @@ class Header extends React.Component {
                 top: 0;
                 width: 100%;
                 z-index: 1;
+                box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
+                  0 0px 9px 0 #4e3b80;
 
                 h1 {
                   margin: ${theme.space.stack.xxs};
@@ -198,6 +200,10 @@ class Header extends React.Component {
 
                 h2 {
                   display: none;
+                }
+
+                img {
+                  width: 60px;
                 }
               }
 
