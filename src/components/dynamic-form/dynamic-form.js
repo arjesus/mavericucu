@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Contact from '../Contact-inserted';
 import DatePickerMaterialComponent from './date-picker/datepicker.material';
+import theme from '../../theme/theme.yaml';
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
@@ -15,8 +16,6 @@ const DynamicForm = () => {
   const [gender, setGender] = useState('');
 
   const [answers, setAnswer] = useState([]);
-  console.log(answers);
-  console.log(formStep);
 
   return (
     <React.Fragment>
@@ -34,7 +33,7 @@ const DynamicForm = () => {
           {formStep === 1 && (
             <div className="feel-container">
               <h3>¿Como te llamas?</h3>
-              <input className="feel-btn" onChange={event => setName(event.target.value)} />
+              <input onChange={event => setName(event.target.value)} />
               <span>{feeling}</span>
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
@@ -42,7 +41,7 @@ const DynamicForm = () => {
           {formStep === 2 && (
             <div className="feel-container">
               <h3>Genial {name} ¿Cuantos años tienes?</h3>
-              <input className="feel-btn" onChange={event => setAge(event.target.value)} />
+              <input onChange={event => setAge(event.target.value)} />
               <span>{feeling}</span>
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
@@ -126,7 +125,6 @@ const DynamicForm = () => {
               </p>
             </div>
           )}
-
           {formStep === 6 && (
             <div className="feel-container">
               <h3>¿Tienes experiencia con terapias anteriores?</h3>
@@ -174,6 +172,19 @@ const DynamicForm = () => {
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
+        input {
+          border: none;
+          width: 200px;
+          border-bottom: 1.5px solid ${theme.color.principals.darkerPurpleText};
+        }
+        button {
+          background-color: ${theme.color.principals.darkerPurpleText};
+          border: none;
+          padding: 7px 40px;
+          color: white;
+          border-radius: 0.3rem;
+          font-size: 15px;
+        }
         .form-steps-container {
           display: flex;
           color: grey;
@@ -182,6 +193,7 @@ const DynamicForm = () => {
 
           .form-steps-counter {
             margin: 0 8px;
+            color: ${theme.color.principals.darkerPurpleText};
           }
           .form-steps-actions {
             cursor: pointer;
@@ -194,10 +206,14 @@ const DynamicForm = () => {
         }
         .form-container {
           background-color: #fff;
-          min-height: 47vh;
+          min-height: 87vh;
           height: auto;
           width: 100%;
           padding: 20px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 75px;
 
           .form-card {
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
@@ -208,7 +224,7 @@ const DynamicForm = () => {
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.5fr 1fr;
+            grid-template-rows: 0.3fr 1fr;
 
             .feel-container {
               display: flex;
@@ -222,11 +238,12 @@ const DynamicForm = () => {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 10px;
                 .feel-btn {
-                  padding: 15px 50px;
-                  background-color: #4e3b80;
-                  color: #fff;
+                  padding: 10px 30px;
+                  background-color: white;
+                  color: ${theme.color.principals.darkerPurpleText};
                   font-size: 20px;
                   text-align: center;
+                  border: 0.5px solid ${theme.color.principals.darkerPurpleText};
                 }
               }
             }
@@ -237,7 +254,8 @@ const DynamicForm = () => {
           }
           h3 {
             color: #4e3b80;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: 400;
           }
         }
         @media (max-width: 600px) {

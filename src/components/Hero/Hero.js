@@ -87,7 +87,7 @@ const Hero = props => {
             <div className="plans-sub">
               <Plans />
               <div className="plans-sub-text">
-                <h2>Primera cita gratis</h2>
+                <h3>Primera cita gratis</h3>
                 <p>
                   Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
                   resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
@@ -380,7 +380,12 @@ const Hero = props => {
             justify-content: space-evenly;
             align-items: center;
             h2 {
-              margin-bottom: 20px;
+              margin-bottom: 50px !important;
+            }
+            h3 {
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 28px;
+              font-weight: 700;
             }
           }
         }

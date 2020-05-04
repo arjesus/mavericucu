@@ -19,7 +19,7 @@ const ContactPage = props => {
 
   return (
     <React.Fragment>
-      <header>
+      {/* <header>
         <section className="hero">
           <div>
             <h1>Formulario de contacto</h1>
@@ -32,12 +32,12 @@ const ContactPage = props => {
             <img src={womanWorried} alt="Mujer preocupada" />
           </div>
         </section>
-      </header>
+      </header> */}
       <DynamicForm />
 
       <Seo facebook={facebook} />
       {/* --- STYLES --- */}
-      <style jsx>{`
+      {/* <style jsx>{`
         .hero {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -105,7 +105,7 @@ const ContactPage = props => {
             grid-template-rows: 1.5fr 0.2fr 1fr;
           }
         }
-      `}</style>
+      `}</style> */}
     </React.Fragment>
   );
 };
