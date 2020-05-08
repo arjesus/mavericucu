@@ -124,7 +124,7 @@ class Layout extends React.Component {
                     <main className="background-img">
                       <div className="background-img-white">{children}</div>
                     </main>
-                    <Footer html={footnoteHTML} theme={this.state.theme} />
+                    <Footer data={data} html={footnoteHTML} theme={this.state.theme} />
 
                     {/* --- STYLES --- */}
                     <style jsx>{`

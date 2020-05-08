@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Contact from '../Contact-inserted';
 import DatePickerMaterialComponent from './date-picker/datepicker.material';
 import theme from '../../theme/theme.yaml';
+import { Link } from 'gatsby';
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
@@ -14,6 +15,8 @@ const DynamicForm = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
   const [answers, setAnswer] = useState([]);
 
@@ -21,20 +24,21 @@ const DynamicForm = () => {
     <React.Fragment>
       <div className="form-container">
         <div className="form-card">
-          <div className="form-steps-container">
-            {formStep !== 1 && (
-              <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
-                ⟵
-              </p>
-            )}
-            <p className="form-steps-counter">{formStep}/8</p>
-            {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
-          </div>
+          {formStep < 8 && (
+            <div className="form-steps-container">
+              {formStep !== 1 && (
+                <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
+                  ⟵
+                </p>
+              )}
+              <p className="form-steps-counter">{formStep}/8</p>
+              {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
+            </div>
+          )}
           {formStep === 1 && (
             <div className="feel-container">
               <h3>¿Como te llamas?</h3>
               <input onChange={event => setName(event.target.value)} />
-              <span>{feeling}</span>
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
@@ -42,7 +46,6 @@ const DynamicForm = () => {
             <div className="feel-container">
               <h3>Genial {name} ¿Cuantos años tienes?</h3>
               <input onChange={event => setAge(event.target.value)} />
-              <span>{feeling}</span>
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
@@ -98,7 +101,7 @@ const DynamicForm = () => {
           )}
           {formStep === 5 && (
             <div className="feel-container">
-              <h3>¿Que te sientes físicamente?</h3>
+              <h3>¿Que sientes físicamente?</h3>
               <div className="btn-container">
                 {feelingsArr.map((feeling, index) => {
                   return (
@@ -128,7 +131,7 @@ const DynamicForm = () => {
           {formStep === 6 && (
             <div className="feel-container">
               <h3>¿Tienes experiencia con terapias anteriores?</h3>
-              <div className="btn-container">
+              <div className="btn-container btn-container-two">
                 {['Si', 'No'].map((items, index) => {
                   return (
                     <button
@@ -154,7 +157,7 @@ const DynamicForm = () => {
               </p>
             </div>
           )}
-          {formStep === 7 && (
+          {/* {formStep === 7 && (
             <div className="feel-container">
               <DatePickerMaterialComponent
                 setFormStep={setFormStep}
@@ -162,10 +165,53 @@ const DynamicForm = () => {
                 answers={[feeling, intensity, experience]}
               />
             </div>
-          )}
-          {formStep === 8 && (
+          )} */}
+          {/* {formStep === 8 && (
             <div className="feel-container">
               <Contact></Contact>
+            </div>
+          )} */}
+          {formStep === 7 && (
+            <div className="feel-container feel-container-four">
+              <h3>
+                Genial {name}, ¿Nos proporcionas tu email y numero de telefono para comunicarnos
+                contigo?
+              </h3>
+              <div className="input-group">
+                <input
+                  onChange={event => setEmail(event.target.value)}
+                  className="input-group__input"
+                  id="email"
+                  type="text"
+                  placeholder=" "
+                  autoComplete="off"
+                />
+                <label className="input-group__label" htmlFor="email">
+                  EMAIL
+                </label>
+              </div>
+              <div className="input-group">
+                <input
+                  onChange={event => setPhone(event.target.value)}
+                  className="input-group__input"
+                  id="email"
+                  type="text"
+                  placeholder=" "
+                  autoComplete="off"
+                />
+                <label className="input-group__label" htmlFor="email">
+                  PHONE
+                </label>
+              </div>
+              <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
+            </div>
+          )}
+          {formStep === 8 && (
+            <div className="feel-container-finish">
+              <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
+              <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
+                Volver a la pagina principial
+              </Link>
             </div>
           )}
         </div>
@@ -176,6 +222,9 @@ const DynamicForm = () => {
           border: none;
           width: 200px;
           border-bottom: 1.5px solid ${theme.color.principals.darkerPurpleText};
+          font-size: 20px;
+          text-align: center;
+          color: ${theme.color.principals.darkerPurpleText};
         }
         button {
           background-color: ${theme.color.principals.darkerPurpleText};
@@ -185,6 +234,16 @@ const DynamicForm = () => {
           border-radius: 0.3rem;
           font-size: 15px;
         }
+
+        .feel-container-finish {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.5fr 1fr;
+          align-items: center;
+          justify-items: center;
+          
+        }
+
         .form-steps-container {
           display: flex;
           color: grey;
@@ -224,14 +283,67 @@ const DynamicForm = () => {
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.3fr 1fr;
+            grid-template-rows: 0.1fr 1fr;
+
+            .feel-container-four {
+              grid-template-rows: 0.5fr 0.7fr 0.7fr 0.5fr !important;
+              h3 {
+                width: 75%;
+                text-align: center;
+                font-size: 20px;
+              }
+              .input-group {
+                width: 40%;
+                height: auto;
+                position: relative;
+                &__input {
+                  display: block;
+                  -moz-appearance: none;
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 100%;
+                  background-color: transparent;
+                  font-size: 15px;
+                  letter-spacing: 0.1em;
+                  color: ${theme.color.principals.darkerPurpleText};
+                  padding: 8px 4px;
+                  outline: none;
+                  border: none;
+                  border-radius: 0px;
+                  border-bottom: 1.2px solid ${theme.color.principals.darkerPurpleText};
+                  &:valid ~ .input-group__label {
+                    color: ${theme.color.principals.darkerPurpleText};
+                  }
+                  &:invalid ~ .input-group__label {
+                    color: ${theme.color.principals.darkerPurpleText};
+                  }
+                  &:placeholder-shown ~ .input-group__label {
+                    color: ${theme.color.principals.darkerPurpleText};
+                  }
+                  /* Floating animation */
+                  &:focus ~ .input-group__label,
+                  &:not(:placeholder-shown) ~ .input-group__label {
+                    transform: translateX(-8px) translateY(-28px) scale(0.8);
+                  }
+                }
+                &__label {
+                  font-size: 13px;
+                  letter-spacing: 0.05em;
+                  position: absolute;
+                  top: 8px;
+                  left: 4px;
+                  cursor: text;
+                  transition: all 0.3s ease;
+                }
+              }
+            }
 
             .feel-container {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-evenly;
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: 0.5fr 1fr 0.5fr;
               align-items: center;
-              height: auto;
+              justify-items: center;
 
               .btn-container {
                 display: grid;
@@ -245,6 +357,10 @@ const DynamicForm = () => {
                   text-align: center;
                   border: 0.5px solid ${theme.color.principals.darkerPurpleText};
                 }
+              }
+
+              .btn-container-two {
+                grid-template-columns: 1fr 1fr;
               }
             }
           }

@@ -1,9 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { graphql } from "gatsby";
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
 
 const Footer = props => {
+  const post = props.data;
   return (
     <React.Fragment>
       <footer className="footer">
@@ -50,7 +52,63 @@ const Footer = props => {
 
 Footer.propTypes = {
   html: PropTypes.string,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default Footer;
+
+export const query = graphql`
+  query IndexQuery3 {
+    posts: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      sort: { fields: [fields___prefix], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+            category
+            author
+            cover {
+              children {
+                ... on ImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 360) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        facebook {
+          appId
+        }
+      }
+    }
+    bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+      resize(width: 1200, quality: 90, cropFocus: CENTER) {
+        src
+      }
+    }
+    bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+      resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+        src
+      }
+    }
+    bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+      resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+        src
+      }
+    }
+  }
+`;

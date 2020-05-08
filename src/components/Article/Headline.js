@@ -29,7 +29,6 @@ const Headline = props => {
             fill: ${theme.color.brand.primary};
           }
         }
-
         @keyframes headlineEntry {
           from {
             opacity: 0.5;

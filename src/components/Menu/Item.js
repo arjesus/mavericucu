@@ -1,21 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 const Item = props => {
   const { theme, item: { label, to, icon: Icon } = {}, onClick } = props;
-
   return (
     <React.Fragment>
-      <li className={"hiddenItem" in props ? "hiddenItem" : "item"} key={label}>
-        <Link
-          to={to}
-          className={"hiddenItem" in props ? "inHiddenItem" : ""}
-          onClick={onClick}
-          data-slug={to}
-        >
-          {Icon && <Icon />} {label}
-        </Link>
+      <li className={'hiddenItem' in props ? 'hiddenItem' : 'item'} key={label}>
+        <div className={label.includes('Contact') && 'contact-button'}>
+          <Link
+            to={to}
+            className={'hiddenItem' in props ? 'inHiddenItem' : ''}
+            onClick={onClick}
+            data-slug={to}
+          >
+            {Icon && <Icon />} {label}
+          </Link>
+        </div>
       </li>
 
       {/* --- STYLES --- */}
@@ -26,6 +27,7 @@ const Item = props => {
           transition: all ${theme.time.duration.default};
           display: flex;
           align-items: center;
+          margin: 0 10px;
 
           :global(a) {
             padding: ${theme.space.inset.s};
@@ -43,6 +45,30 @@ const Item = props => {
           display: none;
         }
 
+        .contact-button {
+          border: 0 solid;
+          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+          box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
+            0 6px 14px 0 #4e3b80;
+          border-radius: 1rem;
+          outline-offset: 0px;
+          text-shadow: none;
+          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+          width: 150px;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: 600;
+          display: flex;
+        }
+
+        .contact-button:hover {
+          border: 1px solid;
+          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+          outline-color: rgba(255, 255, 255, 0);
+          outline-offset: 15px;
+          text-shadow: 1px 1px 2px #427388;
+        }
+
         @from-width desktop {
           .item {
             :global(a) {
@@ -53,7 +79,7 @@ const Item = props => {
             }
 
             :global(.homepage):not(.fixed) & :global(a) {
-              color: ${theme.color.principals.darkerPurpleText};;
+              color: ${theme.color.principals.darkerPurpleText};
             }
 
             :global(a:hover) {

@@ -55,7 +55,7 @@ const Item = props => {
       <style jsx>{`
         :global(.link) {
           width: 100%;
-          color: ${theme.text.color.primary};
+          color: ${theme.color.principals.darkerPurpleText};
         }
 
         li {
@@ -69,7 +69,7 @@ const Item = props => {
 
           :global(.gatsby-image-outer-wrapper) {
             border-radius: ${theme.size.radius.default};
-            border: 1px solid ${theme.line.color};
+            border: 1px solid ${theme.color.principals.lightPurple};
             overflow: hidden;
           }
           :global(.gatsby-image-outer-wrapper img) {
@@ -77,7 +77,7 @@ const Item = props => {
           }
 
           &::after {
-            border-top: 1px solid ${theme.line.color};
+            border-top: 1px solid ${theme.color.principals.lightPurple};
             content: "";
             height: 0;
             position: absolute;
@@ -90,7 +90,7 @@ const Item = props => {
 
           &:first-child {
             &::before {
-              border-top: 1px solid ${theme.line.color};
+              border-top: 1px solid ${theme.color.principals.lightPurple};
               content: "";
               height: 0;
               position: absolute;
@@ -124,7 +124,7 @@ const Item = props => {
           background: transparent;
 
           :global(svg) {
-            fill: ${theme.icon.color};
+            fill: ${theme.color.principals.lightPurple};
             margin: ${theme.space.inline.xs};
           }
           span {
@@ -201,7 +201,7 @@ const Item = props => {
           }
           li {
             &:hover {
-              border: 1px solid ${theme.line.color};
+              border: 1px solid ${theme.color.principals.darkerPurpleText};
               box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.03);
 
               &:after {
@@ -211,11 +211,11 @@ const Item = props => {
                 transform: scale(1.1);
               }
               h1 {
-                color: ${theme.blog.h1.hoverColor};
+                color: ${theme.color.principals.darkerPurpleText};
               }
               :global(.arrow) {
                 opacity: 1;
-                stroke: ${theme.color.special.attention};
+                stroke: ${theme.color.principals.darkerPurpleText};
                 transform: translateX(0);
               }
             }
@@ -224,8 +224,8 @@ const Item = props => {
             }
             :global(.arrow) {
               display: inline-block;
-              fill: ${theme.color.special.attention};
-              stroke: ${theme.color.special.attention};
+              fill: ${theme.color.principals.darkerPurpleText};
+              stroke: ${theme.color.principals.darkerPurpleText};
               stroke-width: 40;
               stroke-linecap: round;
               opacity: 0;

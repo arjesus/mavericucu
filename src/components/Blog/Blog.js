@@ -31,20 +31,15 @@ const Blog = props => {
         ul {
           list-style: none;
           margin: 0 auto;
-          padding: ${`calc(${theme.space.default} * 1.5) 0 calc(${theme.space.default} * 0.5)`};
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 35px;
+          padding: 35px;
         }
 
         @above tablet {
-          .main {
-            padding: 0 ${`0 calc(${theme.space.default} * 1.5)`};
-          }
           ul {
-            max-width: ${theme.text.maxWidth.tablet};
-          }
-        }
-        @above desktop {
-          ul {
-            max-width: ${theme.text.maxWidth.desktop};
+            grid-template-columns: 1fr 1fr;
           }
         }
       `}</style>

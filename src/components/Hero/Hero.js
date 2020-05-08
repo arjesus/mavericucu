@@ -164,7 +164,6 @@ const Hero = props => {
         }
 
         .padding-block {
-
           .hero-sub-header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -320,6 +319,7 @@ const Hero = props => {
           align-items: center;
           grid-auto-flow: column;
           padding: 0 15%;
+          margin-top: -5px;
           h2 {
             color: ${theme.hero.bar.color};
           }
