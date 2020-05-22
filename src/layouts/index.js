@@ -122,7 +122,7 @@ class Layout extends React.Component {
                       theme={this.state.theme}
                     />
                     <main className="background-img">
-                      <div className="background-img-white">{children}</div>
+                      <div>{children}</div>
                     </main>
                     <Footer data={data} html={footnoteHTML} theme={this.state.theme} />
 
@@ -179,10 +179,6 @@ class Layout extends React.Component {
                       -moz-background-size: cover;
                       -o-background-size: cover;
                       background-size: cover;
-                      }
-                      .background-img-white {
-                          background-color: white;
-                          opacity: 0.9;
                       }
                       main {
                         width: auto;

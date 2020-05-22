@@ -73,7 +73,7 @@ const Item = props => {
           .item {
             :global(a) {
               color: ${theme.color.principals.darkerPurpleText};
-              padding: ${theme.space.inset.s};
+              padding: 5px;
               transition: all ${theme.time.duration.default};
               border-radius: ${theme.size.radius.small};
             }

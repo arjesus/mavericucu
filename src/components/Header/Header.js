@@ -95,7 +95,7 @@ class Header extends React.Component {
 
             &.homepage {
               position: absolute;
-              background-color: transparent;
+              background-color: ${theme.color.neutral.white};
               height: ${theme.header.height.homepage};
               z-index: 1;
             }
@@ -118,19 +118,19 @@ class Header extends React.Component {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 60px;
+            height: 45px;
             margin: ${theme.space.inline.default};
             overflow: hidden;
-            width: 60px;
+            width: 45px;
             transition: all 0.5s;
 
             .homepage & {
-              height: 60px;
-              width: 60px;
+              height: 45px;
+              width: 45px;
             }
 
             img {
-              width: 80px;
+              width: 45px;
             }
           }
 
@@ -147,10 +147,10 @@ class Header extends React.Component {
 
           @from-width tablet {
             .header {
-              padding: ${theme.space.inset.l};
+              padding: 5px;
 
               &.homepage {
-                height: ${theme.header.height.homepage};
+                height: 50px;
               }
             }
           }
