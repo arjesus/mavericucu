@@ -65,7 +65,7 @@ const Item = props => {
           padding: ${theme.space.inset.s};
           position: relative;
           transition: all ${theme.time.duration.default};
-          background: transparent;
+          background: #ffffffd9;
 
           :global(.gatsby-image-outer-wrapper) {
             border-radius: ${theme.size.radius.default};
@@ -73,7 +73,7 @@ const Item = props => {
             overflow: hidden;
           }
           :global(.gatsby-image-outer-wrapper img) {
-            z-index: -1;
+            z-index: 0;
           }
 
           &::after {
@@ -171,7 +171,7 @@ const Item = props => {
         }
         @from-width desktop {
           li {
-            margin: ${`calc(${theme.space.default} * 4) 0 calc(${theme.space.default} * 5)`};
+            margin: ${`calc(${theme.space.default} * 3) 0 calc(${theme.space.default})`};
             padding: 0 0 ${`calc(${theme.space.default} * 2)`};
 
             &::after {
