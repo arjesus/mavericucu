@@ -50,14 +50,17 @@ const Hero = props => {
         <div className="close-contact">
           <div className="hero-sub-text">
             <h2>Atención especializada y de calidad</h2>
-            <p>
-              Nuestros especialistas guías te contactaran para de forma segura y privada para
-              encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
+            <div>
+              <p>
+                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y
+                privada poder encontrar el psicólogo que más se adapte a tus necesidades.
+              </p>
+              <p>Empieza tu terapia mediante video, teléfono o chat hoy mismo.</p>
+            </div>
+            <a href="#link-to-form-section">Contactanos</a>
           </div>
           <div className="hero-sub-image">
             <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
-            <a href="#link-to-form-section">Contactanos</a>
           </div>
         </div>
         <div className="reviews">
@@ -69,48 +72,60 @@ const Hero = props => {
             <Plans />
             <div className="plans-sub-text">
               <h3>Primera cita gratis</h3>
-              <p>
-                Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
-                resultados de la terapia online pero a la hora de la verdad lo que cuenta es{' '}
-                <strong>tu experiencia</strong>
-              </p>
               <a href="/contact" className="plans-botton">
-                Contacta con nosotros
+                Contactanos
               </a>
             </div>
           </div>
         </div>
         <div className="steps">
-          <div className="hero-sub-image">
-            <img src={paso1} alt="Mujer psicologa ayudando" />
-            <p>
-              <strong>Contactanos.</strong> Mediante nuestro formulario web o llamada telefónica,
-              nos pondremos en contacto contigo en la hora y momento que solicites.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={paso2} alt="Mujer psicologa ayudando" />
-            <p>
-              Habla con nuestro especialista guia. Nuestros especialistas te contactaran para de
-              forma segura y privada encontrar el psicólogo que más se adapte a tus necesidades.
-            </p>
-          </div>
-          <div className="hero-sub-image">
-            <img src={paso3} alt="Mujer psicologa ayudando" />
-            <p>
-              Comienza tu terapia online. Conoce a tu psicólogo y empieza tu primera sesión
-              gratuita.
-            </p>
+          <h2>Fácil, asequible y 100% adaptado a ti</h2>
+          <div className="steps-img-container">
+            <div className="hero-sub-image">
+              <img src={paso1} alt="Mujer psicologa ayudando" />
+              <h3>Contactanos</h3>
+              <p>
+                Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto
+                contigo en la hora y momento que solicites.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso2} alt="Mujer psicologa ayudando" />
+              <h3>Habla con nuestro especialista guia</h3>
+              <p>
+                Nuestros especialistas te contactaran para de forma segura y privada encontrar el
+                psicólogo que más se adapte a tus necesidades.
+              </p>
+            </div>
+            <div className="hero-sub-image">
+              <img src={paso3} alt="Mujer psicologa ayudando" />
+              <h3>Comienza tu terapia online</h3>
+              <p>Conoce a tu psicólogo y empieza tu primera sesión gratuita.</p>
+            </div>
           </div>
         </div>
-        <div className="contact"></div>
+        <div className="contact close-contact">
+          <div className="hero-sub-text">
+            <h2>Contactanos y comienza a sentirte mejor</h2>
+            <div>
+              <p>
+              Podríamos comentar muchas más cosas sobre nuestros profesionales y los  buenos resultados de la terapia online pero a la hora de la verdad lo que cuenta es tu experiencia.
+              </p>
+              <p>Mediante nuestro breve formulario de contacto podrás elegir el momento que mejor te venga a ti para que nuestro psicólogo guia te contacte.</p>
+            </div>
+            <a href="#link-to-form-section">Empezar</a>
+          </div>
+          <div className="hero-sub-image">
+            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
+          </div>
+        </div>
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
         .grid-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.9fr 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 0.9fr 1fr 0.7fr 1fr 0.9fr 1fr 1fr;
           gap: 25px 1px;
           grid-template-areas:
             'header'
@@ -223,23 +238,31 @@ const Hero = props => {
           img {
             width: 70%;
           }
-          p {
-            color: ${theme.color.principals.darkerPurpleText};
-            font-size: 16px;
-            line-height: 1.4rem;
-          }
-          .hero-sub-image {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-          }
           .hero-sub-text {
             display: grid;
-            grid-template-rows: 1fr 1fr;
-            grid-row-gap: 40px;
+            grid-template-rows: 0.1fr 1fr 0.1fr;
+            grid-row-gap: 20px;
             width: 80%;
             justify-items: center;
+            color: ${theme.color.principals.darkerPurpleText};
+            h2 {
+              font-size: 32px;
+            }
+            p {
+              margin-top: 10px;
+              font-size: 16px;
+              line-height: 1.4rem;
+            }
+            a {
+              background-color: ${theme.color.principals.darkerPurpleText};
+              width: 150px;
+              padding: 7px;
+              color: ${theme.color.principals.white};
+              border-radius: 0.2rem;
+              font-size: 18px;
+              text-align: center;
+              font-weight: 600;
+            }
           }
         }
 
@@ -263,7 +286,8 @@ const Hero = props => {
           align-items: center;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
-            margin-bottom: 30px;
+            margin-bottom: 10px;
+            font-size: 32px;
           }
           .plans-sub {
             display: grid;
@@ -275,55 +299,70 @@ const Hero = props => {
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            h2 {
-              margin-bottom: 50px !important;
-            }
             h3 {
               color: ${theme.color.principals.darkerPurpleText};
               font-size: 28px;
-              font-weight: 700;
+            }
+            a {
+              background-color: ${theme.color.principals.darkerPurpleText};
+              width: 150px;
+              padding: 7px;
+              color: ${theme.color.principals.white};
+              border-radius: 0.2rem;
+              font-size: 18px;
+              text-align: center;
+              font-weight: 600;
             }
           }
         }
-
         .steps {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
           background-color: white;
           border-radius: 1rem;
-          grid-area: steps;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
           width: 100%;
           min-height: 50vh;
           height: auto;
-          -ms-flex-align: center;
-          -ms-flex-align: center;
-          grid-auto-flow: column;
-          grid-column-gap: 60px;
-          justify-items: center;
-          img {
-            width: 70%;
-            margin-bottom: 30px;
-          }
-          .hero-sub-image {
-            display: flex;
-            flex-direction: column;
-            width: 70%;
-            align-items: center;
-            justify-content: center;
-          }
-          h3 {
-            text-align: center;
+          h2 {
             color: ${theme.color.principals.darkerPurpleText};
-            font-size: 16px;
-            line-height: 1.4rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-size: 32px;
           }
-          p {
-            text-align: center;
-            color: ${theme.color.principals.darkerPurpleText};
-            font-size: 16px;
-            line-height: 1.4rem;
+          .steps-img-container {
+            grid-area: steps;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            -ms-flex-align: center;
+            -ms-flex-align: center;
+            grid-auto-flow: column;
+            grid-column-gap: 60px;
+            justify-items: center;
+            img {
+              width: 70%;
+              margin-bottom: 30px;
+            }
+            .hero-sub-image {
+              display: flex;
+              flex-direction: column;
+              width: 80%;
+              align-items: center;
+              justify-content: center;
+            }
+            h3 {
+              text-align: center;
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 16px;
+              line-height: 1.4rem;
+              margin-bottom: 10px;
+              font-weight: 700;
+            }
+            p {
+              text-align: center;
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 16px;
+              line-height: 1.4rem;
+            }
           }
         }
 

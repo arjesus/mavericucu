@@ -48,7 +48,7 @@ const arrOfData = [
 const Psychology = props => {
   const cardToRender = [];
   for (let i = 0; i <= 2; i += 1) {
-    const randomPsuchology = Math.random
+    const randomPsuchology = Math.random;
     cardToRender.push(
       <div className="card-container" key={i.toString()}>
         <div className="header-card">
@@ -90,11 +90,24 @@ const Psychology = props => {
   return (
     <React.Fragment>
       <div className="psychology-container">
-        <h2>Cientos de profesionales, titulados y disponibles en la palma de tu mano</h2>
-        <p>
-          Al hablar con un especialista guia te ofrecemos un cuadro de psicólogos de primer nivel,
-          cuidadosamente seleccionados para ti
+        <div>
+          <h2>Cientos de profesionales.</h2>
+          <h2>Titulados y disponibles en la palma de tu mano</h2>
+        </div>
+        <div>
+          <p>
+            Cientos de psicólogos, titulados, colegiados y con amplia experiencia en diversas áreas,
+            esto es lo que nos permite encontrar el psicólogo más adaptado a tus necesidades.
         </p>
+          <p>
+            Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
+            salud y bienestar, como nutricionistas o profesional de la actividad física, esto permite
+            a nuestros psicólogos encontrar fácilmente el apoyo que más se adapte a ti.
+        </p>
+          <p>
+            <strong>Nuestro misión: Tu bienestar emocional</strong>
+          </p>
+        </div>
         <div className="psychology-card">{cardToRender}</div>
       </div>
       {/* --- STYLES --- */}
@@ -103,11 +116,10 @@ const Psychology = props => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 0.2fr 0.2fr 0.4fr;
-          min-height: 50vh;
+          min-height: 90vh;
           width: 100%;
-          grid-gap: 3rem;
-          padding: 0 60px;
-          margin-top: 50px;
+          grid-gap: 1rem;
+          padding: 20px 60px;
           height: auto;
         }
         .psychology-card {
@@ -117,13 +129,14 @@ const Psychology = props => {
         }
         h2 {
           color: #4e3b80;
-          font-size: 28px;
+          font-size: 32px;
           text-align: center;
         }
         p {
           text-align: center;
           color: #4e3b80;
-          font-size: 18px;
+          font-size: 16px;
+          padding-bottom: 10px;
         }
         @media (max-width: 600px) {
           .psychology-container {
