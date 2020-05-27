@@ -3,6 +3,7 @@ import Contact from '../Contact-inserted';
 import DatePickerMaterialComponent from './date-picker/datepicker.material';
 import theme from '../../theme/theme.yaml';
 import { Link } from 'gatsby';
+import {postFormAnswers} from '../../services/form'
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
@@ -17,9 +18,14 @@ const DynamicForm = () => {
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [body,setBody] = useState("")
 
   const [answers, setAnswer] = useState([]);
 
+  function handleSubmit(e) {
+     
+        postFormAnswers({answers:{age,body,email,experience,feeling,gender,name,phone}})
+  }
   return (
     <React.Fragment>
       <div className="form-container">
@@ -101,15 +107,15 @@ const DynamicForm = () => {
           )}
           {formStep === 5 && (
             <div className="feel-container">
-              <h3>¿Que sientes físicamente?</h3>
+              <h3>¿Como te sientes físicamente?</h3>
               <div className="btn-container">
-                {feelingsArr.map((feeling, index) => {
+                {["Muy bien","Bien","Regular","Mal"].map((feeling, index) => {
                   return (
                     <button
                       className="feel-btn"
                       key={index.toString()}
                       onClick={() => {
-                        return setFormStep(formStep + 1), setFeeling(feeling);
+                        return setFormStep(formStep + 1), setBody(feeling);
                       }}
                     >
                       <span>{feeling}</span>
@@ -206,7 +212,8 @@ const DynamicForm = () => {
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
-          {formStep === 8 && (
+          {formStep === 8 && ( 
+            handleSubmit(),
             <div className="feel-container-finish">
               <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
               <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
