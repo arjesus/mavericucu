@@ -14,3 +14,13 @@ export const postFormAnswers = async (answers) => {
       console.error(error)
   }
 }
+
+export const postFormAnswersProfessionals = async (answers) => {
+  try {
+      const response = await api.post('/form/professional', answers )
+      console.log(response.data)
+      return response.data
+  } catch (error) {
+      console.error(error)
+  }
+}
