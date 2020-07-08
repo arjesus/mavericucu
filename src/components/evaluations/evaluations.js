@@ -1,4 +1,5 @@
 import React from "react";
+import HoverRating from "../starts-rating/starts-rating.component";
 
 import logo from "../../../static/images/lirio.png";
 
@@ -102,6 +103,7 @@ class Evaluations extends React.Component {
       <React.Fragment>
         <div className="reviews-container">
           <h2>Tu bienestar emocional como nuestro punto de partida</h2>
+          <HoverRating />
           <div className="boxes-container">
             <div className="reviews-container-bars">
               <h3>Reviews</h3>
@@ -143,7 +145,6 @@ class Evaluations extends React.Component {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 0fr 1fr;
-            background-color: #ffff;
             height: auto;
             min-height: 53vh;
             width: 100%;

@@ -72,7 +72,7 @@ const Hero = props => {
             <Plans />
             <div className="plans-sub-text">
               <h3>Primera cita gratis</h3>
-              <a href="/contact" className="plans-botton">
+              <a href="#link-to-form-section" className="plans-botton">
                 Contactanos
               </a>
             </div>
@@ -104,7 +104,7 @@ const Hero = props => {
             </div>
           </div>
         </div>
-        <div className="contact close-contact">
+        <div id="link-to-form-section" className="contact close-contact">
           <div className="hero-sub-text">
             <h2>Contactanos y comienza a sentirte mejor</h2>
             <div>
@@ -113,7 +113,7 @@ const Hero = props => {
               </p>
               <p>Mediante nuestro breve formulario de contacto podrás elegir el momento que mejor te venga a ti para que nuestro psicólogo guia te contacte.</p>
             </div>
-            <a href="#link-to-form-section">Empezar</a>
+            <a href="/contact">Empezar</a>
           </div>
           <div className="hero-sub-image">
             <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
@@ -125,7 +125,7 @@ const Hero = props => {
         .grid-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.9fr 1fr 0.7fr 1fr 0.9fr 1fr 1fr;
+          grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.3fr 0.6fr 0.6fr;
           gap: 25px 1px;
           grid-template-areas:
             'header'
@@ -142,7 +142,7 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           grid-area: header;
-          min-height: 70vh;
+          min-height: 53vh;
           height: auto;
           justify-content: center;
           align-items: center;
@@ -178,9 +178,9 @@ const Hero = props => {
             justify-content: space-evenly;
             height: 80%;
             align-self: center;
+            color: ${theme.color.principals.darkerPurpleText};
 
             h1 {
-              color: ${theme.color.principals.darkerPurpleText};
               font-size: 32px;
             }
 
@@ -279,7 +279,7 @@ const Hero = props => {
           display: flex;
           width: 100%;
           height: auto;
-          min-height: 60vh;
+          min-height: 50vh;
           padding: 50px 10%;
           flex-direction: column;
           justify-content: space-between;
