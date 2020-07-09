@@ -47,7 +47,7 @@ const Hero = props => {
         <div className="professionals">
           <Psychology />
         </div>
-        <div className="close-contact">
+        <div className="close-contact blockColumn">
           <div className="hero-sub-text">
             <h2>Atención especializada y de calidad</h2>
             <div>
@@ -68,7 +68,7 @@ const Hero = props => {
         </div>
         <div className="differences">
           <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
-          <div className="plans-sub">
+          <div className="blockColumn plans-sub">
             <Plans />
             <div className="plans-sub-text">
               <h3>Primera cita gratis</h3>
@@ -104,7 +104,7 @@ const Hero = props => {
             </div>
           </div>
         </div>
-        <div id="link-to-form-section" className="contact close-contact">
+        <div id="link-to-form-section" className="blockColumn contact close-contact">
           <div className="hero-sub-text">
             <h2>Contactanos y comienza a sentirte mejor</h2>
             <div>
@@ -370,6 +370,33 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           grid-area: contact;
+        }
+
+        @media (max-width: 600px) {
+          .grid-container {
+            grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.7fr 1fr 0.6fr;
+          }
+          .header {
+            grid-auto-flow: column;
+            display: grid;
+            min-height: 100vh;
+            grid-template-rows: 1fr 0.4fr;
+  
+            .top-header {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-template-columns: 1fr;
+            }
+          }
+          .blockColumn {
+            display: grid;
+            grid-template-rows: 1fr 1fr !important;
+            grid-template-columns: 1fr !important;
+          }
+          .steps-img-container {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 1fr 1fr 1fr !important;
+          }
         }
       `}</style>
     </React.Fragment>
