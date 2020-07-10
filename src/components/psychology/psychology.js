@@ -1,6 +1,8 @@
 import React from 'react';
+import theme from '../../theme/theme.yaml';
 
 import logo from '../../../static/images/lirio.png';
+import fondo from '../../images/jpg/barco-tres-encima.png';
 import terapeuta1 from '../../../static/images/psychology/1.png';
 import terapeuta2 from '../../../static/images/psychology/2.png';
 import terapeuta3 from '../../../static/images/psychology/3.png';
@@ -62,6 +64,7 @@ const Psychology = props => {
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
               0 6px 14px 0 #4e3b80;
             padding: 15px;
+            background-color: ${theme.color.principals.white};
             border-radius: 0.5rem;
           }
 
@@ -108,6 +111,7 @@ const Psychology = props => {
             <strong>Nuestro misión: Tu bienestar emocional</strong>
           </p>
         </div>
+        <img className="psycology-img" src={fondo} />
         <div className="psychology-card">{cardToRender}</div>
       </div>
       {/* --- STYLES --- */}
@@ -115,8 +119,8 @@ const Psychology = props => {
         .psychology-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.2fr 0.2fr 0.4fr;
-          min-height: 90vh;
+          grid-template-rows: 0.2fr 0.2fr 0.2fr;
+          min-height: 70vh;
           width: 100%;
           grid-gap: 1rem;
           padding: 20px 60px;
@@ -126,6 +130,7 @@ const Psychology = props => {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 2rem;
+          background-color: ${theme.color.principals.lightPurple};
         }
         h2 {
           color: #4e3b80;
@@ -155,6 +160,11 @@ const Psychology = props => {
             grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 2rem;
           }
+        }
+        .psycology-img {
+          width: 35%;
+          margin: 0 auto;
+          margin-bottom: -37px;
         }
       `}</style>
     </React.Fragment>

@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../images/jpg/mujer-en-sofa.jpg';
 import capturaDePantalla from '../../images/jpg/mujer-ordenador.jpg';
-
-import paso1 from '../../../static/images/paso1.jpg';
-import paso2 from '../../../static/images/paso2.jpg';
-import paso3 from '../../../static/images/paso3.jpg';
 import Evaluations from '../evaluations/evaluations.js';
 import Psychology from '../psychology/psychology';
 import Plans from './components/plans.component';
 
+import paso1 from '../../../static/images/paso1.jpg';
+import paso2 from '../../../static/images/paso2.jpg';
+import paso3 from '../../../static/images/paso3.jpg';
+import phoneKey from '../../images/jpg/registro-online.png';
+import webAssistance from '../../images/svg-icons/asistencia-online.svg';
 const Hero = props => {
   const { theme } = props;
 
@@ -72,6 +73,7 @@ const Hero = props => {
             <Plans />
             <div className="plans-sub-text">
               <h3>Primera cita gratis</h3>
+              <img src={webAssistance} />
               <a href="#link-to-form-section" className="plans-botton">
                 Contactanos
               </a>
@@ -116,7 +118,7 @@ const Hero = props => {
             <a href="/contact">Empezar</a>
           </div>
           <div className="hero-sub-image">
-            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
+            <img src={phoneKey} alt="Mujer psicologa ayudando" />
           </div>
         </div>
       </div>
@@ -312,6 +314,10 @@ const Hero = props => {
               font-size: 18px;
               text-align: center;
               font-weight: 600;
+            }
+            img {
+              margin: 15px 0;
+              width: 50%;
             }
           }
         }
