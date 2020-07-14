@@ -130,6 +130,8 @@ const Psychology = props => {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 2rem;
+          padding: 20px 30px;
+          margin: 0 -60px;
           background-color: ${theme.color.principals.lightPurple};
         }
         h2 {
@@ -143,6 +145,12 @@ const Psychology = props => {
           font-size: 16px;
           padding-bottom: 10px;
         }
+
+        .psycology-img {
+          width: 35%;
+          margin: 0 auto;
+          margin-bottom: -37px;
+        }
         @media (max-width: 600px) {
           .psychology-container {
             display: grid;
@@ -151,20 +159,21 @@ const Psychology = props => {
             min-height: 70vh;
             width: 100%;
             grid-gap: 1rem;
-            padding: 0 10px;
+            padding: 20px;
             margin-top: 50px;
           }
           .psychology-card {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            grid-gap: 2rem;
+            padding: 0;
+            margin: 0;
+            background-color: ${theme.color.principals.white};
           }
-        }
-        .psycology-img {
-          width: 35%;
-          margin: 0 auto;
-          margin-bottom: -37px;
+          .psycology-img {
+            width: 70%;
+            margin-bottom: -27px;
+          }
         }
       `}</style>
     </React.Fragment>

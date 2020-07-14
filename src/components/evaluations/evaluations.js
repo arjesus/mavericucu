@@ -198,6 +198,7 @@ class Evaluations extends React.Component {
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
                 grid-gap: 2rem;
+                text-align: justify;
               }  
               .review-container-comments {
                 width: 300px;

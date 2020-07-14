@@ -27,11 +27,11 @@ const Hero = props => {
               </p>
               <a href="#link-to-form-section">Contactanos</a>
             </div>
-            {typeof window !== 'undefined' && window.innerWidth <= 600 && (
+            {/* {typeof window !== 'undefined' && window.innerWidth <= 600 && (
               <a href="#link-to-form-section" className="mobile-button">
                 Reserva tu cita online
               </a>
-            )}
+            )} */}
             <img className="top-header-img" src={womanWorried} alt="Mujer preocupada" />
           </div>
           <div>
@@ -144,7 +144,7 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           grid-area: header;
-          min-height: 53vh;
+          min-height: 51vh;
           height: auto;
           justify-content: center;
           align-items: center;
@@ -380,28 +380,63 @@ const Hero = props => {
 
         @media (max-width: 600px) {
           .grid-container {
-            grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.7fr 1fr 0.6fr;
+            grid-template-rows: 0.35fr 1fr 0.5fr 0.6fr 0.6fr 0.9fr 0.55fr;
+            padding-top: 115px;
+            padding: 115px 10px 20px 0px;
+            text-align: center;
+            img {
+              border-radius: 1rem;
+            }
           }
           .header {
             grid-auto-flow: column;
             display: grid;
-            min-height: 100vh;
+            min-height: 75vh;
             grid-template-rows: 1fr 0.4fr;
   
             .top-header {
               display: grid;
-              grid-template-rows: 1fr 1fr;
+              grid-template-rows: 1.6fr 0.4fr;
               grid-template-columns: 1fr;
+
+              .top-header-text {
+                padding: 0 15px;
+                align-items: center;
+              }
+
+              img {
+                width: 80%;
+                margin: 0 auto;
+                border-radius: 1rem;
+              }
             }
+
           }
           .blockColumn {
             display: grid;
-            grid-template-rows: 1fr 1fr !important;
+            grid-template-rows: 1fr 0.5fr !important;
             grid-template-columns: 1fr !important;
+            margin: 0;
           }
           .steps-img-container {
             grid-template-columns: 1fr !important;
             grid-template-rows: 1fr 1fr 1fr !important;
+          }
+          .professionals {
+
+          }
+          .reviews {
+            padding: 20px 0;
+          }
+          .differences {
+            padding: 20px;
+            justify-content: space-around;
+          }
+          .steps {
+
+          }
+          .close-contact {
+
           }
         }
       `}</style>
