@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { postFormAnswersProfessionals } from '../../services/form';
 import theme from '../../theme/theme.yaml';
 
-const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
-
 const ProfessionalForm = () => {
   const [formStep, setFormStep] = useState(1);
   const [name, setName] = useState('');
@@ -22,14 +20,14 @@ const ProfessionalForm = () => {
     <React.Fragment>
       <div className="form-container">
         <div className="form-card">
-          {formStep < 8 && (
+          {formStep < 3 && (
             <div className="form-steps-container">
               {formStep !== 1 && (
                 <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
                   ⟵
                 </p>
               )}
-              <p className="form-steps-counter">{formStep}/8</p>
+              <p className="form-steps-counter">{formStep}/3</p>
               {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
             </div>
           )}
@@ -107,12 +105,12 @@ const ProfessionalForm = () => {
         }
 
         .feel-container-finish {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 0.5fr 1fr;
+          padding: 25px;
+          display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-items: center;
-          
+          height: 100%;
+          text-align: center;
         }
 
         .form-steps-container {
@@ -216,6 +214,10 @@ const ProfessionalForm = () => {
               align-items: center;
               justify-items: center;
 
+              h3 {
+                margin-bottom: 50px;
+              }
+
               .btn-container {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -248,7 +250,14 @@ const ProfessionalForm = () => {
         @media (max-width: 600px) {
           .form-container {
             min-height: 40vh;
+            background-color: transparent;
+
+            .form-card {
+              width: 100%;
+              background-color: ${theme.color.principals.white};
+            }
           }
+
           .feel-btn {
             padding: 15px 14px;
             font-size: 18px;
