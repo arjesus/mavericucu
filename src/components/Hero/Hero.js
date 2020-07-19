@@ -34,16 +34,15 @@ const Hero = props => {
             )} */}
             <img className="top-header-img" src={womanWorried} alt="Mujer preocupada" />
           </div>
-          <div>
             {typeof window !== 'undefined' && window.innerWidth > 600 && (
-              <section className="call-to-action">
+              <div className="call-to-action">
                 <h2>
                   Ayuda psicológica especial durante periodo de confinamiento con psicólogos
                   especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
                 </h2>
-              </section>
+              </div>
             )}
-          </div>
+
         </div>
         <div className="professionals">
           <Psychology />
@@ -144,22 +143,20 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           grid-area: header;
-          min-height: 51vh;
-          height: auto;
           justify-content: center;
           align-items: center;
           grid-auto-flow: column;
           display: grid;
-          grid-template-rows: 1fr 0.4fr;
+          grid-template-rows: 1fr 0.2fr;
 
           .call-to-action {
-            grid-area: call-to-action;
             background-color: ${theme.color.principals.darkerPurpleText};
             color: white;
-            height: 100px;
-            text-align: center;
-            padding: 15px 30px;
+            height: 100%;
             border-radius: 0 0 1rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             h2 {
               font-size: 18px;
@@ -376,6 +373,11 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           grid-area: contact;
+          img {
+            width: 50%;
+            display:block;
+            margin:auto;
+          }
         }
 
         @media (max-width: 600px) {

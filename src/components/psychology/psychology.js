@@ -123,16 +123,17 @@ const Psychology = props => {
           min-height: 70vh;
           width: 100%;
           grid-gap: 1rem;
-          padding: 20px 60px;
+          padding: 20px 60px 0px 60px;
           height: auto;
         }
         .psychology-card {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 2rem;
-          padding: 20px 30px;
+          padding: 50px 30px;
           margin: 0 -60px;
-          background-color: ${theme.color.principals.lightPurple};
+          border-radius: 0 0 1rem 1rem;
+          background-color: ${theme.color.principals.veryLightPurple};
         }
         h2 {
           color: #4e3b80;
@@ -149,7 +150,7 @@ const Psychology = props => {
         .psycology-img {
           width: 35%;
           margin: 0 auto;
-          margin-bottom: -37px;
+          margin-bottom: -57px;
         }
         @media (max-width: 600px) {
           .psychology-container {

@@ -1,25 +1,45 @@
 import { Link } from 'gatsby';
+import { Grid, Box } from '@material-ui/core';
 import React from 'react';
 import { graphql } from "gatsby";
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
+import logo from '../../../static/images/logo.png';
+import config from '../../../content/meta/config';
+
 
 const Footer = props => {
   const post = props.data;
   return (
     <React.Fragment>
       <footer className="footer">
-        <ul>
-          <Link to="/privacy" className="footer-link">
-            Privacidad
-          </Link>
-          <Link to="/cookies" className="footer-link">
-            Cookies
-          </Link>
-          <Link to="/terms" className="footer-link">
-            Términos
-          </Link>
-        </ul>
+      <Box>
+      <Grid container direction="column">
+
+
+        <Grid item md={12}>
+          <Grid item md={3} className="logo">
+            {/* <img
+              src={logo}
+              alt={config.siteTitle}
+            /> */}
+          </Grid>
+        </Grid>
+        <Grid>
+          <ul>
+            <Link to="/privacy" className="footer-link">
+              Privacidad
+            </Link>
+            <Link to="/cookies" className="footer-link">
+              Cookies
+            </Link>
+            <Link to="/terms" className="footer-link">
+              Términos
+            </Link>
+            </ul>
+          </Grid>
+        </Grid>
+      </Box>
       </footer>
       {/* --- STYLES --- */}
       <style jsx>{`
@@ -39,6 +59,11 @@ const Footer = props => {
           min-height: 15vh;
           height: auto;
           justify-content: center;
+          .logo {
+            img {
+              width: 50%;
+            }
+          }
 
           & :global(a.footer-link) {
             color: ${theme.color.principals.white};
