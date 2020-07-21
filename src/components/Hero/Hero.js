@@ -7,8 +7,8 @@ import Psychology from '../psychology/psychology';
 import Plans from './components/plans.component';
 
 import paso1 from '../../../static/images/paso1.jpg';
-import paso2 from '../../../static/images/paso2.jpg';
-import paso3 from '../../../static/images/paso3.jpg';
+import paso2 from '../../../static/images/paso3.svg';
+import paso3 from '../../../static/images/paso2.jpg';
 import phoneKey from '../../images/jpg/registro-online.png';
 import webAssistance from '../../images/svg-icons/asistencia-online.svg';
 const Hero = props => {
@@ -126,7 +126,7 @@ const Hero = props => {
         .grid-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.3fr 0.6fr 0.6fr;
+          grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.4fr 0.6fr 0.6fr;
           gap: 25px 1px;
           grid-template-areas:
             'header'
@@ -277,15 +277,13 @@ const Hero = props => {
           grid-area: differences;
           display: flex;
           width: 100%;
-          height: auto;
-          min-height: 50vh;
           padding: 50px 10%;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             font-size: 32px;
           }
           .plans-sub {
