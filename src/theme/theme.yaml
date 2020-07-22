@@ -45,7 +45,10 @@ color:
     darkerPurpleText: &darkerPurpleText '#4e3b80'
     veryLightPurple: &veryLightPurple '#f8f1ffff'
     white: &white '#fff'
-    gray: &gray '	#696969'
+    gray: &gray '#696969'
+    first: &first '#7BEFC5'
+    second: &second '#AB79F2'
+    third: &third '#FFC558'
 
 
 
