@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
     padding: '0 !important',
     border: `0.1px solid ${theme.color.principals.lightPurple}`,
+    borderTop: 'none',
   },
   plansCardsHeaderFirst: {
     backgroundColor: theme.color.principals.first,
@@ -34,6 +35,8 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '1rem 1rem 0 0',
+    marginBottom: '2rem',
+    marginTop: '-17px',
   },
   plansCardsHeaderSecond: {
     backgroundColor: theme.color.principals.second,
@@ -46,6 +49,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     borderRadius: '1rem 1rem 0 0',
     marginBottom: '2rem',
+    marginTop: '-15px',
   },
   plansCardsHeaderThird: {
     backgroundColor: theme.color.principals.third,
@@ -58,6 +62,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     borderRadius: '1rem 1rem 0 0',
     marginBottom: '2rem',
+    marginTop: '-15px',
   },
   button: {
     backgroundColor: theme.color.principals.darkerPurpleText,
@@ -89,13 +94,14 @@ const useStyles = makeStyles({
   },
   paragraph: {
     fontSize: '1.2rem',
-    color: theme.color.principals.darkerPurpleText,
+    color: theme.color.principals.blackText,
     marginBottom: '3rem',
   },
   paragraphInside: {
     fontSize: '1.2rem',
     color: 'black',
     marginBottom: '3rem',
+    color: theme.color.principals.blackText,
   },
   paragraphInsideBolder: {
     fontSize: '3rem',
@@ -115,10 +121,10 @@ const ProfessionalPage = props => {
     <Box mt={2}>
     <Grid container direction="column" className={classes.plans}>
       <Grid container direction="column" className={classes.plansContainer}>
-        <Grid container direction="column" md={12}  alignItems="center" spacing={5} className={classes.plansBox}>
+        <Grid container direction="column" alignItems="center" spacing={5} className={classes.plansBox}>
           <h2 className={classes.title}>Elige el plan que más se adapte a ti</h2>
-            <Grid container justify="space-around" direction="row" md={12} spacing={5}>
-              <Grid item md={3} sm={12} className={classes.plansCards}>
+            <Grid container justify="space-around" direction="row" spacing={5}>
+              <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
               <div className={classes.plansCardsHeaderFirst}>
                 <h3>SEMANAL</h3>
               </div>
@@ -139,7 +145,7 @@ const ProfessionalPage = props => {
                   Prueba ahora
                 </a>
               </Grid>
-              <Grid item md={3} sm={12} className={classes.plansCards}>
+              <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
               <div className={classes.plansCardsHeaderSecond}>
                 <h3>MENSUAL</h3>
               </div>
@@ -161,7 +167,7 @@ const ProfessionalPage = props => {
                   Prueba ahora
                 </a>
               </Grid>
-              <Grid item md={3} sm={12} className={classes.plansCards}>
+              <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
               <div className={classes.plansCardsHeaderThird}>
                 <h3>BI MENSUAL</h3>
               </div>

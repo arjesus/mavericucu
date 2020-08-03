@@ -4,6 +4,7 @@ import DatePickerMaterialComponent from './date-picker/datepicker.material';
 import theme from '../../theme/theme.yaml';
 import { Link } from 'gatsby';
 import {postFormAnswers} from '../../services/form'
+import conversation from '../../images/jpg/conversacion-digital.jpg';
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
@@ -29,7 +30,7 @@ const DynamicForm = () => {
   return (
     <React.Fragment>
       <div className="form-container">
-        <div className="form-card">
+        <div className={formStep < 8 ? 'form-card' : 'form-card-second'}>
           {formStep < 8 && (
             <div className="form-steps-container">
               {formStep !== 1 && (
@@ -215,10 +216,17 @@ const DynamicForm = () => {
           {formStep === 8 && ( 
             handleSubmit(),
             <div className="feel-container-finish">
-              <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
-              <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
-                Volver a la pagina principial
-              </Link>
+              <img
+                src={conversation}
+                alt='Woman sitting on a sofa'
+              />
+              <h3>Empecemos {name}.</h3>
+              <p>
+              Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para agendar tu primera sesión gratuita con el psicólogo que más se adapte a ti
+              </p>
+              <a href='/plans' className={'plans-button'} data-slug={'/plans'}>
+                Elige tu plan
+              </a>
             </div>
           )}
         </div>
@@ -243,12 +251,42 @@ const DynamicForm = () => {
         }
 
         .feel-container-finish {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 0.5fr 1fr;
+          display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-items: center;
-          
+          justify-content: space-around;
+          text-align: center;
+          height: 100%;
+          h3 {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+          }
+          img {
+            width: 80%;
+          }
+          p {
+            font-size: 18px;
+            color: ${theme.color.principals.darkerPurpleText};
+          }
+          a {
+            background-color: ${theme.color.principals.darkerPurpleText};
+            border: none;
+            padding: 10px 40px;
+            color: white;
+            border-radius: 0.3rem;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+        .form-card-second {
+          box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
+          0 6px 14px 0 #4e3b80;
+          border-radius: 1rem;
+          width: 50%;
+          height: 600px;
+          padding: 30px 50px;
+          margin: 0 auto;
         }
 
         .form-steps-container {
@@ -382,6 +420,10 @@ const DynamicForm = () => {
           }
         }
         @media (max-width: 600px) {
+          .form-card-second {
+            width: 90%;
+            padding: 30px 30px;
+          }
           .form-container {
             min-height: 40vh;
           }
