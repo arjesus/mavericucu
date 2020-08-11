@@ -1,8 +1,8 @@
 //const webpack = require("webpack");
-const _ = require("lodash");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const path = require("path");
-const Promise = require("bluebird");
+const _ = require('lodash');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path');
+const Promise = require('bluebird');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
@@ -12,20 +12,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({ node, getNode });
     const fileNode = getNode(node.parent);
     const source = fileNode.sourceInstanceName;
-    const separtorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0;
+    const separtorIndex = ~slug.indexOf('--') ? slug.indexOf('--') : 0;
     const shortSlugStart = separtorIndex ? separtorIndex + 2 : 0;
 
-    if (source !== "parts") {
+    if (source !== 'parts') {
       createNodeField({
         node,
         name: `slug`,
-        value: `${separtorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`
+        value: `${separtorIndex ? '/' : ''}${slug.substring(shortSlugStart)}`
       });
     }
     createNodeField({
       node,
       name: `prefix`,
-      value: separtorIndex ? slug.substring(1, separtorIndex) : ""
+      value: separtorIndex ? slug.substring(1, separtorIndex) : ''
     });
     createNodeField({
       node,
@@ -39,22 +39,26 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve("./src/templates/PostTemplate.js");
-    const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
-    const categoryTemplate = path.resolve("./src/templates/CategoryTemplate.js");
+    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
+    const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+    const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
+    const specializationTemplate = path.resolve('./src/templates/SpecializationTemplate.js');
 
     // Do not create draft post files in production.
-    let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
-    console.log(`Using environment config: '${activeEnv}'`)
+    let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development';
+    console.log(`Using environment config: '${activeEnv}'`);
     let filters = `filter: { fields: { slug: { ne: null } } }`;
-    if (activeEnv == "production") filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`
+    if (activeEnv == 'production')
+      filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`;
 
     resolve(
       graphql(
         `
           {
             allMarkdownRemark(
-              ` + filters + `
+              ` +
+          filters +
+          `
               sort: { fields: [fields___prefix], order: DESC }
               limit: 1000
             ) {
@@ -110,7 +114,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create posts
-        const posts = items.filter(item => item.node.fields.source === "posts");
+        const posts = items.filter(item => item.node.fields.source === 'posts');
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
           const next = index === 0 ? undefined : posts[index - 1].node;
@@ -129,8 +133,29 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
 
+        // Create specialist
+        const specialization = items.filter(item => item.node.fields.source === 'specialization');
+        specialization.forEach(({ node }, index) => {
+          const slug = node.fields.slug;
+          const next = index === 0 ? undefined : specialization[index - 1].node;
+          const prev =
+            index === specialization.length - 1 ? undefined : specialization[index + 1].node;
+          const source = node.fields.source;
+
+          createPage({
+            path: slug,
+            component: specializationTemplate,
+            context: {
+              slug,
+              prev,
+              next,
+              source
+            }
+          });
+        });
+
         // and pages.
-        const pages = items.filter(item => item.node.fields.source === "pages");
+        const pages = items.filter(item => item.node.fields.source === 'pages');
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
@@ -155,11 +180,11 @@ exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
       actions.setWebpackConfig({
         plugins: [
           new BundleAnalyzerPlugin({
-            analyzerMode: "static",
-            reportFilename: "./report/treemap.html",
+            analyzerMode: 'static',
+            reportFilename: './report/treemap.html',
             openAnalyzer: true,
-            logLevel: "error",
-            defaultSizes: "gzip"
+            logLevel: 'error',
+            defaultSizes: 'gzip'
           })
         ]
       });

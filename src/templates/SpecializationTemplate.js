@@ -8,7 +8,7 @@ import Article from "../components/Article";
 import Post from "../components/Post";
 import { ThemeContext } from "../layouts";
 
-const PostTemplate = props => {
+const SpecializationTemplate = props => {
   const {
     data: {
       post,
@@ -19,8 +19,6 @@ const PostTemplate = props => {
     },
     pageContext: { next, prev }
   } = props;
-
-  console.log(props, 'bbbbbbbbbbbbb')
 
   return (
     <React.Fragment>
@@ -44,16 +42,16 @@ const PostTemplate = props => {
   );
 };
 
-PostTemplate.propTypes = {
+SpecializationTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired
 };
 
-export default PostTemplate;
+export default SpecializationTemplate;
 
 //eslint-disable-next-line no-undef
-export const postQuery = graphql`
-  query PostBySlug($slug: String!) {
+export const specializationQuery = graphql`
+  query SpecializationBySlug($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -72,6 +70,7 @@ export const postQuery = graphql`
             }
           }
         }
+        text
       }
     }
     authornote: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {
