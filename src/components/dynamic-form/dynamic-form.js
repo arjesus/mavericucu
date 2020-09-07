@@ -24,7 +24,6 @@ const DynamicForm = () => {
   const [answers, setAnswer] = useState([]);
 
   function handleSubmit(e) {
-     
         postFormAnswers({answers:{age,body,email,experience,feeling,gender,name,phone}})
   }
   return (

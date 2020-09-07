@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 const ImageBlock = props => {
   const classes = useStyles();
   const { imgBLockOptions } = props;
-  console.log(imgBLockOptions.img.childImageSharp.resize.src, 'vvvvvvvvvvvvvvvvvvvvv')
+
   return (
     <Box mt={2}>
       <Grid container spacing={5} direction="row">
@@ -58,7 +58,7 @@ const ImageBlock = props => {
           </a>
         </Grid>
         <Grid item md={6} sm={12} className={classes.imgBox}>
-          <img src={imgBLockOptions.img.childImageSharp.resize.src} alt="Woman sitting on a sofa" />
+          <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
         </Grid>
       </Grid>
     </Box>
