@@ -5,6 +5,9 @@ import theme from '../../theme/theme.yaml';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
+  container: {
+    marginBottom: '20px'
+  },
   button: {
     backgroundColor: theme.color.principals.darkerPurpleText,
     padding: '20px 15px',
@@ -46,19 +49,27 @@ const useStyles = makeStyles({
 const ImageBlock = props => {
   const classes = useStyles();
   const { imgBLockOptions } = props;
+  console.log(imgBLockOptions);
 
   return (
     <Box mt={2}>
-      <Grid container spacing={5} direction="row">
+      <Grid container spacing={5} direction="row" className={classes.container}>
         <Grid className={classes.textTopBox} item sm={12} md={6}>
           <h2 className={classes.title}>{imgBLockOptions.title}</h2>
           <p className={classes.paragraph}>{imgBLockOptions.text}</p>
           <a className={classes.button} href="/professional-form">
-            {imgBLockOptions.button}
+            Pedir primera sesión gratuita
           </a>
         </Grid>
         <Grid item md={6} sm={12} className={classes.imgBox}>
-          <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
+          {imgBLockOptions.img.childImageSharp ? (
+            <img
+              src={imgBLockOptions.img.childImageSharp.resize.src}
+              alt="Woman sitting on a sofa"
+            />
+          ) : (
+            <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
+          )}
         </Grid>
       </Grid>
     </Box>
