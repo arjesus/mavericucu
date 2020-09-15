@@ -42,7 +42,8 @@ const useStyles = makeStyles({
   },
   imgBox: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    width: '100%'
   }
 });
 

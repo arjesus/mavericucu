@@ -1,45 +1,185 @@
 import { Link } from 'gatsby';
 import { Grid, Box } from '@material-ui/core';
 import React from 'react';
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
 import logo from '../../../static/images/logo.png';
+import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
 
+const useStyles = makeStyles({
+  footer: {
+    background: theme.color.principals.darkerPurpleText,
+    padding: theme.space.inset.default,
+    width: '100%',
+    minHeight: '15vh',
+    height: 'auto'
+  },
+  logo: {
+    width: '200px'
+  },
+  footerLinkTitle: {
+    fontSize: '700',
+    color: theme.color.principals.gray,
+    margin: '10px 0'
+  },
+  footerLink: {
+    color: theme.color.principals.gray,
+    margin: '10px 0'
+  }
+});
+
+const evaMinerva = [
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Trabaja con nosotros',
+    url: '/professional/'
+  },
+  {
+    name: 'Contactanos',
+    url: '/contact/'
+  },
+  {
+    name: 'Planes y precios',
+    url: '/plans/'
+  },
+  {
+    name: 'Especialidades',
+    url: '/%20specialties/'
+  }
+];
+
+const specializacions = [
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  },
+  {
+    name: 'Eva Minerva',
+    url: '/'
+  }
+];
+
+const blogs = [
+  {
+    name: 'Blog',
+    url: '/'
+  },
+  {
+    name: 'Blog 2',
+    url: '/'
+  },
+  {
+    name: 'Blog 3',
+    url: '/'
+  },
+  {
+    name: 'Blog 4',
+    url: '/'
+  }
+];
+
+const legals = [
+  {
+    name: 'Privacidad',
+    url: '/privacy'
+  },
+  {
+    name: 'Terms',
+    url: '/terms'
+  },
+  {
+    name: 'cookies',
+    url: '/cookies'
+  }
+];
 
 const Footer = props => {
   const post = props.data;
+  const classes = useStyles();
+
   return (
     <React.Fragment>
-      <footer className="footer">
-      <Box>
-      <Grid container direction="column">
-
-
-        <Grid item md={12}>
-          <Grid item md={3} className="logo">
-            {/* <img
-              src={logo}
-              alt={config.siteTitle}
-            /> */}
+      <footer className={classes.footer}>
+        <Box>
+          <Grid container direction="column">
+            <Grid container direction="row">
+              <Grid item md={3}>
+                <img className={classes.logo} src={logo} alt={config.siteTitle} />
+              </Grid>
+              <Grid item md={3}>
+                {evaMinerva.map((eva, index) => {
+                  return (
+                    <Grid key={index} item md={12}>
+                      <a className={classes.footerLink} href={eva.url}>
+                        {eva.name}
+                      </a>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+              <Grid item md={3}>
+                {blogs.map((blog, index) => {
+                  return (
+                    <Grid key={index} item md={12}>
+                      <a className={classes.footerLink} href={blog.url}>
+                        {blog.name}
+                      </a>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+              <Grid item md={3}>
+                {specializacions.map((specializacion, index) => {
+                  return (
+                    <Grid key={index} item md={12}>
+                      <a className={classes.footerLink} href={specializacion.url}>
+                        {specializacion.name}
+                      </a>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+              º
+            </Grid>
+            <Grid container direction="row">
+              {legals.map((legal, index) => {
+                return (
+                  <Grid key={index} item md={2}>
+                    <a className={classes.footerLink} href={legal.url}>
+                      {legal.name}
+                    </a>
+                  </Grid>
+                );
+              })}
+              <Grid item md={6}></Grid>
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid>
-          <ul>
-            <Link to="/privacy" className="footer-link">
-              Privacidad
-            </Link>
-            <Link to="/cookies" className="footer-link">
-              Cookies
-            </Link>
-            <Link to="/terms" className="footer-link">
-              Términos
-            </Link>
-            </ul>
-          </Grid>
-        </Grid>
-      </Box>
+        </Box>
       </footer>
       {/* --- STYLES --- */}
       <style jsx>{`

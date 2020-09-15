@@ -12,6 +12,7 @@ const Bodytext = props => {
         .bodytext {
           animation-name: bodytextEntry;
           animation-duration: ${theme.time.duration.long};
+          color: ${theme.color.principals.darkerPurpleText};
 
           :global(h2),
           :global(h3) {
