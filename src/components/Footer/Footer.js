@@ -20,12 +20,13 @@ const useStyles = makeStyles({
     width: '200px'
   },
   footerLinkTitle: {
-    fontSize: '700',
-    color: theme.color.principals.gray,
-    margin: '10px 0'
+    fontWeight: '700',
+    color: theme.color.principals.lightGray,
+    fontSize: '1.2rem',
+    margin: '20px 0'
   },
   footerLink: {
-    color: theme.color.principals.gray,
+    color: theme.color.principals.lightGray,
     margin: '10px 0'
   }
 });
@@ -128,45 +129,60 @@ const Footer = props => {
         <Box>
           <Grid container direction="column">
             <Grid container direction="row">
-              <Grid item md={3}>
-                <img className={classes.logo} src={logo} alt={config.siteTitle} />
+              <Grid item sm={12} md={3}>
+                <Grid item md={12}>
+                  <img className={classes.logo} src={logo} alt={config.siteTitle} />
+                </Grid>
+                <Grid item md={12}>
+                  <p className={classes.footerLink}>Making something big¡¡</p>
+                </Grid>
               </Grid>
-              <Grid item md={3}>
+              <Grid item sm={12} md={3}>
                 {evaMinerva.map((eva, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a className={classes.footerLink} href={eva.url}>
+                      <a
+                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        href={eva.url}
+                      >
                         {eva.name}
                       </a>
                     </Grid>
                   );
                 })}
               </Grid>
-              <Grid item md={3}>
+              <Grid item sm={12} md={3}>
                 {blogs.map((blog, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a className={classes.footerLink} href={blog.url}>
+                      <a
+                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        href={blog.url}
+                      >
                         {blog.name}
                       </a>
                     </Grid>
                   );
                 })}
               </Grid>
-              <Grid item md={3}>
+              <Grid item sm={12} md={3}>
                 {specializacions.map((specializacion, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a className={classes.footerLink} href={specializacion.url}>
+                      <a
+                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        href={specializacion.url}
+                      >
                         {specializacion.name}
                       </a>
                     </Grid>
                   );
                 })}
               </Grid>
-              º
             </Grid>
+            <hr />
             <Grid container direction="row">
+              <Grid item sm={12} md={6}></Grid>
               {legals.map((legal, index) => {
                 return (
                   <Grid key={index} item md={2}>
