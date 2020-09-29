@@ -72,16 +72,6 @@ const ImageBlock = props => {
             <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
           )}
         </Grid>
-        <Grid item md={6} sm={12} className={classes.imgBox}>
-          {imgBLockOptions.img.childImageSharp ? (
-            <img
-              src={imgBLockOptions.img.childImageSharp.resize.src}
-              alt="Woman sitting on a sofa"
-            />
-          ) : (
-            <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
-          )}
-        </Grid>
       </Grid>
     </Box>
   );
