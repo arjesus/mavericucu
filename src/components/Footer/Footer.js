@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
 
 const useStyles = makeStyles({
-  footer: {
+  asd: {
     background: theme.color.principals.darkerPurpleText,
     padding: theme.space.inset.default,
     width: '100%',
@@ -125,14 +125,14 @@ const Footer = props => {
 
   return (
     <React.Fragment>
-      <footer className={classes.footer}>
+      <footer className={classes.asd}>
         <Box>
           <Grid container direction="column">
             <Grid container direction="row">
               <Grid item sm={12} md={3}>
-                {/* <Grid item md={12}>
+                <Grid item md={12}>
                   <img className={classes.logo} src={logo} alt={config.siteTitle} />
-                </Grid> */}
+                </Grid>
                 <Grid item md={12}>
                   <p className={classes.footerLink}>Making something big¡¡</p>
                 </Grid>
