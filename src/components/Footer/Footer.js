@@ -8,9 +8,8 @@ import logo from '../../../static/images/logo.png';
 import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
 
-
 const useStyles = makeStyles({
-  asd: {
+  footer: {
     background: theme.color.principals.darkerPurpleText,
     padding: theme.space.inset.default,
     width: '100%',
@@ -126,7 +125,7 @@ const Footer = props => {
 
   return (
     <React.Fragment>
-      <footer className={classes.asd}>
+      <footer className={classes.footer}>
         <Box>
           <Grid container direction="column">
             <Grid container direction="row">
