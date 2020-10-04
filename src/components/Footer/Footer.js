@@ -8,6 +8,7 @@ import logo from '../../../static/images/logo.png';
 import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
 
+
 const useStyles = makeStyles({
   asd: {
     background: theme.color.principals.darkerPurpleText,

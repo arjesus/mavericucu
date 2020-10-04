@@ -1,5 +1,6 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
 
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
@@ -8,7 +9,7 @@ const redirectToCheckout = async event => {
   event.preventDefault();
   const stripe = await stripePromise;
   const { error } = await stripe.redirectToCheckout({
-    items: [{ sku: process.env.GATSBY_BUTTON_SKU_ID, quantity: 1 }],
+    lineItems: [{ price: process.env.GATSBY_BUTTON_SKU_ID, quantity: 1 }],
     successUrl: `${window.location.origin}/payment/`,
     cancelUrl: `${window.location.origin}/`
   });
@@ -18,24 +19,27 @@ const redirectToCheckout = async event => {
   }
 };
 
+const useStyles = makeStyles({
+  button: {
+    backgroundColor: theme.color.principals.darkerPurpleText,
+    padding: '10px 15px',
+    color: 'white',
+    width: '230px',
+    fontWeight: '500',
+    textAlign: 'center',
+    fontSize: '1.5rem',
+    borderRadius: '0.5rem',
+    marginBottom: '2rem'
+  }
+});
+
 const Checkout = () => {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <button className="mobile-button" aria-label="scroll" onClick={redirectToCheckout}>
-        Reservar tu cita
+      <button className={classes.button} aria-label="scroll" onClick={redirectToCheckout}>
+        Prueba ahora
       </button>
-      {/* --- STYLES --- */}
-      <style jsx>{`
-        .mobile-button {
-          padding: 7px 69px;
-          background-color: ${theme.color.principals.white};
-          border-radius: 1em;
-          color: ${theme.color.principals.darkerPurpleText};
-          font-size: 18px;
-          cursor: pointer;
-          border: none;
-        }
-      `}</style>
     </React.Fragment>
   );
 };

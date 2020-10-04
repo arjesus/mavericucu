@@ -44,6 +44,10 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     width: '100%'
+  },
+  img: {
+    objectFit: 'contain',
+    width: '100%'
   }
 });
 
@@ -65,6 +69,7 @@ const ImageBlock = props => {
         <Grid item md={6} sm={12} className={classes.imgBox}>
           {imgBLockOptions.img.childImageSharp ? (
             <img
+              className={classes.img}
               src={imgBLockOptions.img.childImageSharp.resize.src}
               alt="Woman sitting on a sofa"
             />
