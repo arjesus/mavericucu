@@ -5,6 +5,7 @@ import theme from '../../theme/theme.yaml';
 import { Link } from 'gatsby';
 import { postFormAnswers } from '../../services/form';
 import conversation from '../../images/jpg/conversacion-digital.jpg';
+import hellow from '../../images/jpg/hola.jpg';
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
@@ -29,18 +30,18 @@ const DynamicForm = () => {
   return (
     <React.Fragment>
       <div className="form-container">
-        <div className={formStep < 8 ? 'form-card' : 'form-card-second'}>
+        <div className={formStep < 8 && formStep !== 0 ? 'form-card' : 'form-card-second'}>
           {formStep === 0 &&
             (handleSubmit(),
             (
-              <div className="feel-container-finish">
-                <img src={conversation} alt="Woman sitting on a sofa" />
-                <h3>Empecemos {name}.</h3>
+              <div className="hola-container">
+                <img src={hellow} alt="Woman sitting on a sofa" />
                 <p>
-                  Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para
-                  agendar tu primera sesión gratuita con el psicólogo que más se adapte a ti
+                  Antes de empezar tu primera sesión gratuita y para saber un poco más sobre ti
+                  necesitamos que respondas brevemente a unas preguntas.i
                 </p>
-                <button onClick={() => setFormStep(formStep + 1)}> Comenzar </button>
+                <p>No te llevará ni 30 segundos </p>
+                <button onClick={() => setFormStep(formStep + 1)}> Empezar </button>
               </div>
             ))}
           {formStep !== 0 && formStep < 8 && (
@@ -289,6 +290,21 @@ const DynamicForm = () => {
             font-weight: 600;
           }
         }
+        .hola-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          text-align: center;
+          height: 100%;
+          img {
+            width: 30%;
+          }
+          p {
+            font-size: 18px;
+            color: ${theme.color.principals.darkerPurpleText};
+          }
+        }
 
         .form-card-second {
           box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
@@ -335,7 +351,7 @@ const DynamicForm = () => {
               0 6px 14px 0 #4e3b80;
             border-radius: 1rem;
             width: 50%;
-            height: 300px;
+            height: 50vh;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr;

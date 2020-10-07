@@ -130,9 +130,9 @@ const Footer = props => {
           <Grid container direction="column">
             <Grid container direction="row">
               <Grid item sm={12} md={3}>
-                {/* <Grid item md={12}>
+                <Grid item md={12}>
                   <img className={classes.logo} src={logo} alt={config.siteTitle} />
-                </Grid> */}
+                </Grid>
                 <Grid item md={12}>
                   <p className={classes.footerLink}>Making something big¡¡</p>
                 </Grid>
