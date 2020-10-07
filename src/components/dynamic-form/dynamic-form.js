@@ -3,13 +3,13 @@ import Contact from '../Contact-inserted';
 import DatePickerMaterialComponent from './date-picker/datepicker.material';
 import theme from '../../theme/theme.yaml';
 import { Link } from 'gatsby';
-import {postFormAnswers} from '../../services/form'
+import { postFormAnswers } from '../../services/form';
 import conversation from '../../images/jpg/conversacion-digital.jpg';
 
 const feelingsArr = ['Ansiedad', 'Tristeza', 'Depresion', 'Agobio', 'Miedo'];
 
 const DynamicForm = () => {
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(0);
   const [feeling, setFeeling] = useState('');
   const [intensity, setIntensity] = useState('');
   const [experience, setExperience] = useState('');
@@ -19,18 +19,31 @@ const DynamicForm = () => {
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [body,setBody] = useState("")
+  const [body, setBody] = useState('');
 
   const [answers, setAnswer] = useState([]);
 
   function handleSubmit(e) {
-        postFormAnswers({answers:{age,body,email,experience,feeling,gender,name,phone}})
+    postFormAnswers({ answers: { age, body, email, experience, feeling, gender, name, phone } });
   }
   return (
     <React.Fragment>
       <div className="form-container">
         <div className={formStep < 8 ? 'form-card' : 'form-card-second'}>
-          {formStep < 8 && (
+          {formStep === 0 &&
+            (handleSubmit(),
+            (
+              <div className="feel-container-finish">
+                <img src={conversation} alt="Woman sitting on a sofa" />
+                <h3>Empecemos {name}.</h3>
+                <p>
+                  Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para
+                  agendar tu primera sesión gratuita con el psicólogo que más se adapte a ti
+                </p>
+                <button onClick={() => setFormStep(formStep + 1)}> Comenzar </button>
+              </div>
+            ))}
+          {formStep !== 0 && formStep < 8 && (
             <div className="form-steps-container">
               {formStep !== 1 && (
                 <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
@@ -109,7 +122,7 @@ const DynamicForm = () => {
             <div className="feel-container">
               <h3>¿Como te sientes físicamente?</h3>
               <div className="btn-container">
-                {["Muy bien","Bien","Regular","Mal"].map((feeling, index) => {
+                {['Muy bien', 'Bien', 'Regular', 'Mal'].map((feeling, index) => {
                   return (
                     <button
                       className="feel-btn"
@@ -212,22 +225,21 @@ const DynamicForm = () => {
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
-          {formStep === 8 && ( 
-            handleSubmit(),
-            <div className="feel-container-finish">
-              <img
-                src={conversation}
-                alt='Woman sitting on a sofa'
-              />
-              <h3>Empecemos {name}.</h3>
-              <p>
-              Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para agendar tu primera sesión gratuita con el psicólogo que más se adapte a ti
-              </p>
-              <a href='/plans' className={'plans-button'} data-slug={'/plans'}>
-                Elige tu plan
-              </a>
-            </div>
-          )}
+          {formStep === 8 &&
+            (handleSubmit(),
+            (
+              <div className="feel-container-finish">
+                <img src={conversation} alt="Woman sitting on a sofa" />
+                <h3>Empecemos {name}.</h3>
+                <p>
+                  Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para
+                  agendar tu primera sesión gratuita con el psicólogo que más se adapte a ti
+                </p>
+                <a href="/plans" className={'plans-button'} data-slug={'/plans'}>
+                  Elige tu plan
+                </a>
+              </div>
+            ))}
         </div>
       </div>
       {/* --- STYLES --- */}
@@ -280,7 +292,7 @@ const DynamicForm = () => {
 
         .form-card-second {
           box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-          0 6px 14px 0 #4e3b80;
+            0 6px 14px 0 #4e3b80;
           border-radius: 1rem;
           width: 50%;
           height: 600px;
