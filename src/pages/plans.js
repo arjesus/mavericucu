@@ -137,7 +137,7 @@ const ProfessionalPage = props => {
                   <p></p>
                 </div>
                 <p className={classes.paragraph}>1 sesión de 60 minutos gratis</p>
-                <Checkout />
+                <Checkout sku={process.env.GATSBY_BUTTON_SKU_ID_ONE} />
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderSecond}>
@@ -149,7 +149,7 @@ const ProfessionalPage = props => {
                   <p>cada una</p>
                 </div>
                 <p className={classes.paragraph}>1 sesión de 60 minutos gratis + psicologo guia</p>
-                <Checkout />
+                <Checkout sku={process.env.GATSBY_BUTTON_SKU_ID_FOUR} />
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderThird}>
@@ -161,7 +161,7 @@ const ProfessionalPage = props => {
                   <p>cada una</p>
                 </div>
                 <p className={classes.paragraph}>1 sesión de 60 minutos gratis + psicologo guia</p>
-                <Checkout />
+                <Checkout sku={process.env.GATSBY_BUTTON_SKU_ID_EIGHT} />
               </Grid>
             </Grid>
           </Grid>

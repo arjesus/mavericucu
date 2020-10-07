@@ -4,12 +4,14 @@ import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
 
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+let sku = null;
 
 const redirectToCheckout = async event => {
+  console.log(sku, 'aaaaaaaaaaaaaaaaaaaaaaaaa');
   event.preventDefault();
   const stripe = await stripePromise;
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: process.env.GATSBY_BUTTON_SKU_ID, quantity: 1 }],
+    items: [{ sku: sku, quantity: 1 }],
     successUrl: `${window.location.origin}/payment/`,
     cancelUrl: `${window.location.origin}/`
   });
@@ -33,7 +35,9 @@ const useStyles = makeStyles({
   }
 });
 
-const Checkout = () => {
+const Checkout = props => {
+  console.log(props);
+  sku = props.sku;
   const classes = useStyles();
   return (
     <React.Fragment>
