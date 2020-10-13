@@ -7,8 +7,9 @@ import theme from '../../theme/theme.yaml';
 import logo from '../../../static/images/logo.png';
 import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
+import "./footer.css"
 
-const useStyles = makeStyles({
+/* const useStyles = makeStyles({
   footer: {
     background: theme.color.principals.darkerPurpleText,
     padding: theme.space.inset.default,
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
     color: theme.color.principals.lightGray,
     margin: '10px 0'
   }
-});
+}); */
 
 const evaMinerva = [
   {
@@ -121,20 +122,20 @@ const legals = [
 
 const Footer = props => {
   const post = props.data;
-  const classes = useStyles();
+  /* const classes = useStyles(); */
 
   return (
     <React.Fragment>
-      <footer className={classes.footer}>
-        <Box>
+      <footer className="footer">
+        <Box className="footer-box">
           <Grid container direction="column">
             <Grid container direction="row">
               <Grid item sm={12} md={3}>
                 <Grid item md={12}>
-                  <img className={classes.logo} src={logo} alt={config.siteTitle} />
+                  <img className="logo" src={logo} alt={config.siteTitle} />
                 </Grid>
                 <Grid item md={12}>
-                  <p className={classes.footerLink}>Making something big¡¡</p>
+                  <p className="footerLink">Making something big¡¡</p>
                 </Grid>
               </Grid>
               <Grid item sm={12} md={3}>
@@ -142,7 +143,7 @@ const Footer = props => {
                   return (
                     <Grid key={index} item md={12}>
                       <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
                         href={eva.url}
                       >
                         {eva.name}
@@ -156,7 +157,7 @@ const Footer = props => {
                   return (
                     <Grid key={index} item md={12}>
                       <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
                         href={blog.url}
                       >
                         {blog.name}
@@ -170,7 +171,7 @@ const Footer = props => {
                   return (
                     <Grid key={index} item md={12}>
                       <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
                         href={specializacion.url}
                       >
                         {specializacion.name}
@@ -182,23 +183,25 @@ const Footer = props => {
             </Grid>
             <hr />
             <Grid container direction="row">
-              <Grid item sm={12} md={6}></Grid>
-              {legals.map((legal, index) => {
-                return (
-                  <Grid key={index} item md={2}>
-                    <a className={classes.footerLink} href={legal.url}>
-                      {legal.name}
-                    </a>
-                  </Grid>
-                );
-              })}
-              <Grid item md={6}></Grid>
+              {/* <Grid item sm={12} md={6}></Grid> */}
+              <div className="legals">
+                {legals.map((legal, index) => {
+                  return (
+                    <div key={index}>
+                      <a className="footerLink" href={legal.url}>
+                        {legal.name}
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+             {/*  <Grid item md={6}></Grid> */}
             </Grid>
           </Grid>
         </Box>
       </footer>
       {/* --- STYLES --- */}
-      <style jsx>{`
+      {/* <style jsx>{`
         @media (max-width: 600px) {
           .footer {
             align-items: flex-start !important;
@@ -226,7 +229,7 @@ const Footer = props => {
             margin: 0 20px;
           }
         }
-      `}</style>
+      `}</style>} */}
     </React.Fragment>
   );
 };
