@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
 
 const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+const firstOffer = process.env.GATSBY_BUTTON_SKU_ID_ONE;
+const secondOffer = process.env.GATSBY_BUTTON_SKU_ID_FOUR;
+const thirdOffer = process.env.GATSBY_BUTTON_SKU_ID_EIGHT;
 let sku = null;
 
 const redirectToCheckout = async event => {
@@ -21,6 +24,13 @@ const redirectToCheckout = async event => {
   }
 };
 
+const handleClick = (e, buttonNumber) => {
+  if (buttonNumber === 1) sku = firstOffer;
+  if (buttonNumber === 2) sku = secondOffer;
+  if (buttonNumber === 3) sku = thirdOffer;
+  redirectToCheckout(e);
+};
+
 const useStyles = makeStyles({
   button: {
     backgroundColor: theme.color.principals.darkerPurpleText,
@@ -36,12 +46,17 @@ const useStyles = makeStyles({
 });
 
 const Checkout = props => {
+  const buttonNumber = props.buttonNumber;
   console.log(props);
   sku = props.sku;
   const classes = useStyles();
   return (
     <React.Fragment>
-      <button className={classes.button} aria-label="scroll" onClick={redirectToCheckout}>
+      <button
+        className={classes.button}
+        aria-label="scroll"
+        onClick={e => handleClick(e, buttonNumber)}
+      >
         Prueba ahora
       </button>
     </React.Fragment>

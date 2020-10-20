@@ -4,10 +4,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
-import logo from '../../../static/images/logo.png';
+import logo from '../../../static/images/white-logo-text.svg';
+import Eulogo from '../../../static/images/logo_startup_awards.png';
 import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
-import "./footer.css"
+import './footer.css';
 
 /* const useStyles = makeStyles({
   footer: {
@@ -135,17 +136,16 @@ const Footer = props => {
                   <img className="logo" src={logo} alt={config.siteTitle} />
                 </Grid>
                 <Grid item md={12}>
-                  <p className="footerLink">Making something big¡¡</p>
+                  <div className="logo-container">
+                    <img className="logo" src={Eulogo} alt={config.siteTitle} />
+                  </div>
                 </Grid>
               </Grid>
               <Grid item sm={12} md={3}>
                 {evaMinerva.map((eva, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a
-                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
-                        href={eva.url}
-                      >
+                      <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={eva.url}>
                         {eva.name}
                       </a>
                     </Grid>
@@ -156,10 +156,7 @@ const Footer = props => {
                 {blogs.map((blog, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a
-                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
-                        href={blog.url}
-                      >
+                      <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={blog.url}>
                         {blog.name}
                       </a>
                     </Grid>
@@ -171,7 +168,7 @@ const Footer = props => {
                   return (
                     <Grid key={index} item md={12}>
                       <a
-                        className={index === 0 ? "footerLinkTitle" : "footerLink"}
+                        className={index === 0 ? 'footerLinkTitle' : 'footerLink'}
                         href={specializacion.url}
                       >
                         {specializacion.name}
@@ -183,53 +180,23 @@ const Footer = props => {
             </Grid>
             <hr />
             <Grid container direction="row">
-              {/* <Grid item sm={12} md={6}></Grid> */}
+              <Grid item sm={12} md={6}></Grid>
               <div className="legals">
                 {legals.map((legal, index) => {
                   return (
-                    <div key={index}>
+                    <Grid item md={6} key={index}>
                       <a className="footerLink" href={legal.url}>
                         {legal.name}
                       </a>
-                    </div>
+                    </Grid>
                   );
                 })}
               </div>
-             {/*  <Grid item md={6}></Grid> */}
+              {/*  <Grid item md={6}></Grid> */}
             </Grid>
           </Grid>
         </Box>
       </footer>
-      {/* --- STYLES --- */}
-      {/* <style jsx>{`
-        @media (max-width: 600px) {
-          .footer {
-            align-items: flex-start !important;
-          }
-        }
-        .footer {
-          align-items: center;
-          display: flex;
-          flex-direction: 'column';
-          background: ${theme.color.principals.darkerPurpleText};
-          padding: ${theme.space.inset.default};
-          top: 0;
-          width: 100%;
-          min-height: 15vh;
-          height: auto;
-          justify-content: center;
-          .logo {
-            img {
-              width: 50%;
-            }
-          }
-
-          & :global(a.footer-link) {
-            color: ${theme.color.principals.white};
-            margin: 0 20px;
-          }
-        }
-      `}</style>} */}
     </React.Fragment>
   );
 };
