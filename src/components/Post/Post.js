@@ -42,6 +42,7 @@ const Post = props => {
     prev: prevPost,
     theme
   } = props;
+  console.log(post, 'bbbbbbbbbbbbbbbb');
 
   const imgBLockOptions = {
     title,

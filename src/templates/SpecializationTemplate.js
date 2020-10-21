@@ -1,16 +1,17 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-require("prismjs/themes/prism-okaidia.css");
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql } from 'gatsby';
+require('prismjs/themes/prism-okaidia.css');
 
-import Seo from "../components/Seo";
-import Article from "../components/Article";
-import Post from "../components/Post";
-import { ThemeContext } from "../layouts";
+import Seo from '../components/Seo';
+import Article from '../components/Article';
+import Post from '../components/Post';
+import { ThemeContext } from '../layouts';
 
 const SpecializationTemplate = props => {
   const {
     data: {
+      posts,
       post,
       authornote: { html: authorNote },
       site: {
@@ -71,6 +72,34 @@ export const specializationQuery = graphql`
           }
         }
         text
+      }
+    }
+    posts: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      sort: { fields: [fields___prefix], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+            prefix
+          }
+          frontmatter {
+            title
+            category
+            author
+            cover {
+              children {
+                ... on ImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 360) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
     authornote: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {
