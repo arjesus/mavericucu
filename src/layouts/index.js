@@ -7,6 +7,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers';
 import Footer from '../components/Footer/';
 import Header from '../components/Header';
+import CookiesBlock from '../components/cookiesComponent/cookies.component';
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
@@ -124,6 +125,7 @@ class Layout extends React.Component {
                     <main className="background-img">
                       <div>{children}</div>
                     </main>
+                    {localStorage.getItem('Cookies') !== 'true' && <CookiesBlock />}
                     <Footer data={data} html={footnoteHTML} theme={this.state.theme} />
 
                     {/* --- STYLES --- */}

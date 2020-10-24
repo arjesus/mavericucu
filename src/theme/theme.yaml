@@ -51,6 +51,7 @@ color:
     first: &first '#7BEFC5'
     second: &second '#AB79F2'
     third: &third '#FFC558'
+    orange: &orange '#F4501E'
 
 
 
