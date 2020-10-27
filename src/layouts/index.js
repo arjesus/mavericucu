@@ -124,9 +124,9 @@ class Layout extends React.Component {
                     />
                     <main className="background-img">
                       <div>{children}</div>
+                      {typeof window !== 'undefined' &&
+                        localStorage.getItem('Cookies') !== 'true' && <CookiesBlock />}
                     </main>
-                    {typeof window !== 'undefined' &&
-                      localStorage.getItem('Cookies') !== 'true' && <CookiesBlock />}
                     <Footer data={data} html={footnoteHTML} theme={this.state.theme} />
 
                     {/* --- STYLES --- */}

@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     width: '60%',
     borderRadius: '2rem',
     marginBottom: '20px',
-    padding: '40px 40px'
+    padding: '20px 20px'
   },
   cookiesText: {},
   cookies: {
@@ -32,23 +32,23 @@ const useStyles = makeStyles({
   },
   button: {
     backgroundColor: theme.color.principals.orange,
-    padding: '20px 15px',
+    padding: '5px 0px',
     color: 'white',
-    width: '260px',
-    fontWeight: '700',
+    width: '150px',
+    fontWeight: '600',
     textAlign: 'center',
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
     borderRadius: '0.5rem'
   },
   paragraph: {
-    fontSize: '1.5rem',
+    fontSize: '1.2rem',
     color: theme.color.principals.white,
-    marginBottom: '3rem'
+    marginBottom: '2rem'
   },
   img: {
-    width: '75%',
+    width: '90%',
     position: 'relative',
-    top: '-144px'
+    top: '-115px'
   }
 });
 
