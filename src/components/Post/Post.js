@@ -11,6 +11,7 @@ import Meta from './Meta';
 import Author from './Author';
 import Comments from './Comments';
 import NextPrev from './NextPrev';
+import PsychoCards from '../psycho-cards/psycho.cards';
 
 const Share = asyncComponent(() =>
   import('./Share')
@@ -69,6 +70,7 @@ const Post = props => {
           <Share post={post} theme={theme} />
           {/* <Author note={authornote} theme={theme} /> */}
           <NextPrev next={nextPost} prev={prevPost} theme={theme} />
+          {text && <PsychoCards />}
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>

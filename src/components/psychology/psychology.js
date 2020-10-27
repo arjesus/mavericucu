@@ -101,12 +101,12 @@ const Psychology = props => {
           <p>
             Cientos de psicólogos, titulados, colegiados y con amplia experiencia en diversas áreas,
             esto es lo que nos permite encontrar el psicólogo más adaptado a tus necesidades.
-        </p>
+          </p>
           <p>
             Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
-            salud y bienestar, como nutricionistas o profesional de la actividad física, esto permite
-            a nuestros psicólogos encontrar fácilmente el apoyo que más se adapte a ti.
-        </p>
+            salud y bienestar, como nutricionistas o profesional de la actividad física, esto
+            permite a nuestros psicólogos encontrar fácilmente el apoyo que más se adapte a ti.
+          </p>
           <p>
             <strong>Nuestro misión: Tu bienestar emocional</strong>
           </p>
