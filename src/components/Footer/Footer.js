@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
 import './footer.css';
 
-const useStyles = makeStyles({
+/* const useStyles = makeStyles({
   footer: {
     background: theme.color.principals.darkerPurpleText,
     padding: theme.space.inset.default,
@@ -18,13 +18,8 @@ const useStyles = makeStyles({
     minHeight: '15vh',
     height: 'auto'
   },
-  logoContainer: {
-    backgroundColor: 'white',
-    width: '260px'
-  },
   logo: {
-    width: '200px',
-    marginBottom: '10px'
+    width: '200px'
   },
   footerLinkTitle: {
     fontWeight: '700',
@@ -36,7 +31,7 @@ const useStyles = makeStyles({
     color: theme.color.principals.lightGray,
     margin: '10px 0'
   }
-});
+}); */
 
 const evaMinerva = [
   {
@@ -128,21 +123,21 @@ const legals = [
 
 const Footer = props => {
   const post = props.data;
-  const classes = useStyles();
+  /* const classes = useStyles(); */
 
   return (
     <React.Fragment>
-      <footer className={classes.footer}>
-        <Box>
+      <footer className="footer">
+        <Box className="footer-box">
           <Grid container direction="column">
             <Grid container direction="row">
               <Grid item sm={12} md={3}>
                 <Grid item md={12}>
-                  <img className={classes.logo} src={logo} alt={config.siteTitle} />
+                  <img className="logo" src={logo} alt={config.siteTitle} />
                 </Grid>
                 <Grid item md={12}>
-                  <div className={classes.logoContainer}>
-                    <img className={classes.logo} src={Eulogo} alt={config.siteTitle} />
+                  <div className="logo-container">
+                    <img className="logo" src={Eulogo} alt={config.siteTitle} />
                   </div>
                 </Grid>
               </Grid>
@@ -150,10 +145,7 @@ const Footer = props => {
                 {evaMinerva.map((eva, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
-                        href={eva.url}
-                      >
+                      <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={eva.url}>
                         {eva.name}
                       </a>
                     </Grid>
@@ -164,10 +156,7 @@ const Footer = props => {
                 {blogs.map((blog, index) => {
                   return (
                     <Grid key={index} item md={12}>
-                      <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
-                        href={blog.url}
-                      >
+                      <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={blog.url}>
                         {blog.name}
                       </a>
                     </Grid>
@@ -179,7 +168,7 @@ const Footer = props => {
                   return (
                     <Grid key={index} item md={12}>
                       <a
-                        className={index === 0 ? classes.footerLinkTitle : classes.footerLink}
+                        className={index === 0 ? 'footerLinkTitle' : 'footerLink'}
                         href={specializacion.url}
                       >
                         {specializacion.name}
@@ -196,7 +185,7 @@ const Footer = props => {
                 {legals.map((legal, index) => {
                   return (
                     <Grid item md={6} key={index}>
-                      <a className={classes.footerLink} href={legal.url}>
+                      <a className="footerLink" href={legal.url}>
                         {legal.name}
                       </a>
                     </Grid>
