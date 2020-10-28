@@ -40,7 +40,7 @@ const useStyles = makeStyles({
     fontSize: '1.2rem',
     borderRadius: '0.5rem'
   },
-  paragraph: {
+  CookiesParagraph: {
     fontSize: '1.2rem',
     color: theme.color.principals.white,
     marginBottom: '2rem'
@@ -66,10 +66,10 @@ const CookiesBlock = props => {
           <img className={classes.img} src={cookies} alt="Cookies" />
         </Grid>
         <Grid item md={9} sm={12} className={classes.textCookies}>
-          <p className={classes.paragraph}>
+          <p className={classes.CookiesParagraph}>
             Gracias por visitar Eva Minerva. Como la mayor parte de las webs utilizamos cookies para
             mejorar la experiencia del usuario. Si continuas navegando entendemos que adaptes los
-            términos y condiciones de uso
+            términos y condiciones de uso.
           </p>
         </Grid>
         <Grid item md={12} sm={12} className={classes.cookiesBottom}>
