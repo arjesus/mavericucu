@@ -48,8 +48,8 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-material-ui`,
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-styled-jsx-postcss`, // as above
     {
       resolve: `gatsby-plugin-layout`,
