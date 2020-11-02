@@ -6,7 +6,7 @@ import cookies from '../../images/jpg/Las galletas.svg';
 
 const useStyles = makeStyles({
   cookiesBlock: {
-    position: 'fixed',
+    position: 'sticky',
     bottom: '0',
     left: '0',
     width: '100%',
