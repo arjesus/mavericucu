@@ -62,7 +62,7 @@ const Psychology = props => {
         <style jsx>{`
           .card-container {
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 #4e3b80;
+              0 6px 14px 0 ${theme.color.principals.darkerPurpleText};
             padding: 15px;
             background-color: ${theme.color.principals.white};
             border-radius: 0.5rem;
@@ -76,15 +76,15 @@ const Psychology = props => {
               border-radius: 50%;
             }
             h3 {
-              color: #4e3b80;
-              font-size: 18px;
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 1.2em;
               text-align: start;
             }
           }
           p {
             margin-top: 10px;
-            color: #4e3b80;
-            font-size: 18px;
+            color: ${theme.color.principals.darkerPurpleText};
+            font-size: 1em;
           }
         `}</style>
       </div>
@@ -97,15 +97,12 @@ const Psychology = props => {
           <h2>Cientos de profesionales.</h2>
           <h2>Titulados y disponibles en la palma de tu mano</h2>
         </div>
-        <div>
+        <div className="psychology-text-container">
           <p>
-            Cientos de psicólogos, titulados, colegiados y con amplia experiencia en diversas áreas,
-            esto es lo que nos permite encontrar el psicólogo más adaptado a tus necesidades.
+            Cientos de psicólogos online, titulados, colegiados y con amplia experiencia en diversas áreas, esto es lo que nos permite encontrar el psicólogo más adaptado a ti y a tus necesidades.
           </p>
           <p>
-            Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
-            salud y bienestar, como nutricionistas o profesional de la actividad física, esto
-            permite a nuestros psicólogos encontrar fácilmente el apoyo que más se adapte a ti.
+            Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la salud y bienestar, como por ejemplo nutricionistas, coaches o profesional de la actividad física, esto hace posible que tú y tu psicólogo online podáis trabajar conjuntamente con profesionales de diferentes ámbitos, guiandote de la manera más especializada y práctica posible
           </p>
           <p>
             <strong>Nuestro misión: Tu bienestar emocional</strong>
@@ -126,6 +123,10 @@ const Psychology = props => {
           padding: 20px 60px 0px 60px;
           height: auto;
         }
+        .psychology-text-container{
+          width: 85%;
+          margin: 0 auto;
+        }
         .psychology-card {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
@@ -136,14 +137,14 @@ const Psychology = props => {
           background-color: ${theme.color.principals.veryLightPurple};
         }
         h2 {
-          color: #4e3b80;
-          font-size: 32px;
+          color: ${theme.color.principals.darkerPurpleText};
+          font-size: 2em;
           text-align: center;
         }
         p {
           text-align: center;
-          color: #4e3b80;
-          font-size: 16px;
+          color: ${theme.color.principals.darkerPurpleText};
+          font-size: 1em;
           padding-bottom: 10px;
         }
 

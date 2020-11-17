@@ -1,4 +1,5 @@
 import React from "react";
+import theme from '../../theme/theme.yaml';
 import HoverRating from "../starts-rating/starts-rating.component";
 
 import logo from "../../../static/images/lirio.png";
@@ -54,7 +55,19 @@ const arrOfData = [
 class Evaluations extends React.Component {
   state = {
     counter: 0,
-    contentToRender: {
+    contentToRender:   {
+      number: 2,
+      percentage: "4%",
+      style: "width: 4%",
+      title: "Header de la review",
+      text:
+        "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
+      author: "name autor"
+    },
+    secondContentToRender:   {
+      number: 1,
+      percentage: "1%",
+      style: "width: 1%",
       title: "Header de la review",
       text:
         "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
@@ -71,9 +84,9 @@ class Evaluations extends React.Component {
   }
 
   changeReview() {
-    let { counter, contentToRender } = this.state;
+    let { counter, contentToRender, secondContentToRender } = this.state;
 
-    if (counter >= arrOfData.length - 1) {
+    if (counter >= arrOfData.length - 2) {
       counter = 0;
       this.setState({
         counter
@@ -84,10 +97,16 @@ class Evaluations extends React.Component {
     newReviewToRender.title = arrOfData[counter].title;
     newReviewToRender.text = arrOfData[counter].text;
     newReviewToRender.author = arrOfData[counter].author;
+
+    let secondReviewToRender = secondContentToRender;
+    secondReviewToRender.title = arrOfData[counter + 1].title;
+    secondReviewToRender.text = arrOfData[counter + 1].text;
+    secondReviewToRender.author = arrOfData[counter+ 1].author;
     counter += 1;
     this.setState({
       counter,
-      contentToRender: newReviewToRender
+      contentToRender: newReviewToRender,
+      secondContentToRender: secondReviewToRender
     });
   }
 
@@ -98,11 +117,11 @@ class Evaluations extends React.Component {
   }
 
   render() {
-    const { contentToRender } = this.state;
+    const { contentToRender, secondContentToRender } = this.state;
     return (
       <React.Fragment>
         <div className="reviews-container">
-          <h2>Tu bienestar emocional como nuestro punto de partida</h2>
+          <h2>Tu bienestar emocional como el punto de partida de nuestros psicólogos online</h2>
           <HoverRating />
           <div className="boxes-container">
             <div className="reviews-container-bars">
@@ -137,6 +156,16 @@ class Evaluations extends React.Component {
                 <i>{contentToRender.author}</i>
               </p>
             </div>
+            <div className="review-container-comments">
+              <div className="text">
+                <img src={logo} />
+                <h3>{secondContentToRender.title}</h3>
+              </div>
+              <p>{secondContentToRender.text}</p>
+              <p>
+                <i>{secondContentToRender.author}</i>
+              </p>
+            </div>
           </div>
         </div>
         {/* --- STYLES --- */}
@@ -156,27 +185,27 @@ class Evaluations extends React.Component {
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            padding: 50px 10%;
+            padding: 50px 5%;
 
             .boxes-container {
               display: grid;
-              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr 1fr 1fr;
               grid-gap: 2rem;
             }
 
             h2 {
-              color: #4e3b80;
-              font-size: 28px;
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 2em;
               text-align: center;
             }
 
             h3 {
-              color: #4e3b80;
+              color: ${theme.color.principals.darkerPurpleText};
               font-size: 24px;
             }
 
             p {
-              color: #4e3b80;
+              color: ${theme.color.principals.darkerPurpleText};
               font-size: 18px;
             }
 
@@ -210,7 +239,7 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 #4e3b80;
+              0 6px 14px 0 #6A3BC4;
             padding: 25px;
             border-radius: 1rem;
             margin: 0 auto;
@@ -235,8 +264,8 @@ class Evaluations extends React.Component {
           }
 
           .progress-done {
-            background: linear-gradient(to left, #d2bbe5ff, #4e3b80);
-            box-shadow: 0 3px 3px -5px #d2bbe5ff, #4e3b80;
+            background: linear-gradient(to left, #d2bbe5ff, #6A3BC4);
+            box-shadow: 0 3px 3px -5px #d2bbe5ff, #6A3BC4;
             border-radius: 5px;
             height: 10px;
             width: 0;
@@ -250,11 +279,11 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             -webkit-box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02),
-              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 #4e3b80;
+              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 #6A3BC4;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 #4e3b80;
+              0 6px 14px 0 #6A3BC4;
             padding: 25px;
-            width: 500px;
+            width: 450px;
             height: 100%;
             display: flex;
             flex-direction: c;

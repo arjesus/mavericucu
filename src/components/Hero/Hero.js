@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import womanWorried from '../../images/jpg/mujer-en-sofa.jpg';
-import capturaDePantalla from '../../images/jpg/mujer-ordenador.jpg';
+import capturaDePantalla from '../../images/jpg/woman-doing-videocall.jpg';
 import Evaluations from '../evaluations/evaluations.js';
 import Psychology from '../psychology/psychology';
 import Plans from './components/plans.component';
@@ -9,8 +9,9 @@ import Plans from './components/plans.component';
 import paso1 from '../../../static/images/paso1.jpg';
 import paso2 from '../../../static/images/paso3.svg';
 import paso3 from '../../../static/images/paso2.jpg';
-import phoneKey from '../../images/jpg/registro-online.png';
+import logo from '../../images/jpg/logo-text.png';
 import webAssistance from '../../images/svg-icons/asistencia-online.svg';
+import { Grid } from '@material-ui/core';
 const Hero = props => {
   const { theme } = props;
 
@@ -20,12 +21,18 @@ const Hero = props => {
         <div className="header">
           <div className="top-header">
             <div className="top-header-text">
-              <h1>Psicólogos online. Estabilidad emocional cuando más la necesites</h1>
+              <h1>Psicólogos online. Equilibrio y superación cuando más lo necesites</h1>
               <p>
-                Ayuda psicológica especial durante periodo de confinamiento con psicólogos
-                especializados en el impacto emocional del coronavirus COVID-19.
+                Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y bienestar emocional que más se adapta a ti. Número 1 en España.
               </p>
-              <a href="#link-to-form-section">Contactanos</a>
+              <Grid container direction="row">
+                <Grid item md={3} sm={12}>
+                  <a href="#link-to-form-section">Comenzar</a>
+                </Grid>
+                <Grid item md={3} sm={12}>
+                  <a href="#link-to-form-section">Mirar video</a>
+                </Grid>
+              </Grid>
             </div>
             {/* {typeof window !== 'undefined' && window.innerWidth <= 600 && (
               <a href="#link-to-form-section" className="mobile-button">
@@ -34,14 +41,15 @@ const Hero = props => {
             )} */}
             <img className="top-header-img" src={womanWorried} alt="Mujer preocupada" />
           </div>
-            {typeof window !== 'undefined' && window.innerWidth > 600 && (
-              <div className="call-to-action">
-                <h2>
-                  Ayuda psicológica especial durante periodo de confinamiento con psicólogos
-                  especializados en el impacto emocional del <strong>coronavirus COVID-19.</strong>
-                </h2>
-              </div>
-            )}
+          {typeof window !== 'undefined' && window.innerWidth > 600 && (
+            <div className="call-to-action">
+              <h2>
+                <strong>
+                  Ayuda psicológica especial durante periodo de confinamiento con psicólogos especializados en el impacto emocional del coronavirus COVID-19
+                </strong>
+              </h2>
+            </div>
+          )}
 
         </div>
         <div className="professionals">
@@ -49,15 +57,14 @@ const Hero = props => {
         </div>
         <div className="close-contact blockColumn">
           <div className="hero-sub-text">
-            <h2>Atención especializada y de calidad</h2>
+            <h2>Primeras sesiones gratuitas con tu psicólogo online</h2>
             <div>
               <p>
-                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y
-                privada poder encontrar el psicólogo que más se adapte a tus necesidades.
+                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y privada poder encontrar el psicólogo online que más se adapte a tus necesidades, además, la primera sesión con tu psicólogo online será gratuita.
               </p>
               <p>Empieza tu terapia mediante video, teléfono o chat hoy mismo.</p>
             </div>
-            <a href="#link-to-form-section">Contactanos</a>
+            <a href="#link-to-form-section">Reserva tu cita</a>
           </div>
           <div className="hero-sub-image">
             <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
@@ -69,39 +76,37 @@ const Hero = props => {
         <div className="differences">
           <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
           <div className="blockColumn plans-sub">
-            <Plans />
             <div className="plans-sub-text">
-              <h3>Primera cita gratis</h3>
+              <h3>Primera Sesiones Gratuitas con tu psicólogo online y tu especialista guia</h3>
               <img src={webAssistance} />
               <a href="#link-to-form-section" className="plans-botton">
-                Contactanos
+                Empezar
               </a>
             </div>
+            <Plans />
           </div>
         </div>
         <div className="steps">
-          <h2>Fácil, asequible y 100% adaptado a ti</h2>
+          <h2>Sin compromiso. Fácil, asequible y 100% adaptado a ti </h2>
           <div className="steps-img-container">
             <div className="hero-sub-image">
               <img src={paso1} alt="Mujer psicologa ayudando" />
               <h3>Contactanos</h3>
               <p>
-                Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto
-                contigo en la hora y momento que solicites.
+                Mediante nuestro formulario web nuestros especialistas guías te contactaran en la hora y momento que solicites.
               </p>
             </div>
             <div className="hero-sub-image">
               <img src={paso2} alt="Mujer psicologa ayudando" />
               <h3>Habla con nuestro especialista guia</h3>
               <p>
-                Nuestros especialistas te contactaran para de forma segura y privada encontrar el
-                psicólogo que más se adapte a tus necesidades.
+                Nuestros especialistas te contactaran para encontrar el psicólogo online más adaptado a ti.
               </p>
             </div>
             <div className="hero-sub-image">
               <img src={paso3} alt="Mujer psicologa ayudando" />
               <h3>Comienza tu terapia online</h3>
-              <p>Conoce a tu psicólogo y empieza tu primera sesión gratuita.</p>
+              <p>Conoce a tu psicólogo online y empieza tu primera sesión gratuita hoy mismo.</p>
             </div>
           </div>
         </div>
@@ -110,14 +115,14 @@ const Hero = props => {
             <h2>Contactanos y comienza a sentirte mejor</h2>
             <div>
               <p>
-              Podríamos comentar muchas más cosas sobre nuestros profesionales y los  buenos resultados de la terapia online pero a la hora de la verdad lo que cuenta es tu experiencia.
+                Podríamos comentar muchas más cosas sobre nuestros profesionales y los  buenos resultados de la terapia online pero a la hora de la verdad lo que cuenta es tu experiencia.
               </p>
               <p>Mediante nuestro breve formulario de contacto podrás elegir el momento que mejor te venga a ti para que nuestro psicólogo guia te contacte.</p>
             </div>
             <a href="/contact">Empezar</a>
           </div>
           <div className="hero-sub-image">
-            <img src={phoneKey} alt="Mujer psicologa ayudando" />
+            <img src={logo} alt="Mujer psicologa ayudando" />
           </div>
         </div>
       </div>
@@ -180,20 +185,20 @@ const Hero = props => {
             color: ${theme.color.principals.darkerPurpleText};
 
             h1 {
-              font-size: 32px;
+              font-size: 2em;
             }
 
             p {
-              font-size: 16px;
+              font-size: 1em;
             }
 
             a {
               background-color: ${theme.color.principals.darkerPurpleText};
               width: 112px;
-              padding: 6px;
+              padding: 19px 23px;
               color: ${theme.color.principals.white};
               border-radius: 0.2rem;
-              font-size: 14px;
+              font-size: 1em;
               text-align: center;
               font-weight: 600;
             }
@@ -235,7 +240,8 @@ const Hero = props => {
           margin: 0 auto;
           justify-items: center;
           img {
-            width: 70%;
+            width: 80%;
+            border-radius: 0.5rem;
           }
           .hero-sub-text {
             display: grid;
@@ -245,20 +251,20 @@ const Hero = props => {
             justify-items: center;
             color: ${theme.color.principals.darkerPurpleText};
             h2 {
-              font-size: 32px;
+              font-size: 2em;
             }
             p {
               margin-top: 10px;
-              font-size: 16px;
+              font-size: 1em;
               line-height: 1.4rem;
             }
             a {
               background-color: ${theme.color.principals.darkerPurpleText};
-              width: 150px;
-              padding: 7px;
+              width: 163px;
+              padding: 19px 23px;
               color: ${theme.color.principals.white};
               border-radius: 0.2rem;
-              font-size: 18px;
+              font-size: 1em;
               text-align: center;
               font-weight: 600;
             }
@@ -284,7 +290,7 @@ const Hero = props => {
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
             margin-bottom: 50px;
-            font-size: 32px;
+            font-size: 2em;
           }
           .plans-sub {
             display: grid;
@@ -302,17 +308,17 @@ const Hero = props => {
             }
             a {
               background-color: ${theme.color.principals.darkerPurpleText};
-              width: 150px;
-              padding: 7px;
+              width: 160px;
+              padding: 19px 23px;
               color: ${theme.color.principals.white};
-              border-radius: 0.2rem;
+              border-radius: 0.5rem;
               font-size: 18px;
               text-align: center;
               font-weight: 600;
             }
             img {
               margin: 15px 0;
-              width: 50%;
+              width: 61%;
             }
           }
         }
@@ -328,7 +334,7 @@ const Hero = props => {
           height: auto;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
-            font-size: 32px;
+            font-size: 2em;
           }
           .steps-img-container {
             grid-area: steps;
@@ -340,7 +346,7 @@ const Hero = props => {
             grid-column-gap: 60px;
             justify-items: center;
             img {
-              width: 70%;
+              width: 80%;
               margin-bottom: 30px;
             }
             .hero-sub-image {
@@ -353,7 +359,7 @@ const Hero = props => {
             h3 {
               text-align: center;
               color: ${theme.color.principals.darkerPurpleText};
-              font-size: 16px;
+              font-size: 1.3em;
               line-height: 1.4rem;
               margin-bottom: 10px;
               font-weight: 700;
@@ -361,7 +367,7 @@ const Hero = props => {
             p {
               text-align: center;
               color: ${theme.color.principals.darkerPurpleText};
-              font-size: 16px;
+              font-size: 1em;
               line-height: 1.4rem;
             }
           }
@@ -372,7 +378,7 @@ const Hero = props => {
           border-radius: 1rem;
           grid-area: contact;
           img {
-            width: 50%;
+            width: 60%;
             display:block;
             margin:auto;
           }
@@ -440,7 +446,7 @@ const Hero = props => {
           }
         }
       `}</style>
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 

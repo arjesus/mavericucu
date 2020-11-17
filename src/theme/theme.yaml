@@ -42,7 +42,7 @@ color:
     darkPurple: &darkPurple '#8e7cc3ff'
     lightPurple: &lightPurple '#d2bbe5ff'
     lightPurpleBackground: &lightPurpleBackground '#d2bbe573'
-    darkerPurpleText: &darkerPurpleText '#4e3b80'
+    darkerPurpleText: &darkerPurpleText '#6A3BC4'
     veryLightPurple: &veryLightPurple '#f8f1ffff'
     blackText: &blackText '##2A2A2A'
     white: &white '#fff'

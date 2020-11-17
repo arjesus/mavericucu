@@ -9,25 +9,43 @@ const Plans = props => {
         <ul>
           <h3>Eva Minerva</h3>
           <li>
-            <p>Terapia por mensaje o video llamada</p>
+            <p>Habla con tu psicólogo online desde cualquier lugar</p>
           </li>
           <li>
-            <p>Analizamos tu caso y asesoramos</p>
+            <p>Facilidad para probar. Primera sesión gratuita
+</p>
           </li>
           <li>
-            <p>Amplica cobertura de tratamientos</p>
+            <p>Todos nuestros psicólogos si están titulados y colegiados
+</p>
+          </li>
+          <li>
+            <p>Terapia desde 35 euros la sesion
+</p>
+          </li>
+          <li>
+            <p>Encontramos el psicólogo online que más se adapta a ti mediante una sesión personal con un especialista guia. Además, te facilitamos cambiar de psicologo en cualquier momento.
+
+</p>
           </li>
         </ul>
         <ul className="others-list">
-          <h3>Otros</h3>
+          <h3>Otras terapias</h3>
           <li>
-            <p>Limitadion en tipos de tratamientos</p>
+            <p>Tienes que moverte a un piso del centro de ciudad</p>
           </li>
           <li>
-            <p>Recae en ti el elegir a un terapeuta</p>
+            <p>Te dan una sesión informativa gratuita, no una terapia.</p>
           </li>
           <li>
-            <p>Sin asesoramiento</p>
+            <p>Trabajan con psicólogos online con poca cualificación</p>
+          </li>
+          <li>
+            <p>Psicologos online cobrando precios nada accesibles  </p>
+          </li>
+          <li>
+            <p>Te asignan un psicólogo online sin fundamento,  basándose en una conversación de chat con un  ciber robot. Además cambiar de psicólogo no es una facilidad 
+</p>
           </li>
         </ul>
       </div>
@@ -63,6 +81,7 @@ const Plans = props => {
               p {
                 padding: 0 30px;
                 width: 100%;
+                text-align: center;
               }
             }
           }
