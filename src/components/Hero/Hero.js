@@ -115,9 +115,8 @@ const Hero = props => {
             <h2>Contactanos y comienza a sentirte mejor</h2>
             <div>
               <p>
-                Podríamos comentar muchas más cosas sobre nuestros profesionales y los  buenos resultados de la terapia online pero a la hora de la verdad lo que cuenta es tu experiencia.
-              </p>
-              <p>Mediante nuestro breve formulario de contacto podrás elegir el momento que mejor te venga a ti para que nuestro psicólogo guia te contacte.</p>
+                Elige a continuación el plan que más se adapte a ti para empezar a disfrutar de tus primeras sesiones gratuitas.</p>
+              <p>Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos resultados de nuestra terapia online, pero a la hora de la verdad <strong>lo que cuenta es tu experiencia. </strong></p>
             </div>
             <a href="/contact">Empezar</a>
           </div>

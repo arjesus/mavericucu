@@ -47,7 +47,6 @@ const useStyles = makeStyles({
 
 const Checkout = props => {
   const buttonNumber = props.buttonNumber;
-  console.log(props);
   sku = props.sku;
   const classes = useStyles();
   return (
@@ -57,7 +56,7 @@ const Checkout = props => {
         aria-label="scroll"
         onClick={e => handleClick(e, buttonNumber)}
       >
-        Prueba ahora
+        Elegir Plan
       </button>
     </React.Fragment>
   );
