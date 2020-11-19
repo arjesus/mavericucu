@@ -9,9 +9,6 @@ const ProfessionalForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
-
-  const [answers, setAnswer] = useState([]);
-
   function handleSubmit(e) {
      
         postFormAnswersProfessionals({answers:{name,email,phone}})
