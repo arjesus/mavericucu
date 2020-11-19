@@ -52,6 +52,7 @@ color:
     second: &second '#AB79F2'
     third: &third '#FFC558'
     orange: &orange '#F4501E'
+    lightYellow: &lightYellow '#F2E199'
 
 
 

@@ -7,6 +7,25 @@ import logo from '../images/jpg/logo-text.png';
 import Checkout from '../components/Checkout/checkout';
 import UserInformationModal from '../components/create-user-modal/create-user-modal.componente'
 
+const plansDefinition = [
+	{
+		id: 0,
+		name: 'Plan semanal',
+		cost: 'Una session por 35€',
+	},
+	{
+		id: 1,
+		name: 'Plan mensual',
+		cost: '4 sesiones por 29€ cada una. Total 116€',
+	},
+	{
+		id: 2,
+		name: 'Plan bimensual',
+		cost: '8 sesiones por 24€ cada una. Total 192€',
+	}
+]
+
+
 const useStyles = makeStyles({
 	plans: {
 		padding: '115px 0 50px 0'
@@ -65,17 +84,6 @@ const useStyles = makeStyles({
 		marginBottom: '2rem',
 		marginTop: '-15px'
 	},
-	button: {
-		backgroundColor: theme.color.principals.darkerPurpleText,
-		padding: '10px 15px',
-		color: 'white',
-		width: '230px',
-		fontWeight: '500',
-		textAlign: 'center',
-		fontSize: '1.5rem',
-		borderRadius: '0.5rem',
-		marginBottom: '2rem'
-	},
 	textContainer: {
 		padding: '20px 10%'
 	},
@@ -127,14 +135,17 @@ const useStyles = makeStyles({
 		textAlign: 'center',
 		fontSize: '1.5rem',
 		borderRadius: '0.5rem',
+		cursor: 'pointer',
 		marginBottom: '2rem'
 	}
 });
 
 const ProfessionalPage = (props) => {
 	const [ openModal, setOpenModal ] = useState(false);
+	const [chosenPlan, setChosenPlan] = useState({})
 
-	const handleOpen = () => {
+	const handleOpen = (plan) => {
+		setChosenPlan(plansDefinition[plan])
 		setOpenModal(true);
 	};
 
@@ -174,7 +185,7 @@ const ProfessionalPage = (props) => {
 								<button
 									className={classes.button}
 									aria-label="scroll"
-									onClick={handleOpen}
+									onClick={() => handleOpen(0)}
 								>
 									Elegir Plan
 								</button>
@@ -194,7 +205,7 @@ const ProfessionalPage = (props) => {
 								<button
 									className={classes.button}
 									aria-label="scroll"
-									onClick={handleOpen}
+									onClick={() => handleOpen(1)}
 								>
 									Elegir Plan
 								</button>
@@ -214,7 +225,7 @@ const ProfessionalPage = (props) => {
 								<button
 									className={classes.button}
 									aria-label="scroll"
-									onClick={handleOpen}
+									onClick={() => handleOpen(2)}
 								>
 									Elegir Plan
 								</button>
@@ -265,7 +276,7 @@ const ProfessionalPage = (props) => {
 					</Grid>
 				</Grid>
 			</Grid>
-			<UserInformationModal open={openModal} handleOpen={handleOpen} handleClose={handleClose} />
+			<UserInformationModal chosenPlan={chosenPlan} open={openModal} handleOpen={handleOpen} handleClose={handleClose} />
 		</Box>
 		// <ProfessionalForm />
 	);
