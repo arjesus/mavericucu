@@ -44,6 +44,8 @@ const Post = props => {
     theme
   } = props;
 
+  console.log(imgBLockOptions, 'cccccccccccccccccccccc')
+
   const imgBLockOptions = {
     title,
     text,

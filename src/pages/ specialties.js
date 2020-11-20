@@ -109,11 +109,11 @@ const specialities = [
     description: '',
     link: '/depresion'
   },
-  {
-    title: 'Autoestima',
-    description: '',
-    link: '/autoestima'
-  },
+  // {
+  //   title: 'Autoestima',
+  //   description: '',
+  //   link: '/autoestima'
+  // },
   {
     title: 'Ansiedad',
     description: '',
@@ -122,28 +122,28 @@ const specialities = [
   {
     title: 'Terapia de pareja',
     description: '',
-    link: '/terapia-pareja'
+    link: '/terapia-de-pareja'
   },
-  {
-    title: 'Sexualidad',
-    description: '',
-    link: '/sexualidad'
-  },
-  {
-    title: 'Fobias y Miedos',
-    description: '',
-    link: '/miedos'
-  },
-  {
-    title: 'Coaching o Mentoring',
-    description: 'Laboral /  Académico',
-    link: '/mentoring'
-  },
-  {
-    title: 'Coaching Deportivo',
-    description: '',
-    link: '/deportivo'
-  }
+  // {
+  //   title: 'Sexualidad',
+  //   description: '',
+  //   link: '/sexualidad'
+  // },
+  // {
+  //   title: 'Fobias y Miedos',
+  //   description: '',
+  //   link: '/miedos'
+  // },
+  // {
+  //   title: 'Coaching o Mentoring',
+  //   description: 'Laboral /  Académico',
+  //   link: '/mentoring'
+  // },
+  // {
+  //   title: 'Coaching Deportivo',
+  //   description: '',
+  //   link: '/deportivo'
+  // }
 ];
 
 const ProfessionalPage = props => {

@@ -72,6 +72,7 @@ export const specializationQuery = graphql`
           }
         }
         text
+        button
       }
     }
     posts: allMarkdownRemark(
@@ -98,6 +99,7 @@ export const specializationQuery = graphql`
                 }
               }
             }
+            button
           }
         }
       }

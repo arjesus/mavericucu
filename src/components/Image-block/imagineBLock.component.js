@@ -10,12 +10,11 @@ const useStyles = makeStyles({
 	},
 	button: {
 		backgroundColor: theme.color.principals.darkerPurpleText,
-		padding: '20px 15px',
+		padding: '10px 15px',
 		color: 'white',
-		width: '260px',
 		fontWeight: '700',
 		textAlign: 'center',
-		fontSize: '1.5rem',
+		fontSize: '1.2rem',
 		borderRadius: '0.5rem'
 	},
 	textTopBox: {
@@ -54,6 +53,7 @@ const useStyles = makeStyles({
 const ImageBlock = (props) => {
 	const classes = useStyles();
 	const { imgBLockOptions } = props;
+	console.log(imgBLockOptions, 'aaaaaaaaaaaaaaaaaaaa')
 
 	return (
 		<Box mt={2}>

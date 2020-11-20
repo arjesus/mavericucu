@@ -53,6 +53,10 @@ const evaMinerva = [
   {
     name: 'Especialidades',
     url: '/%20specialties/'
+  },
+  {
+    name: 'Quienes somos',
+    url: '/quienes-somos/'
   }
 ];
 
