@@ -42,7 +42,7 @@ const Checkout = ({ id, answer, handleClose }) => {
 	};
 
 	const handleClick = (e, answer, id) => {
-		postFormAnswers({ answers: answer });
+		postSortFormAnswers({ answers: answer });
 		redirectToCheckout(e, id);
 		handleClose();
 	};

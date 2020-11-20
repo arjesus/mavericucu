@@ -177,6 +177,7 @@ class Evaluations extends React.Component {
             height: auto;
             min-height: 53vh;
             width: 100%;
+            max-width: 100vw;
             grid-gap: 3rem;
             justify-items: center;
             -webkit-box-align: center;
@@ -189,7 +190,7 @@ class Evaluations extends React.Component {
 
             .boxes-container {
               display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
+              grid-template-columns: 0.6fr 1fr 1fr;
               grid-gap: 2rem;
             }
 
@@ -283,7 +284,7 @@ class Evaluations extends React.Component {
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
               0 6px 14px 0 #6A3BC4;
             padding: 25px;
-            width: 450px;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: c;
