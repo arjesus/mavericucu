@@ -27,7 +27,7 @@ const Hero = props => {
               </p>
               <Grid container direction="row">
                 <Grid item md={3} sm={12}>
-                  <a href="#link-to-form-section">Comenzar</a>
+                  <a href="/plans">Comenzar</a>
                 </Grid>
                 <Grid item md={3} sm={12}>
                   <a href="#link-to-form-section">Mirar video</a>
@@ -64,7 +64,7 @@ const Hero = props => {
               </p>
               <p>Empieza tu terapia mediante video, teléfono o chat hoy mismo.</p>
             </div>
-            <a href="#link-to-form-section">Reserva tu cita</a>
+            <a href="/plans">Reserva tu cita</a>
           </div>
           <div className="hero-sub-image">
             <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
@@ -79,7 +79,7 @@ const Hero = props => {
             <div className="plans-sub-text">
               <h3>Primera Sesiones Gratuitas con tu psicólogo online y tu especialista guia</h3>
               <img src={webAssistance} />
-              <a href="#link-to-form-section" className="plans-botton">
+              <a href="/plans" className="plans-botton">
                 Empezar
               </a>
             </div>
@@ -118,7 +118,7 @@ const Hero = props => {
                 Elige a continuación el plan que más se adapte a ti para empezar a disfrutar de tus primeras sesiones gratuitas.</p>
               <p>Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos resultados de nuestra terapia online, pero a la hora de la verdad <strong>lo que cuenta es tu experiencia. </strong></p>
             </div>
-            <a href="/contact">Empezar</a>
+            <a href="/plans">Empezar</a>
           </div>
           <div className="hero-sub-image">
             <img src={logo} alt="Mujer psicologa ayudando" />

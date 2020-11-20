@@ -23,11 +23,17 @@ const useStyles = makeStyles({
 		justifyContent: 'center',
 		border: 'none',
 		borderRadius: '0.5rem',
+		width: '100vw',
 		'& .MuiGrid-container': {
 			width: '50%',
 			backgroundColor: theme.color.principals.white,
 			zIndex: 9999999,
 			padding: '0 40px'
+		},
+		'@media (max-width: 600px)': {
+			'& .MuiGrid-container': {
+				width: '90vw',
+			}
 		}
 	},
 	containerModalImg: {},
@@ -117,7 +123,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 							especialistas guías te contacten
 						</p>
 					</Grid>
-					<Grid item md={6}>
+					<Grid item  sm={12} md={6}>
 						<TextField
 							name="name"
 							id="standard-basic"
@@ -128,7 +134,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 							onChange={handleChangeInputEvent}
 						/>
 					</Grid>
-					<Grid item md={6}>
+					<Grid item sm={12} md={6}>
 						<TextField
 							name="surname"
 							id="standard-basic"
@@ -139,7 +145,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 							onChange={handleChangeInputEvent}
 						/>
 					</Grid>
-					<Grid item md={6}>
+					<Grid item sm={12} md={6}>
 						<TextField
 							name="email"
 							error={!validEmail}
@@ -152,7 +158,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 							onChange={handleChangeInputEvent}
 						/>
 					</Grid>
-					<Grid item md={6}>
+					<Grid item sm={12} md={6}>
 						<TextField
 							name="phone"
 							id="standard-basic"
@@ -162,7 +168,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 							onChange={handleChangeInputEvent}
 						/>
 					</Grid>
-					<Grid item md={12} className={classes.center}>
+					<Grid item sm={12} md={12} className={classes.center}>
 						<DatePickerMaterialComponent value={formFields.date} onChange={handleChangeInputDate} />
 					</Grid>
 					<Grid item md={6} className={classes.center, classes.priceContainer}>
