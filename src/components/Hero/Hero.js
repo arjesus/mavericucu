@@ -177,7 +177,7 @@ const Hero = props => {
             display: flex;
             flex-direction: column;
             display: flex;
-            padding: 25px;
+            padding: 25px 25px 5ppx 25px;
             justify-content: space-evenly;
             height: 80%;
             align-self: center;
@@ -189,6 +189,7 @@ const Hero = props => {
 
             p {
               font-size: 1em;
+              margin-bottom: 10px;
             }
 
             a {
