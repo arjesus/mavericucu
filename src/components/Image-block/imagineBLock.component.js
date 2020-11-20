@@ -53,7 +53,6 @@ const useStyles = makeStyles({
 const ImageBlock = (props) => {
 	const classes = useStyles();
 	const { imgBLockOptions } = props;
-	console.log(imgBLockOptions, 'aaaaaaaaaaaaaaaaaaaa')
 
 	return (
 		<Box mt={2}>
