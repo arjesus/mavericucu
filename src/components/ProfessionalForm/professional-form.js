@@ -10,8 +10,7 @@ const ProfessionalForm = () => {
   const [phone, setPhone] = useState('');
 
   function handleSubmit(e) {
-     
-        postFormAnswersProfessionals({answers:{name,email,phone}})
+    postFormAnswersProfessionals({ answers: { name, email, phone } });
   }
   return (
     <React.Fragment>
@@ -35,7 +34,7 @@ const ProfessionalForm = () => {
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
-          
+
           {formStep === 2 && (
             <div className="feel-container feel-container-four">
               <h3>
@@ -71,15 +70,16 @@ const ProfessionalForm = () => {
               <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
             </div>
           )}
-          {formStep === 3 && ( 
-            handleSubmit(),
-            <div className="feel-container-finish">
-              <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
-              <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
-                Volver a la pagina principial
-              </Link>
-            </div>
-          )}
+          {formStep === 3 &&
+            (handleSubmit(),
+            (
+              <div className="feel-container-finish">
+                <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
+                <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
+                  Volver a la pagina principial
+                </Link>
+              </div>
+            ))}
         </div>
       </div>
       {/* --- STYLES --- */}
