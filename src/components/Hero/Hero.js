@@ -6,7 +6,7 @@ import Evaluations from '../evaluations/evaluations.js';
 import Psychology from '../psychology/psychology';
 import Plans from './components/plans.component';
 
-import paso1 from '../../../static/images/paso1.jpg';
+import paso1 from '../../../static/images/paso1.svg';
 import paso2 from '../../../static/images/paso3.svg';
 import paso3 from '../../../static/images/paso2.jpg';
 import logo from '../../images/jpg/logo-text.png';
@@ -146,8 +146,8 @@ const Hero = props => {
         .grid-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.4fr 0.6fr 0.6fr;
-          gap: 15px 1px;
+          grid-template-rows: 0.5fr 1fr 0.6fr 0.7fr 0.4fr 0.7fr 0.6fr;
+          gap: 10px 1px;
           grid-template-areas:
             'header'
             'professionals'
@@ -167,7 +167,7 @@ const Hero = props => {
           align-items: center;
           grid-auto-flow: column;
           display: grid;
-          grid-template-rows: 1fr 0.15fr;
+          grid-template-rows: 1fr auto;
 
           .call-to-action {
             background-color: ${theme.color.principals.greenDark};
@@ -181,6 +181,7 @@ const Hero = props => {
             h2 {
               font-size: 19px;
               line-height: 1.5;
+              margin: 20px 0;
             }
           }
 
@@ -264,9 +265,11 @@ const Hero = props => {
           .hero-sub-text {
             display: grid;
             grid-template-rows: 0.1fr 1fr 0.1fr;
-            grid-row-gap: 20px;
+            grid-row-gap: 25px;
             width: 80%;
             justify-items: center;
+            text-align: center;
+            line-height: 1.7rem;
             color: ${theme.color.principals.darkerPurpleText};
             h2 {
               font-size: 2em;
@@ -274,7 +277,6 @@ const Hero = props => {
             p {
               margin-top: 10px;
               font-size: 1em;
-              line-height: 1.4rem;
             }
             a {
               background-color: ${theme.color.principals.darkPurple};
@@ -307,13 +309,13 @@ const Hero = props => {
           align-items: center;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             font-size: 2em;
           }
           .plans-sub {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 60px;
+            grid-gap: 90px;
           }
           .plans-sub-text {
             display: flex;
@@ -321,8 +323,9 @@ const Hero = props => {
             justify-content: space-evenly;
             align-items: center;
             h3 {
-              color: ${theme.color.principals.darkerPurpleText};
+              color: ${theme.color.principals.greenLight};
               font-size: 28px;
+              text-align: center;
             }
             a {
               background-color: ${theme.color.principals.darkPurple};
@@ -340,6 +343,13 @@ const Hero = props => {
             }
           }
         }
+        .hero-sub-image {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          align-items: center;
+          justify-content: center;
+        }
         .steps {
           display: flex;
           flex-direction: column;
@@ -348,8 +358,9 @@ const Hero = props => {
           background-color: white;
           border-radius: 1rem;
           width: 100%;
-          min-height: 50vh;
+          min-height: 70vh;
           height: auto;
+          padding: 30px 50px;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
             font-size: 2em;
@@ -363,16 +374,13 @@ const Hero = props => {
             grid-auto-flow: column;
             grid-column-gap: 60px;
             justify-items: center;
-            img {
-              width: 80%;
-              margin-bottom: 30px;
-            }
-            .hero-sub-image {
+            .block-img {
               display: flex;
-              flex-direction: column;
-              width: 80%;
-              align-items: center;
-              justify-content: center;
+              justify-content: end;
+            }
+            img {
+              width: 50%;
+              margin-bottom: 30px;
             }
             h3 {
               text-align: center;

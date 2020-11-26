@@ -1,77 +1,77 @@
-import React from "react";
+import React from 'react';
 import theme from '../../theme/theme.yaml';
-import HoverRating from "../starts-rating/starts-rating.component";
+import HoverRating from '../starts-rating/starts-rating.component';
 
-import logo from "../../../static/images/lirio.png";
+import logo from '../../../static/images/lirio.png';
 
 const arrOfData = [
   {
     number: 5,
-    percentage: "85%",
-    style: "width: 85%",
-    title: "Header de la review",
+    percentage: '85%',
+    style: 'width: 85%',
+    title: 'Header de la review',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    author: "name autor"
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    author: 'name autor'
   },
   {
     number: 4,
-    percentage: "7%",
-    style: "width: 85%",
-    title: "Header de la review",
+    percentage: '7%',
+    style: 'width: 85%',
+    title: 'Header de la review',
     text:
-      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
-    author: "name autor"
+      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+    author: 'name autor'
   },
   {
     number: 3,
-    percentage: "3%",
-    style: "width: 3%",
-    title: "Header de la review",
+    percentage: '3%',
+    style: 'width: 3%',
+    title: 'Header de la review',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    author: "name autor"
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    author: 'name autor'
   },
   {
     number: 2,
-    percentage: "4%",
-    style: "width: 4%",
-    title: "Header de la review",
+    percentage: '4%',
+    style: 'width: 4%',
+    title: 'Header de la review',
     text:
-      "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
-    author: "name autor"
+      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+    author: 'name autor'
   },
   {
     number: 1,
-    percentage: "1%",
-    style: "width: 1%",
-    title: "Header de la review",
+    percentage: '1%',
+    style: 'width: 1%',
+    title: 'Header de la review',
     text:
-      "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-    author: "name autor"
+      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+    author: 'name autor'
   }
 ];
 
 class Evaluations extends React.Component {
   state = {
     counter: 0,
-    contentToRender:   {
+    contentToRender: {
       number: 2,
-      percentage: "4%",
-      style: "width: 4%",
-      title: "Header de la review",
+      percentage: '4%',
+      style: 'width: 4%',
+      title: 'Header de la review',
       text:
-        "Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.",
-      author: "name autor"
+        'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+      author: 'name autor'
     },
-    secondContentToRender:   {
+    secondContentToRender: {
       number: 1,
-      percentage: "1%",
-      style: "width: 1%",
-      title: "Header de la review",
+      percentage: '1%',
+      style: 'width: 1%',
+      title: 'Header de la review',
       text:
-        "Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.",
-      author: "name autor"
+        'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+      author: 'name autor'
     }
   };
 
@@ -101,7 +101,7 @@ class Evaluations extends React.Component {
     let secondReviewToRender = secondContentToRender;
     secondReviewToRender.title = arrOfData[counter + 1].title;
     secondReviewToRender.text = arrOfData[counter + 1].text;
-    secondReviewToRender.author = arrOfData[counter+ 1].author;
+    secondReviewToRender.author = arrOfData[counter + 1].author;
     counter += 1;
     this.setState({
       counter,
@@ -175,10 +175,10 @@ class Evaluations extends React.Component {
             grid-template-columns: 1fr;
             grid-template-rows: 0fr 1fr;
             height: auto;
-            min-height: 53vh;
+            min-height: 65vh;
             width: 100%;
             max-width: 100vw;
-            grid-gap: 3rem;
+            grid-gap: 4rem;
             justify-items: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
@@ -229,7 +229,7 @@ class Evaluations extends React.Component {
                 grid-template-rows: 1fr 1fr;
                 grid-gap: 2rem;
                 text-align: justify;
-              }  
+              }
               .review-container-comments {
                 width: 300px;
               }
@@ -240,7 +240,7 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 #6A3BC4;
+              0 6px 14px 0 #6a3bc4;
             padding: 25px;
             border-radius: 1rem;
             margin: 0 auto;
@@ -265,8 +265,8 @@ class Evaluations extends React.Component {
           }
 
           .progress-done {
-            background: linear-gradient(to left, #d2bbe5ff, #6A3BC4);
-            box-shadow: 0 3px 3px -5px #d2bbe5ff, #6A3BC4;
+            background: linear-gradient(to left, #d2bbe5ff, #6a3bc4);
+            box-shadow: 0 3px 3px -5px #d2bbe5ff, #6a3bc4;
             border-radius: 5px;
             height: 10px;
             width: 0;
@@ -280,9 +280,9 @@ class Evaluations extends React.Component {
             border-radius: 2px;
             background-color: #ffffff;
             -webkit-box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02),
-              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 #6A3BC4;
+              0 1px 33px 0 rgba(0, 0, 0, 0.05), 0 6px 14px 0 #6a3bc4;
             box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 #6A3BC4;
+              0 6px 14px 0 #6a3bc4;
             padding: 25px;
             width: 100%;
             height: 100%;
