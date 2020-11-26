@@ -29,8 +29,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont('font400', 'Open Sans', 400);
-      this.loadFont('font600', 'Open Sans', 600);
+      this.loadFont('font400', 'Lato', 400);
+      this.loadFont('font600', 'Lato', 600);
     }
   }
 
@@ -148,9 +148,7 @@ class Layout extends React.Component {
                       }
                       body {
                         font-family: ${
-                          this.state.font400loaded
-                            ? "'Open Sans', sans-serif;"
-                            : 'Arial, sans-serif;'
+                          this.state.font400loaded ? "'Lato', sans-serif;" : 'Arial, sans-serif;'
                         };
                       }
                       h1,
@@ -175,7 +173,7 @@ class Layout extends React.Component {
                         color: #666;
                       }
                       .background-img {
-                        padding: 0 2.5%;
+                        padding: 0 10px;
                         background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
                         url('${fondo}') no-repeat center center;
                       -webkit-background-size: cover;

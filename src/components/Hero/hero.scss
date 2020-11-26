@@ -170,7 +170,7 @@ p {
   min-height: 20vh;
   height: auto;
   justify-items: center;
-  background-color: ${theme.color.principals.darkerPurpleText};
+  background-color: ${theme.color.principals.darkPurple};
   align-items: center;
   grid-auto-flow: column;
   padding: 0 15%;
@@ -186,7 +186,7 @@ p {
 }
 a {
   padding: 7px 0;
-  background-color: ${theme.color.principals.darkerPurpleText};
+  background-color: ${theme.color.principals.darkPurple};
   border: none;
   border-radius: 0.5rem;
   color: ${theme.color.principals.white};

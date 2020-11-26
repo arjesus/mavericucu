@@ -248,13 +248,13 @@ const DynamicForm = () => {
         input {
           border: none;
           width: 200px;
-          border-bottom: 1.5px solid ${theme.color.principals.darkerPurpleText};
+          border-bottom: 1.5px solid ${theme.color.principals.darkPurple};
           font-size: 20px;
           text-align: center;
           color: ${theme.color.principals.darkerPurpleText};
         }
         button {
-          background-color: ${theme.color.principals.darkerPurpleText};
+          background-color: ${theme.color.principals.darkPurple};
           border: none;
           padding: 7px 40px;
           color: white;
@@ -281,7 +281,7 @@ const DynamicForm = () => {
             color: ${theme.color.principals.darkerPurpleText};
           }
           a {
-            background-color: ${theme.color.principals.darkerPurpleText};
+            background-color: ${theme.color.principals.darkPurple};
             border: none;
             padding: 10px 40px;
             color: white;
@@ -382,7 +382,7 @@ const DynamicForm = () => {
                   outline: none;
                   border: none;
                   border-radius: 0px;
-                  border-bottom: 1.2px solid ${theme.color.principals.darkerPurpleText};
+                  border-bottom: 1.2px solid ${theme.color.principals.darkPurple};
                   &:valid ~ .input-group__label {
                     color: ${theme.color.principals.darkerPurpleText};
                   }
@@ -427,7 +427,7 @@ const DynamicForm = () => {
                   color: ${theme.color.principals.darkerPurpleText};
                   font-size: 20px;
                   text-align: center;
-                  border: 0.5px solid ${theme.color.principals.darkerPurpleText};
+                  border: 0.5px solid ${theme.color.principals.darkPurple};
                 }
               }
 

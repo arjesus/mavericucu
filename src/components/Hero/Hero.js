@@ -21,16 +21,22 @@ const Hero = props => {
         <div className="header">
           <div className="top-header">
             <div className="top-header-text">
-              <h1>Psicólogos online. Equilibrio y superación cuando más lo necesites</h1>
+              <h1>
+                Psicólogos online
+                <br /> Equilibrio y superación
+                <br /> cuando más lo necesites
+              </h1>
               <p>
-                Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y bienestar emocional que más se adapta a ti. Número 1 en España.
+                Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y
+                bienestar emocional que más se adapta a ti. Número 1 en España.
               </p>
               <Grid container direction="row">
-                <Grid item md={6} sm={12} lg={3}>
+                <Grid item md={6} sm={12} lg={4}>
                   <a href="/plans">Comenzar</a>
                 </Grid>
-                <Grid item md={6} sm={12} lg={3}>
-                  <a href="#link-to-form-section">Mirar video</a>
+                <Grid item md={6} sm={12} lg={1}></Grid>
+                <Grid item md={6} sm={12} lg={4}>
+                  {/* <a href="#link-to-form-section">Mirar video</a> */}
                 </Grid>
               </Grid>
             </div>
@@ -45,12 +51,12 @@ const Hero = props => {
             <div className="call-to-action">
               <h2>
                 <strong>
-                  Ayuda psicológica especial durante periodo de confinamiento con psicólogos especializados en el impacto emocional del coronavirus COVID-19
+                  Ayuda psicológica especial durante periodo de confinamiento con psicólogos
+                  especializados en el impacto emocional del coronavirus COVID-19
                 </strong>
               </h2>
             </div>
           )}
-
         </div>
         <div className="professionals">
           <Psychology />
@@ -60,7 +66,9 @@ const Hero = props => {
             <h2>Primeras sesiones gratuitas con tu psicólogo online</h2>
             <div>
               <p>
-                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y privada poder encontrar el psicólogo online que más se adapte a tus necesidades, además, la primera sesión con tu psicólogo online será gratuita.
+                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y
+                privada poder encontrar el psicólogo online que más se adapte a tus necesidades,
+                además, la primera sesión con tu psicólogo online será gratuita.
               </p>
               <p>Empieza tu terapia mediante video, teléfono o chat hoy mismo.</p>
             </div>
@@ -93,14 +101,16 @@ const Hero = props => {
               <img src={paso1} alt="Mujer psicologa ayudando" />
               <h3>Contactanos</h3>
               <p>
-                Mediante nuestro formulario web nuestros especialistas guías te contactaran en la hora y momento que solicites.
+                Mediante nuestro formulario web nuestros especialistas guías te contactaran en la
+                hora y momento que solicites.
               </p>
             </div>
             <div className="hero-sub-image">
               <img src={paso2} alt="Mujer psicologa ayudando" />
               <h3>Habla con nuestro especialista guia</h3>
               <p>
-                Nuestros especialistas te contactaran para encontrar el psicólogo online más adaptado a ti.
+                Nuestros especialistas te contactaran para encontrar el psicólogo online más
+                adaptado a ti.
               </p>
             </div>
             <div className="hero-sub-image">
@@ -115,8 +125,14 @@ const Hero = props => {
             <h2>Contactanos y comienza a sentirte mejor</h2>
             <div>
               <p>
-                Elige a continuación el plan que más se adapte a ti para empezar a disfrutar de tus primeras sesiones gratuitas.</p>
-              <p>Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos resultados de nuestra terapia online, pero a la hora de la verdad <strong>lo que cuenta es tu experiencia. </strong></p>
+                Elige a continuación el plan que más se adapte a ti para empezar a disfrutar de tus
+                primeras sesiones gratuitas.
+              </p>
+              <p>
+                Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
+                resultados de nuestra terapia online, pero a la hora de la verdad{' '}
+                <strong>lo que cuenta es tu experiencia. </strong>
+              </p>
             </div>
             <a href="/plans">Empezar</a>
           </div>
@@ -131,7 +147,7 @@ const Hero = props => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 0.5fr 1fr 0.7fr 0.6fr 0.4fr 0.6fr 0.6fr;
-          gap: 25px 1px;
+          gap: 15px 1px;
           grid-template-areas:
             'header'
             'professionals'
@@ -151,10 +167,10 @@ const Hero = props => {
           align-items: center;
           grid-auto-flow: column;
           display: grid;
-          grid-template-rows: 1fr 0.2fr;
+          grid-template-rows: 1fr 0.15fr;
 
           .call-to-action {
-            background-color: ${theme.color.principals.darkerPurpleText};
+            background-color: ${theme.color.principals.greenDark};
             color: white;
             height: 100%;
             border-radius: 0 0 1rem 1rem;
@@ -163,7 +179,7 @@ const Hero = props => {
             align-items: center;
 
             h2 {
-              font-size: 18px;
+              font-size: 19px;
               line-height: 1.5;
             }
           }
@@ -177,27 +193,29 @@ const Hero = props => {
             display: flex;
             flex-direction: column;
             display: flex;
-            padding: 25px 25px 5ppx 25px;
+            padding: 25px 90px;
             justify-content: space-evenly;
             height: 80%;
             align-self: center;
             color: ${theme.color.principals.darkerPurpleText};
 
             h1 {
-              font-size: 2em;
+              font-size: 2.7em;
+              margin-bottom: 30px;
             }
 
             p {
-              font-size: 1em;
-              margin-bottom: 10px;
+              font-size: 19px;
+              line-height: 1.4;
+              margin-bottom: 50px;
             }
 
             a {
-              background-color: ${theme.color.principals.darkerPurpleText};
-              width: 112px;
-              padding: 19px 23px;
+              background-color: ${theme.color.principals.darkPurple};
+              width: 200px;
+              padding: 19px 50px;
               color: ${theme.color.principals.white};
-              border-radius: 0.2rem;
+              border-radius: 0.5rem;
               font-size: 1em;
               text-align: center;
               font-weight: 600;
@@ -259,7 +277,7 @@ const Hero = props => {
               line-height: 1.4rem;
             }
             a {
-              background-color: ${theme.color.principals.darkerPurpleText};
+              background-color: ${theme.color.principals.darkPurple};
               width: 163px;
               padding: 19px 23px;
               color: ${theme.color.principals.white};
@@ -307,7 +325,7 @@ const Hero = props => {
               font-size: 28px;
             }
             a {
-              background-color: ${theme.color.principals.darkerPurpleText};
+              background-color: ${theme.color.principals.darkPurple};
               width: 160px;
               padding: 19px 23px;
               color: ${theme.color.principals.white};
@@ -379,8 +397,8 @@ const Hero = props => {
           grid-area: contact;
           img {
             width: 60%;
-            display:block;
-            margin:auto;
+            display: block;
+            margin: auto;
           }
         }
 
@@ -399,7 +417,7 @@ const Hero = props => {
             display: grid;
             min-height: 75vh;
             grid-template-rows: 1fr 0.4fr;
-  
+
             .top-header {
               display: grid;
               grid-template-rows: 1.6fr 0.4fr;
@@ -416,7 +434,6 @@ const Hero = props => {
                 border-radius: 1rem;
               }
             }
-
           }
           .blockColumn {
             display: grid;
@@ -429,7 +446,6 @@ const Hero = props => {
             grid-template-rows: 1fr 1fr 1fr !important;
           }
           .professionals {
-
           }
           .reviews {
             padding: 20px 0;
@@ -439,14 +455,12 @@ const Hero = props => {
             justify-content: space-around;
           }
           .steps {
-
           }
           .close-contact {
-
           }
         }
       `}</style>
-    </React.Fragment >
+    </React.Fragment>
   );
 };
 

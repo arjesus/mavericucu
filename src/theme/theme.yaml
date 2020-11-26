@@ -39,10 +39,10 @@ size:
 color:
   # OUR COLOR VARIBLES
   principals:
-    darkPurple: &darkPurple '#8e7cc3ff'
+    darkPurple: &darkPurple '#6A3BC4'
     lightPurple: &lightPurple '#d2bbe5ff'
     lightPurpleBackground: &lightPurpleBackground '#d2bbe573'
-    darkerPurpleText: &darkerPurpleText '#6A3BC4'
+    darkerPurpleText: &darkerPurpleText '#695799'
     veryLightPurple: &veryLightPurple '#f8f1ffff'
     blackText: &blackText '##2A2A2A'
     white: &white '#fff'
@@ -53,6 +53,7 @@ color:
     third: &third '#FFC558'
     orange: &orange '#F4501E'
     lightYellow: &lightYellow '#F2E199'
+    greenDark: &greenDark '#1D7E8E'
 
 
 

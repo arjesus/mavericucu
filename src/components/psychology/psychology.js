@@ -94,18 +94,21 @@ const Psychology = props => {
     <React.Fragment>
       <div className="psychology-container">
         <div>
-          <h2>Cientos de profesionales.</h2>
+          <h2>Cientos de profesionales,</h2>
           <h2>Titulados y disponibles en la palma de tu mano</h2>
         </div>
         <div className="psychology-text-container">
           <p>
-            Cientos de psicólogos online, titulados, colegiados y con amplia experiencia en diversas áreas, esto es lo que nos permite encontrar el psicólogo más adaptado a ti y a tus necesidades.
+            Cientos de psicólogos online, titulados, colegiados y con amplia experiencia en diversas
+            áreas, esto es lo que nos permite encontrar el psicólogo más adaptado a ti y a tus
+            necesidades.
           </p>
           <p>
-            Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la salud y bienestar, como por ejemplo nutricionistas, coaches o profesional de la actividad física, esto hace posible que tú y tu psicólogo online podáis trabajar conjuntamente con profesionales de diferentes ámbitos, guiandote de la manera más especializada y práctica posible
-          </p>
-          <p>
-            <strong>Nuestro misión: Tu bienestar emocional</strong>
+            Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
+            salud y bienestar, como por ejemplo nutricionistas, coaches o profesional de la
+            actividad física, esto hace posible que tú y tu psicólogo online podáis trabajar
+            conjuntamente con profesionales de diferentes ámbitos, guiandote de la manera más
+            especializada y práctica posible.
           </p>
         </div>
         <img className="psycology-img" src={fondo} />
@@ -117,14 +120,14 @@ const Psychology = props => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 0.2fr 0.2fr 0.2fr;
-          min-height: 70vh;
+          min-height: 80vh;
           width: 100%;
-          grid-gap: 1rem;
-          padding: 20px 60px 0px 60px;
+          grid-gap: 2rem;
+          padding: 35px 60px 0px 60px;
           height: auto;
         }
-        .psychology-text-container{
-          width: 85%;
+        .psychology-text-container {
+          width: 100%;
           margin: 0 auto;
         }
         .psychology-card {
@@ -140,16 +143,18 @@ const Psychology = props => {
           color: ${theme.color.principals.darkerPurpleText};
           font-size: 2em;
           text-align: center;
+          line-height: 1.6;
         }
         p {
           text-align: center;
           color: ${theme.color.principals.darkerPurpleText};
           font-size: 1em;
-          padding-bottom: 10px;
+          line-height: 1.7;
+          margin-bottom: 25px;
         }
 
         .psycology-img {
-          width: 35%;
+          width: 27%;
           margin: 0 auto;
           margin-bottom: -57px;
         }
