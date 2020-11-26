@@ -31,7 +31,7 @@ const Hero = props => {
                 bienestar emocional que más se adapta a ti. Número 1 en España.
               </p>
               <Grid container direction="row">
-                <Grid item md={6} sm={12} lg={4}>
+                <Grid item md={6} sm={12} lg={4} className="center-button">
                   <a href="/plans">Comenzar</a>
                 </Grid>
                 <Grid item md={6} sm={12} lg={1}></Grid>
@@ -411,14 +411,24 @@ const Hero = props => {
         }
 
         @media (max-width: 600px) {
+          .plans-sub {
+            grid-gap: 0px;
+            h2 {
+              margin-button: 0px;
+            }
+          }
           .grid-container {
-            grid-template-rows: 0.35fr 1fr 0.5fr 0.6fr 0.6fr 0.9fr 0.55fr;
+            grid-template-rows: 0.5fr 1fr 0.5fr 0.6fr 0.6fr 0.9fr 0.55fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
             img {
               border-radius: 1rem;
             }
+          }
+          .center-button {
+            display: flex;
+            justify-content: center;
           }
           .header {
             grid-auto-flow: column;
@@ -440,6 +450,7 @@ const Hero = props => {
                 width: 80%;
                 margin: 0 auto;
                 border-radius: 1rem;
+                margin-top: 70px;
               }
             }
           }
