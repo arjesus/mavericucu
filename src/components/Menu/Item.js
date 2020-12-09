@@ -53,6 +53,8 @@ const Item = props => {
           border-radius: 1rem;
           outline-offset: 0px;
           text-shadow: none;
+          margin: 0 20px;
+          padding: 0px 20px;
           transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
           width: 150px;
           justify-content: center;

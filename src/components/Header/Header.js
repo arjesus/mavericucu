@@ -8,6 +8,7 @@ import config from '../../../content/meta/config';
 import Menu from '../Menu';
 
 import logo from '../../../static/images/logo.png';
+import SecondMenu from '../Menu/SecondMenu';
 
 class Header extends React.Component {
   state = {
@@ -51,16 +52,7 @@ class Header extends React.Component {
           <FontLoadedContext.Consumer>
             {loaded => (
               <ScreenWidthContext.Consumer>
-                {width => (
-                  <Menu
-                    path={path}
-                    fixed={fixed}
-                    screenWidth={width}
-                    fontLoaded={loaded}
-                    pages={pages}
-                    theme={theme}
-                  />
-                )}
+                {width => <SecondMenu path={path} theme={theme} screenWidth={width} />}
               </ScreenWidthContext.Consumer>
             )}
           </FontLoadedContext.Consumer>

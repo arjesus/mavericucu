@@ -25,7 +25,7 @@ class Menu extends React.Component {
     this.items = [
       { to: '/', label: 'Home', icon: FaHome },
       // { to: "/category/", label: "Blog", icon: FaTag },
-      { to: "/plans/", label: "Planes", icon: FaTag },
+      { to: '/plans/', label: 'Planes', icon: FaTag },
       // { to: "/search/", label: "Search", icon: FaSearch },
       // ...pages,
       { to: '/%20specialties/', label: 'Especialidades', icon: FaSearch },
@@ -64,81 +64,12 @@ class Menu extends React.Component {
       if (this.props.path !== prevProps.path) {
         this.closeMenu();
       }
-      this.hideOverflowedMenuItems();
     }
   }
 
   getRenderedItems = () => {
     const itemList = this.itemList.current;
     return Array.from(itemList.children);
-  };
-
-  hideOverflowedMenuItems = () => {
-    const PADDING_AND_SPACE_FOR_MORELINK = this.props.screenWidth >= 1024 ? 60 : 0;
-
-    const itemsContainer = this.itemList.current;
-    const maxWidth = itemsContainer.offsetWidth - PADDING_AND_SPACE_FOR_MORELINK;
-
-    this.setState({ hiddenItems: [] }); // clears previous state
-
-    const menu = this.renderedItems.reduce(
-      (result, item) => {
-        item.classList.add('item');
-        item.classList.remove('hideItem');
-
-        const currentCumulativeWidth = result.cumulativeWidth + item.offsetWidth;
-        result.cumulativeWidth = currentCumulativeWidth;
-
-        if (!item.classList.contains('more') && currentCumulativeWidth > maxWidth) {
-          const link = item.querySelector('a');
-
-          item.classList.add('hideItem');
-          item.classList.remove('item');
-          result.hiddenItems.push({
-            to: link.getAttribute('data-slug'),
-            label: link.text
-          });
-        }
-        return result;
-      },
-      { visibleItems: [], cumulativeWidth: 0, hiddenItems: [] }
-    );
-
-    this.setState(prevState => ({ hiddenItems: menu.hiddenItems }));
-  };
-
-  toggleMenu = e => {
-    e.preventDefault();
-
-    if (this.props.screenWidth < 1024) {
-      this.renderedItems.map(item => {
-        const oldClass = this.state.open ? 'showItem' : 'hideItem';
-        const newClass = this.state.open ? 'hideItem' : 'showItem';
-
-        if (item.classList.contains(oldClass)) {
-          item.classList.add(newClass);
-          item.classList.remove(oldClass);
-        }
-      });
-    }
-
-    this.setState(prevState => ({ open: !prevState.open }));
-  };
-
-  closeMenu = e => {
-    //e.preventDefault();
-
-    if (this.state.open) {
-      this.setState({ open: false });
-      if (this.props.screenWidth < 1024) {
-        this.renderedItems.map(item => {
-          if (item.classList.contains('showItem')) {
-            item.classList.add('hideItem');
-            item.classList.remove('item');
-          }
-        });
-      }
-    }
   };
 
   render() {
@@ -153,13 +84,13 @@ class Menu extends React.Component {
               if (item.to !== this.props.path) {
                 return <Item item={item} key={item.label} icon={item.icon} theme={theme} />;
               } else {
-                return <div></div>
+                return <div></div>;
               }
             })}
           </ul>
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}
           {open && screenWidth >= 1024 && (
-            <ul className="hiddenItemList">
+            <ul className="hiddenItemList" ref={this.itemList}>
               {this.state.hiddenItems.map(item => (
                 <Item item={item} key={item.label} hiddenItem theme={theme} />
               ))}
@@ -193,28 +124,6 @@ class Menu extends React.Component {
             padding: 0; /* 0 ${theme.space.s}; */
             position: relative;
             width: 100%;
-          }
-
-          @below desktop {
-            .menu {
-              &::after {
-                position: absolute;
-                content: "";
-                left: ${theme.space.m};
-                right: ${theme.space.m};
-                top: 0;
-                height: 1px;
-                background: ${theme.color.brand.primary};
-              }
-
-              &.open {
-                padding: ${theme.space.inset.m};
-              }
-
-              :global(.homepage):not(.fixed) & {
-                bottom: -100px;
-              }
-            }
           }
 
           @from-width desktop {

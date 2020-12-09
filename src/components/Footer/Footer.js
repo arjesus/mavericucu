@@ -188,7 +188,7 @@ const Footer = props => {
               <div className="legals">
                 {legals.map((legal, index) => {
                   return (
-                    <Grid item md={6} key={index}>
+                    <Grid item sm={12} md={6} key={index}>
                       <a className="footerLink" href={legal.url}>
                         {legal.name}
                       </a>

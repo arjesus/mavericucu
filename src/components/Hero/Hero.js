@@ -418,7 +418,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.5fr 1fr 0.5fr 0.6fr 0.6fr 0.9fr 0.55fr;
+            grid-template-rows: 0.5fr 1fr 0.5fr 0.6fr 0.6fr 0.7fr 0.45fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
@@ -435,6 +435,7 @@ const Hero = props => {
             display: grid;
             min-height: 75vh;
             grid-template-rows: 1fr 0.4fr;
+            padding: 25px 0 0 0;
 
             .top-header {
               display: grid;
@@ -453,10 +454,13 @@ const Hero = props => {
                 margin-top: 70px;
               }
             }
+            .center-button {
+              justify-content: center;
+            }
           }
           .blockColumn {
             display: grid;
-            grid-template-rows: 1fr 0.5fr !important;
+            grid-template-rows: 0.4fr 0.5fr !important;
             grid-template-columns: 1fr !important;
             margin: 0;
           }
