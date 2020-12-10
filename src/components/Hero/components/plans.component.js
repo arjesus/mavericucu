@@ -101,7 +101,7 @@ const Plans = props => {
         }
         @media (max-width: 600px) {
           li {
-            height: 100px !important;
+            height: auto;
           }
         }
       `}</style>

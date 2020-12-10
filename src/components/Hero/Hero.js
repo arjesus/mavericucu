@@ -30,12 +30,12 @@ const Hero = props => {
                 Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y
                 bienestar emocional que más se adapta a ti. Número 1 en España.
               </p>
-              <Grid container direction="row">
-                <Grid item md={6} sm={12} lg={4} className="center-button">
+              <Grid container direction="row" className="center-button">
+                <Grid sm={12} item md={6} lg={4}>
                   <a href="/plans">Comenzar</a>
                 </Grid>
-                <Grid item md={6} sm={12} lg={1}></Grid>
-                <Grid item md={6} sm={12} lg={4}>
+                <Grid item sm={12} md={6} lg={1}></Grid>
+                <Grid item sm={12} md={6} lg={4}>
                   {/* <a href="#link-to-form-section">Mirar video</a> */}
                 </Grid>
               </Grid>
@@ -418,17 +418,13 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.5fr 1fr 0.5fr 0.6fr 0.6fr 0.7fr 0.45fr;
+            grid-template-rows: 0.53fr 1fr 0.5fr 0.6fr 0.89fr 0.7fr 0.45fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
             img {
               border-radius: 1rem;
             }
-          }
-          .center-button {
-            display: flex;
-            justify-content: center;
           }
           .header {
             grid-auto-flow: column;
@@ -445,6 +441,9 @@ const Hero = props => {
               .top-header-text {
                 padding: 0 15px;
                 align-items: center;
+                .center-button {
+                  justify-content: center;
+                }
               }
 
               img {
@@ -480,6 +479,7 @@ const Hero = props => {
           .steps {
           }
           .close-contact {
+            padding: 20px;
           }
         }
       `}</style>

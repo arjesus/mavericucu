@@ -28,6 +28,11 @@
     .footer {
       align-items: flex-start !important;
     }
+
+    .footerLink-box {
+      display: flex;
+      justify-content: center;
+    }
   }
   .footer {
     align-items: center;
@@ -55,9 +60,17 @@
       width: 100%;
     }
 
-    .legals {
-      display: flex;
-    justify-content: center;
-    flex: 1;
-    gap: 260px;
+    @media (min-width: 600px) {
+      .legals {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        gap: 260px;
+      }
     }
+
+    .legals {
+      width: 100%;
+    }
+
+

@@ -5,6 +5,7 @@ import { BsList } from 'react-icons/bs';
 import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Item from './Item';
+import theme from '../../theme/theme.yaml';
 
 import { FaHome } from 'react-icons/fa/';
 import { FaSearch } from 'react-icons/fa/';
@@ -14,7 +15,9 @@ import { Box, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   menuButton: {
-    width: '200px'
+    width: '100px',
+    fontSize: '50px',
+    color: theme.color.principals.darkerPurpleText
   }
 });
 
