@@ -45,7 +45,10 @@ const useStyles = makeStyles({
     textAlign: 'center',
     padding: '0 !important',
     border: `0.1px solid ${theme.color.principals.lightPurple}`,
-    borderTop: 'none'
+    borderTop: 'none',
+    '@media (max-width: 600px)': {
+      marginBottom: '35px'
+    }
   },
   plansCardsHeaderFirst: {
     backgroundColor: theme.color.principals.first,
@@ -87,7 +90,10 @@ const useStyles = makeStyles({
     marginTop: '-15px'
   },
   textContainer: {
-    padding: '20px 10%'
+    padding: '20px 10%',
+    '@media (max-width: 600px)': {
+      padding: '0'
+    }
   },
   plansLogo: {
     width: '300px'

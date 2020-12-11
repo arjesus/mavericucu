@@ -42,7 +42,6 @@ const SecondMenu = props => {
   };
 
   const handleClose = () => {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaa');
     setAnchorEl(null);
   };
 
@@ -50,7 +49,7 @@ const SecondMenu = props => {
     <Box>
       {screenWidth > 767 ? (
         <Grid container spacing={2} direction="row">
-          {items.map(item => {
+          {items.map((item, index) => {
             if (item.to !== path) {
               return (
                 <Grid item lg={4}>
@@ -58,7 +57,7 @@ const SecondMenu = props => {
                 </Grid>
               );
             } else {
-              return <div></div>;
+              return <div key={index.toString()}></div>;
             }
           })}
         </Grid>
@@ -79,19 +78,19 @@ const SecondMenu = props => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            {items.map(item => {
+            {items.map((item, index) => {
               if (item.to !== path) {
                 return (
                   <Item
                     item={item}
                     onClick={handleClose}
-                    key={item.label}
+                    key={index.toString()}
                     icon={item.icon}
                     theme={theme}
                   />
                 );
               } else {
-                return <div></div>;
+                return <div key={index.toString()}></div>;
               }
             })}
           </Menu>

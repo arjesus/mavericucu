@@ -123,7 +123,7 @@ const specialities = [
     title: 'Terapia de pareja',
     description: '',
     link: '/terapia-de-pareja'
-  },
+  }
   // {
   //   title: 'Sexualidad',
   //   description: '',
@@ -177,7 +177,7 @@ const ProfessionalPage = props => {
             </Grid>
           </Grid>
           <Grid container spacing={5} direction="row">
-            <Grid md={12}>
+            <Grid item md={12}>
               <h2 className={classes.title}>Contactanos y comienza a sentirte mejor</h2>
             </Grid>
             <Grid className={classes.textTopBox} item sm={12} md={6}>
