@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Article = props => {
   const { children, theme } = props;
@@ -16,14 +16,14 @@ const Article = props => {
         }
         @from-width tablet {
           .article {
-            padding: ${`calc(${theme.space.default}) calc(${theme.space.default} * 2)`};
-            max-width: ${theme.text.maxWidth.tablet};
+            padding: 80px 20px 25px 20px;
+            max-width: 100%;
           }
         }
         @from-width desktop {
           .article {
-            padding: ${`calc(${theme.space.default} * 2 + 90px) 0`};
-            max-width: ${theme.text.maxWidth.desktop};
+            padding: 80px 20px 25px 20px;
+            max-width: 100%;
           }
         }
       `}</style>

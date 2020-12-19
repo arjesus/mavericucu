@@ -6,7 +6,7 @@ import womanSofa from '../images/jpg/3778535-01 (1).svg';
 
 const useStyles = makeStyles({
   professional: {
-    padding: '115px 0 50px 0'
+    padding: '70px 20px 35px 20px'
   },
   professionalContainer: {
     backgroundColor: 'white',
@@ -100,6 +100,38 @@ const useStyles = makeStyles({
     marginBottom: '20px',
     height: '200px',
     backgroundColor: theme.color.principals.lightPurple
+  },
+  '@media (max-width: 600px)': {
+    professional: {
+      padding: '30px 20px 35px 20px'
+    },
+    imgBox: {
+      '& img': {
+        width: '90%'
+      }
+    },
+    textTopBox: {
+      alignItems: 'center'
+    },
+    title: {
+      margin: '0'
+    },
+    button: {
+      padding: '12px 10px',
+      width: '135px',
+      fontSize: '1.2rem',
+      borderRadius: '0.3rem'
+    },
+    plansCards: {
+      '& h3': {
+        fontSize: '1.5rem'
+      }
+    },
+    plansBox: {
+      '& h2': {
+        marginBottom: '20px'
+      }
+    }
   }
 });
 
@@ -109,11 +141,11 @@ const specialities = [
     description: '',
     link: '/depresion'
   },
-  // {
-  //   title: 'Autoestima',
-  //   description: '',
-  //   link: '/autoestima'
-  // },
+  {
+    title: 'Autoestima',
+    description: '',
+    link: '/autoestima'
+  },
   {
     title: 'Ansiedad',
     description: '',
@@ -123,17 +155,17 @@ const specialities = [
     title: 'Terapia de pareja',
     description: '',
     link: '/terapia-de-pareja'
+  },
+  {
+    title: 'Sexualidad',
+    description: '',
+    link: '/sexualidad'
+  },
+  {
+    title: 'Fobias y Miedos',
+    description: '',
+    link: '/miedos'
   }
-  // {
-  //   title: 'Sexualidad',
-  //   description: '',
-  //   link: '/sexualidad'
-  // },
-  // {
-  //   title: 'Fobias y Miedos',
-  //   description: '',
-  //   link: '/miedos'
-  // },
   // {
   //   title: 'Coaching o Mentoring',
   //   description: 'Laboral /  Académico',
@@ -168,7 +200,7 @@ const ProfessionalPage = props => {
                       <h3>{speciality.title}</h3>
                       <p className={classes.paragraphInside}>{speciality.description}</p>
                       <a className={classes.button} href={speciality.link}>
-                        leer mas
+                        Saber mas
                       </a>
                     </div>
                   </Grid>

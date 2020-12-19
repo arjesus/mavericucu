@@ -1,7 +1,7 @@
 ---
 title: Ansiedad. Como superar la ansiedad    
 category: "ansiedad"
-cover: mujerjovendeprimida-01.jpg
+cover: ansiedad-01.png
 text: Además de información sobre la ansiedad y sus síntomas en esta pagina podras encontrar mas contenido sobre nuestros psicólogos online especializados en ayuda para tratar la ansiedad.
 button: Más información sobre Eva Minerva
 ---
