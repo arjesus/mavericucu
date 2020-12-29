@@ -61,6 +61,16 @@ const useStyles = makeStyles({
     color: theme.color.principals.darkPurple,
     textAlign: 'center',
     marginBottom: '60px'
+  },
+  '@media (max-width: 600px)': {
+    cardContainer: {
+      padding: '20px 0px',
+      width: '100%',
+      margin: '0 auto',
+      display: 'flex',
+      justifyContent: 'center',
+      textAlign: 'center'
+    }
   }
 });
 

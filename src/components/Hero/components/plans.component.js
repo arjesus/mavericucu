@@ -110,8 +110,7 @@ const Plans = props => {
 };
 
 Plans.propTypes = {
-  html: PropTypes.string,
-  theme: PropTypes.object.isRequired
+  html: PropTypes.string
 };
 
 export default Plans;

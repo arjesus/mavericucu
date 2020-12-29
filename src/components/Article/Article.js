@@ -11,7 +11,7 @@ const Article = props => {
       {/* --- STYLES --- */}
       <style jsx>{`
         .article {
-          padding: ${theme.space.inset.default};
+          padding: 5px;
           margin: 0 auto;
         }
         @from-width tablet {

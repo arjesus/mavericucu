@@ -200,38 +200,7 @@ class Layout extends React.Component {
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  post: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired
 };
 
 export default Layout;
-
-//eslint-disable-next-line no-undef
-/*
-export const postQuery = graphql`
-  query LayoutQuery {
-    pages: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//pages//" }, fields: { prefix: { regex: "/^\\d+$/" } } }
-      sort: { fields: [fields___prefix], order: ASC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            prefix
-          }
-          frontmatter {
-            title
-            menuTitle
-          }
-        }
-      }
-    }
-    footnote: markdownRemark(fileAbsolutePath: { regex: "/footnote/" }) {
-      id
-      html
-    }
-  }
-`;
-
-*/

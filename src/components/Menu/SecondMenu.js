@@ -52,8 +52,8 @@ const SecondMenu = props => {
           {items.map((item, index) => {
             if (item.to !== path) {
               return (
-                <Grid item lg={4}>
-                  <Item item={item} key={item.label} icon={item.icon} theme={theme} />
+                <Grid item key={item.label} lg={3}>
+                  <Item item={item} icon={item.icon} theme={theme} />
                 </Grid>
               );
             } else {

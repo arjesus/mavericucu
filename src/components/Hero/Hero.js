@@ -30,14 +30,12 @@ const Hero = props => {
                 Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y
                 bienestar emocional que más se adapta a ti. Número 1 en España.
               </p>
-              <Grid container className="center-button">
-                <Grid className="center-button" item sm={12} md={6} lg={4}>
-                  <a href="/plans">Comenzar</a>
-                </Grid>
-                <Grid item sm={12} md={6} lg={1}></Grid>
-                <Grid item sm={12} md={6} lg={4}>
-                  {/* <a href="#link-to-form-section">Mirar video</a> */}
-                </Grid>
+              <Grid className="center-button" item sm={12} md={6} lg={4}>
+                <a href="/plans">Comenzar</a>
+              </Grid>
+              <Grid item sm={12} md={6} lg={1}></Grid>
+              <Grid item sm={12} md={6} lg={4}>
+                {/* <a href="#link-to-form-section">Mirar video</a> */}
               </Grid>
             </div>
             {/* {typeof window !== 'undefined' && window.innerWidth <= 600 && (
@@ -116,7 +114,10 @@ const Hero = props => {
             <div className="hero-sub-image">
               <img src={paso3} alt="Mujer psicologa ayudando" />
               <h3>Comienza tu terapia online</h3>
-              <p>Conoce a tu psicólogo online y empieza tu primera sesión gratuita hoy mismo.</p>
+              <p>
+                Conoce a tu pcenter-buttonsicólogo online y empieza tu primera sesión gratuita hoy
+                mismo.
+              </p>
             </div>
           </div>
         </div>

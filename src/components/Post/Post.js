@@ -27,6 +27,13 @@ const Post = props => {
       backgroundColor: 'white',
       padding: '50px 80px',
       borderRadius: '1rem'
+    },
+    '@media (max-width: 600px)': {
+      postCard: {
+        backgroundColor: 'white',
+        padding: '0px 15px',
+        borderRadius: '1rem'
+      }
     }
   });
   const classes = useStyles();
