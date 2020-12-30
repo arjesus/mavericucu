@@ -54,13 +54,18 @@ const ImageBlock = props => {
   const classes = useStyles();
   const { imgBLockOptions } = props;
 
+  const isProfessional = text => {
+    if (text.includes('Más información sobre Eva Minerva')) return '/plans';
+    return '/rpofessional-form';
+  };
+
   return (
     <Box mt={2}>
       <Grid container spacing={5} direction="row" className={classes.container}>
         <Grid className={classes.textTopBox} item sm={12} md={6}>
           <h2 className={classes.title}>{imgBLockOptions.title}</h2>
           <p className={classes.paragraph}>{imgBLockOptions.text}</p>
-          <a className={classes.button} href="/professional-form">
+          <a className={classes.button} href={isProfessional(imgBLockOptions.button)}>
             {imgBLockOptions.button}
           </a>
         </Grid>

@@ -7,7 +7,7 @@ const Item = props => {
   return (
     <React.Fragment>
       <li className={'hiddenItem' in props ? 'hiddenItem' : 'item'} key={label}>
-        <div className={label.includes('Contact') && 'contact-button'}>
+        <div className={label.includes('Comenzar') && 'contact-button'}>
           <Link
             to={to}
             className={'hiddenItem' in props ? 'inHiddenItem' : ''}

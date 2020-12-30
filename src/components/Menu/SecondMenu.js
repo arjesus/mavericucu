@@ -15,9 +15,16 @@ import { Box, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   menuButton: {
-    width: '100px',
-    fontSize: '50px',
+    fontSize: '40px',
     color: theme.color.principals.darkerPurpleText
+  },
+  contactButton: {
+    fontSize: '1rem',
+    color: theme.color.principals.darkerPurpleText,
+    margin: '0 21px'
+  },
+  menu: {
+    borderRadius: '1rem'
   }
 });
 
@@ -27,14 +34,16 @@ const SecondMenu = props => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const items = [
-    { to: '/', label: 'Home', icon: FaHome },
+    { to: '/', label: 'Home' },
     // { to: "/category/", label: "Blog", icon: FaTag },
-    { to: '/plans/', label: 'Planes', icon: FaTag },
+    { to: '/plans/', label: 'Planes' },
     // { to: "/search/", label: "Search", icon: FaSearch },
     // ...pages,
-    { to: '/%20specialties/', label: 'Especialidades', icon: FaSearch },
+    { to: '/professional/', label: 'Trabaja con nosotros' },
+    { to: '/quienes-somos/', label: 'Quienes somos' },
+    { to: '/%20specialties/', label: 'Especialidades' },
     // { to: '/professional/', label: 'Trabaja Con nosotros', icon: FaSearch },
-    { to: '/contact/', label: 'Contact', icon: FaEnvelope }
+    { to: '/plans/', label: 'Comenzar' }
   ];
 
   const handleClick = event => {
@@ -45,6 +54,17 @@ const SecondMenu = props => {
     setAnchorEl(null);
   };
 
+  const isLonger = item => {
+    if (
+      item.includes('Trabaja con nosotros') ||
+      item.includes('Comenzar') ||
+      item.includes('Quienes somos')
+    )
+      return 3;
+    if (item.includes('Especialidades')) return 2;
+    return 1;
+  };
+
   return (
     <Box>
       {screenWidth > 767 ? (
@@ -52,7 +72,7 @@ const SecondMenu = props => {
           {items.map((item, index) => {
             if (item.to !== path) {
               return (
-                <Grid item key={item.label} lg={3}>
+                <Grid item key={item.label} lg={isLonger(item.label)}>
                   <Item item={item} icon={item.icon} theme={theme} />
                 </Grid>
               );
@@ -63,6 +83,9 @@ const SecondMenu = props => {
         </Grid>
       ) : (
         <div>
+          <a className={classes.contactButton} href={items[5].to}>
+            {items[5].label}
+          </a>
           <Button
             className={classes.menuButton}
             aria-controls="simple-menu"
@@ -77,6 +100,7 @@ const SecondMenu = props => {
             keepMounted
             open={Boolean(anchorEl)}
             onClose={handleClose}
+            className={classes.menu}
           >
             {items.map((item, index) => {
               if (item.to !== path) {

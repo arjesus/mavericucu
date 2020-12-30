@@ -288,6 +288,7 @@ const Hero = props => {
               font-size: 1em;
               text-align: center;
               font-weight: 600;
+              margin-bottom: 15px;
             }
           }
         }
