@@ -16,13 +16,13 @@ const Article = props => {
         }
         @from-width tablet {
           .article {
-            padding: 80px 20px 25px 20px;
+            padding: 70px 0px 25px 0px;
             max-width: 100%;
           }
         }
         @from-width desktop {
           .article {
-            padding: 80px 20px 25px 20px;
+            padding: 70px 0px 25px 0px;
             max-width: 100%;
           }
         }

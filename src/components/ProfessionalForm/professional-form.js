@@ -97,7 +97,7 @@ const ProfessionalForm = () => {
           border: none;
           padding: 7px 40px;
           color: white;
-          border-radius: 0.3rem;
+          border-radius: 0.5rem;
           font-size: 15px;
         }
 

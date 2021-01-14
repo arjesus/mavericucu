@@ -28,6 +28,7 @@ const Item = props => {
           display: flex;
           align-items: center;
           margin: 0 10px;
+          width: max-content;
 
           :global(a) {
             padding: ${theme.space.inset.s};
@@ -50,7 +51,7 @@ const Item = props => {
           box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
           box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
             0 6px 14px 0 #4e3b80;
-          border-radius: 1rem;
+          border-radius: 0.5rem;
           outline-offset: 0px;
           text-shadow: none;
           margin: 0 20px;

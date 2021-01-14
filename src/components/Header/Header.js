@@ -68,7 +68,7 @@ class Header extends React.Component {
             justify-content: center;
             background-color: ${theme.color.neutral.white};
             display: flex;
-            height: ${theme.header.height.default};
+            height: 70px;
             position: relative;
             top: 0;
             width: 100%;
@@ -142,7 +142,7 @@ class Header extends React.Component {
               padding: 5px;
 
               &.homepage {
-                height: 50px;
+                height: 70px;
               }
             }
           }
@@ -222,7 +222,7 @@ class Header extends React.Component {
               margin: ${theme.space.inline.default};
 
               .fixed & {
-                height: 50px;
+                height: 70px;
                 width: 50px;
               }
 

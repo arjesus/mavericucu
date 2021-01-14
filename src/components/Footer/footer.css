@@ -19,6 +19,9 @@
     font-size: 1.8rem;
     margin: 20px 0
   }
+  .links-container {
+    margin-top: 10px;
+  }
   .footerLink {
     color: #bec1cc;
     margin: 10px 0

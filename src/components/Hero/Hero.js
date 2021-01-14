@@ -284,7 +284,7 @@ const Hero = props => {
               width: 163px;
               padding: 19px 23px;
               color: ${theme.color.principals.white};
-              border-radius: 0.2rem;
+              border-radius: 0.5rem;
               font-size: 1em;
               text-align: center;
               font-weight: 600;

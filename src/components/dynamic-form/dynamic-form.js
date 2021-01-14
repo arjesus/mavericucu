@@ -258,7 +258,7 @@ const DynamicForm = () => {
           border: none;
           padding: 7px 40px;
           color: white;
-          border-radius: 0.3rem;
+          border-radius: 0.5rem;
           font-size: 15px;
         }
 
@@ -285,7 +285,7 @@ const DynamicForm = () => {
             border: none;
             padding: 10px 40px;
             color: white;
-            border-radius: 0.3rem;
+            border-radius: 0.5rem;
             font-size: 18px;
             font-weight: 600;
           }

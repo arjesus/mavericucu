@@ -148,7 +148,7 @@ const Footer = props => {
               <Grid item sm={12} md={3}>
                 {evaMinerva.map((eva, index) => {
                   return (
-                    <Grid key={index} item md={12}>
+                    <Grid key={index} item md={12} className="links-container">
                       <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={eva.url}>
                         {eva.name}
                       </a>
@@ -159,7 +159,7 @@ const Footer = props => {
               <Grid item sm={12} md={3}>
                 {blogs.map((blog, index) => {
                   return (
-                    <Grid key={index} item md={12}>
+                    <Grid key={index} item md={12} className="links-container">
                       <a className={index === 0 ? 'footerLinkTitle' : 'footerLink'} href={blog.url}>
                         {blog.name}
                       </a>
@@ -170,7 +170,7 @@ const Footer = props => {
               <Grid item sm={12} md={3}>
                 {specializacions.map((specializacion, index) => {
                   return (
-                    <Grid key={index} item md={12}>
+                    <Grid key={index} item md={12} className="links-container">
                       <a
                         className={index === 0 ? 'footerLinkTitle' : 'footerLink'}
                         href={specializacion.url}

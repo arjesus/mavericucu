@@ -20,11 +20,18 @@ const useStyles = makeStyles({
   },
   contactButton: {
     fontSize: '1rem',
-    color: theme.color.principals.darkerPurpleText,
-    margin: '0 21px'
+    backgroundColor: theme.color.principals.darkPurple,
+    color: theme.color.principals.white,
+    padding: '10px 10px',
+    margin: '0 21px',
+    borderRadius: '0.3rem',
+    fontWeight: '700'
   },
   menu: {
     borderRadius: '1rem'
+  },
+  menuContainer: {
+    flexWrap: 'nowrap'
   }
 });
 
@@ -68,7 +75,7 @@ const SecondMenu = props => {
   return (
     <Box>
       {screenWidth > 767 ? (
-        <Grid container spacing={2} direction="row">
+        <Grid container spacing={2} direction="row" className={classes.menuContainer}>
           {items.map((item, index) => {
             if (item.to !== path) {
               return (
