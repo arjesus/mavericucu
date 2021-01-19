@@ -6,11 +6,6 @@ import { makeStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Item from './Item';
 import theme from '../../theme/theme.yaml';
-
-import { FaHome } from 'react-icons/fa/';
-import { FaSearch } from 'react-icons/fa/';
-import { FaEnvelope } from 'react-icons/fa/';
-import { FaTag } from 'react-icons/fa/';
 import { Box, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -19,7 +14,7 @@ const useStyles = makeStyles({
     color: theme.color.principals.darkerPurpleText
   },
   contactButton: {
-    fontSize: '1rem',
+    fontSize: '1.3rem',
     backgroundColor: theme.color.principals.darkPurple,
     color: theme.color.principals.white,
     padding: '10px 10px',
@@ -32,6 +27,11 @@ const useStyles = makeStyles({
   },
   menuContainer: {
     flexWrap: 'nowrap'
+  },
+  itemContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center'
   }
 });
 
@@ -77,15 +77,16 @@ const SecondMenu = props => {
       {screenWidth > 767 ? (
         <Grid container spacing={2} direction="row" className={classes.menuContainer}>
           {items.map((item, index) => {
-            if (item.to !== path) {
-              return (
-                <Grid item key={item.label} lg={isLonger(item.label)}>
-                  <Item item={item} icon={item.icon} theme={theme} />
-                </Grid>
-              );
-            } else {
-              return <div key={index.toString()}></div>;
-            }
+            return (
+              <Grid
+                item
+                key={item.label}
+                lg={isLonger(item.label)}
+                className={classes.itemContainer}
+              >
+                <Item item={item} icon={item.icon} theme={theme} />
+              </Grid>
+            );
           })}
         </Grid>
       ) : (

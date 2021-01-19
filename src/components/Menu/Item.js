@@ -14,7 +14,7 @@ const Item = props => {
             onClick={onClick}
             data-slug={to}
           >
-            {Icon && <Icon />} {label}
+            {label}
           </Link>
         </div>
       </li>
@@ -46,32 +46,6 @@ const Item = props => {
           display: none;
         }
 
-        .contact-button {
-          border: 0 solid;
-          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-          box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-            0 6px 14px 0 #4e3b80;
-          border-radius: 0.5rem;
-          outline-offset: 0px;
-          text-shadow: none;
-          margin: 0 20px;
-          padding: 0px 20px;
-          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-          width: 150px;
-          justify-content: center;
-          font-size: 16px;
-          font-weight: 600;
-          display: flex;
-        }
-
-        .contact-button:hover {
-          border: 1px solid;
-          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-          outline-color: rgba(255, 255, 255, 0);
-          outline-offset: 15px;
-          text-shadow: 1px 1px 2px #427388;
-        }
-
         @from-width desktop {
           .item {
             :global(a) {
@@ -88,7 +62,6 @@ const Item = props => {
             :global(a:hover) {
               color: ${theme.color.principals.darkerPurpleText};
               font-weight: 700;
-              background: color(white alpha(-60%));
             }
 
             :global(svg) {
@@ -102,6 +75,26 @@ const Item = props => {
               :global(.hero) & :global(svg) {
                 fill: green;
               }
+            }
+          }
+
+          .contact-button {
+            background-color: ${theme.color.principals.darkPurple};
+            width: 150px;
+            padding: 7px 25px;
+            color: #fff;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+            :global(.homepage):not(.fixed) & :global(a) {
+              color: ${theme.color.principals.white};
+            }
+            :global(a) {
+              color: ${theme.color.principals.white};
+            }
+            :global(a:hover) {
+              color: ${theme.color.principals.white};
+              font-weight: 700;
             }
           }
 

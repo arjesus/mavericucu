@@ -84,7 +84,7 @@ const Psychology = props => {
           p {
             margin-top: 10px;
             color: ${theme.color.principals.darkerPurpleText};
-            font-size: 1em;
+            font-size: 1.3em;
           }
         `}</style>
       </div>
@@ -148,7 +148,7 @@ const Psychology = props => {
         p {
           text-align: center;
           color: ${theme.color.principals.darkerPurpleText};
-          font-size: 1em;
+          font-size: 1.3em;
           line-height: 1.7;
           margin-bottom: 25px;
         }

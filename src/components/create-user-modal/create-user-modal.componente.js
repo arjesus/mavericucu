@@ -47,12 +47,12 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   paragraph: {
-    fontSize: '1rem',
+    fontSize: '1.3rem',
     color: theme.color.principals.blackText,
     textAlign: 'center'
   },
   paragraphFooter: {
-    fontSize: '0.6rem',
+    fontSize: '1rem',
     color: theme.color.principals.blackText,
     marginBottom: '2rem',
     textAlign: 'justify'
