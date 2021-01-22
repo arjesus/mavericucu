@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   },
   plansContainer: {
     backgroundColor: 'white',
-    padding: '45px',
+    padding: '45px 90px',
     borderRadius: '1rem'
   },
   plansCards: {

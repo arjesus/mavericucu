@@ -152,7 +152,7 @@ class Layout extends React.Component {
                       h1,
                       h2,
                       h3 {
-                        font-weight: 400;
+                        font-weight: 200;
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -161,6 +161,7 @@ class Layout extends React.Component {
                         letter-spacing: -0.04em;
                       }
                       p {
+                        font-weight: 200;
                         margin: 0;
                         font-size: 1.3rem;
                       }

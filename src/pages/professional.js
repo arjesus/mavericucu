@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
   professionalContainer: {
     backgroundColor: 'white',
-    padding: '45px',
+    padding: '45px 90px',
     borderRadius: '1rem'
   },
   professionalCards: {
