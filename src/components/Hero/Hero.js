@@ -181,7 +181,6 @@ const Hero = props => {
 
             h2 {
               font-size: 19px;
-              line-height: 1.5;
               margin: 20px 0;
             }
           }
@@ -208,7 +207,6 @@ const Hero = props => {
 
             p {
               font-size: 1.3rem;
-              line-height: 1.4;
               margin-bottom: 50px;
             }
 
@@ -270,7 +268,6 @@ const Hero = props => {
             width: 80%;
             justify-items: center;
             text-align: center;
-            line-height: 1.7rem;
             color: ${theme.color.principals.darkerPurpleText};
             h2 {
               font-size: 2em;
@@ -387,7 +384,6 @@ const Hero = props => {
               text-align: center;
               color: ${theme.color.principals.darkerPurpleText};
               font-size: 1.3em;
-              line-height: 1.4rem;
               margin-bottom: 10px;
               font-weight: 700;
             }
@@ -395,7 +391,6 @@ const Hero = props => {
               text-align: center;
               color: ${theme.color.principals.darkerPurpleText};
               font-size: 1.3em;
-              line-height: 1.4rem;
             }
           }
         }

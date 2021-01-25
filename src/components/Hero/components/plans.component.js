@@ -76,7 +76,6 @@ const Plans = props => {
               display: flex;
             }
             h3 {
-              line-height: 1.7;
               padding: 10px 0;
               width: 100%;
               text-align: center;

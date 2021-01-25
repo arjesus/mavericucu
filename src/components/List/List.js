@@ -34,7 +34,6 @@ const List = props => {
         li {
           padding: ${theme.space.xs} 0;
           font-size: ${theme.font.size.s};
-          line-height: ${theme.font.lineHeight.l};
         }
       `}</style>
     </React.Fragment>

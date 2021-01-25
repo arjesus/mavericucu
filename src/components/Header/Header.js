@@ -2,12 +2,14 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
+import { getScreenWidth } from '../../utils/helpers';
 
 import { ScreenWidthContext, FontLoadedContext } from '../../layouts';
 import config from '../../../content/meta/config';
 import Menu from '../Menu';
 
-import logo from '../../../static/images/logo.png';
+import logo from '../../../static/images/logo-top.png';
+import smallLogo from '../../../static/images/logo.png';
 import SecondMenu from '../Menu/SecondMenu';
 
 class Header extends React.Component {
@@ -38,16 +40,11 @@ class Header extends React.Component {
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
-            <div className="logo">
-              <img
-                src={config.gravatarImgMd5 == '' ? logo : config.gravatarImgMd5}
-                alt={config.siteTitle}
-              />
-            </div>
-            <div className="type">
-              <h1>Eva Minerva</h1>
-              <h2>Equilibrio y superacion</h2>
-            </div>
+            <img
+              className={getScreenWidth() > 767 ? 'logo' : 'logoSmall'}
+              src={getScreenWidth() > 767 ? logo : smallLogo}
+              alt={config.siteTitle}
+            />
           </Link>
           <FontLoadedContext.Consumer>
             {loaded => (
@@ -107,23 +104,11 @@ class Header extends React.Component {
           }
 
           .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 45px;
-            margin: ${theme.space.inline.default};
-            overflow: hidden;
-            width: 45px;
-            transition: all 0.5s;
+            width: 350px;
+          }
 
-            .homepage & {
-              height: 45px;
-              width: 45px;
-            }
-
-            img {
-              width: 45px;
-            }
+          .logoSmall {
+            width: 100px;
           }
 
           .sensor {
@@ -148,6 +133,9 @@ class Header extends React.Component {
           }
 
           @below desktop {
+            .header {
+              justify-content: space-between;
+            }
             .header.homepage {
               .logo {
                 border: none;
@@ -197,6 +185,11 @@ class Header extends React.Component {
 
                 img {
                   width: 60px;
+                }
+
+                .logo {
+                  width: 250px;
+                  height: auto;
                 }
               }
 

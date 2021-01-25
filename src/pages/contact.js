@@ -47,7 +47,6 @@ const ContactPage = props => {
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
           color: ${theme.color.principals.darkerPurpleText};
-          line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 'Open Sans';
         }
 
@@ -81,7 +80,6 @@ const ContactPage = props => {
           }
           h1 {
             font-size: 1.9rem;
-            line-height: 1.3;
           }
           p {
             font-size: 1rem;

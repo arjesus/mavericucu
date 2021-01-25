@@ -13,6 +13,7 @@ const arrOfData = [
   {
     number: 5,
     name: 'luis',
+    speciality: 'Especialista en problemas de autoestima',
     text:
       'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
     img: terapeuta5
@@ -20,6 +21,7 @@ const arrOfData = [
   {
     number: 4,
     name: 'Pedro',
+    speciality: 'Especialista en fobias',
     text:
       'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
     img: terapeuta4
@@ -27,6 +29,7 @@ const arrOfData = [
   {
     number: 3,
     name: 'Raquel',
+    speciality: 'Especialista en ansiedad',
     text:
       'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
     img: terapeuta3
@@ -34,6 +37,7 @@ const arrOfData = [
   {
     number: 2,
     name: 'Melisa',
+    speciality: 'Especialista en sexualidad',
     text:
       'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
     img: terapeuta2
@@ -41,6 +45,7 @@ const arrOfData = [
   {
     number: 1,
     name: 'Sara',
+    speciality: 'Especialista en problemas de pareja',
     text:
       'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
     img: terapeuta1
@@ -55,17 +60,20 @@ const Psychology = props => {
       <div className="card-container" key={i.toString()}>
         <div className="header-card">
           <img src={arrOfData[i].img} />
-          <h3>{arrOfData[i].name}</h3>
+          <div>
+            <h3>{arrOfData[i].name}</h3>
+            <p>{arrOfData[i].speciality}</p>
+          </div>
         </div>
         <p>{arrOfData[i].text}</p>
         {/* --- STYLES --- */}
         <style jsx>{`
           .card-container {
-            box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
-              0 6px 14px 0 ${theme.color.principals.darkerPurpleText};
-            padding: 15px;
+            padding: 15px 25px;
             background-color: ${theme.color.principals.white};
             border-radius: 0.5rem;
+            width: 80%;
+            justify-self: center;
           }
 
           .header-card {
@@ -76,9 +84,13 @@ const Psychology = props => {
               border-radius: 50%;
             }
             h3 {
-              color: ${theme.color.principals.darkerPurpleText};
               font-size: 1.2em;
               text-align: start;
+            }
+            p {
+              color: ${theme.color.principals.darkerPurpleText};
+              font-size: 1.1em;
+              font-weight: 600;
             }
           }
           p {
@@ -143,13 +155,11 @@ const Psychology = props => {
           color: ${theme.color.principals.darkerPurpleText};
           font-size: 2em;
           text-align: center;
-          line-height: 1.6;
         }
         p {
           text-align: center;
           color: ${theme.color.principals.darkerPurpleText};
           font-size: 1.3em;
-          line-height: 1.7;
           margin-bottom: 25px;
         }
 

@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   plansContainer: {
     backgroundColor: 'white',
     padding: '45px 90px',
-    borderRadius: '1rem'
+    borderRadius: '0.5rem'
   },
   plansCards: {
     display: 'flex',
@@ -46,6 +46,7 @@ const useStyles = makeStyles({
     padding: '0 !important',
     border: `0.1px solid ${theme.color.principals.lightPurple}`,
     borderTop: 'none',
+    borderRadius: '0 0 1rem 1rem',
     '@media (max-width: 600px)': {
       marginBottom: '35px'
     }

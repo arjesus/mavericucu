@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Contact from '../Contact-inserted';
 import DatePickerMaterialComponent from './date-picker/datepicker.material';
 import theme from '../../theme/theme.yaml';
 import { Link } from 'gatsby';

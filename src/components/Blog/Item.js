@@ -105,7 +105,6 @@ const Item = props => {
 
         h1 {
           padding: ${theme.space.m} ${theme.space.s} 0;
-          line-height: ${theme.blog.h1.lineHeight};
           font-size: ${theme.blog.h1.size};
           text-remove-gap: both;
 
@@ -136,7 +135,6 @@ const Item = props => {
         }
 
         p {
-          line-height: 1.5;
           padding: 0 ${theme.space.s};
           text-remove-gap: both;
         }

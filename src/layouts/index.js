@@ -137,6 +137,7 @@ class Layout extends React.Component {
                     `}</style>
                     <style jsx global>{`
                       html {
+                        font-family: 'Lato';
                         box-sizing: border-box;
                       }
                       *,
@@ -147,12 +148,11 @@ class Layout extends React.Component {
                         padding: 0;
                       }
                       body {
-                        font-family: 'Lato';
+
                       }
                       h1,
                       h2,
                       h3 {
-                        font-weight: 200;
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
@@ -164,6 +164,7 @@ class Layout extends React.Component {
                         font-weight: 200;
                         margin: 0;
                         font-size: 1.3rem;
+                        line-height: 1.5;
                       }
                       strong {
                         font-weight: ${this.state.font600loaded ? 600 : 400};
@@ -171,6 +172,7 @@ class Layout extends React.Component {
                       a {
                         text-decoration: none;
                         color: #666;
+                        line-height: 1.5;
                       }
                       .background-img {
                         padding: 10px 10px;
