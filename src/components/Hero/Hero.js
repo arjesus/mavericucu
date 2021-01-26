@@ -377,7 +377,7 @@ const Hero = props => {
               justify-content: end;
             }
             img {
-              width: 50%;
+              width: 300px;
               margin-bottom: 30px;
             }
             h3 {
@@ -418,7 +418,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.47fr 1fr 0.41fr 0.6fr 0.89fr 0.7fr 0.45fr;
+            grid-template-rows: 0.42fr 1fr 0.41fr 0.6fr 0.89fr 0.7fr 0.45fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
@@ -446,7 +446,7 @@ const Hero = props => {
               img {
                 margin: 0 auto;
                 border-radius: 0 0 1rem 1rem;
-                margin-top: 67px;
+                margin-top: 64px;
               }
             }
           }

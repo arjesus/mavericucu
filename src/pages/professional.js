@@ -7,11 +7,11 @@ import ProfessionalForm from '../components/ProfessionalForm/professional-form';
 import womanSofa from '../images/jpg/3778535-01 (1).svg';
 import calendar from '../images/jpg/calendario.jpg';
 import handMoney from '../images/jpg/manopasta_Mesa de trabajo 1.jpg';
-import homeOffice from '../images/jpg/mujer-trabajadesdecasa-01.jpg';
+import homeOffice from '../images/jpg/mujer-trabajadesdecasa-01.png';
 
 const useStyles = makeStyles({
   professional: {
-    padding: '115px 0 50px 0'
+    padding: '70px 15px 15px 15px'
   },
   professionalContainer: {
     backgroundColor: 'white',
@@ -42,7 +42,9 @@ const useStyles = makeStyles({
     alignItems: 'inherit'
   },
   professionalCardsImages: {
-    height: '300px'
+    width: '300px',
+    height: '300px',
+    marginBottom: '25px'
   },
   title: {
     fontSize: '2.3rem',
@@ -58,7 +60,8 @@ const useStyles = makeStyles({
   paragraph: {
     fontSize: '1.2rem',
     color: theme.color.principals.darkerPurpleText,
-    marginBottom: '3rem'
+    marginBottom: '3rem',
+    minHeight: '83px'
   },
   imgBox: {
     display: 'flex',
@@ -99,12 +102,10 @@ const ProfessionalPage = props => {
                   alt="Woman working from home"
                   className={classes.professionalCardsImages}
                 />
-                <h3 className={classes.secondaryTitle}>
-                  Desarrollate en terapia online además de trabajar desde casa
-                </h3>
+                <h3 className={classes.secondaryTitle}>Trabajar desde casa</h3>
                 <p className={classes.paragraph}>
-                  Recibirás apoyo para mejorar tu posicionamiento y reconocimiento online. Además
-                  recibirás formación sobre terapia online.
+                  Recibirás apoyo para mejorar tu posicionamiento y reconocimiento online. Recibirás
+                  formación sobre terapia online.
                 </p>
               </Grid>
               <Grid item md={3} sm={12} className={classes.professionalCards}>

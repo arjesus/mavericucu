@@ -29,8 +29,8 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont('font400', 'Lato', 400);
-      this.loadFont('font600', 'Lato', 600);
+      this.loadFont('Lato', 100);
+      this.loadFont('Lato', 400);
     }
   }
 
@@ -156,6 +156,7 @@ class Layout extends React.Component {
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
+                        font-weight: 100;
                       }
                       h1 {
                         letter-spacing: -0.04em;

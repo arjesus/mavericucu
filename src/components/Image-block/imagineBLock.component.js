@@ -57,7 +57,7 @@ const ImageBlock = props => {
 
   const isProfessional = text => {
     if (text.includes('Más información sobre Eva Minerva')) return '/plans';
-    return '/rpofessional-form';
+    return '/professional-form';
   };
 
   return (
