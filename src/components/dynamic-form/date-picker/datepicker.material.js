@@ -26,7 +26,7 @@ const DatePickerMaterialComponent = props => {
         <MuiThemeProvider theme={theme}>
           <DateTimePicker
             renderinput={props => <TextField variant="outlined" {...props} />}
-            label="DateTimePicker"
+            label="Seleccione fecha de su cita"
             theme={theme}
             value={value}
             onChange={onChange}

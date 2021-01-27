@@ -64,11 +64,11 @@ const Hero = props => {
             <h2>Primeras sesiones gratuitas con tu psicólogo online</h2>
             <div>
               <p>
-                Nuestros especialistas guías te contactaran sin ningún coste para de forma segura y
-                privada poder encontrar el psicólogo online que más se adapte a tus necesidades,
-                además, la primera sesión con tu psicólogo online será gratuita.
+                La primera sesion con tu psicologo online sera gratuita, ademas, antes de aignarte
+                un psicologo nuestros espcialistas guias te contactaran, sin ningun coste, para que
+                de forma segura y privada encontrar el psicologo que mas se adapta a tí.
               </p>
-              <p>Empieza tu terapia mediante video, teléfono o chat hoy mismo.</p>
+              <p>Empieza tu terapia mediante video o telefono hoy mismo.</p>
             </div>
             <a href="/plans">Reserva tu cita</a>
           </div>
@@ -157,7 +157,7 @@ const Hero = props => {
             'differences'
             'steps'
             'contact';
-          padding: 65px 0 20px 0;
+          padding: 72px 0 20px 0;
         }
 
         .header {

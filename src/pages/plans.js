@@ -27,7 +27,7 @@ const plansDefinition = [
 
 const useStyles = makeStyles({
   plans: {
-    padding: '55px 0 50px 0',
+    padding: '55px 0 10px 0',
     '@media (max-width: 600px)': {
       padding: '17px 0 50px 0'
     }
@@ -39,14 +39,13 @@ const useStyles = makeStyles({
   },
   plansCards: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'center',
     textAlign: 'center',
-    padding: '0 !important',
-    border: `0.1px solid ${theme.color.principals.lightPurple}`,
-    borderTop: 'none',
-    borderRadius: '0 0 1rem 1rem',
+    alignItems: 'center',
+    flexDirection: 'column',
+    padding: '0 25px',
+    justifyContent: 'space-around',
+    border: `2.5px solid ${theme.color.principals.lightPurple}`,
+    borderRadius: '0.5rem',
     '@media (max-width: 600px)': {
       marginBottom: '35px'
     }
@@ -60,7 +59,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '1rem 1rem 0 0',
+    borderRadius: '0.5rem',
     marginBottom: '2rem',
     marginTop: '-17px'
   },
@@ -73,7 +72,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '1rem 1rem 0 0',
+    borderRadius: '0.5rem',
     marginBottom: '2rem',
     marginTop: '-15px'
   },
@@ -86,7 +85,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '1rem 1rem 0 0',
+    borderRadius: '0.5rem',
     marginBottom: '2rem',
     marginTop: '-15px'
   },
@@ -113,8 +112,9 @@ const useStyles = makeStyles({
   },
   paragraph: {
     fontSize: '1.2rem',
-    color: theme.color.principals.blackText,
+    color: theme.color.principals.darkerPurpleText,
     marginBottom: '2rem',
+    lineHeight: '2',
     textAlign: 'center'
   },
   paragraphInside: {
@@ -133,19 +133,21 @@ const useStyles = makeStyles({
   titleSubText: {
     marginBottom: '4rem',
     textAlign: 'center',
-    color: theme.color.principals.darkerPurpleText
+    color: theme.color.principals.darkerPurpleText,
+    '& p': {
+      marginBottom: '2rem'
+    }
   },
   button: {
-    backgroundColor: theme.color.principals.darkerPurpleText,
-    padding: '10px 15px',
-    color: 'white',
-    width: '230px',
-    fontWeight: '500',
-    textAlign: 'center',
-    fontSize: '1.5rem',
+    backgroundColor: theme.color.principals.darkPurple,
+    width: '160px',
+    padding: '19px 23px',
+    color: theme.color.principals.white,
     borderRadius: '0.5rem',
-    cursor: 'pointer',
-    marginBottom: '2rem'
+    fontSize: '18px',
+    textAlign: 'center',
+    fontWeight: '600',
+    marginBottom: '1rem'
   }
 });
 
@@ -179,14 +181,24 @@ const ProfessionalPage = props => {
             </h2>
             <Grid item md={12} className={classes.titleSubText}>
               <p>
-                Todos nuestros planes incluyen dos sesiones gratuitas: La primera sesión gratuita
-                con tu psicólogo online y la primera sesión con el especialista guia. Esto nos
-                permite encontrar el psicólogo más especializado y con más experiencia para tus
-                necesidades. Además te haremos un reembolso del 100 % de tu plan si tras la sesión
-                gratuita no estás 100% satisfecho.
+                Para disfrutar de la primera sesión gratuita con tu psicólogo primero tendrás que
+                elegir uno de nuestros planes.
+              </p>
+              <p>
+                Todos los planes incluyen <strong>dos sesiones gratuitas:</strong> Una sesión con el
+                especialista guia y la primera sesión de la terapia con tu psicologo.
+              </p>
+              <p>
+                El objetivo del especialista guia es el de conocerte y entender mejor para así poder
+                encontrar el psicólogo más adaptado a ti.
+              </p>
+              <p>La segunda sesión gratuita será con tu psicólogo terapeuta. </p>
+              <p>
+                En el caso de que después de la primera sesión con tu psicólogo terapetura, no estas
+                100% conforme, te haremos un <strong>reembolso del 100% de tu plan.</strong>
               </p>
             </Grid>
-            <Grid container justify="space-around" direction="row" spacing={5}>
+            <Grid container justify="space-around" direction="row">
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderFirst}>
                   <h3>SEMANAL</h3>
@@ -197,7 +209,8 @@ const ProfessionalPage = props => {
                   <p />
                 </div>
                 <p className={classes.paragraph}>
-                  1ª Sesión psicólogo online gratis + Sesion gratuita con el especialista guia
+                  Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
+                  especialista guia{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -217,7 +230,8 @@ const ProfessionalPage = props => {
                   <p>cada una. Total 116€</p>
                 </div>
                 <p className={classes.paragraph}>
-                  1ª Sesión psicólogo online gratis + Sesion gratuita con el especialista guia
+                  Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
+                  especialista guia{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -237,7 +251,8 @@ const ProfessionalPage = props => {
                   <p> cada una. Total 192€</p>
                 </div>
                 <p className={classes.paragraph}>
-                  1ª Sesión psicólogo online gratis + Sesion gratuita con el especialista guia
+                  Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
+                  especialista guia{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -257,39 +272,31 @@ const ProfessionalPage = props => {
             alignItems="center"
             className={classes.textContainer}
           >
-            <h2 className={classes.title}>Si es la primera vez que utilizas Eva Minerva</h2>
             <p className={classes.paragraph}>
               En caso de que no quedes 100% satisfecho después de haber probado la primera sesión
-              gratuita, te haremos un reembolso del 100 % de tu plan.
+              gratuita te haremos un reembolso del 100 % de tu plan.
             </p>
             <p className={classes.paragraph}>
-              Después de la llamada con el especialista guia te asignaremos el psicólogo online más
-              adaptado a tus necesidades y tendrás un máximo de 7 días para disfrutar de tu primera
-              sesión gratuita.
+              Todos los planes incluyen la posibilidad de cambio de psicólogo online si es asi como
+              tu lo sientes.
             </p>
             <p className={classes.paragraph}>
-              Tu primera sesión será importante para determinar el motivo de la consulta y
-              clarificar los objetivos que se persiguen durante el desarrollo del plan, conocer a tu
-              psicólogo online y dar los primeros pasos en tu terapia.
+              Tu primera sesión con el psicólogo será importante para determinar el motivo de la
+              consulta y clarificar los objetivos que se persiguen durante el desarrollo del plan,
+              así como para conocer a tu psicólogo online y dar los primeros pasos en tu terapia.
             </p>
             <p className={classes.paragraph}>
               Una vez finalizada esta primera consulta gratuita, y en caso de que desees continuar
               trabajando con tu psicologo online, tu plan elegido se hará activo. El servicio se
-              desarrollará a través de video sesiones semanales de 60 minutos.
+              desarrollará a través de video sesiones semanales de 45 a 60 minutos. Si tu prefieres
+              también puede ser mediante llamadas telefónicas
             </p>
             <p className={classes.paragraph}>
               En el caso de que tu satisfacción no sea la esperada en cualquier momento podrás
-              solicitar la cancelación de tu plan cuando, procederemos al reembolso de las sesiones
-              restantes.
+              solicitar la cancelación de tu plan, después de ello se procederá al reembolso de las
+              sesiones restantes.
             </p>
-            <p className={classes.paragraph}>
-              Además, todos los planes incluyen la posibilidad de cambio de psicólogo online si es
-              asi como tu lo sientes.
-            </p>
-            <p className={classes.paragraph}>
-              Gracias por confiar en Eva Minerva, la red de psicólogos, profesionales de la salud y
-              bienestar emocional que más se adapta a ti. Para más información: info@evaminerva.com
-            </p>
+            <p className={classes.paragraph}>Para más información: info@evaminerva.com</p>
             <img src={logo} alt="Logo Eva Minerva" className={classes.plansLogo} />
           </Grid>
         </Grid>

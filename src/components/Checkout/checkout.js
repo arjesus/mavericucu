@@ -6,14 +6,14 @@ import { postSortFormAnswers } from '../../services/form';
 
 const useStyles = makeStyles({
   button: {
-    backgroundColor: theme.color.principals.darkerPurpleText,
-    padding: '5px 15px',
-    color: 'white',
-    fontWeight: '500',
-    textAlign: 'center',
-    fontSize: '1.2rem',
+    backgroundColor: theme.color.principals.darkPurple,
+    padding: '9px 23px',
+    color: theme.color.principals.white,
     borderRadius: '0.5rem',
-    cursor: 'pointer'
+    fontSize: '18px',
+    textAlign: 'center',
+    fontWeight: '600',
+    marginBottom: '1rem'
   }
 });
 

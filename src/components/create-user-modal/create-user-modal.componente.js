@@ -21,14 +21,15 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: 'none',
+    border: '1px solid white',
     borderRadius: '0.5rem',
     width: '100vw',
     '& .MuiGrid-container': {
       width: '50%',
       backgroundColor: theme.color.principals.white,
       zIndex: 9999999,
-      padding: '0 40px'
+      padding: '15px 40px',
+      borderRadius: '0.5rem'
     },
     '@media (max-width: 600px)': {
       '& .MuiGrid-container': {
@@ -52,9 +53,8 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   paragraphFooter: {
-    fontSize: '1rem',
-    color: theme.color.principals.blackText,
-    marginBottom: '2rem',
+    fontSize: '1.2rem',
+    color: theme.color.principals.darkerPurpleText,
     textAlign: 'justify'
   },
   goBackButton: {
@@ -67,13 +67,16 @@ const useStyles = makeStyles({
     cursor: 'pointer'
   },
   modalImg: {
-    width: '200px'
+    width: '250px',
+    height: '130px'
   },
   center: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginBottom: '1rem'
   },
   priceContainer: {
+    margin: '10px 0',
     backgroundColor: theme.color.principals.lightYellow,
     borderRadius: '0.5rem'
   },
@@ -159,7 +162,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               placeholder="email@address.com"
               fullWidth
               type="email"
-              label="email"
+              label="Email"
               value={formFields.email}
               onChange={handleChangeInputEvent}
             />
