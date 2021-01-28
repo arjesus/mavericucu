@@ -4,7 +4,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
-import logo from '../../../static/images/white-logo-text.svg';
+import logo from '../../../static/images/white-logo-text.png';
 import Eulogo from '../../../static/images/logo_startup_awards.png';
 import { makeStyles } from '@material-ui/core';
 import config from '../../../content/meta/config';
@@ -181,6 +181,13 @@ const Footer = props => {
                   );
                 })}
               </Grid>
+            </Grid>
+            <Grid item sm={12} className="footer-text">
+              <p>
+                Si te encuentras en una situación de emergencia debes ponerte en contacto con las
+                líneas de emergencia, 061 (asesoramiento médico y emergencias) o 112 (solo
+                emergencias) en España.
+              </p>
             </Grid>
             <hr />
             <Grid container direction="row">

@@ -35,14 +35,15 @@ class Header extends React.Component {
   render() {
     const { pages, path, theme } = this.props;
     const { fixed } = this.state;
+    const width = window && window.innerWidth;
 
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <img
-              className={getScreenWidth() > 767 ? 'logo' : 'logoSmall'}
-              src={getScreenWidth() > 767 ? logo : smallLogo}
+              className={width > 767 ? 'logo' : 'logoSmall'}
+              src={width > 767 ? logo : smallLogo}
               alt={config.siteTitle}
             />
           </Link>

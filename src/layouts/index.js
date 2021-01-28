@@ -137,8 +137,9 @@ class Layout extends React.Component {
                     `}</style>
                     <style jsx global>{`
                       html {
-                        font-family: 'Lato';
+                        font-family: 'Montserrat';
                         box-sizing: border-box;
+                        font-weight: 100;
                       }
                       *,
                       *:after,
