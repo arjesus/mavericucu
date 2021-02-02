@@ -35,7 +35,10 @@ class Header extends React.Component {
   render() {
     const { pages, path, theme } = this.props;
     const { fixed } = this.state;
-    const width = window && window.innerWidth;
+    let width = 0;
+    if (typeof window !== `undefined`) {
+      width = window && window.innerWidth;
+    }
 
     return (
       <React.Fragment>
