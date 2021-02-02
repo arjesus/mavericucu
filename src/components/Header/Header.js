@@ -14,8 +14,18 @@ import SecondMenu from '../Menu/SecondMenu';
 
 class Header extends React.Component {
   state = {
-    fixed: false
+    fixed: false,
+    screenWidth: 0
   };
+
+  componentDidMount() {
+    this.setState({
+      screenWidth: getScreenWidth()
+    });
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.resizeThrottler, false);
+    }
+  }
 
   visibilitySensorChange = val => {
     if (val) {
@@ -34,19 +44,15 @@ class Header extends React.Component {
 
   render() {
     const { pages, path, theme } = this.props;
-    const { fixed } = this.state;
-    let width = 0;
-    if (typeof window !== `undefined`) {
-      width = window && window.innerWidth;
-    }
+    const { screenWidth } = this.state;
 
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <img
-              className={width > 767 ? 'logo' : 'logoSmall'}
-              src={width > 767 ? logo : smallLogo}
+              className={screenWidth > 767 ? 'logo' : 'logoSmall'}
+              src={screenWidth > 767 ? logo : smallLogo}
               alt={config.siteTitle}
             />
           </Link>
