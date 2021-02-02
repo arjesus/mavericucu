@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { postFormAnswersProfessionals } from '../../services/form';
 import theme from '../../theme/theme.yaml';
+import Form from '../form/form';
 
 const ProfessionalForm = () => {
   const [formStep, setFormStep] = useState(1);
@@ -16,70 +17,7 @@ const ProfessionalForm = () => {
     <React.Fragment>
       <div className="form-container">
         <div className="form-card">
-          {formStep < 3 && (
-            <div className="form-steps-container">
-              {formStep !== 1 && (
-                <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
-                  ⟵
-                </p>
-              )}
-              <p className="form-steps-counter">{formStep}/3</p>
-              {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
-            </div>
-          )}
-          {formStep === 1 && (
-            <div className="feel-container">
-              <h3>¿Como te llamas?</h3>
-              <input onChange={event => setName(event.target.value)} />
-              <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
-            </div>
-          )}
-
-          {formStep === 2 && (
-            <div className="feel-container feel-container-four">
-              <h3>
-                Genial {name}, ¿Nos proporcionas tu email y numero de telefono para comunicarnos
-                contigo?
-              </h3>
-              <div className="input-group">
-                <input
-                  onChange={event => setEmail(event.target.value)}
-                  className="input-group__input"
-                  id="email"
-                  type="text"
-                  placeholder=" "
-                  autoComplete="off"
-                />
-                <label className="input-group__label" htmlFor="email">
-                  EMAIL
-                </label>
-              </div>
-              <div className="input-group">
-                <input
-                  onChange={event => setPhone(event.target.value)}
-                  className="input-group__input"
-                  id="email"
-                  type="text"
-                  placeholder=" "
-                  autoComplete="off"
-                />
-                <label className="input-group__label" htmlFor="email">
-                  PHONE
-                </label>
-              </div>
-              <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
-            </div>
-          )}
-          {formStep === 3 &&
-            (handleSubmit(),
-            (
-              <div className="feel-container-finish">
-                <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
-                <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
-                  Volver a la pagina principial
-                </Link>
-              </div>
-            ))}
+          <Form />
         </div>
       </div>
       {/* --- STYLES --- */}
@@ -272,3 +210,68 @@ const ProfessionalForm = () => {
 };
 
 export default ProfessionalForm;
+
+// (          {formStep < 3 && (
+//   <div className="form-steps-container">
+//     {formStep !== 1 && (
+//       <p className="form-steps-actions" onClick={() => setFormStep(formStep - 1)}>
+//         ⟵
+//       </p>
+//     )}
+//     <p className="form-steps-counter">{formStep}/3</p>
+//     {/* {formStep !== 4 && <p className="form-steps-actions" onClick={()=>setFormStep(formStep + 1)}>siguiente</p>} */}
+//   </div>
+// )}
+// {formStep === 1 && (
+//   <div className="feel-container">
+//     <h3>¿Como te llamas?</h3>
+//     <input onChange={event => setName(event.target.value)} />
+//     <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
+//   </div>
+// )}
+
+// {formStep === 2 && (
+//   <div className="feel-container feel-container-four">
+//     <h3>
+//       Genial {name}, ¿Nos proporcionas tu email y numero de telefono para comunicarnos
+//       contigo?
+//     </h3>
+//     <div className="input-group">
+//       <input
+//         onChange={event => setEmail(event.target.value)}
+//         className="input-group__input"
+//         id="email"
+//         type="text"
+//         placeholder=" "
+//         autoComplete="off"
+//       />
+//       <label className="input-group__label" htmlFor="email">
+//         EMAIL
+//       </label>
+//     </div>
+//     <div className="input-group">
+//       <input
+//         onChange={event => setPhone(event.target.value)}
+//         className="input-group__input"
+//         id="email"
+//         type="text"
+//         placeholder=" "
+//         autoComplete="off"
+//       />
+//       <label className="input-group__label" htmlFor="email">
+//         PHONE
+//       </label>
+//     </div>
+//     <button onClick={() => setFormStep(formStep + 1)}> Siguiente </button>
+//   </div>
+// )}
+// {formStep === 3 &&
+//   (handleSubmit(),
+//   (
+//     <div className="feel-container-finish">
+//       <h3>Gracias {name}, Nos pondremos en contacto cuanto antes.</h3>
+//       <Link to={'/'} className={'feel-btn'} data-slug={'/'}>
+//         Volver a la pagina principial
+//       </Link>
+//     </div>
+//   ))})

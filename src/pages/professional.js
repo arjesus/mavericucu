@@ -26,14 +26,14 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   button: {
-    backgroundColor: theme.color.principals.darkerPurpleText,
-    padding: '20px 15px',
-    color: 'white',
-    width: '260px',
-    fontWeight: '700',
+    backgroundColor: theme.color.principals.darkPurple,
+    width: 'fit-content',
+    padding: '19px 23px',
+    color: theme.color.principals.white,
+    borderRadius: '0.5rem',
+    fontSize: '18px',
     textAlign: 'center',
-    fontSize: '1.5rem',
-    borderRadius: '0.5rem'
+    fontWeight: '600'
   },
   textTopBox: {
     display: 'flex',

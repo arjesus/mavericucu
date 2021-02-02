@@ -98,6 +98,15 @@ const Psychology = props => {
             color: ${theme.color.principals.darkerPurpleText};
             font-size: 1.3em;
           }
+          @media (max-width: 600px) {
+            .card-container {
+              border: 1px solid ${theme.color.principals.veryLightPurple};
+              width: 100%;
+            }
+            p {
+              text-align: start;
+            }
+          }
         `}</style>
       </div>
     );
@@ -189,6 +198,10 @@ const Psychology = props => {
           .psycology-img {
             width: 70%;
             margin-bottom: -27px;
+          }
+          .card-container {
+            border: 1px solid ${theme.color.principals.veryLightPurple};
+            width: 100%;
           }
         }
       `}</style>

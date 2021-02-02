@@ -358,7 +358,7 @@ const Hero = props => {
           width: 100%;
           min-height: 70vh;
           height: auto;
-          padding: 30px 50px;
+          padding: 20px;
           h2 {
             color: ${theme.color.principals.darkerPurpleText};
             font-size: 2em;
@@ -418,7 +418,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.42fr 1fr 0.41fr 0.6fr 0.89fr 0.7fr 0.45fr;
+            grid-template-rows: 0.38fr 1fr 0.41fr 0.6fr 0.59fr 0.8fr 0.45fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
@@ -446,7 +446,7 @@ const Hero = props => {
               img {
                 margin: 0 auto;
                 border-radius: 0 0 1rem 1rem;
-                margin-top: 64px;
+                margin-top: 60px;
               }
             }
           }
@@ -470,6 +470,7 @@ const Hero = props => {
             justify-content: space-around;
           }
           .steps {
+            padding: 20px;
           }
           .close-contact {
             padding: 20px;

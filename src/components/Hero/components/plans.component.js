@@ -83,7 +83,8 @@ const Plans = props => {
             li {
               padding: 7px 0;
               list-style: none;
-              min-height: 80px;
+              border-bottom: 0.5px solid ${theme.color.principals.lightGray} !important;
+              min-height: 120px !important;
               height: auto;
               p {
                 padding: 0 30px;
@@ -96,11 +97,15 @@ const Plans = props => {
             background-color: ${theme.color.principals.lightGray};
             border-radius: 0 1rem 0 0;
             color: ${theme.color.principals.darkerPurpleText};
+            border-bottom: 0.5px solid ${theme.color.principals.lightGray};
           }
         }
         @media (max-width: 600px) {
           li {
-            height: auto;
+            p {
+              padding: 0 5px !important;
+              font-size: 1rem !important;
+            }
           }
         }
       `}</style>

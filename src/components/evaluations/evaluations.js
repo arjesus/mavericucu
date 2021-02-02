@@ -222,7 +222,7 @@ class Evaluations extends React.Component {
               grid-template-rows: 0.1fr 1fr;
               height: 100%;
               grid-gap: 30px;
-              padding: 10px 10%;
+              padding: 20px;
               .boxes-container {
                 display: grid;
                 grid-template-columns: 1fr;
