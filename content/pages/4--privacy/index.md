@@ -2,98 +2,127 @@
 title: Política de Privacidad
 ---
 
-Finalidad de los datos recabados y consentimiento al tratamiento
+# Política de privacidad y tratamiento de datos
 
-Según lo previsto en el artículo 5 de la LOPD, informamos a los usuarios de que a través de www.proyecto3k.com (en adelante, Sitio Web) no se recaban datos de carácter personal de los usuarios sin su conocimiento, ni se ceden a terceros.
+  
 
-La aceptación de la política de privacidad, se entenderá a todos los efectos como la prestación de consentimiento expreso e inequívoco -del artículo 6 de la LOPD– del usuario al tratamiento de los datos de carácter personal en los términos que se exponen en el presente documento, así como a la transferencia internacional de datos que se produce, exclusivamente debido a la ubicación física de las instalaciones de los proveedores de servicios y encargados del tratamiento de datos.
+A los efectos del cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, en adelante LSSI, el propietario del dominio referenciado, le informa que la finalidad de la Página Web es publicitaria e informativa; asimismo, se ofrece la posibilidad de contratar los productos o servicios ofrecidos por Stamina Digital Solutions Spain (en adelante Sociedad), y/o solicitar información más detallada de los mismos. Los datos personales que usted nos facilite quedarán incorporados en nuestro registro interno de actividades de tratamiento con la finalidad de poder gestionar su solicitud y, siempre que haya aceptado expresamente este uso de sus datos, se utilizarán para mantenerle informado de futuras promociones, noticias y novedades relacionadas con la actividad o servicios, todo ello sin perjuicio de que pueda revocar dicho consentimiento en cualquier momento.
 
-El responsable del fichero de datos es Luis Palma Sanchez con DNI 48356594Z
+  
 
-Tabla de contenidos [show]
+1. Responsable del tratamiento de datos
 
-Cumplimiento de la normativa de aplicación
-Este sitio web cumple con las directrices de la Ley Orgánica 15/1999 de 13 de diciembre de Protección de Datos de Carácter Personal, el Real Decreto 1720/2007 de 21 de diciembre por el que se aprueba el Reglamento de desarrollo de dicha Ley Orgánica y demás normativa vigente y de aplicación en cada momento, velando por garantizar un correcto uso y tratamiento de los datos personales del usuario.
+El responsable de los datos será Stamina Digital Solutions Spain.
 
-Este sitio web también informa de que cumple la Ley 34/2002 de 11 de julio, de Servicios de la Sociedad de la Información y el Comercio Electrónico.
+  
 
-Medidas de seguridad
-En este sitio web tenemos implantadas y actualizadas todas las medidas de seguridad de índole técnica y organizativas necesarias para garantizar la seguridad de sus datos de carácter personal y evitar su alteración, pérdida y tratamiento y/o acceso no autorizado. Todo ello de conformidad con lo previsto en el Art. 9 de la LOPD y el Título VIII del RLOPD.
+2. La finalidad del tratamiento de datos será:
 
-Enlaces externos
-Este sitio web contiene enlaces a sitios web de terceros, cuyas políticas de privacidad son ajenas a este sitio web. Al acceder a tales sitios web, usted puede decidir si acepta sus políticas de privacidad y de cookies. Por favor, antes de proporcionar su información personal a estos sitios web ajenos a este sitio web tenga en cuenta que sus prácticas de privacidad pueden diferir de las nuestras. Nosotros solo somos responsables de la política de privacidad de este sitio web
+Cumplimiento de las obligaciones contractuales. Gestión contable, fiscal y económica de la sociedad, gestión administrativa de los clientes, gestionar las consultas y solicitudes remitidas a través de formularios de la Plataforma. Envío de información, acciones de marketing y remisión de facturas. Realización de llamadas y envíos comerciales, vía móvil, SMS o correo postal.
 
-El único objeto de los enlaces es proporcionar al usuario la posibilidad de acceder a dichos enlaces y conocer nuestro trabajo, aunque no ofrece ni comercializa por sí ni por medio de terceros la información, contenidos y servicios disponibles en los sitios enlazados, ni aprueba, supervisa o controla en modo alguno los contenidos y servicios y cualquier material de cualquier naturaleza existente en los mismos. Este sitio web no se responsabiliza en ningún caso de los resultados que puedan derivarse al usuario por acceso a dichos enlaces.
+  
 
-Obtención de Información Personal en este sitio web
-Este sitio web solicita siempre el consentimiento previo de los usuarios para obtener y para hacer uso de sus datos personales con los fines indicados. Cualquier usuario tiene derecho a revocar su consentimiento previo en cualquier momento.
+3. Conservación de los datos
 
-Los casos en los que esta web requiere datos personales son:
+En caso de que el usuario se registre en la web use los servicios de terapia través de la web, los datos personales se conservarán mientras se mantenga la relación contractual entre las partes y, en todo caso, hasta que transcurra el plazo para exigir responsabilidades derivadas de la relación contractual y otras obligaciones legales.
 
-Para comentar los contenidos publicados en el blog.
+En el resto de los casos, los datos personales proporcionados se conservarán mientras no se solicite su supresión por el interesado. Asimismo, los datos serán conservados conforme a los plazos legales establecidos en materia legal, fiscal y contable, tomando como referencia la fecha de la solicitud de supresión de los datos efectuada por el interesado.
 
-Los Datos de Carácter Personal recabados serán, salvo que se indique lo contrario, el nombre y correo electrónico del usuario web.
+  
 
-En algunos casos, la información sobre los visitantes de este sitio puede compartirse de manera anónima con terceros, tales como anunciantes de publicidad, patrocinadores o afiliados, con el único objetivo de mejorar los servicios que este sitio web ofrece a sus usuarios, y para financiar el sitio web. Todas estas tareas de procesamiento se llevan a cabo según las normativa vigente. En todo momento se respetarán los derechos de los usuarios en materia de protección de datos conforme a la ley.
+4. Legitimación para el tratamiento de sus datos
 
-En todo momento y en todo caso, el usuario tiene plenos derechos sobre sus datos personales y sobre el uso de los mismos y podrá ejercitarlos en cualquier momento.
+En caso de que el usuario se registre en la web como profesional para prestar sus servicios a través de esta, la base legal para el tratamiento de datos personales reside en la ejecución del contrato existente entre las partes. Le recordamos que la relación contractual entre las partes se inicia en el momento en que el usuario de la web se registra como profesional y acepta las condiciones generales.
 
-Métodos para obtener información personal de este sitio web
-Este sitio web utiliza los siguientes métodos de captación de información personal:
+En caso de que el utilice nuestros servicios a través de la web en condición de consumidor, la base legal para el tratamiento de datos personales reside en la ejecución del contrato existente entre las partes. Le recordamos que la relación contractual entre las partes se inicia en el momento en que el usuario contrata servicios a través de la WEB y acepta las condiciones generales.
 
-1) Formulario de comentarios: En la web existen formularios para poder enviar un comentario a una determina página de la web. En este formulario se solicita al usuario un nombre y una dirección de correo electrónico. Estos datos se utilizan únicamente para publicar, despublicar y moderar dichos comentarios.
+En el resto de supuestos en los cuales el usuario facilita datos personales a través de cualquier formulario ubicado en la web, la base legal para el tratamiento de sus datos residirá en el consentimiento prestado libremente, el cual podrá ser retirado en cualquier momento.
 
-2) Cookies: Durante la navegación por este sitio web se almacenan cookies en el ordenador del usuario. Cualquier usuario puede consultar el documento de Política de Cookies para conocer cómo se usan las cookies y cómo puede desactivarlas.
+El interés legítimo para mejorar nuestros productos y servicios.
 
-3) Navegación y Dirección IP: Durante la navegación por este sitio web, el usuario envía automáticamente al servidor de la web la informacioń de su dirección de IP, la fecha y hora de acceso a la web, el sistema operativo y el navegador que se ha utilizado para acceder al sitio web. También se pueden enviar datos relativos a la dirección web desde la cual el usuario ha accedido a este sitio web. La Agencia Española de Protección de Datos considera que la dirección IP es un dato de carácter personal. Este sitio web en ningún momento usará la dirección IP para identificar a sus usuarios. Solo la utilizará y la guardará para elaborar estadísticas de acceso al sitio web y para analizar tendencias de comportamiento de los usuarios dentro de este sitio web.
+  
 
-Este sitio web nunca comunicará o cederá estos datos a terceros, salvo requerimiento legal o judicial.
+5. Derechos del Interesado
 
-Servicios ofrecidos por terceros en esta web
-Para prestar servicios estrictamente necesarios para el desarrollo de su actividad, Este sitio web utiliza los siguientes prestadores de servicios. Cada uno de ellos ejerce su actividad bajo sus propias políticas de privacidad.
+El usuario de la web, en su condición de interesado, puede ejercer los siguientes derechos:
 
-Alojamiento y servidor web: Webempresa.
-Plataforma de gestión de contenidos: WordPress.org
-Plataforma de publicidad para blogs: Google Adsense
-Plataforma de estadísticas de tráfico web: Google Analytics
-Servicio de afiliados: Amazon EU.
+Derecho a solicitar el acceso a sus datos personales: Cualquier persona tiene el derecho de conocer si la Sociedad trata datos personales que le conciernan, o no. Las personas interesadas tienen derecho a acceder a sus datos personales.
 
-El usuario de esta web puede encontrar programas de afiliados y anunciantes que acceden a los hábitos de navegación de los usuarios, para establecer perfiles de usuarios y mostrarle al usuario publicidad en función a sus intereses y hábitos de navegación. Esta información siempre es anónima y no se identifica al usuario en ningún momento.
+Derecho a solicitar la rectificación de sus datos: Esto es, a obtener del Responsable del tratamiento la rectificación de los datos personales inexactos que le conciernen sin demora indebida.
 
-El propietario de este portal, este sitio web participa en el Programa de Afiliados de Amazon EU, un programa de publicidad para afiliados diseñado para ofrecer a sitios web un modo de obtener comisiones por publicidad, publicitando e incluyendo enlaces a Amazon.es.
+Derecho a solicitar la supresión de sus datos (derecho al olvido): Es decir, derecho a obtener, sin dilación indebida del responsable del tratamiento, la supresión de los datos personales que le conciernan, cuando concurra alguna de las circunstancias siguientes:
 
-Este sitio web puede estudiar los patrones de comportamiento de sus visitantes para realizar análisis de audiencia y adaptar todo lo posible los contenidos que se ofrecen en el sitio web a las preferencias de sus usuarios.
+a) Cuando los datos personales ya no sean necesarios en relación con los fines para los que fueron recogidos o tratados de otro modo.
 
-Cualquier usuario de la web y cualquier persona física o jurídica puede enlazar desde su sitio web a este sitio web. Esta acción en ningún caso implica relación de ningún tipo entre este sitio web y el propietario del sitio o de la página web enlazada. Tampoco implica que este sitio web acepte ni apruebe total o parcialmente los contenidos o los servicios de las páginas web que enlacen hacia ella.
+b) Cuando el interesado retire el consentimiento en que se basa el tratamiento de acuerdo con lo establecido en el apartado a) del artículo 6.1 del RGPD, o en el apartado a) del artículo 9.2 del RGPD, y éste no se base en otro fundamento jurídico.
 
-Este sitio web siempre se reserva el derecho de prohibir o inhabilitar cualquier enlace.
+c) Cuando el interesado se oponga al tratamiento y no prevalezcan otros motivos legítimos para el tratamiento, de acuerdo con lo establecido en el artículo 21.1 y 21.2 del RGPD.
 
-Sobre la Exactitud y Veracidad de los Datos
-El usuario de este sitio web garantiza que los datos personales facilitados a través de los diferentes formularios son exactos y veraces.
+d) Cuando los datos personales hayan sido tratados ilícitamente.
 
-El usuario de este sitio web garantiza que toda la información facilitada dentro del sitio web es veraz y es exacta en el día en que se facilita dicha información.
+e) Cuando los datos personales deban suprimirse para el cumplimiento de una obligación legal establecida en el Derecho de la Unión o de los Estados miembros que se aplique al responsable del tratamiento.
 
-El usuario de este sitio web está obligado a preservar la exactitud de sus datos y a mantenerlos actualizados.
+f) Cuando los datos personales se hayan obtenido en relación con la oferta de servicios de la sociedad de la información según dispone el artículo 8.1 del RGPD.
 
-El usuario de este sitio web es el único responsable de la inexactitud o falsedad de los datos que haya facilitado, y de los perjuicios derivados de esa falsedad que se puedan causar al sitio web y a su responsable legal.
+  
 
-Ejercicio de los derechos ARCO
-Los usuarios de esta web tienen los siguientes derechos:
+Derecho a solicitar la limitación de su tratamiento: tendrá derecho a obtener del responsable del tratamiento la limitación del tratamiento de los datos están tasados por la norma y son:
 
-Consultar qué datos personales almacenamos sobre el usuario de este sitio web en cualquier momento.
+a) Cuando el interesado impugne la exactitud de los datos personales, durante un plazo que permita al responsable verificar la exactitud de los mismos.
 
-Solicitar la actualización o modificación de datos incorrectos almacenados sobre el usuario.
+b) Cuando el tratamiento sea ilícito y el interesado se oponga a la supresión de los datos personales y solicite en su lugar la limitación de su uso.
 
-Para ejercitar los derechos de acceso, rectificación, cancelación y oposición de sus datos, un usuarios puede enviar un correo electrónico a la dirección proyecto.lik@gmail.com . Dicha solicitud debe ir acompañada de una prueba de identidad válida en derecho (fotocopia del D.N.I. o documento equivalente).
+c) Cuando el responsable ya no necesite los datos personales para los fines del tratamiento, pero el interesado los necesite para la formulación, el ejercicio o la defensa de reclamaciones.
 
-Aceptación y consentimiento
-El usuario de este sitio web declara haber sido informado de las condiciones sobre protección de datos de carácter personal. El usuario de este sitio web acepta y consiente el tratamiento de esos datos por parte del sitio web de la manera y para los fines indicados en el documento de Aviso Legal de esta misma web.
+d) Cuando el interesado se haya opuesto al tratamiento ejercitando su derecho de oposición de acuerdo con lo dispuesto en el artículo 21.1RGPD, mientras se verifica si los motivos legítimos del responsable prevalecen sobre los del interesado.
 
-Modificaciones en la Política de Privacidad
-El webmaster, como responsable legal de esta web se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales así como a prácticas habituales de la industria.
+Derecho a la portabilidad de los datos: tendrá derecho a recibir los datos personales que le incumban, que haya facilitado a un responsable del tratamiento, en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos a otro responsable del tratamiento sin que lo impida el responsable al que se los hubiese facilitado.
 
-Si así ocurriese, se anunciarán en esta misma página los cambios introducidos con antelación suficiente a su puesta en práctica. La utilización de este sitio web después de dichos cambios implicará la aceptación de los mismos.
+Derecho a oponerse al tratamiento: el derecho del interesado a oponerse, en cualquier momento, por motivos relacionados con su situación particular, a que datos personales que le conciernan sean objeto de un tratamiento.
 
-Envío y Regulación de Correos Comerciales
+Derecho a retirar el consentimiento prestado: el interesado tiene derecho retirar su consentimiento para el procesamiento de sus datos personales en cualquier momento.
 
-De acuerdo con la LSSI-CE, este sitio web no realiza prácticas de SPAM y nunca envía correos electrónicos comerciales sin solicitud o sin consentimiento previo del usuario.
+Puede ejercer sus derechos mediante comunicación escrita dirigida al Responsable del tratamiento a las siguientes direcciones:
+
+[evaminerva.rrhh@gmail.com](mailto:evaminerva.rrhh@gmail.com)
+
+Para el efectivo ejercicio de sus derechos, usted deberá acompañar, junto a su solicitud, una fotocopia del documento correspondiente para acreditar su identidad (NIF, DNI, etc.).
+
+Finalmente, le informamos de que tiene derecho a acudir ante la Agencia Estatal de Protección de Datos para presentar una reclamación, si considera que se ha vulnerado alguno de sus derechos. A través del siguiente enlace, hallará los datos de contacto de la mencionada Agencia.
+
+[https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos](https://www.aepd.es/es/derechos-y-deberes/conoce-tus-derechos)
+
+  
+
+6. Cookies
+
+La Sociedad usa cookies. Para más información, puede consultar nuestra Política de Cookies. [Política de Cookies](https://evaminerva.com/cookies).
+
+  
+
+7. Modificación de la Política de Privacidad
+
+La Sociedad se reserva el derecho a modificar la presente Política de Privacidad, de acuerdo con su propio criterio, motivado por un cambio legislativo, jurisprudencial o doctrinal de la Agencia Española de Protección de Datos.
+
+  
+
+Le informaremos acerca de dichos cambios mediante la publicación de la Política de Privacidad modificada en la propia Página, así como mediante el correspondiente aviso que se ubicará en la página de inicio.
+
+  
+
+8. Legislación aplicable y competencia jurisdiccional
+
+La base jurídica de los tratamientos, se aplicará el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos), en adelante RGPD. Se aplicarán los artículos de RGPD relativos a:
+
+-   6.1.a) Para el consentimiento expreso del interesado para el tratamiento de sus datos personales para uno o varios fines específicos.
+    
+-   6.1.b) Para la ejecución del contrato y aplicación de las medidas precontractuales.
+    
+-   6.1.c) En lo referente al correcto cumplimiento de las obligaciones legales.
+    
+-   6.1.f) Para la satisfacción de intereses legítimos.
+    
+
+  
+
+Fecha de última actualización: 02/11/2020

@@ -37,6 +37,14 @@ const useStyles = makeStyles({
     padding: '45px 90px',
     borderRadius: '0.5rem'
   },
+  '@media (max-width: 600px)': {
+    plans: {
+      padding: '17px 0 50px 0'
+    },
+    plansContainer: {
+      padding: '25px'
+    }
+  },
   plansCards: {
     display: 'flex',
     textAlign: 'center',

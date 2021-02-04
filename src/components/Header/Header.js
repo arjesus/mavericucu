@@ -45,7 +45,7 @@ class Header extends React.Component {
   render() {
     const { pages, path, theme } = this.props;
     const { screenWidth } = this.state;
-
+    console.log(screenWidth, 'aaaaaaaaaaaaaaaaaaaaaaaa');
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
