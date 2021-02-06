@@ -58,19 +58,19 @@ const Form = props => {
       .join('&');
   }
 
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({
-  //       'form-name': event.target.getAttribute('name'),
-  //       ...name
-  //     })
-  //   })
-  //     .then(() => (window.location.href = '/'))
-  //     .catch(error => alert(error));
-  // };
+  const handleSubmit = event => {
+    event.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...name
+      })
+    })
+      .then(() => (window.location.href = '/'))
+      .catch(error => alert(error));
+  };
   return (
     <form data-netlify="true" name="pizzaOrder" method="post" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="pizzaOrder" />

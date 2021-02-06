@@ -42,7 +42,7 @@ const useStyles = makeStyles({
       padding: '17px 0 50px 0'
     },
     plansContainer: {
-      padding: '25px'
+      padding: '25px 40px'
     }
   },
   plansCards: {
