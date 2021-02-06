@@ -418,7 +418,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.38fr 1fr 0.41fr 0.6fr 0.59fr 0.8fr 0.45fr;
+            grid-template-rows: 0.36fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;
@@ -446,7 +446,7 @@ const Hero = props => {
               img {
                 margin: 0 auto;
                 border-radius: 0 0 1rem 1rem;
-                margin-top: 60px;
+                margin-top: 45px;
               }
             }
           }
@@ -474,6 +474,12 @@ const Hero = props => {
           }
           .close-contact {
             padding: 20px;
+            img {
+              width: 100%;
+            }
+            .hero-sub-text {
+              width: 100%;
+            }
           }
         }
       `}</style>

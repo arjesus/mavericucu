@@ -27,10 +27,7 @@ const plansDefinition = [
 
 const useStyles = makeStyles({
   plans: {
-    padding: '55px 0 10px 0',
-    '@media (max-width: 600px)': {
-      padding: '17px 0 50px 0'
-    }
+    padding: '55px 0 10px 0'
   },
   plansContainer: {
     backgroundColor: 'white',
@@ -39,7 +36,7 @@ const useStyles = makeStyles({
   },
   '@media (max-width: 600px)': {
     plans: {
-      padding: '17px 0 50px 0'
+      padding: '0px'
     },
     plansContainer: {
       padding: '25px 40px'

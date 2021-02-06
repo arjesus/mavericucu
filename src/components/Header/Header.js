@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-import { getScreenWidth } from '../../utils/helpers';
+import { getScreenWidth, isPortrait } from '../../utils/helpers';
 
 import { ScreenWidthContext, FontLoadedContext } from '../../layouts';
 import config from '../../../content/meta/config';
@@ -20,7 +20,8 @@ class Header extends React.Component {
 
   componentDidMount() {
     this.setState({
-      screenWidth: getScreenWidth()
+      screenWidth: getScreenWidth(),
+      portrait: isPortrait()
     });
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', this.resizeThrottler, false);
@@ -44,15 +45,15 @@ class Header extends React.Component {
 
   render() {
     const { pages, path, theme } = this.props;
-    const { screenWidth } = this.state;
-    console.log(screenWidth, 'aaaaaaaaaaaaaaaaaaaaaaaa');
+    const { screenWidth, portrait } = this.state;
+
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <img
-              className={screenWidth > 767 ? 'logo' : 'logoSmall'}
-              src={screenWidth > 767 ? logo : smallLogo}
+              className={screenWidth > 760 || !portrait ? 'logo' : 'logoSmall'}
+              src={screenWidth > 760 || !portrait ? logo : smallLogo}
               alt={config.siteTitle}
             />
           </Link>
@@ -97,6 +98,11 @@ class Header extends React.Component {
               background-color: ${theme.color.neutral.white};
               height: ${theme.header.height.homepage};
               z-index: 1;
+            }
+          }
+          @media screen and (orientation: landscape) {
+            header {
+              width: fit-content !important;
             }
           }
 

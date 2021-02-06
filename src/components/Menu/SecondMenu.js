@@ -22,6 +22,17 @@ const useStyles = makeStyles({
     borderRadius: '0.3rem',
     fontWeight: '700'
   },
+  '@media screen and (orientation: landscape)': {
+    contactButton: {
+      fontSize: '1.3rem',
+      backgroundColor: theme.color.principals.darkPurple,
+      color: theme.color.principals.white,
+      padding: '10px 10px',
+      margin: '0 21px',
+      borderRadius: '0.3rem',
+      fontWeight: '700'
+    }
+  },
   menu: {
     borderRadius: '1rem'
   },

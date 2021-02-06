@@ -4,6 +4,15 @@ export function getScreenWidth() {
   }
 }
 
+export function isPortrait() {
+  if (typeof window !== `undefined`) {
+    if (window.innerHeight > window.innerWidth) {
+      return true;
+    }
+    return false;
+  }
+}
+
 export function isWideScreen() {
   if (typeof window !== `undefined`) {
     const Width = window.innerWidth;

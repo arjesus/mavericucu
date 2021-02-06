@@ -151,6 +151,11 @@ class Layout extends React.Component {
                       body {
 
                       }
+                      @media screen and (orientation:landscape) {                         
+                        html {
+                          width: fit-content;
+                        }
+                      }
                       h1,
                       h2,
                       h3 {
