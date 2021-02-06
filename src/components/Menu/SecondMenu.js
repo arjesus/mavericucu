@@ -36,7 +36,6 @@ const useStyles = makeStyles({
   menu: {
     borderRadius: '1rem'
   },
-
   menuContainer: {
     flexWrap: 'nowrap'
   },
