@@ -100,11 +100,6 @@ class Header extends React.Component {
               z-index: 1;
             }
           }
-          @media screen and (orientation: landscape) {
-            header {
-              width: fit-content !important;
-            }
-          }
 
           h1 {
             font-size: ${theme.font.size.m};
