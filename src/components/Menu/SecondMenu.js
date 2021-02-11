@@ -37,7 +37,10 @@ const useStyles = makeStyles({
     borderRadius: '1rem'
   },
   menuContainer: {
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap',
+    '.MuiPopover-paper': {
+      top: '85px'
+    }
   },
   itemContainer: {
     display: 'flex',

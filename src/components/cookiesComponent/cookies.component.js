@@ -3,6 +3,8 @@ import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
 import cookies from '../../images/jpg/Las galletas.svg';
+import Switch from '@material-ui/core/Switch';
+import { FaFileExcel } from 'react-icons/fa';
 
 const useStyles = makeStyles({
   cookiesBlock: {
@@ -49,6 +51,27 @@ const useStyles = makeStyles({
     width: '90%',
     position: 'relative',
     top: '-115px'
+  },
+  switchCookies: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  },
+  '@media (max-width: 600px)': {
+    cookiesBlockBox: {
+      width: '100%',
+      fontSize: '1rem',
+      opacity: '0.9',
+      padding: '0px 20px 10px 20px'
+    },
+    CookiesParagraph: {
+      fontSize: '0.7rem',
+      marginBottom: '1rem'
+    },
+    img: {
+      width: '60%',
+      top: '-75px'
+    }
   }
 });
 
@@ -71,6 +94,10 @@ const CookiesBlock = props => {
             mejorar la experiencia del usuario. Si continuas navegando entendemos que adaptes los
             términos y condiciones de uso.
           </p>
+        </Grid>
+        <Grid item md={9} sm={12} className={classes.switchCookies}>
+          <p className={classes.CookiesParagraph}>Cookies de terceros para la gestión de pagos</p>
+          <Switch inputProps={{ 'aria-label': 'primary checkbox' }} />
         </Grid>
         <Grid item md={12} sm={12} className={classes.cookiesBottom}>
           <button className={classes.button} onClick={handleClick}>
