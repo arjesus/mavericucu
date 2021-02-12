@@ -46,6 +46,14 @@ const useStyles = makeStyles({
     height: '300px',
     marginBottom: '25px'
   },
+  '@media (max-width: 600px)': {
+    professional: {
+      padding: '0px 15px 15px 15px'
+    },
+    professionalContainer: {
+      padding: '45px 35px'
+    }
+  },
   title: {
     fontSize: '2.3rem',
     lineHeight: '1.3',

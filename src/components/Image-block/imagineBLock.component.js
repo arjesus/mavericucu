@@ -48,6 +48,14 @@ const useStyles = makeStyles({
   img: {
     objectFit: 'contain',
     width: '100%'
+  },
+  '@media (max-width: 600px)': {
+    imgBox: {
+      width: 'inherit'
+    },
+    img: {
+      width: 'inherit'
+    }
   }
 });
 
@@ -78,7 +86,11 @@ const ImageBlock = props => {
               alt="Woman sitting on a sofa"
             />
           ) : (
-            <img src={imgBLockOptions.img} alt="Woman sitting on a sofa" />
+            <img
+              className={classes.imgBox}
+              src={imgBLockOptions.img}
+              alt="Woman sitting on a sofa"
+            />
           )}
         </Grid>
       </Grid>

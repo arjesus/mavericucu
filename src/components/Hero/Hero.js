@@ -418,7 +418,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.36fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
+            grid-template-rows: 0.37fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
             padding-top: 115px;
             padding: 115px 10px 20px 0px;
             text-align: center;

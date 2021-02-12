@@ -131,6 +131,12 @@ const useStyles = makeStyles({
       '& h2': {
         marginBottom: '20px'
       }
+    },
+    professionalContainer: {
+      padding: '45px 35px'
+    },
+    plansCardsContainer: {
+      padding: '0 5px'
     }
   }
 });
@@ -192,10 +198,18 @@ const ProfessionalPage = props => {
             className={classes.plansBox}
           >
             <h2 className={classes.title}>Áreas de especialidad de Eva Minerva</h2>
-            <Grid container spacing={10} justify="space-around">
+            <Grid container justify="space-around">
               {specialities.map((speciality, i) => {
                 return (
-                  <Grid key={i} item md={4} sm={6} xs={6}>
+                  <Grid
+                    key={i}
+                    spacing={5}
+                    item
+                    md={4}
+                    sm={6}
+                    xs={6}
+                    className={classes.plansCardsContainer}
+                  >
                     <div className={classes.plansCards}>
                       <h3>{speciality.title}</h3>
                       <p className={classes.paragraphInside}>{speciality.description}</p>

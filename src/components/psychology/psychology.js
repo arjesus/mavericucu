@@ -181,7 +181,7 @@ const Psychology = props => {
           .psychology-container {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.2fr 0.2fr 0.4fr;
+            grid-template-rows: 0.2fr 0.2fr 0.3fr;
             min-height: 70vh;
             width: 100%;
             grid-gap: 1rem;
@@ -197,7 +197,7 @@ const Psychology = props => {
           }
           .psycology-img {
             width: 70%;
-            margin-bottom: -27px;
+            margin-bottom: 0px;
           }
           .card-container {
             border: 1px solid ${theme.color.principals.veryLightPurple};
