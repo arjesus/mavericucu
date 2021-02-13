@@ -99,7 +99,12 @@ const useStyles = makeStyles({
     padding: '10px 15px',
     marginBottom: '20px',
     height: '200px',
-    backgroundColor: theme.color.principals.lightPurple
+    backgroundColor: theme.color.principals.lightPurple,
+    width: '300px'
+  },
+  plansCardsContainer: {
+    display: 'flex',
+    justifyContent: 'center'
   },
   '@media (max-width: 600px)': {
     professional: {
