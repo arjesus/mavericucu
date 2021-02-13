@@ -125,7 +125,11 @@ const ProfessionalPage = props => {
                 </p>
               </Grid>
             </Grid>
-            <a href="/professional-form" className={classes.button}>
+            <a
+              href="https://kf2sm3o3mb2.typeform.com/to/ux4iyPRY"
+              target="_blank"
+              className={classes.button}
+            >
               Enviar candidatura
             </a>
           </Grid>

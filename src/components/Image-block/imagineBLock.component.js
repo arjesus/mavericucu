@@ -65,7 +65,11 @@ const ImageBlock = props => {
 
   const isProfessional = text => {
     if (text.includes('Más información sobre Eva Minerva')) return '/plans';
-    return '/professional-form';
+    return 'https://kf2sm3o3mb2.typeform.com/to/ux4iyPRY';
+  };
+  const isProfessionalTarget = text => {
+    if (text.includes('Más información sobre Eva Minerva')) return '';
+    return '_blank';
   };
 
   return (
@@ -74,7 +78,11 @@ const ImageBlock = props => {
         <Grid className={classes.textTopBox} item sm={12} md={6}>
           <h2 className={classes.title}>{imgBLockOptions.title}</h2>
           <p className={classes.paragraph}>{imgBLockOptions.text}</p>
-          <a className={classes.button} href={isProfessional(imgBLockOptions.button)}>
+          <a
+            className={classes.button}
+            target={isProfessionalTarget(imgBLockOptions.button)}
+            href={isProfessional(imgBLockOptions.button)}
+          >
             {imgBLockOptions.button}
           </a>
         </Grid>
