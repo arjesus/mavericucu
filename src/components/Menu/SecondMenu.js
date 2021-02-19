@@ -33,8 +33,14 @@ const useStyles = makeStyles({
       fontWeight: '700'
     }
   },
+  '.MuiPaper-rounded': {
+    borderRadius: '2rem',
+  },
   menu: {
-    borderRadius: '1rem'
+    borderRadius: '1rem',
+    '.MuiPaper-rounded': {
+      borderRadius: '2rem',
+    }
   },
   menuContainer: {
     flexWrap: 'nowrap'
@@ -85,10 +91,11 @@ const SecondMenu = props => {
     if (item.includes('Especialidades')) return 2;
     return 1;
   };
+  
 
   return (
     <Box>
-      {screenWidth > 767 ? (
+      {screenWidth > 1090 ? (
         <Grid container spacing={2} direction="row" className={classes.menuContainer}>
           {items.map((item, index) => {
             return (
@@ -119,6 +126,9 @@ const SecondMenu = props => {
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}
+            getContentAnchorEl={null}
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            transformOrigin={{ vertical: "top", horizontal: "center" }}
             keepMounted
             open={Boolean(anchorEl)}
             onClose={handleClose}

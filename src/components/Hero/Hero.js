@@ -157,7 +157,6 @@ const Hero = props => {
             'differences'
             'steps'
             'contact';
-          padding: 72px 0 20px 0;
         }
 
         .header {
@@ -169,6 +168,7 @@ const Hero = props => {
           grid-auto-flow: column;
           display: grid;
           grid-template-rows: 1fr auto;
+          margin-top: 70px;
 
           .call-to-action {
             background-color: ${theme.color.principals.greenDark};
@@ -406,6 +406,12 @@ const Hero = props => {
           }
         }
 
+        @media (max-width: 750px) {
+          .header {
+            margin-top: 0;
+          }
+        }
+
         @media (max-width: 600px) {
           .center-button {
             display-flex: center;
@@ -418,9 +424,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.37fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
-            padding-top: 115px;
-            padding: 115px 10px 20px 0px;
+            grid-template-rows: 0.39fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
             text-align: center;
             img {
               border-radius: 1rem;

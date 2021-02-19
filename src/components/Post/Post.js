@@ -58,6 +58,8 @@ const Post = props => {
     img: cover
   };
 
+
+
   return (
     <React.Fragment>
       <div className={classes.postCard}>
@@ -76,7 +78,7 @@ const Post = props => {
           {/* <Share post={post} theme={theme} /> */}
           {/* <Author note={authornote} theme={theme} /> */}
           <NextPrev next={nextPost} prev={prevPost} theme={theme} />
-          {text && <PsychoCards />}
+          {text && <PsychoCards category={category} />}
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>

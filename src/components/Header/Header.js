@@ -52,8 +52,8 @@ class Header extends React.Component {
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <img
-              className={screenWidth > 760 || !portrait ? 'logo' : 'logoSmall'}
-              src={screenWidth > 760 || !portrait ? logo : smallLogo}
+              className={screenWidth < 760 ? 'logoSmall' : 'logo'}
+              src={screenWidth < 760 ? smallLogo : logo}
               alt={config.siteTitle}
             />
           </Link>
@@ -94,7 +94,6 @@ class Header extends React.Component {
             }
 
             &.homepage {
-              position: absolute;
               background-color: ${theme.color.neutral.white};
               height: ${theme.header.height.homepage};
               z-index: 1;

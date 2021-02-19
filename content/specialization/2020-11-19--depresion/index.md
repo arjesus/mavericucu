@@ -1,6 +1,6 @@
 ---
 title: Depresión. Como superar una depresión   
-category: "depresion"
+category: "Depresion"
 cover: mujerjovendeprimida-01.jpg
 text: Además de información sobre la depresión y sus síntomas en esta pagina podras encontrar mas contenido sobre nuestros psicólogos online especializados en ayuda para superar la depresión.
 button: Más información sobre Eva Minerva

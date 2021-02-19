@@ -1,6 +1,6 @@
 ---
 title: Terapia de pareja. Ayuda psicologica para parejas       
-category: "terapia de pareja"
+category: "Terapia de pareja"
 cover: terapia-pareja.png
 text: Además de información sobre terapia para pareja y ayuda psicologica para parejas encontrar más contenido sobre nuestros psicólogos online especializados en terapia de pareja.
 button: Más información sobre Eva Minerva
