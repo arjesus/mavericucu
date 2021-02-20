@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   },
   plansContainer: {
     backgroundColor: 'white',
-    padding: '45px 90px',
+    padding: '25px 40px',
     borderRadius: '0.5rem'
   },
   '@media (max-width: 600px)': {
@@ -78,7 +78,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '0.5rem',
-    marginBottom: '2rem',
+    marginBottom: '1rem',
     marginTop: '-15px'
   },
   plansCardsHeaderThird: {
@@ -91,7 +91,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '0.5rem',
-    marginBottom: '2rem',
+    marginBottom: '1rem',
     marginTop: '-15px'
   },
   textContainer: {
@@ -107,7 +107,7 @@ const useStyles = makeStyles({
     fontSize: '2.3rem',
     lineHeight: '1.3',
     color: theme.color.principals.darkerPurpleText,
-    margin: '3rem 0 1.5rem 0',
+    margin: '2rem 0 1rem 0',
     textAlign: 'center'
   },
   secondaryTitle: {
@@ -118,7 +118,7 @@ const useStyles = makeStyles({
   paragraph: {
     fontSize: '1.2rem',
     color: theme.color.principals.darkerPurpleText,
-    marginBottom: '2rem',
+    marginBottom: '1rem',
     lineHeight: '2',
     textAlign: 'center'
   },
@@ -140,7 +140,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
     color: theme.color.principals.darkerPurpleText,
     '& p': {
-      marginBottom: '2rem'
+      marginBottom: '0.5rem'
     }
   },
   button: {
