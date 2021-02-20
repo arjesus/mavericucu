@@ -57,17 +57,17 @@ const PsychoCards = props => {
         <Grid item md={3} sm={12}>
           <Grid container spacing={5} className={classes.cardContainer}>
             <Grid sm={6}>
-              <img className={classes.psychoImg} src={psychologists[i].img} />
+              <img className={classes.psychoImg} src={psychologists[i] && psychologists[i].img} />
             </Grid>
             <Grid sm={6} className={classes.psychoTitle}>
-              <p>{psychologists[i].name}</p>
+              <p>{psychologists[i] && psychologists[i].name}</p>
             </Grid>
             <Grid sm={12}>
               <p className={classes.bold}>Especialidades:</p>
-              <p className={classes.psychoTextSpetialities}>{psychologists[i].spectiality}</p>
+              <p className={classes.psychoTextSpetialities}>{psychologists[i] && psychologists[i].spectiality}</p>
             </Grid>
             <Grid sm={12}>
-              <p className={classes.psychoText}>{psychologists[i].text}</p>
+              <p className={classes.psychoText}>{psychologists[i] && psychologists[i].text}</p>
             </Grid>
           </Grid>
         </Grid>

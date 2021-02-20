@@ -41,7 +41,7 @@ export const setPsychologist = category => {
   const psychologistsArr = [
     {
       number: 1,
-      name: 'luis',
+      name: 'Luis',
       spectiality: 'Depresion, Ansiedad',
       text: 'Soy Psicólogo Sanitario con Máster en Psicología Clínica y de la Salud. Amplia experiencia en terapia para el bienestar mental, emocional, familiar y ...',
       img: terapeuta5
