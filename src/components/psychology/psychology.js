@@ -82,6 +82,7 @@ const Psychology = props => {
             img {
               width: 70px;
               border-radius: 50%;
+              margin-right: 10px;
             }
             h3 {
               font-size: 1.2em;

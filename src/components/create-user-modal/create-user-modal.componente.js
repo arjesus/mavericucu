@@ -33,7 +33,8 @@ const useStyles = makeStyles({
     },
     '@media (max-width: 600px)': {
       '& .MuiGrid-container': {
-        width: '90vw'
+        width: '90vw',
+        padding: '15px 5px',
       }
     }
   },
@@ -82,6 +83,9 @@ const useStyles = makeStyles({
   },
   noPadding: {
     padding: '0'
+  },
+  '@media (max-width: 600px)': {
+
   }
 });
 
@@ -112,7 +116,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 
   return (
     <div>
-      <Modal maxWidth="sm" fullWidth className={classes.modal} open={open} onClose={handleClose}>
+      <Modal maxWidth="sm" disableScrollLock="false" fullWidth className={classes.modal} open={open} onClose={handleClose}>
         <Grid
           container
           className={classes.containerModalImg}
@@ -132,7 +136,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               especialistas guías te contacten
             </p>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item md={6}>
             <TextField
               name="name"
               id="standard-basic"
@@ -143,7 +147,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               onChange={handleChangeInputEvent}
             />
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item md={6}>
             <TextField
               name="surname"
               id="standard-basic"
@@ -154,7 +158,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               onChange={handleChangeInputEvent}
             />
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item md={6}>
             <TextField
               name="email"
               error={!validEmail}
@@ -167,7 +171,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               onChange={handleChangeInputEvent}
             />
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item md={6}>
             <TextField
               name="phone"
               id="standard-basic"

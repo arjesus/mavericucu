@@ -424,7 +424,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: 0.39fr 1fr 0.36fr 0.6fr 0.59fr 0.8fr 0.38fr;
+            grid-template-rows: auto 1fr 0.39fr 0.6fr 0.59fr 0.8fr auto;
             text-align: center;
             img {
               border-radius: 1rem;
@@ -434,7 +434,7 @@ const Hero = props => {
             grid-auto-flow: column;
             display: grid;
             min-height: 75vh;
-            grid-template-rows: 1fr 0.4fr;
+            grid-template-rows: 1fr 0fr;
             padding: 25px 0 0 0;
 
             .top-header {
@@ -445,12 +445,19 @@ const Hero = props => {
               .top-header-text {
                 padding: 0 15px;
                 align-items: center;
+                h1 {
+                  font-size: 2em;
+                  margin-bottom: 25px;
+                }
+                p {
+                  font-size: 1.2em;
+                }
               }
 
               img {
                 margin: 0 auto;
                 border-radius: 0 0 1rem 1rem;
-                margin-top: 45px;
+                margin-top: 12px;
               }
             }
           }
