@@ -51,27 +51,30 @@ const PsychoCards = props => {
   const classes = useStyles();
   const psychologists = setPsychologist(props.category ? props.category : 'Depresion');
   const cardToRender = [];
-  for (let i = 0; i <= 2; i += 1) {
-    cardToRender.push(
-      <Grid item md={3} sm={12}>
-        <Grid container spacing={5} className={classes.cardContainer}>
-          <Grid sm={6}>
-            <img className={classes.psychoImg} src={psychologists[i].img} />
-          </Grid>
-          <Grid sm={6} className={classes.psychoTitle}>
-            <p>{psychologists[i].name}</p>
-          </Grid>
-          <Grid sm={12}>
-            <p className={classes.bold}>Especialidades:</p>
-            <p className={classes.psychoTextSpetialities}>{psychologists[i].spectiality}</p>
-          </Grid>
-          <Grid sm={12}>
-            <p className={classes.psychoText}>{psychologists[i].text}</p>
+  if (psychologists) {
+    for (let i = 0; i <= 2; i += 1) {
+      cardToRender.push(
+        <Grid item md={3} sm={12}>
+          <Grid container spacing={5} className={classes.cardContainer}>
+            <Grid sm={6}>
+              <img className={classes.psychoImg} src={psychologists[i].img} />
+            </Grid>
+            <Grid sm={6} className={classes.psychoTitle}>
+              <p>{psychologists[i].name}</p>
+            </Grid>
+            <Grid sm={12}>
+              <p className={classes.bold}>Especialidades:</p>
+              <p className={classes.psychoTextSpetialities}>{psychologists[i].spectiality}</p>
+            </Grid>
+            <Grid sm={12}>
+              <p className={classes.psychoText}>{psychologists[i].text}</p>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    );
+      );
+    }
   }
+
   return (
     <Box mt={2}>
       <Grid container direction="row" justify="space-around" alignItems="center" spacing={2}>
