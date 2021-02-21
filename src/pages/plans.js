@@ -124,7 +124,6 @@ const useStyles = makeStyles({
   },
   paragraphInside: {
     fontSize: '1.2rem',
-    color: 'black',
     marginBottom: '3rem',
     color: theme.color.principals.blackText
   },

@@ -34,7 +34,9 @@ const useStyles = makeStyles({
     '@media (max-width: 600px)': {
       '& .MuiGrid-container': {
         width: '90vw',
+        height: '96vh',
         padding: '15px 5px',
+        overflowY: 'auto'
       }
     }
   },
@@ -65,7 +67,10 @@ const useStyles = makeStyles({
     fontSize: '1.2rem',
     border: 'none',
     backgroundColor: 'white',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    border: `1px solid ${theme.color.principals.darkerPurpleText}`,
+    padding: '10px',
+    borderRadius: '0.5rem',
   },
   modalImg: {
     width: '250px',
@@ -85,7 +90,15 @@ const useStyles = makeStyles({
     padding: '0'
   },
   '@media (max-width: 600px)': {
-
+    title: {
+      fontSize: '1.9rem',
+    },
+    paragraph: {
+      fontSize: '1rem',
+    },
+    paragraphFooter: {
+      fontSize: '1rem',
+    },
   }
 });
 
