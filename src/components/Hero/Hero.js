@@ -178,6 +178,7 @@ const Hero = props => {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0 25px;
 
             h2 {
               font-size: 19px;

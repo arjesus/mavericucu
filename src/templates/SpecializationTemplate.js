@@ -62,7 +62,6 @@ export const specializationQuery = graphql`
       }
       frontmatter {
         title
-        author
         category
         cover {
           childImageSharp {
@@ -89,7 +88,6 @@ export const specializationQuery = graphql`
           frontmatter {
             title
             category
-            author
             cover {
               children {
                 ... on ImageSharp {

@@ -13,6 +13,18 @@ import Comments from './Comments';
 import NextPrev from './NextPrev';
 import PsychoCards from '../psycho-cards/psycho.cards';
 
+import anxiety from '../../images/jpg/ansiedad-01.png';
+import selfEsteem from '../../images/jpg/autoestima.png';
+import couple from '../../images/jpg/terapia-pareja.png';
+import depresion from '../../images/jpg/mujerjovendeprimida-01.jpg';
+
+const blogImg = {
+  Ansiedad: anxiety,
+  Depresion: depresion,
+  'Terapia de pareja': couple,
+  Autoestima: selfEsteem
+};
+
 const Share = asyncComponent(() =>
   import('./Share')
     .then(module => {
@@ -51,14 +63,15 @@ const Post = props => {
     theme
   } = props;
 
+  console.log(blogImg[nextPost.frontmatter.category], 'aaaaaaaaaaaaaaaaaaaa');
+
+
   const imgBLockOptions = {
     title,
     text,
     button,
     img: cover
   };
-
-
 
   return (
     <React.Fragment>

@@ -7,6 +7,8 @@ import logo from '../images/jpg/logo-text.png';
 import Checkout from '../components/Checkout/checkout';
 import UserInformationModal from '../components/create-user-modal/create-user-modal.componente';
 
+// "styled-jsx-plugin-postcss": "^0.1.3",
+
 const plansDefinition = [
   {
     id: 0,

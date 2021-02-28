@@ -61,7 +61,6 @@ export const postQuery = graphql`
       }
       frontmatter {
         title
-        author
         category
         cover {
           childImageSharp {
