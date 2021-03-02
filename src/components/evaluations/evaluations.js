@@ -72,7 +72,8 @@ class Evaluations extends React.Component {
       text:
         'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
       author: 'name autor'
-    }
+    },
+    intervalId: 0
   };
 
   componentDidMount() {
@@ -111,9 +112,17 @@ class Evaluations extends React.Component {
   }
 
   intervalReviewText() {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       this.changeReview();
     }, 3000);
+    this.setState({
+      intervalId
+    });
+  }
+
+  componentWillUnmount() {
+    const { intervalId } = this.state;
+    clearInterval(intervalId);
   }
 
   render() {

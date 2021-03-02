@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 import ImageBlock from '../Image-block/imagineBLock.component';
 import 'prismjs/themes/prism-okaidia.css';
+import BlogResume from '../Blog-resume/Blog';
 
 import asyncComponent from '../AsyncComponent';
 import Headline from '../Article/Headline';
@@ -63,8 +64,7 @@ const Post = props => {
     theme
   } = props;
 
-  console.log(blogImg[nextPost.frontmatter.category], 'aaaaaaaaaaaaaaaaaaaa');
-
+  // console.log(blogImg[nextPost.frontmatter.category], 'aaaaaaaaaaaaaaaaaaaa');
 
   const imgBLockOptions = {
     title,
@@ -90,8 +90,9 @@ const Post = props => {
         <footer>
           {/* <Share post={post} theme={theme} /> */}
           {/* <Author note={authornote} theme={theme} /> */}
-          <NextPrev next={nextPost} prev={prevPost} theme={theme} />
+          {/* <NextPrev next={nextPost} prev={prevPost} theme={theme} /> */}
           {text && <PsychoCards category={category} />}
+          <BlogResume category={category} />
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>
@@ -105,7 +106,7 @@ Post.propTypes = {
   facebook: PropTypes.object.isRequired,
   next: PropTypes.object,
   prev: PropTypes.object,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
 };
 
 export default Post;

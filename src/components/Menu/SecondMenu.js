@@ -34,12 +34,12 @@ const useStyles = makeStyles({
     }
   },
   '.MuiPaper-rounded': {
-    borderRadius: '2rem',
+    borderRadius: '2rem'
   },
   menu: {
     borderRadius: '1rem',
     '.MuiPaper-rounded': {
-      borderRadius: '2rem',
+      borderRadius: '2rem'
     }
   },
   menuContainer: {
@@ -91,7 +91,6 @@ const SecondMenu = props => {
     if (item.includes('Especialidades')) return 2;
     return 1;
   };
-  
 
   return (
     <Box>
@@ -127,8 +126,8 @@ const SecondMenu = props => {
             id="simple-menu"
             anchorEl={anchorEl}
             getContentAnchorEl={null}
-            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-            transformOrigin={{ vertical: "top", horizontal: "center" }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'center' }}
             keepMounted
             open={Boolean(anchorEl)}
             onClose={handleClose}
@@ -138,6 +137,7 @@ const SecondMenu = props => {
               if (item.to !== path) {
                 return (
                   <Item
+                    childRef={ref => (this.child = ref)}
                     item={item}
                     onClick={handleClose}
                     key={index.toString()}

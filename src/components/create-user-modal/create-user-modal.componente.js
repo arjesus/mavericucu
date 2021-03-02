@@ -70,7 +70,7 @@ const useStyles = makeStyles({
     cursor: 'pointer',
     border: `1px solid ${theme.color.principals.darkerPurpleText}`,
     padding: '10px',
-    borderRadius: '0.5rem',
+    borderRadius: '0.5rem'
   },
   modalImg: {
     width: '250px',
@@ -91,14 +91,14 @@ const useStyles = makeStyles({
   },
   '@media (max-width: 600px)': {
     title: {
-      fontSize: '1.9rem',
+      fontSize: '1.9rem'
     },
     paragraph: {
-      fontSize: '1rem',
+      fontSize: '1rem'
     },
     paragraphFooter: {
-      fontSize: '1rem',
-    },
+      fontSize: '1rem'
+    }
   }
 });
 
@@ -129,7 +129,14 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 
   return (
     <div>
-      <Modal maxWidth="sm" disableScrollLock="false" fullWidth className={classes.modal} open={open} onClose={handleClose}>
+      <Modal
+        maxWidth="sm"
+        disableScrollLock={false}
+        fullWidth
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+      >
         <Grid
           container
           className={classes.containerModalImg}

@@ -208,7 +208,6 @@ const ProfessionalPage = props => {
                 return (
                   <Grid
                     key={i}
-                    spacing={5}
                     item
                     md={4}
                     sm={6}

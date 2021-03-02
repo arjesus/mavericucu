@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import { ThemeContext } from "../layouts";
-import Blog from "../components/Blog";
-import Hero from "../components/Hero";
-import Seo from "../components/Seo";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql } from 'gatsby';
+import { ThemeContext } from '../layouts';
+import Blog from '../components/Blog';
+import Hero from '../components/Hero';
+import Seo from '../components/Seo';
 
 class CategoryPage extends React.Component {
   render() {
@@ -40,8 +40,7 @@ class CategoryPage extends React.Component {
 
         <Seo facebook={facebook} />
 
-        <style jsx>{`
-        `}</style>
+        <style jsx>{``}</style>
       </React.Fragment>
     );
   }

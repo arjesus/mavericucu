@@ -93,9 +93,9 @@ const ProfessionalPage = props => {
       <Grid container direction="column" className={classes.professional}>
         <Grid container direction="column" spacing={5} className={classes.professionalContainer}>
           <ImageBlock imgBLockOptions={imgBLockOptions} />
-          <Grid container direction="column" md={12} alignItems="center" spacing={5}>
+          <Grid container direction="column" alignItems="center" spacing={5}>
             <h2 className={classes.title}>Ventajas de ser psicólogos online en Eva Minerva </h2>
-            <Grid container justify="space-around" direction="row" md={12} spacing={5}>
+            <Grid container justify="space-around" direction="row" spacing={5}>
               <Grid item md={3} sm={12} className={classes.professionalCards}>
                 <img src={calendar} alt="Calendar" className={classes.professionalCardsImages} />
                 <h3 className={classes.secondaryTitle}>Horario flexible</h3>
