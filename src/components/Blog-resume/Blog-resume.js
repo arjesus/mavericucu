@@ -23,8 +23,8 @@ const BlogResume = props => {
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1fr;
-          grid-gap: 35px;
-          padding: 35px;
+          grid-gap: 60px;
+          padding: 25px;
         }
 
         @above tablet {
