@@ -48,6 +48,31 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: 'G-NN6D94WGK9',
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/privacy', '/terms', '/cookies'],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Set Variation ID. 0 for original 1,2,3....
+        variationId: 'YOUR_GOOGLE_OPTIMIZE_VARIATION_ID',
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: 'example.com'
+      }
+    },
     `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-styled-jsx-postcss`, // as above

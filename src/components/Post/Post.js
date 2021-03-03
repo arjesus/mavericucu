@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 import ImageBlock from '../Image-block/imagineBLock.component';
 import 'prismjs/themes/prism-okaidia.css';
-import BlogResume from '../Blog-resume/Blog';
+import BlogResume from '../Blog-resume/Blog-resume';
 
 import asyncComponent from '../AsyncComponent';
 import Headline from '../Article/Headline';

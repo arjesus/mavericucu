@@ -13,15 +13,6 @@ export default class HTML extends React.Component {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />
           <meta name="apple-mobile-web-app-title" content="Lazywill" />
-          <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6D94WGK9"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-              
-            gtag('config', 'G-NN6D94WGK9');
-          </script>
           <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72" />

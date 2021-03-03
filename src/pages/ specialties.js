@@ -206,14 +206,7 @@ const ProfessionalPage = props => {
             <Grid container justify="space-around">
               {specialities.map((speciality, i) => {
                 return (
-                  <Grid
-                    key={i}
-                    item
-                    md={4}
-                    sm={6}
-                    xs={6}
-                    className={classes.plansCardsContainer}
-                  >
+                  <Grid key={i} item md={4} sm={6} xs={6} className={classes.plansCardsContainer}>
                     <div className={classes.plansCards}>
                       <h3>{speciality.title}</h3>
                       <p className={classes.paragraphInside}>{speciality.description}</p>
