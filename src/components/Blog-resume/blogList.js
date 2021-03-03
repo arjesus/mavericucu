@@ -1,5 +1,3 @@
-import PostShare from '../Post/Share';
-
 const blogPages = [
   {
     title: 'Como superar la ansiedad',
