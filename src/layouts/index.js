@@ -208,6 +208,7 @@ class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired
 };
 
