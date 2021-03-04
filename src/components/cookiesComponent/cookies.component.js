@@ -48,7 +48,7 @@ const useStyles = makeStyles({
     marginBottom: '2rem'
   },
   img: {
-    width: '90%',
+    width: '150px',
     position: 'relative',
     top: '-115px'
   },
@@ -57,7 +57,7 @@ const useStyles = makeStyles({
     flexDirection: 'row',
     justifyContent: 'flex-end'
   },
-  '@media (max-width: 600px)': {
+  '@media (max-width: 700px)': {
     cookiesBlockBox: {
       width: '100%',
       fontSize: '1rem',
@@ -69,8 +69,8 @@ const useStyles = makeStyles({
       marginBottom: '1rem'
     },
     img: {
-      width: '60%',
-      top: '-75px'
+      width: '70px',
+      top: '-60px'
     }
   }
 });

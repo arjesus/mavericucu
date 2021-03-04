@@ -140,6 +140,8 @@ class Layout extends React.Component {
                         font-family: 'Montserrat';
                         box-sizing: border-box;
                         font-weight: 100;
+                        max-width: 1920px;
+                        margin: 0 auto;
                       }
                       *,
                       *:after,

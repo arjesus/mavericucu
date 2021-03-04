@@ -79,6 +79,7 @@ class Header extends React.Component {
             height: 70px;
             position: relative;
             top: 0;
+            max-width: 1920px;
             width: 100%;
             align-items: center;
 
@@ -180,7 +181,7 @@ class Header extends React.Component {
                 padding: 0 ${theme.space.m};
                 position: fixed;
                 top: 0;
-                width: 100%;
+                max-width: 100%;
                 z-index: 1;
                 box-shadow: 0 3px 26px -1px rgba(0, 0, 0, 0.02), 0 1px 33px 0 rgba(0, 0, 0, 0.05),
                   0 0px 9px 0 #4e3b80;
