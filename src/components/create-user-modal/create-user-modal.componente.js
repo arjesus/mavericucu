@@ -6,7 +6,17 @@ import React, { useState } from 'react';
 import chatImg from '../../images/jpg/conversaicon-digital-01.svg';
 import Checkout from '../Checkout/checkout';
 import theme from '../../theme/theme.yaml';
-import DatePickerMaterialComponent from '../dynamic-form/date-picker/datepicker.material';
+// Custom Components
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import CheckoutForm from './checkoutForm';
+
+// Stripe
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
+
+// import DatePickerMaterialComponent from '../dynamic-form/date-picker/datepicker.material';
 
 const initialFormState = {
   name: '',
@@ -123,9 +133,9 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     handleInput(e.target.name, e.target.value);
   };
 
-  const handleChangeInputDate = date => {
-    handleInput('date', date);
-  };
+  // const handleChangeInputDate = date => {
+  //   handleInput('date', date);
+  // };
 
   return (
     <div>
@@ -156,11 +166,10 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               especialistas guías te contacten
             </p>
           </Grid>
-          <Grid item md={6}>
+          {/* <Grid item md={6}>
             <TextField
               name="name"
               id="standard-basic"
-              label="Standard"
               fullWidth
               label={'Nombre'}
               value={formFields.name}
@@ -171,7 +180,6 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
             <TextField
               name="surname"
               id="standard-basic"
-              label="Standard"
               fullWidth
               label={'Apellidos'}
               value={formFields.apellidos}
@@ -200,21 +208,28 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               value={formFields.phone}
               onChange={handleChangeInputEvent}
             />
-          </Grid>
+          </Grid> */}
           <Grid item sm={12} md={12} className={classes.center}>
-            <DatePickerMaterialComponent value={formFields.date} onChange={handleChangeInputDate} />
+            <Elements stripe={stripePromise}>
+              <CheckoutForm
+                handleChangeInputEvent={handleChangeInputEvent}
+                formFields={formFields}
+                chosenPlan={chosenPlan}
+              />
+            </Elements>
+            {/* <DatePickerMaterialComponent value={formFields.date} onChange={handleChangeInputDate} /> */}
           </Grid>
-          <Grid item md={6} className={(classes.center, classes.priceContainer)}>
+          {/* <Grid item md={6} className={(classes.center, classes.priceContainer)}>
             <Grid item md={12}>
               <p>{chosenPlan.name}</p>
             </Grid>
             <Grid item md={12}>
               <p>{chosenPlan.cost}</p>
             </Grid>
-          </Grid>
-          <Grid item md={12} className={classes.center}>
+          </Grid> */}
+          {/* <Grid item md={12} className={classes.center}>
             <Checkout id={chosenPlan.id} answer={formFields} handleClose={handleClose} />
-          </Grid>
+          </Grid> */}
           <Grid item md={12} className={classes.center}>
             <button className={classes.goBackButton} aria-label="scroll" onClick={handleClose}>
               Ver otros planes
