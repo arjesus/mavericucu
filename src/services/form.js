@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://eva-minerva.herokuapp.com'
+  // baseURL: 'https://eva-minerva.herokuapp.com'
+  baseURL: 'http://localhost:3000/'
+
   //withCredentials: true
 });
 
@@ -18,7 +20,6 @@ export const postFormAnswers = async answers => {
 export const postSortFormAnswers = async answers => {
   try {
     const response = await api.post('/form/sort', answers);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

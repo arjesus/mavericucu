@@ -32,8 +32,8 @@ const Checkout = ({ id, answer, handleClose }) => {
     const stripe = await stripePromise;
     const { error } = await stripe.redirectToCheckout({
       items: [{ sku: offers[id], quantity: 1 }],
-      successUrl: `${window.location.origin}/payment/`,
-      cancelUrl: `${window.location.origin}/`
+      successUrl: `${window.location.origin}/`,
+      cancelUrl: `${window.location.origin}/plans`
     });
 
     if (error) {
@@ -43,7 +43,7 @@ const Checkout = ({ id, answer, handleClose }) => {
 
   const handleClick = (e, answer, id) => {
     postSortFormAnswers({ answers: answer });
-    redirectToCheckout(e, id);
+    // redirectToCheckout(e, id);
     handleClose();
   };
 
