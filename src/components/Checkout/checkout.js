@@ -14,10 +14,21 @@ const useStyles = makeStyles({
     textAlign: 'center',
     fontWeight: '600',
     marginBottom: '1rem'
+  },
+  buttonDisable: {
+    backgroundColor: theme.color.principals.darkPurple,
+    padding: '9px 23px',
+    color: theme.color.principals.white,
+    borderRadius: '0.5rem',
+    fontSize: '18px',
+    textAlign: 'center',
+    fontWeight: '600',
+    marginBottom: '1rem',
+    opacity: '0.4'
   }
 });
 
-const Checkout = ({ id, answer, handleClose }) => {
+const Checkout = ({ id, answer, handleClose, disable }) => {
   const classes = useStyles();
 
   const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
@@ -31,7 +42,10 @@ const Checkout = ({ id, answer, handleClose }) => {
     event.preventDefault();
     const stripe = await stripePromise;
     const { error } = await stripe.redirectToCheckout({
+      customer_email: answer.email,
       items: [{ sku: offers[id], quantity: 1 }],
+      payment_method_types: ['card'],
+      mode: 'payment',
       successUrl: `${window.location.origin}/`,
       cancelUrl: `${window.location.origin}/plans`
     });
@@ -50,11 +64,12 @@ const Checkout = ({ id, answer, handleClose }) => {
   return (
     <React.Fragment>
       <button
-        className={classes.button}
+        className={disable ? classes.buttonDisable : classes.button}
         aria-label="scroll"
         onClick={e => handleClick(e, answer, id)}
+        disabled={disable}
       >
-        Confirmar información y hacer el pago
+        {disable ? 'Completar todos los campos' : 'Continuar con el pago'}
       </button>
     </React.Fragment>
   );

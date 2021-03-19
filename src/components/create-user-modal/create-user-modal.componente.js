@@ -84,7 +84,9 @@ const useStyles = makeStyles({
   priceContainer: {
     margin: '10px 0',
     backgroundColor: theme.color.principals.lightYellow,
-    borderRadius: '0.5rem'
+    borderRadius: '0.5rem',
+    display: 'flex',
+    justifyContent: 'center'
   },
   noPadding: {
     padding: '0'
@@ -104,6 +106,7 @@ const useStyles = makeStyles({
 
 const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => {
   const [formFields, setformFields] = useState(initialFormState);
+  const [disable, setDisable] = useState(true);
   const isEmailValid = email => {
     const numberRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -117,6 +120,14 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
       ...prevFormFields,
       [field]: value
     }));
+    if (
+      formFields.surname !== initialFormState.surname &&
+      formFields.name !== initialFormState.name &&
+      formFields.phone !== initialFormState.phone &&
+      formFields.email !== initialFormState.email
+    ) {
+      setDisable(false);
+    }
   };
 
   const handleChangeInputEvent = e => {
@@ -201,19 +212,21 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               onChange={handleChangeInputEvent}
             />
           </Grid>
-          <Grid item sm={12} md={12} className={classes.center}>
+          {/* <Grid item sm={12} md={12} className={classes.center}>
             <DatePickerMaterialComponent value={formFields.date} onChange={handleChangeInputDate} />
-          </Grid>
-          <Grid item md={6} className={(classes.center, classes.priceContainer)}>
-            <Grid item md={12}>
-              <p>{chosenPlan.name}</p>
-            </Grid>
-            <Grid item md={12}>
-              <p>{chosenPlan.cost}</p>
-            </Grid>
+          </Grid> */}
+          <Grid item md={12} className={(classes.center, classes.priceContainer)}>
+            <p>
+              {chosenPlan.name} {chosenPlan.cost}
+            </p>
           </Grid>
           <Grid item md={12} className={classes.center}>
-            <Checkout id={chosenPlan.id} answer={formFields} handleClose={handleClose} />
+            <Checkout
+              disable={disable}
+              id={chosenPlan.id}
+              answer={formFields}
+              handleClose={handleClose}
+            />
           </Grid>
           <Grid item md={12} className={classes.center}>
             <button className={classes.goBackButton} aria-label="scroll" onClick={handleClose}>
