@@ -42,10 +42,8 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
     event.preventDefault();
     const stripe = await stripePromise;
     const { error } = await stripe.redirectToCheckout({
-      customer_email: answer.email,
+      customerEmail: answer.email,
       items: [{ sku: offers[id], quantity: 1 }],
-      payment_method_types: ['card'],
-      mode: 'payment',
       successUrl: `${window.location.origin}/`,
       cancelUrl: `${window.location.origin}/plans`
     });
@@ -56,8 +54,8 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
   };
 
   const handleClick = (e, answer, id) => {
-    postSortFormAnswers({ answers: answer });
     redirectToCheckout(e, id);
+    postSortFormAnswers({ answers: answer });
     handleClose();
   };
 
