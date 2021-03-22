@@ -6,48 +6,39 @@ import logo from '../../../static/images/lirio.png';
 
 const arrOfData = [
   {
-    number: 5,
+    number: 4,
     percentage: '85%',
     style: 'width: 85%',
-    title: 'Header de la review',
+    title: '¡¡Estoy encantada!!',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
-    author: 'name autor'
-  },
-  {
-    number: 4,
-    percentage: '7%',
-    style: 'width: 85%',
-    title: 'Header de la review',
-    text:
-      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+      'Estoy encantada. La experiencia con EvaMinerva ha sido muy gratificante. Para mí era muy importante poder tener la comodidad de hacerlo desde casa, por eso la terapia online con la psicóloga que me asignaron me ha venido tan bien.',
     author: 'name autor'
   },
   {
     number: 3,
-    percentage: '3%',
-    style: 'width: 3%',
-    title: 'Header de la review',
+    percentage: '7%',
+    style: 'width: 85%',
+    title: 'Todo perfecto por ahora',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+      'No estaba segura al principio por si no era fácil de usar y no sabía comunicarme para que me entendieran, pero igual decidí probar. Después de 3 sesiones tengo que decir que es tan sencillo como navegar por cualquier red y poder encontrar una buena terapeuta de calidad. Diría que más fácil que hacerlo en persona.',
     author: 'name autor'
   },
   {
     number: 2,
-    percentage: '4%',
-    style: 'width: 4%',
-    title: 'Header de la review',
+    percentage: '3%',
+    style: 'width: 3%',
+    title: 'Elena es espectacular',
     text:
-      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+      'He de reconocer que me preocupaba que no encajara con la psicóloga, o no me sintiera cómoda... pero es que justamente han acertado con la terapeuta que me sugirieron. Elena me entiende y su forma de trabajar es justo la que encaja conmigo. Lo recomiendo completamente!',
     author: 'name autor'
   },
   {
     number: 1,
-    percentage: '1%',
-    style: 'width: 1%',
-    title: 'Header de la review',
+    percentage: '4%',
+    style: 'width: 4%',
+    title: 'Me siento muy respetado',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+      'Yo diría que desde el primer momento que me llamaron ya supe que aquí se cuida mucho a la persona que consulta. Me sentí siempre muy respetado y saben lo que hacen. Tanto que yo diría que después de varias sesiones me encuentro muy bien, y las herramientas que he aprendido me van a servir siempre.',
     author: 'name autor'
   }
 ];
@@ -157,23 +148,23 @@ class Evaluations extends React.Component {
             </div>
             <div className="review-container-comments">
               <div className="text">
-                <img src={logo} />
+                {/* <img src={logo} /> */}
                 <h3>{contentToRender.title}</h3>
               </div>
               <p>{contentToRender.text}</p>
-              <p>
+              {/* <p>
                 <i>{contentToRender.author}</i>
-              </p>
+              </p> */}
             </div>
             <div className="review-container-comments">
               <div className="text">
-                <img src={logo} />
+                {/* <img src={logo} /> */}
                 <h3>{secondContentToRender.title}</h3>
               </div>
               <p>{secondContentToRender.text}</p>
-              <p>
+              {/* <p>
                 <i>{secondContentToRender.author}</i>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -212,6 +203,7 @@ class Evaluations extends React.Component {
             h3 {
               color: ${theme.color.principals.darkerPurpleText};
               font-size: 24px;
+              font-weight: 600;
             }
 
             p {

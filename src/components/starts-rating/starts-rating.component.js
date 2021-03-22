@@ -30,7 +30,7 @@ export default function HoverRating() {
   return (
     <div className={classes.root}>
       <div className={classes.ratingStarts}>
-        <Rating name="size-large" defaultValue={defaultValue} size="large" />
+        <Rating name="size-large" defaultValue={defaultValue} size="large" disabled />
         <span>{defaultValue}</span>
       </div>
       <p>Basado en 1.492 evaluaciones y referencias web de nuestros psicólogos online</p>

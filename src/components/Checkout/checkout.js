@@ -57,7 +57,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
 
   const handleClick = (e, answer, id) => {
     postSortFormAnswers({ answers: answer });
-    // redirectToCheckout(e, id);
+    redirectToCheckout(e, id);
     handleClose();
   };
 
