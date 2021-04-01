@@ -11,44 +11,44 @@ import terapeuta5 from '../../../static/images/psychology/5.png';
 
 const arrOfData = [
   {
-    number: 5,
-    name: 'luis',
-    speciality: 'Especialista en problemas de autoestima',
+    number: 4,
+    name: 'Melisa',
+    speciality: 'Especialista en sexualidad',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
-    img: terapeuta5
+      'La plataforma Eva Minerva ha supuesto una gran solución a los problemas de movilidad que tenía con mis pacientes.',
+    img: terapeuta2
   },
   {
-    number: 4,
-    name: 'Pedro',
-    speciality: 'Especialista en fobias',
+    number: 5,
+    name: 'Sara',
+    speciality: 'Especialista en problemas de pareja',
     text:
-      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
-    img: terapeuta4
+      'La psicología online permite una terapia muy cómoda, puedo hablar con mis pacientes desde donde y cuando más lo necesites.',
+    img: terapeuta1
   },
   {
     number: 3,
     name: 'Raquel',
     speciality: 'Especialista en ansiedad',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+      'La web Eva Minerva me ha facilitado llegar a pacientes y motivos de consulta más adaptados a mi formación y experiencia.',
     img: terapeuta3
   },
   {
-    number: 2,
-    name: 'Melisa',
-    speciality: 'Especialista en sexualidad',
+    number: 1,
+    name: 'luis',
+    speciality: 'Especialista en problemas de autoestima',
     text:
-      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
-    img: terapeuta2
+      'La psicología online permite una terapia muy cómoda, puedo hablar con mis pacientes desde donde y cuando más lo necesites.',
+    img: terapeuta5
   },
   {
-    number: 1,
-    name: 'Sara',
-    speciality: 'Especialista en problemas de pareja',
+    number: 3,
+    name: 'Pedro',
+    speciality: 'Especialista en fobias',
     text:
-      'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
-    img: terapeuta1
+      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+    img: terapeuta4
   }
 ];
 

@@ -211,7 +211,7 @@ const ProfessionalPage = props => {
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>1 sesión por</p>
-                  <p className={classes.paragraphInsideBolder}>XX€</p>
+                  <p className={classes.paragraphInsideBolder}>35€</p>
                   <p />
                 </div>
                 <p className={classes.paragraph}>
@@ -232,8 +232,8 @@ const ProfessionalPage = props => {
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>4 sesiones por</p>
-                  <p className={classes.paragraphInsideBolder}>XX€</p>
-                  <p>cada una. Total XXX€</p>
+                  <p className={classes.paragraphInsideBolder}>33€</p>
+                  <p>cada una. Total 132€</p>
                 </div>
                 <p className={classes.paragraph}>
                   Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
@@ -253,8 +253,8 @@ const ProfessionalPage = props => {
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>8 sesiones por</p>
-                  <p className={classes.paragraphInsideBolder}>XX€</p>
-                  <p> cada una. Total XXX€</p>
+                  <p className={classes.paragraphInsideBolder}>29€</p>
+                  <p> cada una. Total 232€</p>
                 </div>
                 <p className={classes.paragraph}>
                   Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
