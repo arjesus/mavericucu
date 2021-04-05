@@ -14,7 +14,8 @@ const initialFormState = {
   surname: '',
   phone: null,
   email: '',
-  date: null
+  date: null,
+  plan: 0,
 };
 
 const useStyles = makeStyles({
@@ -106,6 +107,7 @@ const useStyles = makeStyles({
 });
 
 const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => {
+  initialFormState.plan = chosenPlan.id;
   const [formFields, setformFields] = useState(initialFormState);
   const [disable, setDisable] = useState(true);
   const [isReCaptcha, setIsReCaptcha] = useState(false);
