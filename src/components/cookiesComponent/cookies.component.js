@@ -131,7 +131,7 @@ const CookiesBlock = props => {
         </Grid>
         <Grid item md={1} sm={4} className={classes.cookiesBottom}>
           <button className={classes.button} onClick={handleClick}>
-            Entendido
+            Aceptar
           </button>
         </Grid>
       </Grid>

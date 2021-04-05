@@ -8,8 +8,14 @@ const useStyles = makeStyles({
   cardContainer: {
     padding: '20px 20px',
     color: theme.color.principals.darkerPurpleText,
+    borderRadius: '0.5rem',
+    cursor: 'pointer',
     boxShadow:
-      '0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12)'
+      '0 2.8px 2.2px rgba(0, 0, 0, 0.034),0 6.7px 5.3px rgba(0, 0, 0, 0.048),0 12.5px 10px rgba(0, 0, 0, 0.06),0 22.3px 17.9px rgba(0, 0, 0, 0.072),0 41.8px 33.4px rgba(0, 0, 0, 0.086),0 100px 80px rgba(0, 0, 0, 0.12)',
+    '&:hover': {
+      boxShadow:
+        '0 2.8px 2.2px rgba(105, 87, 153, 0.034),0 6.7px 5.3px rgba(105, 87, 153, 0.048),0 12.5px 10px rgba(105, 87, 153, 0.06),0 22.3px 17.9px rgba(105, 87, 153, 0.072),0 41.8px 33.4px rgba(105, 87, 153, 0.086),0 100px 80px rgba(105, 87, 153, 0.12)'
+    }
   },
   psychoImg: {
     width: '120px',
@@ -57,18 +63,20 @@ const PsychoCards = props => {
     for (let i = 0; i <= 2; i += 1) {
       cardToRender.push(
         <Grid key={i} item md={3} sm={12}>
-          <Grid container spacing={5} className={classes.cardContainer}>
+          <Grid container spacing={2} className={classes.cardContainer}>
             <Grid item sm={6}>
               <img className={classes.psychoImg} src={psychologists[i] && psychologists[i].img} />
             </Grid>
-            <Grid item sm={6} className={classes.psychoTitle}>
-              <p>{psychologists[i] && psychologists[i].name}</p>
-            </Grid>
-            <Grid item sm={12}>
-              <p className={classes.bold}>Especialidades:</p>
-              <p className={classes.psychoTextSpetialities}>
-                {psychologists[i] && psychologists[i].spectiality}
-              </p>
+            <Grid item sm={6}>
+              <Grid item sm={12} className={classes.psychoTitle}>
+                <p>{psychologists[i] && psychologists[i].name}</p>
+              </Grid>
+              <Grid item sm={12}>
+                <p className={classes.bold}>Especialidades:</p>
+                <p className={classes.psychoTextSpetialities}>
+                  {psychologists[i] && psychologists[i].spectiality}
+                </p>
+              </Grid>
             </Grid>
             <Grid item sm={12}>
               <p className={classes.psychoText}>{psychologists[i] && psychologists[i].text}</p>

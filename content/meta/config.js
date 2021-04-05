@@ -2,10 +2,10 @@ module.exports = {
   siteTitle: 'Eva Minerva', // <title>
   shortSiteTitle: 'Eva Minerva', // <title> ending for posts and pages
   siteDescription:
-    'Eva Minerva, plataforma de psicologia que pone en contacto a profesionales y gente interesada en cuidar su salid.',
-  siteUrl: 'https://evaminerca.com',
+    'Eva Minerva, plataforma de psicologia que pone en contacto a profesionales y gente interesada en cuidar su salud.',
+  siteUrl: 'https://evaminerva.com',
   // pathPrefix: "",
-  siteImage: 'preview.jpg',
+  siteImage: '../../static/icons/logo.png',
   siteLanguage: 'es',
 
   /* author */

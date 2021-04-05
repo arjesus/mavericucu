@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import chatImg from '../../images/jpg/conversaicon-digital-01.svg';
 import Checkout from '../Checkout/checkout';
 import theme from '../../theme/theme.yaml';
+import ReCAPTCHA from 'react-google-recaptcha';
 import DatePickerMaterialComponent from '../dynamic-form/date-picker/datepicker.material';
 
 const initialFormState = {
@@ -107,6 +108,7 @@ const useStyles = makeStyles({
 const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => {
   const [formFields, setformFields] = useState(initialFormState);
   const [disable, setDisable] = useState(true);
+  const [isReCaptcha, setIsReCaptcha] = useState(false);
   const isEmailValid = email => {
     const numberRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -128,6 +130,11 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     ) {
       setDisable(false);
     }
+  };
+
+  const onReCatchaChange = value => {
+    setIsReCaptcha(value);
+    console.log('Captcha value:', value);
   };
 
   const handleChangeInputEvent = e => {
@@ -221,11 +228,15 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
             </p>
           </Grid>
           <Grid item md={12} className={classes.center}>
+            <ReCAPTCHA sitekey={process.env.GOOGLE_CATCHAP} onChange={onReCatchaChange} />,
+          </Grid>
+          <Grid item md={12} className={classes.center}>
             <Checkout
               disable={disable}
               id={chosenPlan.id}
               answer={formFields}
               handleClose={handleClose}
+              isReCaptcha={isReCaptcha}
             />
           </Grid>
           <Grid item md={12} className={classes.center}>
