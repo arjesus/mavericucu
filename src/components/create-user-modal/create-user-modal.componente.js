@@ -136,7 +136,6 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
 
   const onReCatchaChange = value => {
     setIsReCaptcha(value);
-    console.log('Captcha value:', value);
   };
 
   const handleChangeInputEvent = e => {
