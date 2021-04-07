@@ -173,9 +173,19 @@ const specialities = [
     link: '/sexualidad'
   },
   {
-    title: 'Fobias y Miedos',
+    title: 'Fobia',
     description: '',
-    link: '/miedos'
+    link: '/fobias-miedos'
+  },
+  {
+    title: 'Coaching deportivo',
+    description: '',
+    link: '/coaching-deportivo'
+  },
+  {
+    title: 'Coaching',
+    description: '',
+    link: '/coaching'
   }
   // {
   //   title: 'Coaching o Mentoring',

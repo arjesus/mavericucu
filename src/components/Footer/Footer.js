@@ -62,32 +62,40 @@ const evaMinerva = [
 
 const specializacions = [
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Especialidades',
+    url: '/%20specialties'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Depresión',
+    url: '/depresión'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Autoestima',
+    url: '/autoestima'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Ansiedad',
+    url: '/ansiedad'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Terapia de pareja',
+    url: '/terapia-de-pareja'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Sexualidad',
+    url: '/sexualidad'
   },
   {
-    name: 'Eva Minerva',
-    url: '/'
+    name: 'Fobia',
+    url: '/fobias-miedos'
+  },
+  {
+    name: 'Coaching deportivo',
+    url: '/coaching-deportivo'
+  },
+  {
+    name: 'Coaching',
+    url: '/coaching'
   }
 ];
 
