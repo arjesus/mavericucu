@@ -150,7 +150,7 @@ const specialities = [
   {
     title: 'Depresión',
     description: '',
-    link: '/depresion'
+    link: '/depresión'
   },
   {
     title: 'Autoestima',
