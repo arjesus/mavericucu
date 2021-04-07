@@ -80,7 +80,8 @@ const PsychoCards = props => {
   const texts = setTitlePsycoCards(props.category ? props.category : 'Depresion')[0];
   const cardToRender = [];
   if (psychologists.length) {
-    for (let i = 0; i <= 2; i += 1) {
+    const numberOfCards = psychologists.length >= 2 ? 2 : psychologists.length;
+    for (let i = 0; i <= numberOfCards; i += 1) {
       cardToRender.push(
         <Grid key={i} item md={3} sm={12}>
           <Grid container spacing={2} className={classes.cardContainer}>
