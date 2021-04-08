@@ -150,7 +150,7 @@ const specialities = [
   {
     title: 'Depresión',
     description: '',
-    link: '/depresión'
+    link: '/depresion'
   },
   {
     title: 'Autoestima',
@@ -175,7 +175,7 @@ const specialities = [
   {
     title: 'Fobia',
     description: '',
-    link: '/fobias-miedos'
+    link: '/fobias'
   },
   {
     title: 'Coaching deportivo',

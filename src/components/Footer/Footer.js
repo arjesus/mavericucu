@@ -67,7 +67,7 @@ const specializacions = [
   },
   {
     name: 'Depresión',
-    url: '/depresión'
+    url: '/depresion'
   },
   {
     name: 'Autoestima',
@@ -87,7 +87,7 @@ const specializacions = [
   },
   {
     name: 'Fobia',
-    url: '/fobias-miedos'
+    url: '/fobias'
   },
   {
     name: 'Coaching deportivo',
