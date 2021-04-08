@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 import ImageBlock from '../Image-block/imagineBLock.component';
@@ -72,6 +72,13 @@ const Post = props => {
     button,
     img: cover
   };
+  const [isPost, setIsPost] = useState(true);
+
+  useEffect(() => {
+    if (window && window.location.pathname.includes('quienes-somos')) {
+      setIsPost(false);
+    }
+  }, []);
 
   return (
     <React.Fragment>
@@ -91,8 +98,8 @@ const Post = props => {
           {/* <Share post={post} theme={theme} /> */}
           {/* <Author note={authornote} theme={theme} /> */}
           {/* <NextPrev next={nextPost} prev={prevPost} theme={theme} /> */}
-          {text && <PsychoCards category={category} />}
-          <BlogResume category={category} />
+          {text & isPost && <PsychoCards category={category} />}
+          {text & isPost && <BlogResume category={category} />}
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>
