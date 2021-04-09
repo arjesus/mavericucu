@@ -229,7 +229,10 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
             </p>
           </Grid>
           <Grid item md={12} className={classes.center}>
-            <ReCAPTCHA sitekey={process.env.GOOGLE_CATCHAP} onChange={onReCatchaChange} />
+            <ReCAPTCHA
+              sitekey="6Lflv6IaAAAAAKEjAw4qHJBxu7WgD7Nxa-9g1Svh"
+              onChange={onReCatchaChange}
+            />
           </Grid>
           <Grid item md={12} className={classes.center}>
             <Checkout
