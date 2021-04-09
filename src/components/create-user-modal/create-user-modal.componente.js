@@ -240,7 +240,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               id={chosenPlan.id}
               answer={formFields}
               handleClose={handleClose}
-              isReCaptcha={isReCaptcha}
+              isReCaptcha={!isReCaptcha}
             />
           </Grid>
           <Grid item md={12} className={classes.center}>
