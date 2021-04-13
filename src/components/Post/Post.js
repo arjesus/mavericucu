@@ -70,6 +70,7 @@ const Post = props => {
     title,
     text,
     button,
+    category,
     img: cover
   };
   const [isPost, setIsPost] = useState(true);

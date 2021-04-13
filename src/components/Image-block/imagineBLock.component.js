@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
+import { getImg } from '../../utils/helpers';
 import theme from '../../theme/theme.yaml';
 import PropTypes from 'prop-types';
 
@@ -47,7 +48,8 @@ const useStyles = makeStyles({
   },
   img: {
     objectFit: 'contain',
-    width: '100%'
+    width: '100%',
+    maxWidth: '500px'
   },
   '@media (max-width: 600px)': {
     imgBox: {
@@ -90,8 +92,8 @@ const ImageBlock = props => {
           {imgBLockOptions.img.childImageSharp ? (
             <img
               className={classes.img}
-              src={imgBLockOptions.img.childImageSharp.resize.src}
-              alt="Woman sitting on a sofa"
+              src={getImg(imgBLockOptions.category)}
+              alt={imgBLockOptions.category}
             />
           ) : (
             <img

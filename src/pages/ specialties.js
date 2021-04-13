@@ -2,7 +2,8 @@ import React from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import theme from '../theme/theme.yaml';
-import womanSofa from '../images/jpg/3778535-01 (1).svg';
+import womanSofa from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/depresion.svg';
+import { getImg } from '../utils/helpers';
 
 const useStyles = makeStyles({
   professional: {
@@ -21,7 +22,6 @@ const useStyles = makeStyles({
     textAlign: 'center'
   },
   button: {
-    backgroundColor: theme.color.principals.darkerPurpleText,
     padding: '20px 15px',
     color: 'white',
     width: '260px',
@@ -52,7 +52,11 @@ const useStyles = makeStyles({
   },
   imgBox: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '& img': {
+      width: '100%',
+      maxWidth: '500px'
+    }
   },
   title: {
     fontSize: '2.3rem',
@@ -96,10 +100,9 @@ const useStyles = makeStyles({
     alignItems: 'center',
     borderRadius: '0.5rem',
     textAlign: 'center',
-    padding: '10px 15px',
+    padding: '15px 15px',
     marginBottom: '20px',
-    height: '200px',
-    backgroundColor: theme.color.principals.lightPurple,
+    border: `1px solid ${theme.color.principals.darkerPurpleText}`,
     width: '300px'
   },
   plansCardsContainer: {
@@ -148,7 +151,7 @@ const useStyles = makeStyles({
 
 const specialities = [
   {
-    title: 'Depresión',
+    title: 'Depresion',
     description: '',
     link: '/depresion'
   },
@@ -168,12 +171,12 @@ const specialities = [
     link: '/terapia-de-pareja'
   },
   {
-    title: 'Sexualidad',
+    title: 'Terapia sexual',
     description: '',
     link: '/sexualidad'
   },
   {
-    title: 'Fobia',
+    title: 'Fobias',
     description: '',
     link: '/fobias'
   },
@@ -216,10 +219,17 @@ const ProfessionalPage = props => {
             <Grid container justify="space-around">
               {specialities.map((speciality, i) => {
                 return (
-                  <Grid key={i} item md={4} sm={6} xs={6} className={classes.plansCardsContainer}>
+                  <Grid key={i} item md={3} sm={6} xs={6} className={classes.plansCardsContainer}>
                     <div className={classes.plansCards}>
                       <h3>{speciality.title}</h3>
                       <p className={classes.paragraphInside}>{speciality.description}</p>
+                      <Grid item md={6} sm={12} className={classes.imgBox}>
+                        <img
+                          className={classes.img}
+                          src={getImg(speciality.title)}
+                          alt={speciality.description}
+                        />
+                      </Grid>
                       <a className={classes.button} href={speciality.link}>
                         Saber mas
                       </a>
@@ -249,7 +259,11 @@ const ProfessionalPage = props => {
               </a>
             </Grid>
             <Grid item md={6} sm={12} className={classes.imgBox}>
-              <img src={womanSofa} alt="Woman sitting on a sofa" />
+              <img
+                className={classes.img}
+                src={getImg('Depresion')}
+                alt="Woman sitting on a sofa"
+              />
             </Grid>
           </Grid>
         </Grid>
