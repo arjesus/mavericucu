@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import theme from '../theme/theme.yaml';
@@ -13,16 +13,19 @@ const plansDefinition = [
   {
     id: 0,
     name: 'Plan semanal',
+    url: 'semanal',
     cost: 'Una session por 35€'
   },
   {
     id: 1,
     name: 'Plan mensual',
+    url: 'mensual',
     cost: '4 sesiones por 29€ cada una. Total 116€'
   },
   {
     id: 2,
     name: 'Plan bimensual',
+    url: 'bimensual',
     cost: '8 sesiones por 24€ cada una. Total 192€'
   }
 ];
@@ -162,6 +165,7 @@ const ProfessionalPage = props => {
   const [chosenPlan, setChosenPlan] = useState({});
 
   const handleOpen = plan => {
+    history.pushState(null, null, plansDefinition[plan].url);
     setChosenPlan(plansDefinition[plan]);
     setOpenModal(true);
   };
@@ -169,6 +173,11 @@ const ProfessionalPage = props => {
   const handleClose = () => {
     setOpenModal(false);
   };
+
+  window.addEventListener('popstate', event => {
+    setChosenPlan({});
+    setOpenModal(false);
+  });
 
   const classes = useStyles();
   return (
