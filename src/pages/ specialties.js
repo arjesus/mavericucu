@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import theme from '../theme/theme.yaml';
-import womanSofa from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/depresion.svg';
 import { getImg } from '../utils/helpers';
 
 const useStyles = makeStyles({
