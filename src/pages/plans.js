@@ -174,10 +174,12 @@ const ProfessionalPage = props => {
     setOpenModal(false);
   };
 
-  window && window.addEventListener('popstate', event => {
-    setChosenPlan({});
-    setOpenModal(false);
-  });
+  if (typeof window !== 'undefined') {
+    window.addEventListener('popstate', event => {
+      setChosenPlan({});
+      setOpenModal(false);
+    });
+  }
 
   const classes = useStyles();
   return (
