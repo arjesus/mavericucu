@@ -31,6 +31,10 @@
     margin-left: 10px;
   }
 
+  .MuiSvgIcon-fontSizeLarge {
+    font-size: 4rem;
+  }
+
   @media (max-width: 600px) {
     .footer {
       align-items: flex-start !important;
@@ -41,6 +45,7 @@
       justify-content: center;
     }
   }
+  
   .footer {
     padding: 115px 0 50px 0;
     align-items: center;

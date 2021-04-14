@@ -7,6 +7,9 @@ import theme from '../../theme/theme.yaml';
 import logo from '../../../static/images/white-logo-text.png';
 import Eulogo from '../../../static/images/logo_startup_awards.png';
 import { makeStyles } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import config from '../../../content/meta/config';
 import './footer.css';
 
@@ -151,6 +154,17 @@ const Footer = props => {
                   <div className="logo-container">
                     <img className="logo" src={Eulogo} alt={config.siteTitle} />
                   </div>
+                </Grid>
+                <Grid item md={12} className="social-media-container">
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <FacebookIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <InstagramIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <LinkedInIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
                 </Grid>
               </Grid>
               <Grid item sm={12} md={3}>
