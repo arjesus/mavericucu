@@ -4,15 +4,15 @@ import terapeuta2 from '../../static/images/psychology/2.png';
 import terapeuta3 from '../../static/images/psychology/3.png';
 import terapeuta4 from '../../static/images/psychology/4.png';
 import terapeuta5 from '../../static/images/psychology/5.png';
-import ansiedad from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/ansiedad.svg';
-import depresion from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/depresion.svg';
-import fobias from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/fobias.svg';
-import sexualidad from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/sexualidad.svg';
-import terapiaPareja from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/terapìa-pareja.svg';
-import coaching from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/coaching.svg';
-import autoestima from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/autoestima.svg';
-import coachingDeportivo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/coaching-deportivo.svg';
-import logo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg-icons/Logo.svg';
+import ansiedad from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/ansiedad.svg';
+import depresion from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/depresion.svg';
+import fobias from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/fobias.svg';
+import sexualidad from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/sexualidad.svg';
+import terapiaPareja from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/terapìa-pareja.svg';
+import coaching from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/coaching.svg';
+import autoestima from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/autoestima.svg';
+import coachingDeportivo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/specialties/coaching-deportivo.svg';
+import logo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg/Logo.svg';
 
 export function getScreenWidth() {
   if (typeof window !== `undefined`) {
