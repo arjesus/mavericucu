@@ -12,7 +12,7 @@ import terapiaPareja from '/home/ismael/Documents/Coding/Ev/mavericucu/src/image
 import coaching from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/coaching.svg';
 import autoestima from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/autoestima.svg';
 import coachingDeportivo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/specialties/coaching-deportivo.svg';
-import logo from '/home/ismael/Documents/Coding/Ev/mavericucu/static/images/Logosin fondo.svg';
+import logo from '/home/ismael/Documents/Coding/Ev/mavericucu/src/images/svg-icons/Logo.svg';
 
 export function getScreenWidth() {
   if (typeof window !== `undefined`) {
