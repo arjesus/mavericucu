@@ -174,7 +174,7 @@ const ProfessionalPage = props => {
     setOpenModal(false);
   };
 
-  window.addEventListener('popstate', event => {
+  window && window.addEventListener('popstate', event => {
     setChosenPlan({});
     setOpenModal(false);
   });
