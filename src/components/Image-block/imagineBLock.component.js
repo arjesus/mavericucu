@@ -66,11 +66,11 @@ const ImageBlock = props => {
   const { imgBLockOptions } = props;
 
   const isProfessional = text => {
-    if (text.includes('Más información sobre Eva Minerva')) return '/plans';
+    if (text.includes('Más información')) return '/plans';
     return 'https://kf2sm3o3mb2.typeform.com/to/ux4iyPRY';
   };
   const isProfessionalTarget = text => {
-    if (text.includes('Más información sobre Eva Minerva')) return '';
+    if (text.includes('Más información')) return '';
     return '_blank';
   };
 

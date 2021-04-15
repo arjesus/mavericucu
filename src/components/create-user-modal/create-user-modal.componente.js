@@ -14,6 +14,7 @@ const initialFormState = {
   surname: '',
   phone: null,
   email: '',
+  emailSecure: '',
   date: null,
   plan: 0
 };
@@ -128,7 +129,8 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
       formFields.surname !== initialFormState.surname &&
       formFields.name !== initialFormState.name &&
       formFields.phone !== initialFormState.phone &&
-      formFields.email !== initialFormState.email
+      formFields.email !== initialFormState.email &&
+      formFields.email !== initialFormState.emailSecure
     ) {
       setDisable(false);
     }
@@ -207,6 +209,19 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               type="email"
               label="Email"
               value={formFields.email}
+              onChange={handleChangeInputEvent}
+            />
+          </Grid>
+          <Grid item md={6}>
+            <TextField
+              name="email"
+              error={!validEmail}
+              helperText={!validEmail && 'Email incorrecto'}
+              placeholder={formFields.email}
+              fullWidth
+              type="email"
+              label="Complete de nuevo con su Email"
+              value={formFields.emailSecure}
               onChange={handleChangeInputEvent}
             />
           </Grid>

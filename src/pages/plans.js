@@ -198,21 +198,16 @@ const ProfessionalPage = props => {
             </h2>
             <Grid item md={12} className={classes.titleSubText}>
               <p>
-                Para disfrutar de la primera sesión gratuita con tu psicólogo primero tendrás que
-                elegir uno de nuestros planes.
+                Para disfrutar de la primera sesión gratuita con tu psicólogo elige primero uno de
+                nuestros planes iniciales.
               </p>
               <p>
                 Todos los planes incluyen <strong>dos sesiones gratuitas:</strong> Una sesión con el
                 especialista guia y la primera sesión de la terapia con tu psicologo.
               </p>
               <p>
-                El objetivo del especialista guia es el de conocerte y entender mejor para así poder
-                encontrar el psicólogo más adaptado a ti.
-              </p>
-              <p>La segunda sesión gratuita será con tu psicólogo terapeuta. </p>
-              <p>
-                En el caso de que después de la primera sesión con tu psicólogo terapetura, no estas
-                100% conforme, te haremos un <strong>reembolso del 100% de tu plan.</strong>
+                En el caso de que después de la primera sesión con tu psicólogo terapetura, no estés
+                100% conforme, te haremos un reembolso del 100% de tu plan.
               </p>
             </Grid>
             <Grid container justify="space-around" direction="row">
@@ -227,7 +222,7 @@ const ProfessionalPage = props => {
                 </div>
                 <p className={classes.paragraph}>
                   Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
-                  especialista guia{' '}
+                  especialista guía{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -248,7 +243,7 @@ const ProfessionalPage = props => {
                 </div>
                 <p className={classes.paragraph}>
                   Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
-                  especialista guia{' '}
+                  especialista guía{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -269,7 +264,7 @@ const ProfessionalPage = props => {
                 </div>
                 <p className={classes.paragraph}>
                   Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
-                  especialista guia{' '}
+                  especialista guía{' '}
                 </p>
                 <button
                   className={classes.button}
@@ -294,17 +289,22 @@ const ProfessionalPage = props => {
               gratuita te haremos un reembolso del 100 % de tu plan.
             </p>
             <p className={classes.paragraph}>
-              Todos los planes incluyen la posibilidad de cambio de psicólogo online si es asi como
-              tu lo sientes.
+              Todos los planes incluyen la posibilidad de cambio de psicólogo online si es así como
+              tú lo sientes.
             </p>
             <p className={classes.paragraph}>
-              Tu primera sesión con el psicólogo será importante para determinar el motivo de la
-              consulta y clarificar los objetivos que se persiguen durante el desarrollo del plan,
-              así como para conocer a tu psicólogo online y dar los primeros pasos en tu terapia.
+              El objetivo del especialista guía es el de conocerte y entender mejor para así poder
+              encontrar el psicólogo más adaptado a ti.
+            </p>
+            <p className={classes.paragraph}>
+              Tu primera sesión gratuita con el psicólogo será importante para determinar el motivo
+              de la consulta y clarificar los objetivos que se persiguen durante el desarrollo del
+              plan, así como para conocer a tu psicólogo online y dar los primeros pasos en tu
+              terapia.
             </p>
             <p className={classes.paragraph}>
               Una vez finalizada esta primera consulta gratuita, y en caso de que desees continuar
-              trabajando con tu psicologo online, tu plan elegido se hará activo. El servicio se
+              trabajando con tu psicólogo online, tu plan elegido se hará activo. El servicio se
               desarrollará a través de video sesiones semanales de 45 a 60 minutos. Si tu prefieres
               también puede ser mediante llamadas telefónicas
             </p>

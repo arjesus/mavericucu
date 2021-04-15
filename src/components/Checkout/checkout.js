@@ -44,7 +44,7 @@ const Checkout = ({ id, answer, handleClose, disable, isReCaptcha }) => {
     const { error } = await stripe.redirectToCheckout({
       customerEmail: answer.email,
       items: [{ sku: offers[id], quantity: 1 }],
-      successUrl: `${window.location.origin}/`,
+      successUrl: `https://meetings.hubspot.com/info10678/sesion-con-tu-especialista-guia`,
       cancelUrl: `${window.location.origin}/plans`
     });
 

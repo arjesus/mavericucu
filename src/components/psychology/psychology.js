@@ -127,9 +127,12 @@ const Psychology = props => {
           </p>
           <p>
             Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
-            salud y bienestar, como por ejemplo nutricionistas, coaches o profesional de la
-            actividad física, esto hace posible que tú y tu psicólogo online podáis trabajar
-            conjuntamente con profesionales de diferentes ámbitos, guiandote de la manera más
+            salud y bienestar, como por ejemplo nutricionistas o profesionales de la actividad
+            física.
+          </p>
+          <p>
+            Esto hace posible que tú y tu psicólogo online podáis trabajar conjuntamente con
+            profesionales de diferentes ámbitos, trabajando tu bienestar de la manera más
             especializada y práctica posible.
           </p>
         </div>

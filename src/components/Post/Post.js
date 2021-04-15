@@ -81,6 +81,8 @@ const Post = props => {
     }
   }, []);
 
+  console.log(isPost, text, 'aaaaaaaaaaaaaaaaaaaa');
+
   return (
     <React.Fragment>
       <div className={classes.postCard}>
@@ -99,8 +101,8 @@ const Post = props => {
           <Share post={post} theme={theme} />
           {/* <Author note={authornote} theme={theme} /> */}
           {/* <NextPrev next={nextPost} prev={prevPost} theme={theme} /> */}
-          {text & isPost && <PsychoCards category={category} />}
-          {text & isPost && <BlogResume category={category} />}
+          {text && isPost && <PsychoCards category={category} />}
+          {text && isPost && <BlogResume category={category} />}
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>

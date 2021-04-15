@@ -17,16 +17,15 @@ const Plans = props => {
             <p>Facilidad para probar. Primera sesión gratuita</p>
           </li>
           <li>
-            <p>Todos nuestros psicólogos si están titulados y colegiados</p>
+            <p>Todos nuestros psicólogos SI están titulados y colegiados</p>
           </li>
           <li>
-            <p>Terapia desde 35 euros la sesion</p>
+            <p>Terapia desde 29€ euros la sesión</p>
           </li>
           <li>
             <p>
               Encontramos el psicólogo online que más se adapta a ti mediante una sesión personal
-              con un especialista guia. Además, te facilitamos cambiar de psicologo en cualquier
-              momento.
+              con un especialista. Además, podrás cambiar de psicólogo en cualquier momento.
             </p>
           </li>
         </ul>
@@ -35,16 +34,16 @@ const Plans = props => {
             <h3>Otras terapias</h3>
           </div>
           <li>
-            <p>Tienes que moverte a un piso del centro de ciudad</p>
+            <p>Tienes que desplazarte a un piso del centro de ciudad</p>
           </li>
           <li>
-            <p>Te dan una sesión informativa gratuita, no una terapia.</p>
+            <p>Te dan una sesión informativa gratuita, NO una terapia.</p>
           </li>
           <li>
             <p>Trabajan con psicólogos online con poca cualificación</p>
           </li>
           <li>
-            <p>Psicologos online cobrando precios nada accesibles </p>
+            <p>Psicologos online cobrando precios nada accesibles</p>
           </li>
           <li>
             <p>

@@ -3,7 +3,7 @@ title: Coaching Deportivo Online
 category: "Coaching deportivo"
 cover: coaching-deportivo.png
 text: Además de información sobre coaching deportivo, sus objetivos y técnicas, en esta pagina podras encontrar mas contenido sobre nuestros psicólogos online especializados coaching deportivo.
-button: Más información sobre Eva Minerva
+button: Más información
 ---
 ## Que es el coaching deportivo
 

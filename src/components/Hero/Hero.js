@@ -49,8 +49,8 @@ const Hero = props => {
             <div className="call-to-action">
               <h2>
                 <strong>
-                  Ayuda psicológica especial durante periodo de confinamiento con psicólogos
-                  especializados en el impacto emocional del coronavirus COVID-19
+                  Ayuda psicológica especial con psicólogos online especializados en el impacto de
+                  la Covid-19
                 </strong>
               </h2>
             </div>
@@ -63,12 +63,12 @@ const Hero = props => {
           <div className="hero-sub-text">
             <h2>Primeras sesiones gratuitas con tu psicólogo online</h2>
             <div>
+              <p>La primera sesión con tu psicólogo online es gratuita.</p>
               <p>
-                La primera sesion con tu psicologo online sera gratuita, ademas, antes de aignarte
-                un psicologo nuestros espcialistas guias te contactaran, sin ningun coste, para que
-                de forma segura y privada encontrar el psicologo que mas se adapta a tí.
+                Además, antes de asignarte un psicólogo nuestros especialistas guías te contactaran
+                personalmente para encontrar el psicólogo que más se adapta a ti.
               </p>
-              <p>Empieza tu terapia mediante video o telefono hoy mismo.</p>
+              <p>Empieza tu terapia mediante video o teléfono hoy mismo.</p>
             </div>
             <a href="/plans">Reserva tu cita</a>
           </div>
@@ -83,7 +83,7 @@ const Hero = props => {
           <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
           <div className="blockColumn plans-sub">
             <div className="plans-sub-text">
-              <h3>Primera Sesiones Gratuitas con tu psicólogo online y tu especialista guia</h3>
+              <h3>Primeras Sesiones Gratuitas con tu psicólogo online y tu especialista guía</h3>
               <img src={webAssistance} />
               <a href="/plans" className="plans-botton">
                 Empezar
@@ -93,31 +93,28 @@ const Hero = props => {
           </div>
         </div>
         <div className="steps">
-          <h2>Sin compromiso. Fácil, asequible y 100% adaptado a ti </h2>
+          <h2>Sin compromiso. Fácil, asequible y 100% adaptado a ti</h2>
           <div className="steps-img-container">
             <div className="hero-sub-image">
               <img src={paso1} alt="Mujer psicologa ayudando" />
-              <h3>Contactanos</h3>
+              <h3>Contáctanos</h3>
               <p>
-                Mediante nuestro formulario web nuestros especialistas guías te contactaran en la
-                hora y momento que solicites.
+                Mediante nuestro formulario indica tu disponibilidad para hablar con un especialista
+                guía.
               </p>
             </div>
             <div className="hero-sub-image">
               <img src={paso2} alt="Mujer psicologa ayudando" />
-              <h3>Habla con nuestro especialista guia</h3>
+              <h3>Habla con un especialista guía</h3>
               <p>
-                Nuestros especialistas te contactaran para encontrar el psicólogo online más
-                adaptado a ti.
+                Un especialista hablará contigo para conocerte mejor y así encontrar tu psicólogo
+                online.
               </p>
             </div>
             <div className="hero-sub-image">
               <img src={paso3} alt="Mujer psicologa ayudando" />
               <h3>Comienza tu terapia online</h3>
-              <p>
-                Conoce a tu pcenter-buttonsicólogo online y empieza tu primera sesión gratuita hoy
-                mismo.
-              </p>
+              <p>Conoce a tu psicólogo online y empieza tu primera sesión gratuita hoy mismo.</p>
             </div>
           </div>
         </div>
@@ -132,10 +129,11 @@ const Hero = props => {
               <p>
                 Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
                 resultados de nuestra terapia online, pero a la hora de la verdad{' '}
-                <strong>lo que cuenta es tu experiencia. </strong>
+                <strong>lo que cuenta es tu experiencia. </strong>Elige a continuación el plan que
+                más se adapte a ti para empezar a disfrutar de tus primeras sesiones gratuitas.
               </p>
             </div>
-            <a href="/plans">Empezar</a>
+            <a href="/plans">Elige tu plan</a>
           </div>
           <div className="hero-sub-image">
             <img src={logo} alt="Mujer psicologa ayudando" />

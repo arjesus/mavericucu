@@ -33,7 +33,7 @@ export default function HoverRating() {
         <Rating name="size-large" defaultValue={defaultValue} size="large" disabled />
         <span>{defaultValue}</span>
       </div>
-      <p>Basado en 1.492 evaluaciones y referencias web de nuestros psicólogos online</p>
+      <p>Basado en 192 evaluaciones y referencias web de nuestros psicólogos online</p>
     </div>
   );
 }
