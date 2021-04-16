@@ -100,7 +100,7 @@ const Post = props => {
         </header>
         <Bodytext html={html} theme={theme} />
         <footer>
-          <Share post={post} theme={theme} />
+          {/* <Share post={post} theme={theme} /> */}
           {/* <Author note={authornote} theme={theme} /> */}
           {/* <NextPrev next={nextPost} prev={prevPost} theme={theme} /> */}
           {text && category !== 'quienes somos' && isPost && <PsychoCards category={category} />}
