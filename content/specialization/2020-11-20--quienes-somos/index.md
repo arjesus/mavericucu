@@ -2,13 +2,7 @@
 title: ¿QUIENES SOMOS?
 category: "quienes somos"
 cover: mujerjovendeprimida-01.jpg
-text: "Nuestra historia comenzó durante el primer confinamiento del Coronavirus COVID-19. Como consecuencia del impacto en la salud mental de las personas, nuestra fundadoras, Eva y Katerina, tuvieron una idea revolucionaria
-
-“La psicología tendría un impacto más positivo para la sociedad en caso de hacerse online, ya que esto no solo la haría más accesible, sino que también haría posible que otros especialistas, como nutricionistas, entrenadores físicos o mentores en multitud de áreas, pudiesen trabajar de la mano con los psicólogos"
-
-Con este fin en mente, y con muchas ganas de apoyar a las personas a conseguir su bienestar, formamos una pequeña empresa a finales de 2020. Nuestro primer gran logro fue conseguir que cientos de psicólogos colegiados se integrasen a nuestra red, además de otros muchos profesionales relacionados con el bienestar. 
-
-Al poco tiempo de formar una red de cerca de mil profesionales, y tras desarrollar una tecnología pionera en inteligencia artificial, pudiésemos comenzar a encontrar al profesional que más se adapta a cada persona que buscaba sentirse mejor, comenzando así nuestra pequeñas revolución de la psicología y del bienestar."
+text: Nuestra historia comenzó durante el primer confinamiento del Coronavirus COVID-19. Como consecuencia del impacto en la salud mental de las personas, nuestra fundadoras, Eva y Katerina, tuvieron una idea revolucionaria La psicología tendría un impacto más positivo para la sociedad en caso de hacerse online, ya que esto no solo la haría más accesible, sino que también haría posible que otros especialistas, como nutricionistas, entrenadores físicos o mentores en multitud de áreas, pudiesen trabajar de la mano con los psicólogos" Con este fin en mente, y con muchas ganas de apoyar a las personas a conseguir su bienestar, formamos una pequeña empresa a finales de 2020. Nuestro primer gran logro fue conseguir que cientos de psicólogos colegiados se integrasen a nuestra red, además de otros muchos profesionales relacionados con el bienestar. Al poco tiempo de formar una red de cerca de mil profesionales, y tras desarrollar una tecnología pionera en inteligencia artificial, pudiésemos comenzar a encontrar al profesional que más se adapta a cada persona que buscaba sentirse mejor, comenzando así nuestra pequeñas revolución de la psicología y del bienestar.
 
 button: Más información
 ---
