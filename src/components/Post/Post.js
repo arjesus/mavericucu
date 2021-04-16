@@ -76,10 +76,14 @@ const Post = props => {
   const [isPost, setIsPost] = useState(true);
 
   useEffect(() => {
-    if (window && window.location.pathname.includes('quienes-somos')) {
+    console.log('cccccccccccccccccccccccccccccccc');
+    if (category === 'quienes somos') {
+      console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
       setIsPost(false);
     }
-  }, []);
+  }, [category]);
+
+  console.log(imgBLockOptions, 'aAAAAAAAAAAAAAAAAAAAA');
 
   return (
     <React.Fragment>
@@ -99,8 +103,8 @@ const Post = props => {
           <Share post={post} theme={theme} />
           {/* <Author note={authornote} theme={theme} /> */}
           {/* <NextPrev next={nextPost} prev={prevPost} theme={theme} /> */}
-          {text && isPost && <PsychoCards category={category} />}
-          {text && isPost && <BlogResume category={category} />}
+          {text && category !== 'quienes somos' && isPost && <PsychoCards category={category} />}
+          {text && category !== 'quienes somos' && isPost && <BlogResume category={category} />}
           {/* <Comments slug={slug} facebook={facebook} theme={theme} /> */}
         </footer>
       </div>
