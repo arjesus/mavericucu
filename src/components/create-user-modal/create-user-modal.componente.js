@@ -32,7 +32,9 @@ const useStyles = makeStyles({
       backgroundColor: theme.color.principals.white,
       zIndex: 9999999,
       padding: '15px 40px',
-      borderRadius: '0.5rem'
+      borderRadius: '0.5rem',
+      maxHeight: '100vh',
+      overflowY: 'auto'
     },
     '@media (max-width: 600px)': {
       '& .MuiGrid-container': {
