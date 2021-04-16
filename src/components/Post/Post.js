@@ -81,8 +81,6 @@ const Post = props => {
     }
   }, []);
 
-  console.log(isPost, text, 'aaaaaaaaaaaaaaaaaaaa');
-
   return (
     <React.Fragment>
       <div className={classes.postCard}>
