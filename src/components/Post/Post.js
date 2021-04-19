@@ -76,14 +76,10 @@ const Post = props => {
   const [isPost, setIsPost] = useState(true);
 
   useEffect(() => {
-    console.log('cccccccccccccccccccccccccccccccc');
     if (category === 'quienes somos') {
-      console.log('bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
       setIsPost(false);
     }
   }, [category]);
-
-  console.log(imgBLockOptions, 'aAAAAAAAAAAAAAAAAAAAA');
 
   return (
     <React.Fragment>

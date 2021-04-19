@@ -10,11 +10,11 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import DatePickerMaterialComponent from '../dynamic-form/date-picker/datepicker.material';
 
 const initialFormState = {
-  name: '',
-  surname: '',
+  name: null,
+  surname: null,
   phone: null,
-  email: '',
-  emailSecure: '',
+  email: null,
+  emailSecure: null,
   date: null,
   plan: 0
 };
@@ -122,19 +122,17 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
   const validEmail = formFields.email === '' || isEmailValid(formFields.email);
   const classes = useStyles();
 
-  const handleInput = (field, value) => {
-    setformFields(prevFormFields => ({
-      ...prevFormFields,
-      [field]: value
-    }));
-    if (
-      formFields.surname !== initialFormState.surname &&
-      formFields.name !== initialFormState.name &&
-      formFields.phone !== initialFormState.phone &&
-      formFields.email !== initialFormState.email &&
-      formFields.email !== initialFormState.emailSecure
-    ) {
+  const handleInput = (name, value) => {
+    const form = {
+      ...formFields,
+      [name]: value
+    };
+    setformFields(form);
+    const sameEmail = form.emailSecure === form.email;
+    if (form.surname && form.name && form.phone && form.email && sameEmail) {
       setDisable(false);
+    } else {
+      setDisable(true);
     }
   };
 
@@ -143,7 +141,8 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
   };
 
   const handleChangeInputEvent = e => {
-    handleInput(e.target.name, e.target.value);
+    const { name, value } = e.target;
+    handleInput(name, value);
   };
 
   const handleChangeInputDate = date => {
@@ -216,11 +215,17 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           </Grid>
           <Grid item md={6}>
             <TextField
-              name="email"
+              name="emailSecure"
               error={!validEmail}
               helperText={!validEmail && 'Email incorrecto'}
               placeholder={formFields.email}
               fullWidth
+              inputProps={{
+                autocomplete: 'new-password',
+                form: {
+                  autocomplete: 'off'
+                }
+              }}
               type="email"
               label="Complete de nuevo con su Email"
               value={formFields.emailSecure}
