@@ -13,8 +13,8 @@ const initialFormState = {
   name: null,
   surname: null,
   phone: null,
-  email: null,
-  emailSecure: null,
+  email: '',
+  emailSecure: '',
   date: null,
   plan: 0
 };
