@@ -129,7 +129,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     };
     setformFields(form);
     const sameEmail = form.emailSecure === form.email;
-    if (form.surname && form.name && form.phone && form.email && sameEmail) {
+    if (form.surname && form.name && form.phone && form.email && sameEmail && isReCaptcha) {
       setDisable(false);
     } else {
       setDisable(true);
