@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Checkout = ({ id, answer, handleClose, disable, isReCaptcha }) => {
+const Checkout = ({ id, answer, handleClose, disable }) => {
   const classes = useStyles();
 
   const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
@@ -67,7 +67,7 @@ const Checkout = ({ id, answer, handleClose, disable, isReCaptcha }) => {
         onClick={e => handleClick(e, answer, id)}
         disabled={disable}
       >
-        {disable && isReCaptcha ? 'Completar todos los campos' : 'Continuar con el pago'}
+        {disable ? 'Completar todos los campos' : 'Continuar con el pago'}
       </button>
     </React.Fragment>
   );
