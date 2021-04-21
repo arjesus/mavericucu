@@ -181,10 +181,16 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           <Grid item md={6}>
             <TextField
               name="name"
-              id="standard-basic"
+              id="name-form"
               label="Standard"
               fullWidth
               label={'Nombre'}
+              inputProps={{
+                autocomplete: 'new-password',
+                form: {
+                  autocomplete: 'on'
+                }
+              }}
               value={formFields.name}
               onChange={handleChangeInputEvent}
             />
@@ -192,10 +198,16 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           <Grid item md={6}>
             <TextField
               name="surname"
-              id="standard-basic"
+              id="surname-form"
               label="Standard"
               fullWidth
               label={'Apellidos'}
+              inputProps={{
+                autocomplete: 'new-password',
+                form: {
+                  autocomplete: 'on'
+                }
+              }}
               value={formFields.apellidos}
               onChange={handleChangeInputEvent}
             />
@@ -203,10 +215,17 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           <Grid item md={6}>
             <TextField
               name="email"
+              id="email-form"
               error={!validEmail}
               helperText={!validEmail && 'Email incorrecto'}
               placeholder="email@address.com"
               fullWidth
+              inputProps={{
+                autocomplete: 'new-password',
+                form: {
+                  autocomplete: 'on'
+                }
+              }}
               type="email"
               label="Email"
               value={formFields.email}
@@ -215,6 +234,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           </Grid>
           <Grid item md={6}>
             <TextField
+              id="secondEmail-form"
               name="emailSecure"
               error={!validEmail}
               helperText={!validEmail && 'Email incorrecto'}
@@ -235,13 +255,13 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           <Grid item md={6}>
             <TextField
               name="phone"
-              id="standard-basic"
+              id="phone-form"
               label="Telefono"
               fullWidth
               inputProps={{
                 autocomplete: 'new-password',
                 form: {
-                  autocomplete: 'off'
+                  autocomplete: 'on'
                 }
               }}
               value={formFields.phone}
