@@ -238,6 +238,12 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
               id="standard-basic"
               label="Telefono"
               fullWidth
+              inputProps={{
+                autocomplete: 'new-password',
+                form: {
+                  autocomplete: 'off'
+                }
+              }}
               value={formFields.phone}
               onChange={handleChangeInputEvent}
             />

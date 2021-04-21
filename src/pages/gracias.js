@@ -82,7 +82,7 @@ const ThankYouPage = props => {
               </Grid>
             </Grid>
             <Grid item md={12}>
-              <a href="/quienes-somos" className={classes.button}>Descubre Nuestra Historia y Nuestros Orígenes</a>
+              <a href="/quienes-somos" className={classes.button}>Descubre Nuestra Historia</a>
             </Grid>
             <Grid item md={12}>
               <a href="/" className={classes.back}>

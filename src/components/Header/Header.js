@@ -15,13 +15,28 @@ import SecondMenu from '../Menu/SecondMenu';
 class Header extends React.Component {
   state = {
     fixed: false,
-    screenWidth: 0
+    screenWidth: 0,
+    logoClass: {
+      style: 'logo',
+      img: logo
+    }
   };
 
   componentDidMount() {
+    let logoClass = {
+      style: 'logo',
+      img: logo
+    };
+    if (getScreenWidth() < 760) {
+      logoClass = {
+        style: 'logoSmall',
+        img: smallLogo
+      };
+    }
     this.setState({
       screenWidth: getScreenWidth(),
-      portrait: isPortrait()
+      portrait: isPortrait(),
+      logoClass
     });
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', this.resizeThrottler, false);
@@ -45,17 +60,13 @@ class Header extends React.Component {
 
   render() {
     const { pages, path, theme } = this.props;
-    const { screenWidth, portrait } = this.state;
+    const { screenWidth, portrait, logoClass } = this.state;
 
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
-            <img
-              className={screenWidth < 760 ? 'logoSmall' : 'logo'}
-              src={screenWidth < 760 ? smallLogo : logo}
-              alt={config.siteTitle}
-            />
+            <img className={logoClass.style} src={logoClass.img} alt={config.siteTitle} />
           </Link>
           <FontLoadedContext.Consumer>
             {loaded => (

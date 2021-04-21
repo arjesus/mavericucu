@@ -24,7 +24,8 @@ const useStyles = makeStyles({
     textAlign: 'center',
     fontWeight: '600',
     marginBottom: '1rem',
-    opacity: '0.4'
+    opacity: '0.4',
+    cursor: 'pointer'
   }
 });
 
