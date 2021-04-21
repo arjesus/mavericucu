@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     fontSize: '18px',
     textAlign: 'center',
     fontWeight: '600',
-    marginBottom: '1rem'
+    marginBottom: '1rem',
+    cursor: 'pointer'
   },
   buttonDisable: {
     backgroundColor: theme.color.principals.darkPurple,
@@ -24,9 +25,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
     fontWeight: '600',
     marginBottom: '1rem',
-    opacity: '0.4',
-    cursor: 'pointer'
-  }
+    opacity: '0.4'  }
 });
 
 const Checkout = ({ id, answer, handleClose, disable }) => {
