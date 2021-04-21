@@ -110,7 +110,7 @@ const useStyles = makeStyles({
   },
   '@media (max-width: 600px)': {
     professional: {
-      padding: '30px 20px 35px 20px'
+      padding: '5px 20px 35px 20px'
     },
     imgBox: {
       '& img': {

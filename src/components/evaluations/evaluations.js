@@ -105,7 +105,7 @@ class Evaluations extends React.Component {
   intervalReviewText() {
     const intervalId = setInterval(() => {
       this.changeReview();
-    }, 3000);
+    }, 6000);
     this.setState({
       intervalId
     });

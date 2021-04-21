@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     color: theme.color.principals.darkerPurpleText
   },
   contactButton: {
-    fontSize: '1.3rem',
+    fontSize: '1rem',
     backgroundColor: theme.color.principals.darkPurple,
     color: theme.color.principals.white,
     padding: '10px 10px',

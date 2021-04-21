@@ -130,7 +130,7 @@ class Header extends React.Component {
           }
 
           .logoSmall {
-            width: 160px;
+            width: 140px;
             margin-left: 10px;
           }
 
