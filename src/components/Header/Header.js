@@ -9,7 +9,7 @@ import config from '../../../content/meta/config';
 import Menu from '../Menu';
 
 import logo from '../../../static/images/logo-top.png';
-import smallLogo from '../../../static/images/logo.png';
+import smallLogo from '../../../static/images/logo-small-text.png';
 import SecondMenu from '../Menu/SecondMenu';
 
 class Header extends React.Component {
@@ -130,7 +130,8 @@ class Header extends React.Component {
           }
 
           .logoSmall {
-            width: 100px;
+            width: 160px;
+            margin-left: 10px;
           }
 
           .sensor {

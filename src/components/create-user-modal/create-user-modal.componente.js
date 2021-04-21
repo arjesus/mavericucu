@@ -120,6 +120,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     return numberRegex.test(String(email).toLowerCase());
   };
   const validEmail = formFields.email === '' || isEmailValid(formFields.email);
+  const validSecondEmail = formFields.emailSecure === '' || isEmailValid(formFields.emailSecure);
   const classes = useStyles();
 
   const handleInput = (name, value) => {
@@ -227,8 +228,8 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           <Grid item md={6}>
             <TextField
               name="emailSecure"
-              error={!validEmail}
-              helperText={!validEmail && 'Email incorrecto'}
+              error={!validSecondEmail}
+              helperText={!validSecondEmail && 'Email incorrecto'}
               placeholder={formFields.email}
               fullWidth
               inputProps={{

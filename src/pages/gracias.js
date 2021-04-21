@@ -9,7 +9,10 @@ const useStyles = makeStyles({
     padding: '55px 0 10px 0',
     color: theme.color.principals.darkerPurpleText,
     maxWidth: '1000px',
-    margin: '0 auto'
+    margin: '0 auto',
+    '@media (max-width: 600px)': {
+      padding: '0px 0 10px 0'
+    }
   },
   thankyouContainer: {
     backgroundColor: 'white',
