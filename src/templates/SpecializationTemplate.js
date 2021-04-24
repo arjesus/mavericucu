@@ -63,13 +63,6 @@ export const specializationQuery = graphql`
       frontmatter {
         title
         category
-        cover {
-          childImageSharp {
-            resize(width: 300) {
-              src
-            }
-          }
-        }
         text
         button
       }
@@ -88,15 +81,6 @@ export const specializationQuery = graphql`
           frontmatter {
             title
             category
-            cover {
-              children {
-                ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
             button
           }
         }

@@ -5,7 +5,7 @@ import Item from './Item';
 
 const Blog = props => {
   const { posts, theme } = props;
-
+console.log(posts, 'aaaaaaaaaaaaaaaaaaaaaaaaaaa');
   return (
     <React.Fragment>
       <main className="main">

@@ -1,11 +1,15 @@
-import { FaArrowRight } from "react-icons/fa/";
-import { FaCalendar } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
-import Img from "gatsby-image";
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { FaArrowRight } from 'react-icons/fa/';
+import { FaCalendar } from 'react-icons/fa/';
+import { FaTag } from 'react-icons/fa/';
+import { FaUser } from 'react-icons/fa/';
+import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { getPost } from '../../utils/helpers';
+import trabajo from '/src/images/jpg/telegrabajo.jpg';
+import relajacion from '../../../content/posts/2021-04-22--tecnica-relajacion/relajacion.jpg';
+import aislamiento from '../../../content/posts/2021-04-21--fin-aislamiento-ansiedad/fin-aislamiento-ansiedad.jpg';
 
 const Item = props => {
   const {
@@ -13,23 +17,23 @@ const Item = props => {
     post: {
       excerpt,
       fields: { slug, prefix },
-      frontmatter: {
-        title,
-        category,
-        author,
-        cover: {
-          children: [{ fluid }]
-        }
-      }
+      frontmatter: { title, category, author, cover }
     }
   } = props;
+
+  const img = {
+    'Teletrabajo': trabajo,
+    'Relajacion': relajacion,
+    'FIn aislamiento': aislamiento
+  }
+console.log(img[category]);
 
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Img fluid={fluid} />
+            <Img src={img[category]} />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />
@@ -78,7 +82,7 @@ const Item = props => {
 
           &::after {
             border-top: 1px solid ${theme.color.principals.lightPurple};
-            content: "";
+            content: '';
             height: 0;
             position: absolute;
             bottom: ${`calc(${theme.space.default} * -1.5)`};
@@ -91,7 +95,7 @@ const Item = props => {
           &:first-child {
             &::before {
               border-top: 1px solid ${theme.color.principals.lightPurple};
-              content: "";
+              content: '';
               height: 0;
               position: absolute;
               top: ${`calc(${theme.space.default} * -1.5)`};

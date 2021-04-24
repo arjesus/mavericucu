@@ -89,7 +89,7 @@ const ImageBlock = props => {
           </a>
         </Grid>
         <Grid item md={6} sm={12} className={classes.imgBox}>
-          {imgBLockOptions.img.childImageSharp ? (
+          {imgBLockOptions.img ? (
             <img
               className={classes.img}
               src={getImg(imgBLockOptions.category)}

@@ -62,13 +62,7 @@ export const postQuery = graphql`
       frontmatter {
         title
         category
-        cover {
-          childImageSharp {
-            resize(width: 300) {
-              src
-            }
-          }
-        }
+        author
       }
     }
     authornote: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {

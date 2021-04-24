@@ -105,19 +105,19 @@ const specializacions = [
 const blogs = [
   {
     name: 'Blog',
-    url: '/'
+    url: '/blog'
   },
   {
-    name: 'Blog 2',
-    url: '/'
+    name: 'Tecnica de relaciòn',
+    url: '/tecnica-relajacion/'
   },
   {
-    name: 'Blog 3',
-    url: '/'
+    name: 'Teletrabajo e impacto psicológico',
+    url: '/teletrabajo'
   },
   {
-    name: 'Blog 4',
-    url: '/'
+    name: 'Fin del aislamiento y ansiedad',
+    url: '/fin-aislamiento-ansiedad'
   }
 ];
 
@@ -258,15 +258,6 @@ export const query = graphql`
           frontmatter {
             title
             category
-            cover {
-              children {
-                ... on ImageSharp {
-                  fluid(maxWidth: 800, maxHeight: 360) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
           }
         }
       }
