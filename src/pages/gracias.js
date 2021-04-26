@@ -57,12 +57,14 @@ const useStyles = makeStyles({
 const ThankYouPage = props => {
   const classes = useStyles();
   useEffect(() => {
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
-      value: 60.0,
-      currency: 'EUR',
-      transaction_id: 'ismael-test1'
-    });
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
+        value: 60.0,
+        currency: 'EUR',
+        transaction_id: 'ismael-test1'
+      });
+    }
   }, []);
   return (
     <Box mt={2}>
