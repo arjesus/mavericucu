@@ -56,6 +56,14 @@ const useStyles = makeStyles({
 
 const ThankYouPage = props => {
   const classes = useStyles();
+  useEffect(() => {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
+      value: 60.0,
+      currency: 'EUR',
+      transaction_id: 'ismael-test1'
+    });
+  }, []);
   return (
     <Box mt={2}>
       <Grid container direction="column" className={classes.thankyouPage}>
@@ -85,7 +93,9 @@ const ThankYouPage = props => {
               </Grid>
             </Grid>
             <Grid item md={12}>
-              <a href="/quienes-somos" className={classes.button}>Descubre Nuestra Historia</a>
+              <a href="/quienes-somos" className={classes.button}>
+                Descubre Nuestra Historia
+              </a>
             </Grid>
             <Grid item md={12}>
               <a href="/" className={classes.back}>
