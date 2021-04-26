@@ -14,19 +14,22 @@ const plansDefinition = [
     id: 0,
     name: 'Plan semanal',
     url: 'semanal',
-    cost: 'Una session por 35€'
+    cost: 'Una session por 35€',
+    value: 35
   },
   {
     id: 1,
     name: 'Plan mensual',
     url: 'mensual',
-    cost: '4 sesiones por 29€ cada una. Total 116€'
+    cost: '4 sesiones por 29€ cada una. Total 116€',
+    value: 116
   },
   {
     id: 2,
     name: 'Plan bimensual',
     url: 'bimensual',
-    cost: '8 sesiones por 24€ cada una. Total 192€'
+    cost: '8 sesiones por 24€ cada una. Total 192€',
+    value: 192
   }
 ];
 
@@ -168,6 +171,13 @@ const ProfessionalPage = props => {
     history.pushState(null, null, plansDefinition[plan].url);
     setChosenPlan(plansDefinition[plan]);
     setOpenModal(true);
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-382469846/sldjCKrs9osCENaNsLYB',
+        value: plansDefinition[plan].value,
+        currency: 'EUR'
+      });
+    }
   };
 
   const handleClose = () => {
