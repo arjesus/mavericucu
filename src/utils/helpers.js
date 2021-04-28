@@ -12,7 +12,7 @@ import terapiaPareja from '/src/images/specialties/terapìa-pareja.svg';
 import coaching from '/src/images/specialties/coaching.svg';
 import autoestima from '/src/images/specialties/autoestima.svg';
 import coachingDeportivo from '/src/images/specialties/coaching-deportivo.svg';
-import logo from '/static/images/Logosin fondo.svg';
+import logo from '/static/images/logosinfondo.svg';
 
 export function getScreenWidth() {
   if (typeof window !== `undefined`) {

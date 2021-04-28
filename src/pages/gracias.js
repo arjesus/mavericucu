@@ -57,11 +57,10 @@ const useStyles = makeStyles({
 const ThankYouPage = props => {
   const classes = useStyles();
   useEffect(() => {
-    const plan = localStorage.getItem('plan');
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
       window.gtag('event', 'conversion', {
         send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
-        value: plan,
+        value: localStorage.getItem('plan'),
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });

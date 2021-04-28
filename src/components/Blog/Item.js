@@ -26,14 +26,13 @@ const Item = props => {
     'Relajacion': relajacion,
     'FIn aislamiento': aislamiento
   }
-console.log(img[category]);
 
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Img src={img[category]} />
+            <Img src={relajacion} />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />
