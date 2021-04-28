@@ -57,12 +57,13 @@ const useStyles = makeStyles({
 const ThankYouPage = props => {
   const classes = useStyles();
   useEffect(() => {
+    const plan = localStorage.getItem('plan');
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
         send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
-        value: 60.0,
+        value: plan,
         currency: 'EUR',
-        transaction_id: 'ismael-test1'
+        transaction_id: localStorage.getItem('id')
       });
     }
   }, []);

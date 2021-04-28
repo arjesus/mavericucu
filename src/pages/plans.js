@@ -171,11 +171,13 @@ const ProfessionalPage = props => {
     history.pushState(null, null, plansDefinition[plan].url);
     setChosenPlan(plansDefinition[plan]);
     setOpenModal(true);
+    localStorage.setItem('plan', plansDefinition[plan].value);
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
         send_to: 'AW-382469846/sldjCKrs9osCENaNsLYB',
         value: plansDefinition[plan].value,
-        currency: 'EUR'
+        currency: 'EUR',
+        transaction_id: localStorage.getItem('id')
       });
     }
   };

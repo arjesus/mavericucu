@@ -43,6 +43,9 @@ class Layout extends React.Component {
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', this.resizeThrottler, false);
     }
+    if (localStorage.getItem('Cookies') && !localStorage.getItem('id')) {
+      localStorage.setItem('id', Math.floor(100000 + Math.random() * 900000));
+    }
   }
 
   resizeThrottler = () => {
