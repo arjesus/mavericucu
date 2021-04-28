@@ -179,6 +179,11 @@ const ProfessionalPage = props => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
+      
+      window.gtag('event', 'compra', {
+        event_name: "compra",
+        Gallina: "50",
+      });
     }
   };
 
