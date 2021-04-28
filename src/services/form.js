@@ -18,6 +18,12 @@ export const postFormAnswers = async answers => {
 
 export const postSortFormAnswers = async answers => {
   try {
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'compra', {
+        event_name: "compra",
+        Gallina: "50",
+      });
+    }
     const response = await api.post('/form/sort', answers);
     return response.data;
   } catch (error) {
