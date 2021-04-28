@@ -7,9 +7,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { getPost } from '../../utils/helpers';
-import trabajo from '/src/images/jpg/telegrabajo.jpg';
-import relajacion from '../../../content/posts/2021-04-22--tecnica-relajacion/relajacion.jpg';
-import aislamiento from '../../../content/posts/2021-04-21--fin-aislamiento-ansiedad/fin-aislamiento-ansiedad.jpg';
 
 const Item = props => {
   const {
@@ -21,18 +18,18 @@ const Item = props => {
     }
   } = props;
 
-  const img = {
-    'Teletrabajo': trabajo,
-    'Relajacion': relajacion,
-    'FIn aislamiento': aislamiento
-  }
-
   return (
     <React.Fragment>
       <li>
         <Link to={slug} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
-            <Img src={relajacion} />
+            <img
+              width="900"
+              height="700"
+              className="blog-image"
+              src={getPost(category)}
+              alt={category}
+            />
           </div>
           <h1>
             {title} <FaArrowRight className="arrow" />
@@ -72,11 +69,13 @@ const Item = props => {
 
           :global(.gatsby-image-outer-wrapper) {
             border-radius: ${theme.size.radius.default};
-            border: 1px solid ${theme.color.principals.lightPurple};
             overflow: hidden;
           }
           :global(.gatsby-image-outer-wrapper img) {
             z-index: 0;
+            width: 100%;
+            height: auto;
+            border-radius: ${theme.size.radius.default};
           }
 
           &::after {

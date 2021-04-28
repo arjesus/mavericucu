@@ -5,11 +5,7 @@ cover: teletrabajo.jpg
 author: Lucía García-Figueras Arizmendi
 ---
 
-![unsplash.com](./teletrabajo.jpg)
-
-
-![test](./teletrabajo.jpg)
-
+![alt text](telegrabajo.jpg "Teletrabajo")
 
 ` `**Teletrabajo e impacto psicológico. Las 7 Pautas para mejorar**
 

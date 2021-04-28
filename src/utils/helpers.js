@@ -13,6 +13,10 @@ import coaching from '/src/images/specialties/coaching.svg';
 import autoestima from '/src/images/specialties/autoestima.svg';
 import coachingDeportivo from '/src/images/specialties/coaching-deportivo.svg';
 import logo from '/static/images/logosinfondo.svg';
+import trabajo from '/content/posts/2021-04-21--teletrabajo/telegrabajo.jpg';
+import relajacion from '/content/posts/2021-04-22--tecnica-relajacion/relajacion.jpg';
+import aislamiento from '/content/posts/2021-04-21--fin-aislamiento-ansiedad/fin-aislamiento-ansiedad.jpg';
+
 
 export function getScreenWidth() {
   if (typeof window !== `undefined`) {
@@ -58,6 +62,15 @@ export const getImg = category => {
     'Coaching': coaching,
     'Coaching deportivo': coachingDeportivo,
     'Terapia sexual': sexualidad
+  }
+  return img[category];
+}
+
+export const getPost = category => {
+  const img = {
+    'Teletrabajo': trabajo,
+    'Relajacion': relajacion,
+    'Fin aislamiento': aislamiento
   }
   return img[category];
 }

@@ -5,6 +5,7 @@ cover: fin-aislamiento-ansiedad.jpg
 author: 
 ---
 
+![alt text](fin-aislamiento-ansiedad.jpg "Fin del aislamiento y ansiedad. Cómo afrontarlo")
 # Fin del aislamiento y ansiedad. Cómo afrontarlo
 
 Para la mayoría de las personas, es la primera vez en nuestras vidas que hemos tenido que aislarnos completamente de la vida exterior, y no sólo una vez sino que, a estas alturas, posiblemente hasta dos y tres veces por contagio, precaución o estricta indicación médica. Esto implica que empezamos a normalizar el aislamiento, así como las consecuencias psicológicas que este genera. Incluso puede que estemos buscando aislarnos voluntariamente por malestar emocional o estados ansiosos generados a raíz de la pandemia.

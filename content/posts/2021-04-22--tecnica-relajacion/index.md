@@ -5,6 +5,7 @@ cover:
 author: 
 ---
 
+![alt text](relajacion.jpg "3 técnicas para relajarse en casa")
 # 3 técnicas para relajarse en casa
 
 La nueva normalidad nos ha traído muchos cambios repentinos en muy poco tiempo. Entre ellos, el de buscarnos formas alternativas a nuestra rutina exterior pero dentro de casa. Como la situación general puede provocar intensos niveles de estrés es importante conocer formas para aprender a relajarse sin salir de casa.
