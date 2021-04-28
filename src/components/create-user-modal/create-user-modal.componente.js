@@ -145,7 +145,6 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
         ['gclid']: localStorage.getItem('gclid')
       };
       setformFields(form);
-      console.log(form, 'aaaaaaaaaaaaaaaaaaaaaaaa');
     }
   }, []);
 
