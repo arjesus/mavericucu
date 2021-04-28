@@ -2,7 +2,7 @@ import { Grid } from '@material-ui/core';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import chatImg from '../../images/jpg/conversaicon-digital-01.svg';
 import Checkout from '../Checkout/checkout';
 import theme from '../../theme/theme.yaml';
@@ -16,7 +16,8 @@ const initialFormState = {
   email: '',
   emailSecure: '',
   date: null,
-  plan: 0
+  plan: 0,
+  gclid: null
 };
 
 const useStyles = makeStyles({
@@ -136,6 +137,17 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
       setDisable(true);
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem('gclid')) {
+      const form = {
+        ...formFields,
+        ['gclid']: localStorage.getItem('gclid')
+      };
+      setformFields(form);
+      console.log(form, 'aaaaaaaaaaaaaaaaaaaaaaaa');
+    }
+  }, []);
 
   const onReCatchaChange = value => {
     const sameEmail = formFields.emailSecure === formFields.email;
