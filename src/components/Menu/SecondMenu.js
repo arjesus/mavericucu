@@ -62,12 +62,12 @@ const SecondMenu = props => {
 
   const items = [
     { to: '/', label: 'Home' },
-    // { to: "/category/", label: "Blog", icon: FaTag },
     { to: '/plans/', label: 'Planes' },
     // { to: "/search/", label: "Search", icon: FaSearch },
     // ...pages,
     { to: '/professional/', label: 'Trabaja con nosotros' },
     { to: '/quienes-somos/', label: 'Quienes somos' },
+    { to: '/blog/', label: 'Blog' },
     { to: '/%20specialties/', label: 'Especialidades' },
     // { to: '/professional/', label: 'Trabaja Con nosotros', icon: FaSearch },
     { to: '/plans/', label: 'Comenzar' }
