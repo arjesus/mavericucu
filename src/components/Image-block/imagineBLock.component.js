@@ -95,8 +95,8 @@ const ImageBlock = props => {
               src={imgBLockOptions.img}
               alt={imgBLockOptions.category}
               loading="lazy"
-              height=""
-              width=""
+              height="470"
+              width="740"
             />
           ) : (
             <img
@@ -104,8 +104,8 @@ const ImageBlock = props => {
               src={getImg(imgBLockOptions.category)}
               alt="Woman sitting on a sofa"
               loading="lazy"
-              height=""
-              width=""
+              height="470"
+              width="740"
             />
           )}
         </Grid>

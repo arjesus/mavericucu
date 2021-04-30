@@ -97,7 +97,7 @@ const ProfessionalPage = props => {
             <h2 className={classes.title}>Ventajas de ser psicólogos online en Eva Minerva </h2>
             <Grid container justify="space-around" direction="row" spacing={5}>
               <Grid item md={3} sm={12} className={classes.professionalCards}>
-                <img src={calendar} alt="Calendar" className={classes.professionalCardsImages} loading="lazy" height="" width=""/>
+                <img src={calendar} alt="Calendar" className={classes.professionalCardsImages} loading="lazy" height="300" width="300"/>
                 <h3 className={classes.secondaryTitle}>Horario flexible</h3>
                 <p className={classes.paragraph}>
                   Programa con antelación o selecciona algún bloque disponible, adaptando tus
@@ -109,7 +109,7 @@ const ProfessionalPage = props => {
                   src={homeOffice}
                   alt="Woman working from home"
                   className={classes.professionalCardsImages}
-                  loading="lazy" height="" width=""
+                  loading="lazy" height="300" width="300"
                 />
                 <h3 className={classes.secondaryTitle}>Trabajar desde casa</h3>
                 <p className={classes.paragraph}>
@@ -118,7 +118,7 @@ const ProfessionalPage = props => {
                 </p>
               </Grid>
               <Grid item md={3} sm={12} className={classes.professionalCards}>
-                <img src={handMoney} alt="Money" className={classes.professionalCardsImages} loading="lazy" height="" width=""/>
+                <img src={handMoney} alt="Money" className={classes.professionalCardsImages} loading="lazy" height="300" width="300"/>
                 <h3 className={classes.secondaryTitle}>Ingresos adicionales </h3>
                 <p className={classes.paragraph}>
                   Consigue ingresos, reduce los gastos de la práctica privada y llega a nuevos
