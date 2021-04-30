@@ -29,6 +29,7 @@ const Item = props => {
               className="blog-image"
               src={getPost(category)}
               alt={category}
+              loading="lazy"
             />
           </div>
           <h1>

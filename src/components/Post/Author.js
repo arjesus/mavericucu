@@ -14,6 +14,7 @@ const Author = props => {
           <img
             src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
             alt={config.siteTitle}
+            loading="lazy" height="" width=""
           />
         </div>
         <div className="note" dangerouslySetInnerHTML={{ __html: note }} />

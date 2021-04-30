@@ -190,7 +190,14 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           alignItems="center"
         >
           <Grid item md={12} className={classes.center}>
-            <img className={classes.modalImg} src={chatImg} alt="Dos personas hablando" />
+            <img
+              className={classes.modalImg}
+              src={chatImg}
+              alt="Dos personas hablando"
+              loading="lazy"
+              height=""
+              width=""
+            />
           </Grid>
           <Grid item md={12} className={classes.center}>
             <h2 className={classes.title}>¡Perfecto, has elegido el Plan Semanal!</h2>

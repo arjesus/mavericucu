@@ -5,7 +5,10 @@ module.exports = function(chunksTotal, { node }) {
     internal: { content }
   } = node;
 
-  const noEmojiContent = content.replace(/<img class="emoji-icon".+\/>/g, "");
+  const noEmojiContent = content.replace(
+    /<img loading="lazy" height="" width="" class="emoji-icon".+\/>/g,
+    ''
+  );
 
   const contentChunks = chunkString(noEmojiContent, 5000);
   const record = { title, slug, content };
@@ -20,5 +23,5 @@ module.exports = function(chunksTotal, { node }) {
 };
 
 function chunkString(str, length) {
-  return str.match(new RegExp("(.|[\r\n]){1," + length + "}", "g"));
+  return str.match(new RegExp('(.|[\r\n]){1,' + length + '}', 'g'));
 }

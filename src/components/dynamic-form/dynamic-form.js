@@ -34,7 +34,7 @@ const DynamicForm = () => {
             (handleSubmit(),
             (
               <div className="hola-container">
-                <img src={hellow} alt="Woman sitting on a sofa" />
+                <img src={hellow} alt="Woman sitting on a sofa" loading="lazy" height="" width="" />
                 <p>
                   Antes de empezar tu primera sesión gratuita y para saber un poco más sobre ti
                   necesitamos que respondas brevemente a unas preguntas.i
@@ -229,7 +229,13 @@ const DynamicForm = () => {
             (handleSubmit(),
             (
               <div className="feel-container-finish">
-                <img src={conversation} alt="Woman sitting on a sofa" />
+                <img
+                  src={conversation}
+                  alt="Woman sitting on a sofa"
+                  loading="lazy"
+                  height=""
+                  width=""
+                />
                 <h3>Empecemos {name}.</h3>
                 <p>
                   Elige el plan que más se adapte a ti, nuestro psicólogo guia te contactara para

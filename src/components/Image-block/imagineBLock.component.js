@@ -90,12 +90,22 @@ const ImageBlock = props => {
         </Grid>
         <Grid item md={6} sm={12} className={classes.imgBox}>
           {imgBLockOptions.img ? (
-            <img className={classes.img} src={imgBLockOptions.img} alt={imgBLockOptions.category} />
+            <img
+              className={classes.img}
+              src={imgBLockOptions.img}
+              alt={imgBLockOptions.category}
+              loading="lazy"
+              height=""
+              width=""
+            />
           ) : (
             <img
               className={classes.imgBox}
               src={getImg(imgBLockOptions.category)}
               alt="Woman sitting on a sofa"
+              loading="lazy"
+              height=""
+              width=""
             />
           )}
         </Grid>

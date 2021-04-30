@@ -77,7 +77,7 @@ const ThankYouPage = props => {
             spacing={5}
             className={classes.plansBox}
           >
-            <img className={classes.logo} src={logo} alt={logo} />
+            <img className={classes.logo} src={logo} alt={logo} loading="lazy" height="" width=""/>
             <h2 className={classes.title}>¡Gracias por confiar en Eva Minerva!</h2>
             <Grid item md={12} className={classes.titleSubText}>
               <p>

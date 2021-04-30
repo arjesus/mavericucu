@@ -86,7 +86,7 @@ const PsychoCards = props => {
         <Grid key={i} item md={3} sm={12}>
           <Grid container spacing={2} className={classes.cardContainer}>
             <Grid item sm={6}>
-              <img className={classes.psychoImg} src={psychologists[i] && psychologists[i].img} />
+              <img className={classes.psychoImg} src={psychologists[i] && psychologists[i].img} alt="" loading="lazy" height="" width=""/>
             </Grid>
             <Grid item sm={6}>
               <Grid item sm={12} className={classes.psychoTitle}>

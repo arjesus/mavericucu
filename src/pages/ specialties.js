@@ -227,6 +227,7 @@ const ProfessionalPage = props => {
                           className={classes.img}
                           src={getImg(speciality.title)}
                           alt={speciality.description}
+                          loading="lazy" height="" width=""
                         />
                       </Grid>
                       <a className={classes.button} href={speciality.link}>
@@ -262,6 +263,7 @@ const ProfessionalPage = props => {
                 className={classes.img}
                 src={getImg('Depresion')}
                 alt="Woman sitting on a sofa"
+                loading="lazy" height="" width=""
               />
             </Grid>
           </Grid>

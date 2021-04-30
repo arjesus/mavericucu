@@ -331,7 +331,7 @@ const ProfessionalPage = props => {
               sesiones restantes.
             </p>
             <p className={classes.paragraph}>Para más información: info@evaminerva.com</p>
-            <img src={logo} alt="Logo Eva Minerva" className={classes.plansLogo} />
+            <img src={logo} alt="Logo Eva Minerva" className={classes.plansLogo} loading="lazy" height="" width=""/>
           </Grid>
         </Grid>
       </Grid>

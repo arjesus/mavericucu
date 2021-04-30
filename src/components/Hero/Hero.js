@@ -43,7 +43,14 @@ const Hero = props => {
                 Reserva tu cita online
               </a>
             )} */}
-            <img className="top-header-img" src={womanWorried} alt="Mujer preocupada" />
+            <img
+              className="top-header-img"
+              src={womanWorried}
+              alt="Mujer preocupada"
+              loading="lazy"
+              height=""
+              width=""
+            />
           </div>
           {typeof window !== 'undefined' && window.innerWidth > 600 && (
             <div className="call-to-action">
@@ -73,7 +80,7 @@ const Hero = props => {
             <a href="/plans">Reserva tu cita</a>
           </div>
           <div className="hero-sub-image">
-            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" />
+            <img src={capturaDePantalla} alt="Mujer psicologa ayudando" loading="lazy" height="" width=""/>
           </div>
         </div>
         <div className="reviews">
@@ -84,7 +91,7 @@ const Hero = props => {
           <div className="blockColumn plans-sub">
             <div className="plans-sub-text">
               <h3>Primeras Sesiones Gratuitas con tu psicólogo online y tu especialista guía</h3>
-              <img src={webAssistance} />
+              <img src={webAssistance} alt="" loading="lazy" height="" width=""/>
               <a href="/plans" className="plans-botton">
                 Empezar
               </a>
@@ -96,7 +103,7 @@ const Hero = props => {
           <h2>Sin compromiso. Fácil, asequible y 100% adaptado a ti</h2>
           <div className="steps-img-container">
             <div className="hero-sub-image">
-              <img src={paso1} alt="Mujer psicologa ayudando" />
+              <img src={paso1} alt="Mujer psicologa ayudando" loading="lazy" height="" width=""/>
               <h3>Contáctanos</h3>
               <p>
                 Mediante nuestro formulario indica tu disponibilidad para hablar con un especialista
@@ -104,7 +111,7 @@ const Hero = props => {
               </p>
             </div>
             <div className="hero-sub-image">
-              <img src={paso2} alt="Mujer psicologa ayudando" />
+              <img src={paso2} alt="Mujer psicologa ayudando" loading="lazy" height="" width=""/>
               <h3>Habla con un especialista guía</h3>
               <p>
                 Un especialista hablará contigo para conocerte mejor y así encontrar tu psicólogo
@@ -112,7 +119,7 @@ const Hero = props => {
               </p>
             </div>
             <div className="hero-sub-image">
-              <img src={paso3} alt="Mujer psicologa ayudando" />
+              <img src={paso3} alt="Mujer psicologa ayudando" loading="lazy" height="" width=""/>
               <h3>Comienza tu terapia online</h3>
               <p>Conoce a tu psicólogo online y empieza tu primera sesión gratuita hoy mismo.</p>
             </div>
@@ -136,7 +143,7 @@ const Hero = props => {
             <a href="/plans">Elige tu plan</a>
           </div>
           <div className="hero-sub-image">
-            <img src={logo} alt="Mujer psicologa ayudando" />
+            <img src={logo} alt="Mujer psicologa ayudando" loading="lazy" height="" width=""/>
           </div>
         </div>
       </div>

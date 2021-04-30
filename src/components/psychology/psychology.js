@@ -59,7 +59,7 @@ const Psychology = props => {
     cardToRender.push(
       <div className="card-container" key={i.toString()}>
         <div className="header-card">
-          <img src={arrOfData[i].img} />
+          <img src={arrOfData[i].img} loading="lazy" height="" width="" alt="" />
           <div>
             <h3>{arrOfData[i].name}</h3>
             <p>{arrOfData[i].speciality}</p>
@@ -136,7 +136,7 @@ const Psychology = props => {
             especializada y práctica posible.
           </p>
         </div>
-        <img className="psycology-img" src={fondo} />
+        <img className="psycology-img" src={fondo} loading="lazy" height="" width="" alt="" />
         <div className="psychology-card">{cardToRender}</div>
       </div>
       {/* --- STYLES --- */}
