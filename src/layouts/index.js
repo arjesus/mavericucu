@@ -1,3 +1,4 @@
+import './typography.css';
 import 'typeface-open-sans';
 import FontFaceObserver from 'fontfaceobserver';
 import PropTypes from 'prop-types';
@@ -147,7 +148,7 @@ class Layout extends React.Component {
                       html {
                         font-family: 'Montserrat';
                         box-sizing: border-box;
-                        font-weight: 100;
+                        font-weight: 400;
                         max-width: 1920px;
                         margin: 0 auto;
                       }
@@ -172,13 +173,13 @@ class Layout extends React.Component {
                         line-height: 1.1;
                         letter-spacing: -0.03em;
                         margin: 0;
-                        font-weight: 100;
+                        font-weight: 400;
                       }
                       h1 {
                         letter-spacing: -0.04em;
                       }
                       p {
-                        font-weight: 100;
+                        font-weight: 300;
                         margin: 0;
                         font-size: 1.3rem;
                         line-height: 1.5;
