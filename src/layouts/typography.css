@@ -3,6 +3,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 100;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-100.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -16,6 +17,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 200;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-200.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -29,6 +31,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-300.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -41,6 +44,7 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   src: url('../fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
@@ -55,6 +59,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-500.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -68,6 +73,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-600.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -81,6 +87,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/montserrat-v15-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/montserrat-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -93,6 +100,7 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
+  font-display: swap;
   font-weight: 800;
   src: url('../fonts/montserrat-v15-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
@@ -106,6 +114,7 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
+  font-display: swap;
   font-weight: 900;
   src: url('../fonts/montserrat-v15-latin-900.eot'); /* IE9 Compat Modes */
   src: local(''),
