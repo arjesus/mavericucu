@@ -200,6 +200,7 @@ const Psychology = props => {
             background-color: ${theme.color.principals.white};
           }
           .psycology-img {
+            height: auto;
             width: 70%;
             margin-bottom: 0px;
           }

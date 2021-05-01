@@ -215,7 +215,7 @@ const ProfessionalPage = props => {
             className={classes.plansBox}
           >
             <h2 className={classes.title}>Áreas de especialidad de Eva Minerva</h2>
-            <Grid container justify="space-around">
+            <Grid container spacing={5} justify="space-around">
               {specialities.map((speciality, i) => {
                 return (
                   <Grid key={i} item md={3} sm={6} xs={6} className={classes.plansCardsContainer}>

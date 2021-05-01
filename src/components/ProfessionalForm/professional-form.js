@@ -173,6 +173,7 @@ const ProfessionalForm = () => {
             }
           }
           .form-integrated {
+            height: auto;
             margin-top: 20px;
             width: 70%;
           }

@@ -425,6 +425,11 @@ const Hero = props => {
         }
 
         @media (max-width: 600px) {
+          .hero-sub-image {
+            img {
+              height: auto;
+            }
+          }
           .center-button {
             display-flex: center;
             justify-content: center;
@@ -469,7 +474,7 @@ const Hero = props => {
               img {
                 margin: 0 auto;
                 border-radius: 0 0 1rem 1rem;
-                margin-top: 12px;
+                margin-top: 30px;
               }
             }
           }

@@ -68,9 +68,9 @@ const SecondMenu = props => {
     { to: '/professional/', label: 'Trabaja con nosotros' },
     { to: '/quienes-somos/', label: 'Quienes somos' },
     { to: '/blog/', label: 'Blog' },
-    { to: '/%20specialties/', label: 'Especialidades' },
+    { to: '/plans/', label: 'Comenzar' },
+    { to: '/%20specialties/', label: 'Especialidades' }
     // { to: '/professional/', label: 'Trabaja Con nosotros', icon: FaSearch },
-    { to: '/plans/', label: 'Comenzar' }
   ];
 
   const handleClick = event => {
