@@ -66,7 +66,13 @@ class Header extends React.Component {
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
-            <img className={logoClass.style} src={logoClass.img} alt={config.siteTitle} />
+            <img
+              width="140"
+              height="41.391"
+              className={logoClass.style}
+              src={logoClass.img}
+              alt={config.siteTitle}
+            />
           </Link>
           <FontLoadedContext.Consumer>
             {loaded => (
@@ -127,6 +133,7 @@ class Header extends React.Component {
 
           .logo {
             width: 350px;
+            height: auto;
           }
 
           .logoSmall {

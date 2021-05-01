@@ -148,11 +148,23 @@ const Footer = props => {
             <Grid container direction="row">
               <Grid item sm={12} md={3}>
                 <Grid item md={12}>
-                  <img className="logo" src={logo} alt={config.siteTitle} />
+                  <img
+                    className="logo"
+                    src={logo}
+                    height="178.552"
+                    width="260"
+                    alt={config.siteTitle}
+                  />
                 </Grid>
                 <Grid item md={12}>
                   <div className="logo-container">
-                    <img className="logo" src={Eulogo} alt={config.siteTitle} />
+                    <img
+                      className="logo"
+                      src={Eulogo}
+                      alt={config.siteTitle}
+                      height="56"
+                      width="260"
+                    />
                   </div>
                 </Grid>
                 <Grid item md={12} className="social-media-container">
