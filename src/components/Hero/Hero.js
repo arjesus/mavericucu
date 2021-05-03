@@ -8,7 +8,7 @@ import Plans from './components/plans.component';
 
 import paso1 from '../../../static/images/paso1.svg';
 import paso2 from '../../../static/images/paso3.svg';
-import paso3 from '../../../static/images/paso2.jpg';
+import paso3 from '../../../static/images/PASO 2-02.svg';
 import logo from '../../images/jpg/logo-text.png';
 import webAssistance from '../../images/svg-icons/asistencia-online.svg';
 import { Grid } from '@material-ui/core';

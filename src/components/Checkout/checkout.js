@@ -30,7 +30,6 @@ const useStyles = makeStyles({
 
 const Checkout = ({ id, answer, handleClose, disable }) => {
   const classes = useStyles();
-console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
   const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
   const offers = [
     process.env.GATSBY_BUTTON_SKU_ID_ONE,
