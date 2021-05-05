@@ -7,13 +7,16 @@
   }
   .logo-container {
     background-color: white;
-    width: 260px;
-    border-radius: 0.5rem;
-    opacity: 0.8;
+    width: 300px;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
   }
   .logo {
     width: 260px;
-    margin-bottom: 1rem;
   }
   .footerLinkTitle {
     font-weight: '700';
@@ -33,6 +36,13 @@
 
   .MuiSvgIcon-fontSizeLarge {
     font-size: 4rem;
+  }
+
+  .footer-icon-column {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 600px) {

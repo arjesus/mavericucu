@@ -102,7 +102,7 @@ const ThankYouPage = props => {
             <Grid item md={12}>
               <a href="/" className={classes.back}>
                 {' '}
-                Volver a la página principal"
+                Volver a la página principal
               </a>
             </Grid>
           </Grid>

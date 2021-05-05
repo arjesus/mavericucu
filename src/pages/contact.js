@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { ThemeContext } from '../layouts';
 import womanWorried from '../../static/images/mujer.preocupada.jpg';
 import Article from '../components/Article';
-import DynamicForm from '../components/dynamic-form/dynamic-form';
 import theme from '../theme/theme.yaml';
 import Seo from '../components/Seo';
 
@@ -19,8 +18,6 @@ const ContactPage = props => {
 
   return (
     <React.Fragment>
-  
-      <DynamicForm />
 
       <Seo facebook={facebook} />
       {/* --- STYLES --- */}

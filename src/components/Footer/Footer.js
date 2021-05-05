@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
 import logo from '../../../static/images/white-logo-text.png';
 import Eulogo from '../../../static/images/logo_startup_awards.png';
+import googleStart from '../../../static/images/Google_for_Startups_logo.png';
+import cloudFor from '../../../static/images/cloudforstartup.png';
 import { makeStyles } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -146,7 +148,7 @@ const Footer = props => {
         <Box className="footer-box">
           <Grid container direction="column">
             <Grid container direction="row">
-              <Grid item sm={12} md={3}>
+              <Grid item sm={12} md={3} className="footer-icon-column">
                 <Grid item md={12}>
                   <img
                     className="logo"
@@ -155,6 +157,17 @@ const Footer = props => {
                     width="260"
                     alt={config.siteTitle}
                   />
+                </Grid>
+                <Grid item md={12} className="social-media-container">
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <FacebookIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <InstagramIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
+                  <a href="https://www.instagram.com/eva_minerva_es/">
+                    <LinkedInIcon style={{ fontSize: '4rem', color: 'white' }} />
+                  </a>
                 </Grid>
                 <Grid item md={12}>
                   <div className="logo-container">
@@ -167,16 +180,27 @@ const Footer = props => {
                     />
                   </div>
                 </Grid>
-                <Grid item md={12} className="social-media-container">
-                  <a href="https://www.instagram.com/eva_minerva_es/">
-                    <FacebookIcon style={{ fontSize: '4rem', color: 'white' }} />
-                  </a>
-                  <a href="https://www.instagram.com/eva_minerva_es/">
-                    <InstagramIcon style={{ fontSize: '4rem', color: 'white' }} />
-                  </a>
-                  <a href="https://www.instagram.com/eva_minerva_es/">
-                    <LinkedInIcon style={{ fontSize: '4rem', color: 'white' }} />
-                  </a>
+                <Grid item md={12}>
+                  <div className="logo-container">
+                    <img
+                      className="logo"
+                      src={googleStart}
+                      alt={config.siteTitle}
+                      height="56"
+                      width="260"
+                    />
+                  </div>
+                </Grid>
+                <Grid item md={12}>
+                  <div className="logo-container">
+                    <img
+                      className="logo"
+                      src={cloudFor}
+                      alt={config.siteTitle}
+                      height="56"
+                      width="260"
+                    />
+                  </div>
                 </Grid>
               </Grid>
               <Grid item sm={12} md={3}>

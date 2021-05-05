@@ -68,8 +68,8 @@ const SecondMenu = props => {
     { to: '/professional/', label: 'Trabaja con nosotros' },
     { to: '/quienes-somos/', label: 'Quienes somos' },
     { to: '/blog/', label: 'Blog' },
-    { to: '/plans/', label: 'Comenzar' },
-    { to: '/%20specialties/', label: 'Especialidades' }
+    { to: '/%20specialties/', label: 'Especialidades' },
+    { to: '/plans/', label: 'Comenzar' }
     // { to: '/professional/', label: 'Trabaja Con nosotros', icon: FaSearch },
   ];
 
@@ -112,7 +112,7 @@ const SecondMenu = props => {
       ) : (
         <div>
           <a className={classes.contactButton} href={items[5].to}>
-            {items[5].label}
+            {items[6].label}
           </a>
           <Button
             className={classes.menuButton}

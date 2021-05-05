@@ -105,7 +105,7 @@ class Evaluations extends React.Component {
   intervalReviewText() {
     const intervalId = setInterval(() => {
       this.changeReview();
-    }, 6000);
+    }, 10000);
     this.setState({
       intervalId
     });
@@ -218,6 +218,13 @@ class Evaluations extends React.Component {
           }
 
           @media (max-width: 600px) {
+            .reviews-container-bars {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: fit-content;
+            }
             .reviews-container {
               grid-template-columns: 1fr;
               grid-template-rows: 0.1fr 1fr;
@@ -227,12 +234,19 @@ class Evaluations extends React.Component {
               .boxes-container {
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
+                grid-template-rows: 0.5fr 1fr;
                 grid-gap: 2rem;
                 text-align: justify;
               }
               .review-container-comments {
                 width: 300px;
+                height: 500px;
+                display: flex;
+                justify-content: space-around;
+                text-align: initial;
+                p {
+                  text-align: initial;
+                }
               }
             }
           }

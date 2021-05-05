@@ -24,7 +24,6 @@ const Blog = props => {
       {/* --- STYLES --- */}
       <style jsx>{`
         .main {
-          padding: 0 ${theme.space.inset.default};
         }
 
         ul {
@@ -32,12 +31,18 @@ const Blog = props => {
           margin: 0 auto;
           display: grid;
           grid-template-columns: 1fr;
-          grid-gap: 35px;
-          padding: 35px;
+          li {
+            margin: 20px 0;
+          }
         }
 
         @above tablet {
+          .main {
+            padding: 15px;
+          }
+  
           ul {
+            grid-gap: 35px;
             grid-template-columns: 1fr 1fr;
           }
         }

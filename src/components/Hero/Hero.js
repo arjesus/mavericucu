@@ -97,7 +97,7 @@ const Hero = props => {
           <div className="blockColumn plans-sub">
             <div className="plans-sub-text">
               <h3>Primeras Sesiones Gratuitas con tu psicólogo online y tu especialista guía</h3>
-              <img src={webAssistance} alt="" loading="lazy" height="247" width="381" />
+              <img src={webAssistance} alt="" loading="lazy" height="400" width="600" />
               <a href="/plans" className="plans-botton">
                 Empezar
               </a>
@@ -355,7 +355,7 @@ const Hero = props => {
           .plans-sub-text {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             h3 {
               color: ${theme.color.principals.greenLight};
@@ -364,17 +364,16 @@ const Hero = props => {
             }
             a {
               background-color: ${theme.color.principals.darkPurple};
-              width: 160px;
-              padding: 19px 23px;
+              width: 180px;
+              padding: 19px 30px;
               color: ${theme.color.principals.white};
               border-radius: 0.5rem;
-              font-size: 18px;
+              font-size: 19px;
               text-align: center;
               font-weight: 600;
             }
             img {
               margin: 15px 0;
-              width: 61%;
             }
           }
         }
@@ -450,6 +449,11 @@ const Hero = props => {
         }
 
         @media (max-width: 600px) {
+          .plans-sub-text {
+            img {
+              width: 280px;
+            }
+          }
           .hero-sub-image {
             img {
               height: auto;

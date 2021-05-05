@@ -13,6 +13,7 @@ const BlogResume = props => {
   const posts = getPost(category);
   return (
     <React.Fragment>
+      <div className="blog-resume-container">
       {posts.length && (
         <ul>
           {posts.map((post, i) => {
@@ -21,6 +22,7 @@ const BlogResume = props => {
         </ul>
       )}
       <p>{texts.subTex}</p>
+      </div>
       {/* --- STYLES --- */}
       <style jsx>{`
         ul {
@@ -39,8 +41,14 @@ const BlogResume = props => {
         }
 
         @above tablet {
+          .blog-resume-container {
+            padding: 0 0 10px 0;
+          }
           ul {
             grid-template-columns: 1fr 1fr 1fr;
+          }
+          p {
+            margin-bottom: 15px;
           }
         }
       `}</style>

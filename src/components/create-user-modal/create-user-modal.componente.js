@@ -7,7 +7,6 @@ import chatImg from '../../images/jpg/conversaicon-digital-01.svg';
 import Checkout from '../Checkout/checkout';
 import theme from '../../theme/theme.yaml';
 import ReCAPTCHA from 'react-google-recaptcha';
-import DatePickerMaterialComponent from '../dynamic-form/date-picker/datepicker.material';
 
 const initialFormState = {
   name: null,
@@ -111,7 +110,6 @@ const useStyles = makeStyles({
 });
 
 const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => {
-  initialFormState.plan = chosenPlan.id;
   const [formFields, setformFields] = useState(initialFormState);
   const [disable, setDisable] = useState(true);
   const [isReCaptcha, setIsReCaptcha] = useState(false);
@@ -142,11 +140,12 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     if (localStorage.getItem('gclid')) {
       const form = {
         ...formFields,
-        ['gclid']: localStorage.getItem('gclid')
+        ['gclid']: localStorage.getItem('gclid'),
+        plan: chosenPlan.id
       };
       setformFields(form);
     }
-  }, []);
+  }, [chosenPlan]);
 
   const onReCatchaChange = value => {
     const sameEmail = formFields.emailSecure === formFields.email;

@@ -52,8 +52,19 @@ const useStyles = makeStyles({
     maxWidth: '500px'
   },
   '@media (max-width: 600px)': {
+    container: {
+      paddingBottom: '20px'
+    },
+    title: {
+      margin: '1rem 0 2rem 0'
+    },
+    button: {
+      margin: '0 auto'
+    },
     imgBox: {
-      width: 'inherit'
+      width: '200px',
+      height: 'auto',
+      margin: '0 auto'
     },
     img: {
       width: 'inherit'
