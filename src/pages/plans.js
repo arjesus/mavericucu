@@ -14,7 +14,7 @@ const plansDefinition = [
     id: 0,
     name: 'Plan semanal',
     url: 'semanal',
-    cost: 'Una session por 35€',
+    cost: 'Una sesión por 35€',
     value: 35
   },
   {

@@ -357,6 +357,7 @@ const Hero = props => {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            padding: 100px 0;
             h3 {
               color: ${theme.color.principals.greenLight};
               font-size: 28px;
@@ -450,6 +451,8 @@ const Hero = props => {
 
         @media (max-width: 600px) {
           .plans-sub-text {
+            padding: 0 !important;
+            max-height: 500px;
             img {
               width: 280px;
             }

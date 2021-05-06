@@ -16,6 +16,7 @@ import logo from '/static/images/logosinfondo.svg';
 import trabajo from '/content/posts/2021-04-21--teletrabajo/telegrabajo.jpg';
 import relajacion from '/content/posts/2021-04-22--tecnica-relajacion/relajacion.jpg';
 import aislamiento from '/content/posts/2021-04-21--fin-aislamiento-ansiedad/fin-aislamiento-ansiedad.jpg';
+import fundadoras from '../../static/images/fundadoras.jpg';
 
 
 export function getScreenWidth() {
@@ -54,7 +55,7 @@ export function timeoutThrottlerHandler(timeouts, name, delay, handler) {
 export const getImg = category => {
   const img = {
     'Depresion': depresion,
-    'quienes somos': logo,
+    'quienes somos': fundadoras,
     'Fobias': fobias,
     'Ansiedad': ansiedad,
     'Autoestima': autoestima,

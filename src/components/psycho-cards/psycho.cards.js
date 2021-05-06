@@ -124,7 +124,7 @@ const PsychoCards = props => {
         {cardToRender}
         <Grid item sm={12} className={classes.buttonContainer}>
           <a className={classes.button} href="/plans">
-            Pedir primera session gratuita
+            Pedir primera sesión gratuita
           </a>
         </Grid>
         <Grid item sm={12} className={classes.psychoTitlePrincipal}>

@@ -22,14 +22,14 @@ const useStyles = makeStyles({
   textTopBox: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'inherit'
   },
   title: {
     fontSize: '2.3rem',
     lineHeight: '1.3',
     color: theme.color.principals.darkerPurpleText,
-    margin: '3rem 0 4rem 0'
+    margin: '0rem 0 2rem 0'
   },
   secondaryTitle: {
     fontSize: '1.5rem',
@@ -49,7 +49,8 @@ const useStyles = makeStyles({
   img: {
     objectFit: 'contain',
     width: '100%',
-    maxWidth: '500px'
+    maxWidth: '500px',
+    height: 'auto'
   },
   '@media (max-width: 600px)': {
     container: {
@@ -76,9 +77,9 @@ const ImageBlock = props => {
   const classes = useStyles();
   const { imgBLockOptions } = props;
 
-  const isProfessional = text => {
-    if (text.includes('Más información')) return '/plans';
-    return 'https://kf2sm3o3mb2.typeform.com/to/ux4iyPRY';
+  const isProfessional = imgBLockOption => {
+    if (imgBLockOption.category === 'quienes somos') return '/plans';
+    return '/';
   };
   const isProfessionalTarget = text => {
     if (text.includes('Más información')) return '';
@@ -94,7 +95,7 @@ const ImageBlock = props => {
           <a
             className={classes.button}
             target={isProfessionalTarget(imgBLockOptions.button)}
-            href={isProfessional(imgBLockOptions.button)}
+            href={isProfessional(imgBLockOptions)}
           >
             {imgBLockOptions.button}
           </a>

@@ -17,6 +17,7 @@
   }
   .logo {
     width: 260px;
+    height: auto;
   }
   .footerLinkTitle {
     font-weight: '700';

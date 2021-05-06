@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import theme from '../../theme/theme.yaml';
 import { makeStyles } from '@material-ui/core';
 import ImageBlock from '../Image-block/imagineBLock.component';
 import 'prismjs/themes/prism-okaidia.css';
@@ -9,15 +10,46 @@ import asyncComponent from '../AsyncComponent';
 import Headline from '../Article/Headline';
 import Bodytext from '../Article/Bodytext';
 import Meta from './Meta';
-import Author from './Author';
-import Comments from './Comments';
-import NextPrev from './NextPrev';
+// import Author from './Author';
+// import Comments from './Comments';
+// import NextPrev from './NextPrev';
 import PsychoCards from '../psycho-cards/psycho.cards';
 
 import anxiety from '../../images/jpg/ansiedad-01.png';
 import selfEsteem from '../../images/jpg/autoestima.png';
 import couple from '../../images/jpg/terapia-pareja.png';
 import depresion from '../../images/jpg/mujerjovendeprimida-01.jpg';
+
+const useStyles = makeStyles({
+  postCard: {
+    backgroundColor: 'white',
+    padding: '50px 80px',
+    borderRadius: '1rem'
+  },
+  button: {
+    backgroundColor: theme.color.principals.darkPurple,
+    width: 'fit-content',
+    padding: '19px 23px',
+    color: theme.color.principals.white,
+    borderRadius: '0.5rem',
+    fontSize: '18px',
+    textAlign: 'center',
+    fontWeight: '600'
+  },
+  buttonContainer: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '20px 0'
+  },
+  '@media (max-width: 600px)': {
+    postCard: {
+      backgroundColor: 'white',
+      padding: '0px 15px',
+      borderRadius: '1rem'
+    }
+  }
+});
 
 const blogImg = {
   Ansiedad: anxiety,
@@ -35,20 +67,6 @@ const Share = asyncComponent(() =>
 );
 
 const Post = props => {
-  const useStyles = makeStyles({
-    postCard: {
-      backgroundColor: 'white',
-      padding: '50px 80px',
-      borderRadius: '1rem'
-    },
-    '@media (max-width: 600px)': {
-      postCard: {
-        backgroundColor: 'white',
-        padding: '0px 15px',
-        borderRadius: '1rem'
-      }
-    }
-  });
   const classes = useStyles();
   const {
     post,
@@ -95,6 +113,11 @@ const Post = props => {
           )}
         </header>
         <Bodytext html={html} theme={theme} />
+        <div className={classes.buttonContainer}>
+          <a className={classes.button} href={'/plans'}>
+            Pedir primera sesión gratuita
+          </a>
+        </div>
         <footer>
           {/* <Share post={post} theme={theme} /> */}
           {/* <Author note={authornote} theme={theme} /> */}
@@ -114,7 +137,7 @@ Post.propTypes = {
   facebook: PropTypes.object.isRequired,
   next: PropTypes.object,
   prev: PropTypes.object,
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired
 };
 
 export default Post;

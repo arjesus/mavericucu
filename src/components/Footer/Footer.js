@@ -8,6 +8,7 @@ import logo from '../../../static/images/white-logo-text.png';
 import Eulogo from '../../../static/images/logo_startup_awards.png';
 import googleStart from '../../../static/images/Google_for_Startups_logo.png';
 import cloudFor from '../../../static/images/cloudforstartup.png';
+import diversity from '../../../static/images/diversity.png';
 import { makeStyles } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -196,6 +197,17 @@ const Footer = props => {
                     <img
                       className="logo"
                       src={cloudFor}
+                      alt={config.siteTitle}
+                      height="56"
+                      width="260"
+                    />
+                  </div>
+                </Grid>
+                <Grid item md={12}>
+                  <div className="logo-container">
+                    <img
+                      className="logo"
+                      src={diversity}
                       alt={config.siteTitle}
                       height="56"
                       width="260"

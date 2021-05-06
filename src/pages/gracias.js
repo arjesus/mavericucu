@@ -64,6 +64,9 @@ const ThankYouPage = props => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
+      if (window.fbq != null) {
+        window.fbq('track', 'Purchase', { currency: 'EUR', value: localStorage.getItem('plan') });
+      }
     }
   }, []);
   return (

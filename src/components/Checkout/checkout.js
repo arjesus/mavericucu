@@ -25,7 +25,8 @@ const useStyles = makeStyles({
     textAlign: 'center',
     fontWeight: '600',
     marginBottom: '1rem',
-    opacity: '0.4'  }
+    opacity: '0.4'
+  }
 });
 
 const Checkout = ({ id, answer, handleClose, disable }) => {
@@ -62,6 +63,9 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
+      if (window.fbq != null) {
+        window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
+      }
     }
     handleClose();
   };

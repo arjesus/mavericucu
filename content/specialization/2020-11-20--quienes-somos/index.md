@@ -4,7 +4,7 @@ category: "quienes somos"
 cover: mujerjovendeprimida-01.jpg
 text: "Nuestra historia comenzó durante el primer confinamiento del Coronavirus COVID-19. Como consecuencia del impacto en la salud mental de las personas, nuestra fundadoras, Eva y Katerina, tuvieron una idea revolucionaria"
 
-button: MÁS INFORMACIÓN
+button: Más información
 
 ---
 La psicología tendría un impacto más positivo para la sociedad en caso de hacerse online, ya que esto no solo la haría más accesible, sino que también haría posible que otros especialistas, como nutricionistas, entrenadores físicos o mentores en multitud de áreas, pudiesen trabajar de la mano con los psicólogos
