@@ -110,6 +110,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '311082667293618'
+      }
+    },
+    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : '',
