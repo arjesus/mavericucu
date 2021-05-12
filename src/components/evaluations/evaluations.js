@@ -175,7 +175,7 @@ class Evaluations extends React.Component {
             grid-template-columns: 1fr;
             grid-template-rows: 0fr 1fr;
             height: auto;
-            min-height: 65vh;
+            min-height: 53vh;
             width: 100%;
             max-width: 100vw;
             grid-gap: 4rem;
