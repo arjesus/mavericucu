@@ -48,20 +48,20 @@ class Evaluations extends React.Component {
     counter: 0,
     contentToRender: {
       number: 2,
-      percentage: '4%',
-      style: 'width: 4%',
-      title: 'Header de la review',
+      percentage: '3%',
+      style: 'width: 3%',
+      title: 'Elena es espectacular',
       text:
-        'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+        'He de reconocer que me preocupaba que no encajara con la psicóloga, o no me sintiera cómoda... pero es que justamente han acertado con la terapeuta que me sugirieron. Elena me entiende y su forma de trabajar es justo la que encaja conmigo. Lo recomiendo completamente!',
       author: 'name autor'
     },
     secondContentToRender: {
       number: 1,
-      percentage: '1%',
-      style: 'width: 1%',
-      title: 'Header de la review',
+      percentage: '4%',
+      style: 'width: 4%',
+      title: 'Me siento muy respetado',
       text:
-        'Mediante nuestro formulario web o llamada telefónica, nos pondremos en contacto contigo en la hora y momento que blabla.',
+        'Yo diría que desde el primer momento que me llamaron ya supe que aquí se cuida mucho a la persona que consulta. Me sentí siempre muy respetado y saben lo que hacen. Tanto que yo diría que después de varias sesiones me encuentro muy bien, y las herramientas que he aprendido me van a servir siempre.',
       author: 'name autor'
     },
     intervalId: 0

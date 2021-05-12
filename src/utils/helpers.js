@@ -133,9 +133,9 @@ export const setTitlePsycoCards = category => {
       title: 'Algunos de nuestros psicólogos online especializados en subir el autoestima',
       subTitle: 'Artículos de interés sobre mejorar el autoestima y cómo tener buen autoestima',
       text:
-        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression',
+        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir la ansiedad, como superar la ansiedad, síntomas de la ansiedad',
       subTex:
-        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression'
+        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir la ansiedad, como superar la ansiedad, síntomas de la ansiedad'
     },
     {
       spectiality: 'Ansiedad',
@@ -153,18 +153,18 @@ export const setTitlePsycoCards = category => {
       title: 'Algunos de nuestros psicólogos online especializados en superar la depresión',
       subTitle: 'Artículos de interés sobre la depresión y cómo superar la depresión ',
       text:
-        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression.',
+        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir la depresión, como salir de una depresión, síntomas de la depresión.',
       subTex:
-        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression'
+        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir la depresión, como salir de una depresión, síntomas de la depresión'
     },
     {
       spectiality: 'Terapia de pareja',
       title: 'Algunos de nuestros psicólogos online especializados en terapia para pareja',
       subTitle: 'Artículos de interés sobre la terapia de pareja y crisis de pareja',
       text:
-        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression',
+        'A continuación incluimos una selección de artículos dedicados a temas relacionados con como combatir los problemas de pareja y como superarlos',
       subTex:
-        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir la depresion, como salir de una depresión, síntomas de la dépression'
+        'En nuestro blog podras encontrar mas artículos dedicados a temas relacionados con como combatir los problemas de pareja y como superarlos'
     },
     {
       spectiality: 'Terapia sexual',

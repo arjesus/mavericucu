@@ -160,8 +160,7 @@ const Hero = props => {
               <p>
                 Podríamos comentar muchas más cosas sobre nuestros profesionales y los buenos
                 resultados de nuestra terapia online, pero a la hora de la verdad{' '}
-                <strong>lo que cuenta es tu experiencia. </strong>Elige a continuación el plan que
-                más se adapte a ti para empezar a disfrutar de tus primeras sesiones gratuitas.
+                <strong>lo que cuenta es tu experiencia. </strong>
               </p>
             </div>
             <a href="/plans">Elige tu plan</a>
@@ -440,7 +439,7 @@ const Hero = props => {
             width: 60%;
             display: block;
             margin: auto;
-            height: auto;
+            height: auto; 
           }
         }
 

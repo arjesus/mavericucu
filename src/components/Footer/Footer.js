@@ -161,13 +161,13 @@ const Footer = props => {
                 </Grid>
                 <Grid item md={12} className="social-media-container">
                   <a href="https://www.instagram.com/eva_minerva_es/">
-                    <FacebookIcon style={{ fontSize: '4rem', color: 'white' }} />
+                    <FacebookIcon style={{ fontSize: '3rem', color: 'white' }} />
                   </a>
                   <a href="https://www.instagram.com/eva_minerva_es/">
-                    <InstagramIcon style={{ fontSize: '4rem', color: 'white' }} />
+                    <InstagramIcon style={{ fontSize: '3rem', color: 'white' }} />
                   </a>
                   <a href="https://www.instagram.com/eva_minerva_es/">
-                    <LinkedInIcon style={{ fontSize: '4rem', color: 'white' }} />
+                    <LinkedInIcon style={{ fontSize: '3rem', color: 'white' }} />
                   </a>
                 </Grid>
                 <Grid item md={12}>

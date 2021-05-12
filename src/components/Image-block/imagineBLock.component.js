@@ -79,8 +79,8 @@ const ImageBlock = props => {
   const { imgBLockOptions } = props;
 
   const isProfessional = imgBLockOption => {
-    if (imgBLockOption.category === 'quienes somos') return '/plans';
-    return '/';
+    if (imgBLockOption.category === 'quienes somos') return '/';
+    return '/plans';
   };
   const isProfessionalTarget = text => {
     if (text.includes('Más información')) return '';

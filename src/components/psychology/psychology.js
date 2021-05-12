@@ -43,11 +43,11 @@ const arrOfData = [
     img: terapeuta5
   },
   {
-    number: 3,
+    number: 2,
     name: 'Pedro',
     speciality: 'Especialista en fobias',
     text:
-      'Nuestros especialistas guías te contactaran para de forma segura y privada para encontrar el psicólogo que más se adapte a tus necesidades.',
+      'Los primeros pasos son muy duros para para llamar, coger el teléfono, escribir, concertar un cita, explicar que me pasa -si hay veces que ni yo sé com...',
     img: terapeuta4
   }
 ];
