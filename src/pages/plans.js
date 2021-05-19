@@ -179,10 +179,10 @@ const ProfessionalPage = props => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
-      
+
       window.gtag('event', 'compra', {
-        event_name: "compra",
-        Gallina: "50",
+        event_name: 'compra',
+        Gallina: plansDefinition[plan].value
       });
     }
   };
@@ -331,7 +331,14 @@ const ProfessionalPage = props => {
               sesiones restantes.
             </p>
             <p className={classes.paragraph}>Para más información: info@evaminerva.com</p>
-            <img src={logo} alt="Logo Eva Minerva" className={classes.plansLogo} loading="lazy" height="" width=""/>
+            <img
+              src={logo}
+              alt="Logo Eva Minerva"
+              className={classes.plansLogo}
+              loading="lazy"
+              height=""
+              width=""
+            />
           </Grid>
         </Grid>
       </Grid>

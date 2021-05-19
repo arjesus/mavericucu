@@ -111,7 +111,7 @@ const blogs = [
     url: '/blog'
   },
   {
-    name: 'Tecnica de relaciòn',
+    name: 'Tecnica de relación',
     url: '/tecnica-relajacion/'
   },
   {

@@ -47,7 +47,7 @@ const arrOfData = [
     name: 'Pedro',
     speciality: 'Especialista en fobias',
     text:
-      'Los primeros pasos son muy duros para para llamar, coger el teléfono, escribir, concertar un cita, explicar que me pasa -si hay veces que ni yo sé com...',
+      'La web Eva Minerva me ha facilitado llegar a pacientes y motivos de consulta más adaptados a mi formación y experiencia.',
     img: terapeuta4
   }
 ];
