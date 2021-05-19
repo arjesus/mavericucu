@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://eva-minerva.herokuapp.com'
-
+  //baseURL: 'https://eva-minerva.herokuapp.com'
+  baseURL: '80.224.164.12:3000'
   //withCredentials: true
 });
 
