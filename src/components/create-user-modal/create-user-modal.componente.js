@@ -15,7 +15,7 @@ const initialFormState = {
   email: '',
   emailSecure: '',
   date: null,
-  plan: 0,
+  plan: null,
   gclid: null
 };
 
@@ -137,14 +137,17 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
   };
 
   useEffect(() => {
+    let form = {
+      ...formFields,
+      plan: chosenPlan.id
+    };
     if (localStorage.getItem('gclid')) {
-      const form = {
+      form = {
         ...formFields,
-        ['gclid']: localStorage.getItem('gclid'),
-        plan: chosenPlan.id
+        ['gclid']: localStorage.getItem('gclid')
       };
-      setformFields(form);
     }
+    setformFields(form);
   }, [chosenPlan]);
 
   const onReCatchaChange = value => {
