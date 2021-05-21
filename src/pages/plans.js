@@ -180,9 +180,9 @@ const ProfessionalPage = props => {
         transaction_id: localStorage.getItem('id')
       });
 
-      window.gtag('event', 'compra', {
-        event_name: 'compra',
-        Gallina: plansDefinition[plan].value
+      window.gtag('event', 'begin_checkout', {
+        currency: 'EUR',
+        value: plansDefinition[plan].value
       });
     }
   };
