@@ -179,8 +179,7 @@ const ProfessionalPage = props => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
-
-      window.gtag('event', 'begin_checkout', {
+      window.gtag('event', 'view_item', {
         currency: 'EUR',
         value: plansDefinition[plan].value
       });
@@ -197,6 +196,12 @@ const ProfessionalPage = props => {
       setOpenModal(false);
     });
   }
+
+  useEffect(() => {
+    window.gtag('event', 'view_item_list', {
+      item_list_name: 'Plans'
+    });
+  }, []);
 
   const classes = useStyles();
   return (

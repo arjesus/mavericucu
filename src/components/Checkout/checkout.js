@@ -63,6 +63,10 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
         currency: 'EUR',
         transaction_id: localStorage.getItem('id')
       });
+      window.gtag('event', 'begin_checkout', {
+        currency: 'EUR',
+        value: localStorage.getItem('plan')
+      });
       if (window.fbq != null) {
         window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
       }
