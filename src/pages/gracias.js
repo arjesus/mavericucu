@@ -57,7 +57,7 @@ const useStyles = makeStyles({
 const ThankYouPage = props => {
   const classes = useStyles();
   useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
+    if (typeof window !== 'undefined' && localStorage.getItem('plan') && window.gtag) {
       window.gtag('event', 'conversion', {
         send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
         value: localStorage.getItem('plan'),

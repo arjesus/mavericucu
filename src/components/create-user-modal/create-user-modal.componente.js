@@ -143,7 +143,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     };
     if (localStorage.getItem('gclid')) {
       form = {
-        ...formFields,
+        ...form,
         ['gclid']: localStorage.getItem('gclid')
       };
     }

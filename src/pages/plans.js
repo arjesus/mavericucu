@@ -172,7 +172,7 @@ const ProfessionalPage = props => {
     setChosenPlan(plansDefinition[plan]);
     setOpenModal(true);
     localStorage.setItem('plan', plansDefinition[plan].value);
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'conversion', {
         send_to: 'AW-382469846/sldjCKrs9osCENaNsLYB',
         value: plansDefinition[plan].value,
