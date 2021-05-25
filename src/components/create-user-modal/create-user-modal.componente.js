@@ -290,7 +290,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
           </Grid>
           <Grid item md={12} className={classes.center}>
             <Checkout
-              disable={false}
+              disable={disable}
               id={chosenPlan.id}
               answer={formFields}
               handleClose={handleClose}
