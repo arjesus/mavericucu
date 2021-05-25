@@ -237,7 +237,7 @@ const ProfessionalPage = props => {
             <Grid container justify="space-around" direction="row">
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderFirst}>
-                  <h3>SEMANAL</h3>
+                  <h3>Semanal</h3>
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>1 sesión por</p>
