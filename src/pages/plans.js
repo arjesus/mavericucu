@@ -198,9 +198,11 @@ const ProfessionalPage = props => {
   }
 
   useEffect(() => {
-    window.gtag('event', 'view_item_list', {
-      item_list_name: 'Plans'
-    });
+    if (window.gtag) {
+      window.gtag('event', 'view_item_list', {
+        item_list_name: 'Plans'
+      });
+    }
   }, []);
 
   const classes = useStyles();
@@ -256,7 +258,7 @@ const ProfessionalPage = props => {
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderSecond}>
-                  <h3>MENSUAL</h3>
+                  <h3>Un mes</h3>
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>4 sesiones por</p>
@@ -277,7 +279,7 @@ const ProfessionalPage = props => {
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderThird}>
-                  <h3>BI MENSUAL</h3>
+                  <h3>Dos meses</h3>
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>8 sesiones por</p>

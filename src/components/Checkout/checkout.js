@@ -42,10 +42,11 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
     event.preventDefault();
     const stripe = await stripePromise;
     const { error } = await stripe.redirectToCheckout({
+      lineItems: [{ price: offers[id], quantity: 1 }],
+      mode: 'payment',
       customerEmail: answer.email,
-      items: [{ sku: offers[id], quantity: 1 }],
       successUrl: `https://evaminerva.com/gracias`,
-      cancelUrl: `${window.location.origin}/plans`
+      cancelUrl: `https://evaminerva.com/plans`
     });
 
     if (error) {
