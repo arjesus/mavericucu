@@ -1,7 +1,7 @@
 import { Divider } from 'material-ui';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getPost } from './blogList';
+import { getArticles } from '../../utils/helpers';
 import { setTitlePsycoCards } from '../../utils/helpers';
 import theme from '../../theme/theme.yaml';
 
@@ -10,18 +10,18 @@ import Item from './Item';
 const BlogResume = props => {
   const { category } = props;
   const texts = setTitlePsycoCards(category ? category : 'Depresion')[0];
-  const posts = getPost(category);
+  const posts = getArticles(category);
   return (
     <React.Fragment>
       <div className="blog-resume-container">
-      {posts.length && (
-        <ul>
-          {posts.map((post, i) => {
-            return <Item key={i} post={post} />;
-          })}
-        </ul>
-      )}
-      <p>{texts.subTex}</p>
+        {posts.length && (
+          <ul>
+            {posts.map((post, i) => {
+              return <Item key={i} post={post} />;
+            })}
+          </ul>
+        )}
+        <p>{texts.subTex}</p>
       </div>
       {/* --- STYLES --- */}
       <style jsx>{`
