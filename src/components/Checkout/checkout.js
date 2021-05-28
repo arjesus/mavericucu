@@ -57,20 +57,21 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
   const handleClick = (e, answer, id) => {
     redirectToCheckout(e, id);
     postSortFormAnswers({ answers: answer });
-    if (typeof window !== 'undefined' && localStorage.getItem('plan') && window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-382469846/48gMCO7ts4wCENaNsLYB',
-        value: localStorage.getItem('plan'),
-        currency: 'EUR',
-        transaction_id: localStorage.getItem('id')
-      });
-      window.gtag('event', 'begin_checkout', {
-        currency: 'EUR',
-        value: localStorage.getItem('plan')
-      });
-      if (window.fbq != null) {
+    if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
+      window.gtag &&
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-382469846/48gMCO7ts4wCENaNsLYB',
+          value: localStorage.getItem('plan'),
+          currency: 'EUR',
+          transaction_id: localStorage.getItem('id')
+        });
+      window.gtag &&
+        window.gtag('event', 'begin_checkout', {
+          currency: 'EUR',
+          value: localStorage.getItem('plan')
+        });
+      window.fbq &&
         window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
-      }
     }
     handleClose();
   };

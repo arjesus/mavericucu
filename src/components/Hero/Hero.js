@@ -28,7 +28,7 @@ const Hero = props => {
               </h1>
               <p>
                 Eva Minerva es la red de psicólogos online colegiados, profesionales de la salud y
-                bienestar emocional que más se adapta a ti. Número 1 en España.
+                bienestar emocional que más se adapta a ti.
               </p>
               <Grid className="center-button" item sm={12} md={6} lg={4}>
                 <a href="/plans">Comenzar</a>

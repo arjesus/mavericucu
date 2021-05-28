@@ -57,21 +57,22 @@ const useStyles = makeStyles({
 const ThankYouPage = props => {
   const classes = useStyles();
   useEffect(() => {
-    if (typeof window !== 'undefined' && localStorage.getItem('plan') && window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
-        value: localStorage.getItem('plan'),
-        currency: 'EUR',
-        transaction_id: localStorage.getItem('id')
-      });
-      window.gtag('event', 'purchase', {
-        currency: 'EUR',
-        transaction_id: localStorage.getItem('id'),
-        value: localStorage.getItem('plan')
-      });
-      if (window.fbq != null) {
+    if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
+      window.gtag &&
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-382469846/HdYZCK7b9osCENaNsLYB',
+          value: localStorage.getItem('plan'),
+          currency: 'EUR',
+          transaction_id: localStorage.getItem('id')
+        });
+      window.gtag &&
+        window.gtag('event', 'purchase', {
+          currency: 'EUR',
+          transaction_id: localStorage.getItem('id'),
+          value: localStorage.getItem('plan')
+        });
+      window.fbq &&
         window.fbq('track', 'Purchase', { currency: 'EUR', value: localStorage.getItem('plan') });
-      }
     }
   }, []);
   return (
@@ -85,7 +86,7 @@ const ThankYouPage = props => {
             spacing={5}
             className={classes.plansBox}
           >
-            <img className={classes.logo} src={logo} alt={logo} loading="lazy" height="" width=""/>
+            <img className={classes.logo} src={logo} alt={logo} loading="lazy" height="" width="" />
             <h2 className={classes.title}>¡Gracias por confiar en Eva Minerva!</h2>
             <Grid item md={12} className={classes.titleSubText}>
               <p>
