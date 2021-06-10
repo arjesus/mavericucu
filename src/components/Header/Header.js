@@ -11,6 +11,7 @@ import Menu from '../Menu';
 import logo from '../../../static/images/logo-top.png';
 import smallLogo from '../../../static/images/logo-small-text.png';
 import SecondMenu from '../Menu/SecondMenu';
+import { wakeup } from '../../services/form';
 
 class Header extends React.Component {
   state = {
@@ -41,6 +42,7 @@ class Header extends React.Component {
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', this.resizeThrottler, false);
     }
+    wakeup();
   }
 
   visibilitySensorChange = val => {

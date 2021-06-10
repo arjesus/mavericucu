@@ -33,3 +33,12 @@ export const postFormAnswersProfessionals = async answers => {
     console.error(error);
   }
 };
+
+export const wakeup = async () => {
+  try {
+    const response = await api.get('/');
+    console.log(response.data);
+  } catch (error) {
+    console.error('sleeping');
+  }
+};
