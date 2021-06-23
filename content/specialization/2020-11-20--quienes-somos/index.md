@@ -7,7 +7,7 @@ text: "Nuestra historia comenzó durante el primer confinamiento del Coronavirus
 button: Más información
 
 ---
-La psicología tendría un impacto más positivo para la sociedad en caso de hacerse online, ya que esto no solo la haría más accesible, sino que también haría posible que otros especialistas, como nutricionistas, entrenadores físicos o mentores en multitud de áreas, pudiesen trabajar de la mano con los psicólogos
+La psicología tendría un impacto más positivo para la sociedad en caso de hacerse online, ya que esto no solo la haría más accesible, sino que también haría posible que otros especialistas, como entrenadores físicos o mentores en multitud de áreas, pudiesen trabajar de la mano con los psicólogos
 
 Con este fin en mente, y con muchas ganas de apoyar a las personas a conseguir su bienestar, formamos una pequeña empresa a finales de 2020. Nuestro primer gran logro fue conseguir que cientos de psicólogos colegiados se integrasen a nuestra red, además de otros muchos profesionales relacionados con el bienestar. 
 
