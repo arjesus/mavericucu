@@ -127,7 +127,7 @@ const Psychology = props => {
           </p>
           <p>
             Además, la red Eva Minerva cuenta con profesionales de otras áreas relacionadas con la
-            salud y bienestar, como por ejemplo nutricionistas o profesionales de la actividad
+            salud y bienestar, como por ejemplo mentoria empresadial o profesionales de la actividad
             física.
           </p>
           <p>
