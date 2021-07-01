@@ -115,7 +115,6 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
   const [isReCaptcha, setIsReCaptcha] = useState(false);
   const isEmailValid = email => {
     const numberRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
     return numberRegex.test(String(email).toLowerCase());
   };
   const validEmail = formFields.email === '' || isEmailValid(formFields.email);
@@ -168,10 +167,6 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
   const handleChangeInputEvent = e => {
     const { name, value } = e.target;
     handleInput(name, value);
-  };
-
-  const handleChangeInputDate = date => {
-    handleInput('date', date);
   };
 
   return (

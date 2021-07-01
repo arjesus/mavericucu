@@ -45,6 +45,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
       lineItems: [{ price: offers[id], quantity: 1 }],
       mode: 'payment',
       customerEmail: answer.email,
+      allow_promotion_codes: true,
       successUrl: `https://evaminerva.com/gracias`,
       cancelUrl: `https://evaminerva.com/plans`
     });
