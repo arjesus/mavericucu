@@ -111,7 +111,7 @@ const useStyles = makeStyles({
 
 const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => {
   const [formFields, setformFields] = useState(initialFormState);
-  const [disable, setDisable] = useState(true);
+  const [disable, setDisable] = useState(false);
   const [isReCaptcha, setIsReCaptcha] = useState(false);
   const isEmailValid = email => {
     const numberRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -131,7 +131,7 @@ const UserInformationModal = ({ handleClose, open, handleOpen, chosenPlan }) => 
     if (form.surname && form.name && form.phone && form.email && sameEmail && isReCaptcha) {
       setDisable(false);
     } else {
-      setDisable(true);
+      setDisable(false);
     }
   };
 

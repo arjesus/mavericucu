@@ -2,7 +2,7 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
-import { postSortFormAnswers } from '../../services/form';
+import { postSortFormAnswers, checkOut } from '../../services/form';
 
 const useStyles = makeStyles({
   button: {
@@ -31,7 +31,6 @@ const useStyles = makeStyles({
 
 const Checkout = ({ id, answer, handleClose, disable }) => {
   const classes = useStyles();
-  const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PUBLISHABLE_KEY);
   const offers = [
     process.env.GATSBY_BUTTON_SKU_ID_ONE,
     process.env.GATSBY_BUTTON_SKU_ID_FOUR,
@@ -40,18 +39,11 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
 
   const redirectToCheckout = async (event, id) => {
     event.preventDefault();
-    const stripe = await stripePromise;
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [{ price: offers[id], quantity: 1 }],
-      mode: 'payment',
-      customerEmail: answer.email,
-      successUrl: `https://evaminerva.com/gracias`,
-      cancelUrl: `https://evaminerva.com/plans`
+    const redirect = await checkOut({
+      email: answer.email,
+      price: offers[id]
     });
-
-    if (error) {
-      console.warn('Error:', error);
-    }
+    window.location.href = redirect.url;
   };
 
   const handleClick = (e, answer, id) => {
