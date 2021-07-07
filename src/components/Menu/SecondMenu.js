@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     backgroundColor: theme.color.principals.darkPurple,
     color: theme.color.principals.white,
     padding: '10px 10px',
-    margin: '0 21px',
+    margin: '0 15px',
     borderRadius: '0.3rem',
     fontWeight: '700'
   },
