@@ -80,10 +80,11 @@ const ImageBlock = props => {
 
   const isProfessional = imgBLockOption => {
     if (imgBLockOption.category === 'quienes somos') return '/';
+    if (imgBLockOption.button.includes('Únete')) return 'mailto:info@evaminerva.com';
     return '/plans';
   };
   const isProfessionalTarget = text => {
-    if (text.includes('Más información')) return '';
+    if (text.includes('Más información') || text.includes('Únete')) return '';
     return '_blank';
   };
 
