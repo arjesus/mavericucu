@@ -46,14 +46,6 @@ const useStyles = makeStyles({
     height: '300px',
     marginBottom: '25px'
   },
-  '@media (max-width: 600px)': {
-    professional: {
-      padding: '0px 15px 15px 15px'
-    },
-    professionalContainer: {
-      padding: '45px 35px'
-    }
-  },
   title: {
     fontSize: '2.3rem',
     lineHeight: '1.3',
@@ -69,7 +61,8 @@ const useStyles = makeStyles({
     fontSize: '1.2rem',
     color: theme.color.principals.darkerPurpleText,
     marginBottom: '3rem',
-    minHeight: '83px'
+    minHeight: '83px',
+    textAlign: 'initial'
   },
   imgBox: {
     display: 'flex',
@@ -77,6 +70,17 @@ const useStyles = makeStyles({
   },
   cardBox: {
     marginTop: '25px'
+  },
+  '@media (max-width: 600px)': {
+    professional: {
+      padding: '0px 15px 15px 15px'
+    },
+    professionalContainer: {
+      padding: '45px 35px'
+    },
+    paragraph: {
+      textAlign: 'center'
+    }
   }
 });
 
@@ -97,7 +101,7 @@ const ProfessionalPage = props => {
           <ImageBlock imgBLockOptions={imgBLockOptions} />
           <Grid container className={classes.cardBox} direction="column" alignItems="center" spacing={5}>
             <Grid container justify="space-around" direction="row" spacing={5}>
-              <Grid item md={3} sm={12} className={classes.professionalCards}>
+              <Grid item md={4} sm={12} className={classes.professionalCards}>
                 <h3 className={classes.secondaryTitle}>
                   ¿Cuántos seguidores hacen falta para participar en una campaña?
                 </h3>
@@ -108,7 +112,7 @@ const ProfessionalPage = props => {
                   positivo.
                 </p>
               </Grid>
-              <Grid item md={3} sm={12} className={classes.professionalCards}>
+              <Grid item md={4} sm={12} className={classes.professionalCards}>
                 <h3 className={classes.secondaryTitle}>¿Qué tipo de colaboraciones proponemos?</h3>
                 <p className={classes.paragraph}>
                   Podrás participar en campañas de contenido, de opinión y promocionales. En
@@ -116,7 +120,7 @@ const ProfessionalPage = props => {
                   ventas producidas :)
                 </p>
               </Grid>
-              <Grid item md={3} sm={12} className={classes.professionalCards}>
+              <Grid item md={4} sm={12} className={classes.professionalCards}>
                 <h3 className={classes.secondaryTitle}>
                   Salud Mental accesible, donde y cuando más lo necesiten las personas
                 </h3>
@@ -129,7 +133,7 @@ const ProfessionalPage = props => {
             </Grid>
             <p className={classes.paragraph}>
               Si sientes que esto encaja con tu audiencia también puedes contactarnos a 
-              <a href="mailto:info@evaminerva.com">info@evaminerva.com</a>
+              <a href="mailto:info@evaminerva.com"> info@evaminerva.com</a>
             </p>
             <p className={classes.paragraph}>¡Muchas Gracias por tiempo!</p>
           </Grid>

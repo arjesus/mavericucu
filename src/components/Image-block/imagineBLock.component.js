@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     borderRadius: '0.5rem',
     fontSize: '18px',
     textAlign: 'center',
-    fontWeight: '600'
+    fontWeight: '600',
+    minWidth: '250px'
   },
   textTopBox: {
     display: 'flex',
