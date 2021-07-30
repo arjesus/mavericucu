@@ -21,15 +21,15 @@ const plansDefinition = [
     id: 1,
     name: 'Plan mensual',
     url: 'mensual',
-    cost: '4 sesiones por 29€ cada una. Total 116€',
-    value: 116
+    cost: '4 sesiones por 33€ cada una. Total 132€',
+    value: 132
   },
   {
     id: 2,
     name: 'Plan bimensual',
     url: 'bimensual',
-    cost: '8 sesiones por 24€ cada una. Total 192€',
-    value: 192
+    cost: '8 sesiones por 29€ cada una. Total 232€',
+    value: 232
   }
 ];
 
