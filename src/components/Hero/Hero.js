@@ -63,8 +63,8 @@ const Hero = props => {
             </div>
           )}
         </div>
-        <div className="professionals">
-          <Psychology />
+        <div className="reviews">
+          <Evaluations />
         </div>
         <div className="close-contact blockColumn">
           <div className="hero-sub-text">
@@ -89,8 +89,8 @@ const Hero = props => {
             />
           </div>
         </div>
-        <div className="reviews">
-          <Evaluations />
+        <div className="professionals">
+          <Psychology />
         </div>
         <div className="differences">
           <h2>¿Por qué nos eligen con respecto a otras terapias?</h2>
@@ -181,13 +181,13 @@ const Hero = props => {
         .grid-container {
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 0.5fr 1fr 0.6fr 0.7fr 0.4fr 0.7fr 0.6fr;
+          grid-template-rows: 0.5fr 0.6fr 0.6fr 0.7fr 0.4fr 0.7fr 0.6fr;
           gap: 10px 1px;
           grid-template-areas:
             'header'
-            'professionals'
-            'close-contact'
             'reviews'
+            'close-contact'
+            'professionals'
             'differences'
             'steps'
             'contact';
@@ -473,7 +473,7 @@ const Hero = props => {
             }
           }
           .grid-container {
-            grid-template-rows: auto 1fr 0.39fr 0.6fr 0.59fr 0.8fr auto;
+            grid-template-rows: auto 0.7fr 0.39fr 0.6fr 0.59fr 0.8fr auto;
             text-align: center;
             img {
               border-radius: 1rem;

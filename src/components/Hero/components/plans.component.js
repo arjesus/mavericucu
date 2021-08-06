@@ -89,7 +89,6 @@ const Plans = props => {
               p {
                 padding: 0 30px;
                 width: 100%;
-                text-align: justify;
               }
             }
           }

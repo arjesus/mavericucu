@@ -121,7 +121,7 @@ class Evaluations extends React.Component {
     return (
       <React.Fragment>
         <div className="reviews-container">
-          <h2>Tu bienestar emocional como el punto de partida de nuestros psicólogos online</h2>
+          <h2>Si tú no das el paso, nadie lo hará por ti. Nosotros te guiamos.</h2>
           <HoverRating />
           <div className="boxes-container">
             <div className="reviews-container-bars">

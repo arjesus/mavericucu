@@ -19,14 +19,14 @@ const plansDefinition = [
   },
   {
     id: 1,
-    name: 'Plan mensual',
+    name: 'Plan 4 sessiones',
     url: 'mensual',
     cost: '4 sesiones por 33€ cada una. Total 132€',
     value: 132
   },
   {
     id: 2,
-    name: 'Plan bimensual',
+    name: 'Plan 8 sessiones',
     url: 'bimensual',
     cost: '8 sesiones por 29€ cada una. Total 232€',
     value: 232
@@ -258,7 +258,7 @@ const ProfessionalPage = props => {
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderSecond}>
-                  <h3>Un mes</h3>
+                  <h3>Cuatro sessiones</h3>
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>4 sesiones por</p>
@@ -279,7 +279,7 @@ const ProfessionalPage = props => {
               </Grid>
               <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
                 <div className={classes.plansCardsHeaderThird}>
-                  <h3>Dos meses</h3>
+                  <h3>Ocho sessiones</h3>
                 </div>
                 <div className={classes.paragraphInside}>
                   <p>8 sesiones por</p>
