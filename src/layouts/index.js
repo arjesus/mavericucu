@@ -9,6 +9,7 @@ import { getScreenWidth, timeoutThrottlerHandler } from '../utils/helpers';
 import Footer from '../components/Footer/';
 import Header from '../components/Header';
 import CookiesBlock from '../components/cookiesComponent/cookies.component';
+import Whatsapp from '../components/whatsapp/whatsapp';
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
@@ -133,6 +134,7 @@ class Layout extends React.Component {
                     />
                     <main className="background-img">
                       <div>{children}</div>
+                      <Whatsapp />
                       {typeof window !== 'undefined' &&
                         localStorage.getItem('Cookies') !== 'true' && <CookiesBlock />}
                     </main>

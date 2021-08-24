@@ -1,0 +1,22 @@
+.whatsapp-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  right: 10px;
+}
+
+.icon {
+  background: #6a3bc4c7;
+  border-radius: 0.5rem;
+  margin: 3px 0;
+  height: 50px;
+}
+
+.insta:hover {
+  background: #6a3bc4;
+}
+
+.whatsapp:hover {
+  background: #6a3bc4;
+}
