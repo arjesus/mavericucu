@@ -6,7 +6,7 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 const Whatsapp = () => {
   return (
     <div className="whatsapp-container">
-      <a className="icon insta" href="https://www.instagram.com/eva_minerva_es/">
+      <a className="icon insta" href="https://www.instagram.com/eva.minerva.psicologia/">
         <InstagramIcon style={{ fontSize: '3rem', color: 'white' }} />
       </a>
       <a className="icon whatsapp" href="https://wa.me/34608960411">

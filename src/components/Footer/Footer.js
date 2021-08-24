@@ -163,7 +163,7 @@ const Footer = props => {
                   <a href="https://www.facebook.com/Eva-Minerva-109002587988694">
                     <FacebookIcon style={{ fontSize: '3rem', color: 'white' }} />
                   </a>
-                  <a href="https://www.instagram.com/eva_minerva_es/">
+                  <a href="https://www.instagram.com/eva.minerva.psicologia/">
                     <InstagramIcon style={{ fontSize: '3rem', color: 'white' }} />
                   </a>
                   <a href="https://www.linkedin.com/in/eva-minerva-616a78205/">
