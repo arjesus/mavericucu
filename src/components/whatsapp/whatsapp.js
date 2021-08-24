@@ -9,7 +9,7 @@ const Whatsapp = () => {
       <a className="icon insta" href="https://www.instagram.com/eva_minerva_es/">
         <InstagramIcon style={{ fontSize: '3rem', color: 'white' }} />
       </a>
-      <a className="icon whatsapp" href="https://wa.me/608960411">
+      <a className="icon whatsapp" href="https://wa.me/0034608960411">
         <WhatsAppIcon style={{ fontSize: '3rem', color: 'white' }} />
       </a>
     </div>
