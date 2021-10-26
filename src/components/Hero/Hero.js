@@ -97,7 +97,7 @@ const Hero = props => {
           <div className="blockColumn plans-sub">
             <div className="plans-sub-text">
               <h3>Primeras Sesiones Gratuitas con tu psicólogo online y tu especialista guía</h3>
-              <img src={webAssistance} alt="" loading="lazy" height="400" width="600" />
+              <img src={webAssistance} alt="" loading="lazy" height="400" width="100%" />
               <a href="/plans" className="plans-botton">
                 Empezar
               </a>
@@ -222,14 +222,14 @@ const Hero = props => {
 
           .top-header {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
           }
 
           .top-header-text {
             display: flex;
             flex-direction: column;
             display: flex;
-            padding: 25px 90px;
+            padding: 25px 25px;
             justify-content: space-evenly;
             height: 80%;
             align-self: center;
@@ -296,6 +296,7 @@ const Hero = props => {
           img {
             width: 80%;
             border-radius: 0.5rem;
+            height: auto;
           }
           .hero-sub-text {
             display: grid;
@@ -348,7 +349,7 @@ const Hero = props => {
           }
           .plans-sub {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;
             grid-gap: 90px;
           }
           .plans-sub-text {
