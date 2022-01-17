@@ -298,6 +298,27 @@ const ProfessionalPage = props => {
                   Elegir Plan
                 </button>
               </Grid>
+              {/* <Grid item md={3} sm={12} xs={12} className={classes.plansCards}>
+                <div className={classes.plansCardsHeaderFirst}>
+                  <h3>Terapia de pareja</h3>
+                </div>
+                <div className={classes.paragraphInside}>
+                  <p>1 sesión</p>
+                  <p className={classes.paragraphInsideBolder}>€</p>
+                  <p />
+                </div>
+                <p className={classes.paragraph}>
+                  Incluye primera sesión con tu psicólogo gratis + la sesión gratuita con el
+                  especialista guía{' '}
+                </p>
+                <button
+                  className={classes.button}
+                  aria-label="scroll"
+                  onClick={() => handleOpen(0)}
+                >
+                  Elegir Plan
+                </button>
+              </Grid> */}
             </Grid>
           </Grid>
           <Grid
@@ -308,6 +329,10 @@ const ProfessionalPage = props => {
             alignItems="center"
             className={classes.textContainer}
           >
+            <p className={classes.paragraph}>
+              En caso de terapia de pareja cada parte debe reservar sus paquetes de sesiones de
+              manera individual.
+            </p>
             <p className={classes.paragraph}>
               En caso de que no quedes 100% satisfecho después de haber probado la primera sesión
               gratuita te haremos un reembolso del 100 % de tu plan.
