@@ -2,8 +2,6 @@ import React from 'react';
 import theme from '../../theme/theme.yaml';
 import HoverRating from '../starts-rating/starts-rating.component';
 
-import logo from '../../../static/images/lirio.png';
-
 const arrOfData = [
   {
     number: 4,

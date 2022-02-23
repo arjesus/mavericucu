@@ -189,16 +189,6 @@ const specialities = [
     description: '',
     link: '/coaching'
   }
-  // {
-  //   title: 'Coaching o Mentoring',
-  //   description: 'Laboral /  Académico',
-  //   link: '/mentoring'
-  // },
-  // {
-  //   title: 'Coaching Deportivo',
-  //   description: '',
-  //   link: '/deportivo'
-  // }
 ];
 
 const ProfessionalPage = props => {

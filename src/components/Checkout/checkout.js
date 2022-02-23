@@ -34,7 +34,8 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
   const offers = [
     process.env.GATSBY_BUTTON_SKU_ID_ONE,
     process.env.GATSBY_BUTTON_SKU_ID_FOUR,
-    process.env.GATSBY_BUTTON_SKU_ID_EIGHT
+    process.env.GATSBY_BUTTON_SKU_ID_EIGHT,
+    process.env.GATSBY_BUTTON_SKU_ID_COUPLE
   ];
 
   const redirectToCheckout = async (event, id) => {
