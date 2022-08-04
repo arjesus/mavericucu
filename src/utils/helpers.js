@@ -17,6 +17,7 @@ import trabajo from '/content/posts/2021-04-21--teletrabajo/telegrabajo.jpg';
 import relajacion from '/content/posts/2021-04-22--tecnica-relajacion/relajacion.jpg';
 import aislamiento from '/content/posts/2021-04-21--fin-aislamiento-ansiedad/fin-aislamiento-ansiedad.jpg';
 import fundadoras from '../../static/images/fundadoras.jpg';
+import redFlag from '/content/posts/2022-08-04--red-flag/Header.jpg';
 
 
 export function getScreenWidth() {
@@ -71,7 +72,8 @@ export const getPost = category => {
   const img = {
     'Teletrabajo': trabajo,
     'Relajacion': relajacion,
-    'Fin aislamiento': aislamiento
+    'Fin aislamiento': aislamiento,
+    'Red Flag': redFlag
   }
   return img[category];
 }
@@ -270,6 +272,14 @@ const blogPages = [
     category: 'Autoestima, Depresion, Ansiedad',
     test:
       'Para la mayoría de las personas, es la primera vez en nuestras vidas que hemos tenido que aislarnos completamente de la vida exterior, y no sólo una vez sino que, a estas alturas, posiblemente hasta dos y t...'
+  },
+  {
+    title: 'Red flags en las relaciones sexuales de pareja',
+    img: redFlag,
+    url: '/red-flag/',
+    category: 'Terapia de pareja, Terapia sexual',
+    test:
+      'El sexo es una parte más de nuestras necesidades básicas como seres humanos. Es un acto de comunicación, donde lo más importante es escuchar. Una buena pareja sexual será aquella que pregunte y se preocupe por el bienestar del otrx. '
   }
 ];
 
