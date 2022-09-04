@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -12,9 +12,9 @@ import {
   TwitterIcon,
   GooglePlusIcon,
   LinkedinIcon
-} from "react-share";
+} from 'react-share';
 
-import config from "../../../content/meta/config";
+import config from '../../../content/meta/config';
 
 const PostShare = props => {
   const {
@@ -29,7 +29,7 @@ const PostShare = props => {
   const url = config.siteUrl + config.pathPrefix + slug;
 
   const iconSize = 36;
-  const filter = count => (count > 0 ? count : "");
+  const filter = count => (count > 0 ? count : '');
 
   return (
     <React.Fragment>
@@ -40,7 +40,7 @@ const PostShare = props => {
             url={url}
             title={title}
             additionalProps={{
-              "aria-label": "Twitter share"
+              'aria-label': 'Twitter share'
             }}
           >
             <TwitterIcon round size={iconSize} />
@@ -48,7 +48,7 @@ const PostShare = props => {
           <GooglePlusShareButton
             url={url}
             additionalProps={{
-              "aria-label": "Google share"
+              'aria-label': 'Google share'
             }}
           >
             <GooglePlusIcon round size={iconSize} />
@@ -60,7 +60,7 @@ const PostShare = props => {
             url={url}
             quote={`${title} - ${excerpt}`}
             additionalProps={{
-              "aria-label": "Facebook share"
+              'aria-label': 'Facebook share'
             }}
           >
             <FacebookIcon round size={iconSize} />
@@ -73,7 +73,7 @@ const PostShare = props => {
             title={title}
             description={excerpt}
             additionalProps={{
-              "aria-label": "LinkedIn share"
+              'aria-label': 'LinkedIn share'
             }}
           >
             <LinkedinIcon round size={iconSize} />

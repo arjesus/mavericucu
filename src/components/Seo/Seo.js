@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import config from "../../../content/meta/config";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import config from '../../../content/meta/config';
 
 const Seo = props => {
   const { data, facebook } = props;
@@ -19,13 +19,15 @@ const Seo = props => {
     <Helmet
       htmlAttributes={{
         lang: config.siteLanguage,
-        prefix: "og: http://ogp.me/ns#"
+        prefix: 'og: http://ogp.me/ns#'
       }}
     >
       {/* General tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       {/* OpenGraph tags */}
+      <meta name="color-scheme" content="light" />
+      <meta name="color-scheme" content="only light" />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

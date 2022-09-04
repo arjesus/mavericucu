@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
-    const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
+    // const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js');
     const specializationTemplate = path.resolve('./src/templates/SpecializationTemplate.js');
 
     // Do not create draft post files in production.
@@ -122,7 +122,7 @@ exports.createPages = ({ graphql, actions }) => {
           const source = node.fields.source;
 
           createPage({
-            path: slug,
+            path: `/blog/${_.kebabCase(slug)}/`,
             component: postTemplate,
             context: {
               slug,

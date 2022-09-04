@@ -1,4 +1,4 @@
-module.exports = function(chunksTotal, { node }) {
+/* module.exports = function(chunksTotal, { node }) {
   const {
     fields: { slug },
     frontmatter: { title },
@@ -25,3 +25,4 @@ module.exports = function(chunksTotal, { node }) {
 function chunkString(str, length) {
   return str.match(new RegExp('(.|[\r\n]){1,' + length + '}', 'g'));
 }
+ */

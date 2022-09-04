@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import { FaCalendar } from "react-icons/fa/";
-import { FaUser } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
+import { FaCalendar } from 'react-icons/fa/';
+import { FaUser } from 'react-icons/fa/';
+import { FaTag } from 'react-icons/fa/';
 
 const Meta = props => {
   const { prefix, author: authorName, category, theme } = props;
@@ -20,7 +20,7 @@ const Meta = props => {
       {category && (
         <span>
           <FaTag size={18} />
-          <Link to={`/blog/${category.split(" ").join("-")}`}>{category}</Link>
+          <Link to={`/blog/${category.split(' ').join('-')}`}>{category}</Link>
         </span>
       )}
 

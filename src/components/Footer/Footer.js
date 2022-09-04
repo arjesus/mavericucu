@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import { Grid, Box } from '@material-ui/core';
 import React from 'react';
-import { graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import theme from '../../theme/theme.yaml';
 import logo from '../../../static/images/white-logo-text.png';
@@ -112,15 +112,15 @@ const blogs = [
   },
   {
     name: 'Tecnica de relación',
-    url: '/tecnica-relajacion/'
+    url: '/blog/tecnica-relajacion/'
   },
   {
     name: 'Teletrabajo e impacto psicológico',
-    url: '/teletrabajo'
+    url: '/blog/teletrabajo'
   },
   {
     name: 'Fin del aislamiento y ansiedad',
-    url: '/fin-aislamiento-ansiedad'
+    url: '/blog/fin-aislamiento-ansiedad'
   }
 ];
 
@@ -140,8 +140,54 @@ const legals = [
 ];
 
 const Footer = props => {
-  const post = props.data;
   /* const classes = useStyles(); */
+
+  const data = useStaticQuery(graphql`
+    {
+      posts: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+        sort: { fields: [fields___prefix], order: DESC }
+      ) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+              prefix
+            }
+            frontmatter {
+              title
+              category
+            }
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          facebook {
+            appId
+          }
+        }
+      }
+      bgDesktop: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+        resize(width: 1200, quality: 90, cropFocus: CENTER) {
+          src
+        }
+      }
+      bgTablet: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+        resize(width: 800, height: 1100, quality: 90, cropFocus: CENTER) {
+          src
+        }
+      }
+      bgMobile: imageSharp(fluid: { originalName: { regex: "/hero-background/" } }) {
+        resize(width: 450, height: 850, quality: 90, cropFocus: CENTER) {
+          src
+        }
+      }
+    }
+  `);
+
+  const post = JSON.stringify(data, null, 4);
 
   return (
     <React.Fragment>
@@ -252,28 +298,30 @@ const Footer = props => {
                 })}
               </Grid>
             </Grid>
-            <Grid item sm={12} className="footer-text">
-              <p>
-                Si te encuentras en una situación de emergencia debes ponerte en contacto con las
-                líneas de emergencia, 061 (asesoramiento médico y emergencias) o 112 (solo
-                emergencias) en España.
-              </p>
-            </Grid>
-            <hr />
-            <Grid container direction="row">
-              <Grid item sm={12} md={6}></Grid>
-              <div className="legals">
-                {legals.map((legal, index) => {
-                  return (
-                    <Grid item sm={12} md={6} key={index} className="footerLink-box">
-                      <a className="footerLink" href={legal.url}>
-                        {legal.name}
-                      </a>
-                    </Grid>
-                  );
-                })}
-              </div>
-              {/*  <Grid item md={6}></Grid> */}
+            <Grid container direction="column">
+              <Grid item className="footer-text">
+                <p>
+                  Si te encuentras en una situación de emergencia debes ponerte en contacto con las
+                  líneas de emergencia, 061 (asesoramiento médico y emergencias) o 112 (solo
+                  emergencias) en España.
+                </p>
+              </Grid>
+              <hr />
+              <Grid container direction="row">
+                <Grid item sm={12} md={6}></Grid>
+                <div className="legals">
+                  {legals.map((legal, index) => {
+                    return (
+                      <Grid item sm={12} md={6} key={index} className="footerLink-box">
+                        <a className="footerLink" href={legal.url}>
+                          {legal.name}
+                        </a>
+                      </Grid>
+                    );
+                  })}
+                </div>
+                {/*  <Grid item md={6}></Grid> */}
+              </Grid>
             </Grid>
           </Grid>
         </Box>
@@ -284,12 +332,13 @@ const Footer = props => {
 
 Footer.propTypes = {
   html: PropTypes.string,
-  theme: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired
+  // data: PropTypes.object.isRequired
 };
 
 export default Footer;
 
+/* 
 export const query = graphql`
   query IndexQuery3 {
     posts: allMarkdownRemark(
@@ -334,3 +383,4 @@ export const query = graphql`
     }
   }
 `;
+ */

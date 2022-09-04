@@ -1,7 +1,7 @@
 require('dotenv').config();
 const config = require('./content/meta/config');
 
-const query = `{
+/* const query = `{
   allMarkdownRemark( filter: { fields: { slug: { ne: null } } }) {
     edges {
       node {
@@ -27,7 +27,7 @@ const queries = [
       return data.allMarkdownRemark.edges.reduce(transformer, []);
     }
   }
-];
+]; */
 
 module.exports = {
   // pathPrefix: config.pathPrefix,
@@ -39,6 +39,7 @@ module.exports = {
       appId: process.env.FB_APP_ID ? process.env.FB_APP_ID : ''
     }
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -93,9 +94,18 @@ module.exports = {
     //     cookieDomain: 'evaminerva.com'
     //   }
     // },
-    `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
+    // `gatsby-plugin-styled-jsx`, // the plugin's code is inserted directly to gatsby-node.js and gatsby-ssr.js files
+    // `gatsby-plugin-styled-jsx-postcss`, // as above
+    {
+      resolve: `gatsby-plugin-styled-jsx`,
+      options: {
+        jsxPlugins: ['styled-jsx-plugin-postcss'],
+        optimizeForSpeed: false,
+        sourceMaps: false,
+        vendorPrefixes: true
+      }
+    },
     `gatsby-plugin-material-ui`,
-    `gatsby-plugin-styled-jsx-postcss`, // as above
     {
       resolve: `gatsby-plugin-layout`,
       options: {

@@ -440,7 +440,7 @@ const Hero = props => {
             width: 60%;
             display: block;
             margin: auto;
-            height: auto; 
+            height: auto;
           }
         }
 

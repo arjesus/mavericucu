@@ -40,7 +40,7 @@ const Blog = props => {
           .main {
             padding: 15px;
           }
-  
+
           ul {
             grid-gap: 35px;
             grid-template-columns: 1fr 1fr;

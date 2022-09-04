@@ -73,6 +73,7 @@ const useStyles = makeStyles({
     border: 'none',
     backgroundColor: 'white',
     cursor: 'pointer',
+    // eslint-disable-next-line no-dupe-keys
     border: `1px solid ${theme.color.principals.darkerPurpleText}`,
     padding: '10px',
     borderRadius: '0.5rem'

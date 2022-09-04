@@ -1,3 +1,5 @@
+import React from 'react';
+import { kebabcase } from 'lodash';
 import { FaArrowRight } from 'react-icons/fa/';
 import { FaCalendar } from 'react-icons/fa/';
 import { FaTag } from 'react-icons/fa/';
@@ -5,8 +7,8 @@ import { FaUser } from 'react-icons/fa/';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { getPost } from '../../utils/helpers';
+import { KeyboardBackspaceSharp } from '@material-ui/icons';
 
 const Item = props => {
   const {
@@ -18,10 +20,13 @@ const Item = props => {
     }
   } = props;
 
+  console.log(getPost(category));
+  console.log(category);
+
   return (
     <React.Fragment>
       <li>
-        <Link to={slug} key={slug} className="link">
+        <Link to={`/blog/${kebabcase(slug)}`} key={slug} className="link">
           <div className="gatsby-image-outer-wrapper">
             <img
               width="900"

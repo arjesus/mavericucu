@@ -1,12 +1,12 @@
-import { FaTag } from "react-icons/fa/";
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
-import Seo from "../components/Seo";
-import { ThemeContext } from "../layouts";
-import Article from "../components/Article";
-import Headline from "../components/Article/Headline";
-import List from "../components/List";
+import { FaTag } from 'react-icons/fa/';
+import PropTypes from 'prop-types';
+import React from 'react';
+// import { graphql } from 'gatsby';
+import Seo from '../components/Seo';
+import { ThemeContext } from '../layouts';
+import Article from '../components/Article';
+import Headline from '../components/Article/Headline';
+import List from '../components/List';
 
 const CategoryTemplate = props => {
   const {
@@ -30,11 +30,8 @@ const CategoryTemplate = props => {
                 {category}
               </Headline>
               <p className="meta">
-                There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post{totalCount >
-                1
-                  ? "s"
-                  : ""}{" "}
-                in the category.
+                There {totalCount > 1 ? 'are' : 'is'} <strong>{totalCount}</strong> post
+                {totalCount > 1 ? 's' : ''} in the category.
               </p>
               <List edges={edges} theme={theme} />
             </header>
@@ -55,7 +52,7 @@ CategoryTemplate.propTypes = {
 export default CategoryTemplate;
 
 // eslint-disable-next-line no-undef
-export const categoryQuery = graphql`
+/* export const categoryQuery = graphql`
   query PostsByCategory($category: String) {
     allMarkdownRemark(
       limit: 1000
@@ -85,4 +82,4 @@ export const categoryQuery = graphql`
       }
     }
   }
-`;
+`; */

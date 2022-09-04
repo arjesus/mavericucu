@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import { FaArrowRight } from "react-icons/fa/";
-import { FaArrowLeft } from "react-icons/fa/";
+import { FaArrowRight } from 'react-icons/fa/';
+import { FaArrowLeft } from 'react-icons/fa/';
 
 const NextPrev = props => {
   const {
@@ -50,7 +50,7 @@ const NextPrev = props => {
 
           :global(a) {
             display: flex;
-            color : ${theme.color.principals.darkerPurpleText};
+            color: ${theme.color.principals.darkerPurpleText};
           }
 
           :global(a:nth-child(2)) {

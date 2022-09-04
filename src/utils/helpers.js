@@ -19,6 +19,28 @@ import aislamiento from '/content/posts/2021-04-21--fin-aislamiento-ansiedad/fin
 import fundadoras from '../../static/images/fundadoras.jpg';
 import redFlag from '/content/posts/2022-08-04--red-flag/Header.jpg';
 
+export function removeAccents(str) {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+export function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + '...';
+}
+
+export function handleFilterData(query, data) {
+  if (!query) {
+    return data;
+  } else {
+    return data.filter(d =>
+      removeAccents(d.excerpt)
+        .toLowerCase()
+        .includes(removeAccents(query).toLowerCase())
+    );
+  }
+}
 
 export function getScreenWidth() {
   if (typeof window !== `undefined`) {
@@ -40,7 +62,7 @@ export function isWideScreen() {
     const Width = window.innerWidth;
     const mediaQueryL = 1024;
 
-    return windowWidth >= mediaQueryL;
+    return 'windowWidth' >= mediaQueryL;
   }
 }
 
@@ -55,28 +77,29 @@ export function timeoutThrottlerHandler(timeouts, name, delay, handler) {
 
 export const getImg = category => {
   const img = {
-    'Depresion': depresion,
+    Depresion: depresion,
     'quienes somos': fundadoras,
-    'Fobias': fobias,
-    'Ansiedad': ansiedad,
-    'Autoestima': autoestima,
+    Fobias: fobias,
+    Ansiedad: ansiedad,
+    Autoestima: autoestima,
     'Terapia de pareja': terapiaPareja,
-    'Coaching': coaching,
+    Coaching: coaching,
     'Coaching deportivo': coachingDeportivo,
     'Terapia sexual': sexualidad
-  }
+  };
   return img[category];
-}
+};
 
 export const getPost = category => {
   const img = {
-    'Teletrabajo': trabajo,
-    'Relajacion': relajacion,
+    Teletrabajo: trabajo,
+    Relajacion: relajacion,
     'Fin aislamiento': aislamiento,
-    'Red Flag': redFlag
-  }
+    'Red Flag': redFlag,
+    'Terapia de pareja': redFlag
+  };
   return img[category];
-}
+};
 
 export const setPsychologist = category => {
   const psychologistsArr = [
@@ -216,7 +239,6 @@ export const setTitlePsycoCards = category => {
 
   return psychologistsTexts;
 };
-
 
 const blogPages = [
   // {
