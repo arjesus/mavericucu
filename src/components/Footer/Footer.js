@@ -308,7 +308,7 @@ const Footer = props => {
               </Grid>
               <hr />
               <Grid container direction="row">
-                <Grid item sm={12} md={6}></Grid>
+                {/* <Grid item sm={12} md={6}></Grid> */}
                 <div className="legals">
                   {legals.map((legal, index) => {
                     return (

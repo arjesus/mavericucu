@@ -144,7 +144,7 @@ class Layout extends React.Component {
                     <style jsx>{`
                       main {
                         min-height: 80vh;
-                        overflow: auto;
+                        overflow-x: hidden;
                       }
                     `}</style>
                     <style jsx global>{`

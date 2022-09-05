@@ -20,7 +20,14 @@ const Meta = props => {
       {category && (
         <span>
           <FaTag size={18} />
-          <Link to={`/blog/${category.split(' ').join('-')}`}>{category}</Link>
+          <Link
+            to={`/${category
+              .toLowerCase()
+              .split(' ')
+              .join('-')}`}
+          >
+            {category}
+          </Link>
         </span>
       )}
 
