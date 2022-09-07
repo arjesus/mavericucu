@@ -2,7 +2,7 @@ import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { makeStyles } from '@material-ui/core';
 import theme from '../../theme/theme.yaml';
-import { postSortFormAnswers, checkOut } from '../../services/form';
+import { postSortFormAnswers, checkOut, wakeup } from '../../services/form';
 
 const useStyles = makeStyles({
   button: {
@@ -65,6 +65,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
       window.fbq &&
         window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
     }
+    wakeup();
     redirectToCheckout(e, id);
     handleClose();
   };
