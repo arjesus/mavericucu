@@ -48,6 +48,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
   };
 
   const handleClick = (e, answer, id) => {
+    wakeup();
     postSortFormAnswers({ answers: answer });
     if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
       window.gtag &&
@@ -65,8 +66,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
       window.fbq &&
         window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
     }
-    wakeup();
-    redirectToCheckout(e, id);
+    //redirectToCheckout(e, id);
     handleClose();
   };
 
