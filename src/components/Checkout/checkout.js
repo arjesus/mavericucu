@@ -66,7 +66,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
       window.fbq &&
         window.fbq('track', 'Lead', { currency: 'EUR', value: localStorage.getItem('plan') });
     }
-    //redirectToCheckout(e, id);
+    redirectToCheckout(e, id);
     handleClose();
   };
 
