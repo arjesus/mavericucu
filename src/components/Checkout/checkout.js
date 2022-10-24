@@ -47,9 +47,9 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
     window.location.href = redirect.url;
   };
 
-  const handleClick = (e, answer, id) => {
+  const handleClick = async (e, answer, id) => {
     wakeup();
-    postSortFormAnswers({ answers: answer });
+    await postSortFormAnswers({ answers: answer });
     if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
       window.gtag &&
         window.gtag('event', 'conversion', {
