@@ -50,6 +50,7 @@ const Checkout = ({ id, answer, handleClose, disable }) => {
   const handleClick = async (e, answer, id) => {
     wakeup();
     await postSortFormAnswers({ answers: answer });
+    await new Promise(resolve => setTimeout(resolve, 1000));
     if (typeof window !== 'undefined' && localStorage.getItem('plan')) {
       window.gtag &&
         window.gtag('event', 'conversion', {
